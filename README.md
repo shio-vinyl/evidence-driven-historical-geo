@@ -15,7 +15,7 @@ flowchart LR
     C --> D[Uncertainty diagnosis]
     D --> E[Ranked search targets]
     E --> A
-    C --> F[Held-out evaluation]
+    C --> F[Evaluation-only comparison]
 ```
 
 ## What the agent does
@@ -44,7 +44,7 @@ The v0.2 contract treats `Source → Observation → Claim → Model Decision �
 
 ## Flagship case: Crusader States
 
-The case covers **1130** and **end of 1187**. Round 01 closes the Cairo, Jaffa, Edessa-date, and Tripoli-inland gaps through page-addressable text and gazetteer evidence; it admits Cairo and Jaffa as locality points and adds Rafaniyya as a minor 1130 control point. These changes remain locality constraints, never direct county or state perimeters. The Ascalon gap remains open and its disputed anchor stays an evidence scenario.
+The case covers **1130** and **end of 1187**. Round 01 closes the Cairo, Jaffa, Edessa-date, and Tripoli-inland gaps through page-addressable text and gazetteer evidence; it admits Cairo and Jaffa as locality points and adds Rafaniyya as a minor 1130 control point. These changes remain locality constraints, never direct county or state perimeters. Ascalon is now the only open gap promoted to the next targeted search; Tortosa and Latin-survival extent remain recorded without a measured evidence-scenario effect.
 
 The frozen claim-decision register and the round-specific state-change record keep these judgments machine-readable. They record the source/observation/claim/decision delta instead of leaving a revised baseline in prose alone.
 
@@ -54,17 +54,17 @@ The frozen claim-decision register and the round-specific state-change record ke
 
 The project registers four published maps from three works. Public-domain Shepherd and Johnston plates support a categorical comparison; Buck’s exact 1130 map is recorded as access- and rights-blocked because the legal preview does not expose the map body. No scan or traced atlas boundary is committed.
 
-The comparison checks named city control, entity presence, adjacency, and coastal place order. It reports 12 of 17 comparable assertions aligned for the c.1140 proxy, 4 of 4 entity assertions aligned for Shepherd’s c.1190 plate, and 13 of 14 city/entity assertions aligned for Johnston’s 1187–1190 campaign map. These counts describe agreement, not historical accuracy.
+The frozen Round-00 comparison checks named city control, entity presence, adjacency, and coastal place order. It reports 12 of 17 comparable assertions aligned for the c.1140 proxy, 4 of 4 entity assertions aligned for Shepherd’s c.1190 plate, and 13 of 14 city/entity assertions aligned for Johnston’s 1187–1190 campaign map. These counts describe pre-search agreement, not historical accuracy; the project does not claim an updated Round-01 score.
 
 ![Categorical external map comparison](cases/crusader_states/public/figures/reference-comparison.png)
 
 ## Uncertainty-driven research
 
-Eight scenarios test evidence eligibility, natural costs, the allowed projection ordinals, and 5/10/20 km grids. Their common analysis grid separates stable core, model-sensitive, evidence-sensitive, and unresolved zones.
+The frozen Round-00 grouped analysis covers eight evidence, natural-cost, projection, and grid scenarios. Its common analysis grid separates stable core, model-sensitive, evidence-sensitive, and unresolved zones. The current Round-01 diagnosis instead uses atomic evidence counterfactuals and three declared model variants so each remaining search target has an identifiable spatial effect.
 
 ![Scenario agreement zones](cases/crusader_states/public/figures/uncertainty-zones.png)
 
-The large model-sensitive share shows that bounded projection choices dominate the current areal result. The v0.2 diagnosis also measures which evidence scenarios change the assignment and links those changed cells back to open evidence gaps. Round 00 ranks the first concrete searches; round 01 records which gaps were closed and recomputes the residual agenda.
+Both records show that bounded projection choices dominate the areal result: Round 01 measures 5,823 model-sensitive cells versus one evidence-sensitive cell in 1130, and 5,269 versus zero in 1187. The v0.2 diagnosis links evidence changes back to open gaps. Round 00 ranks the first concrete searches; Round 01 records which gaps were closed and recomputes the residual agenda.
 
 The Crusader case is a retrospective testbed: external maps never enter reconstruction inputs or parameter tuning, although they were already inspected during development. A future case is required for a strict pre-registered held-out evaluation.
 

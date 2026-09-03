@@ -15,7 +15,7 @@ flowchart LR
     C --> D[不确定性诊断]
     D --> E[排序后的搜索目标]
     E --> A
-    C --> F[留出评估]
+    C --> F[仅用于评估的外部比较]
 ```
 
 ## Agent 负责什么
@@ -44,7 +44,7 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 ## 核心案例：十字军诸国
 
-案例覆盖 **1130 年**和 **1187 年末**。第 01 轮通过可按页定位的文本与地名库证据关闭 Cairo、Jaffa、Edessa 年份与 Tripoli 内陆四项缺口；Cairo 和 Jaffa 被纳入地点约束，Rafaniyya 作为 1130 年次要控制点加入。它们都只构成地点约束，不能直接推出伯国或政权的连续边界。Ascalon 缺口仍然开放，其争议锚点保留在证据情景中。
+案例覆盖 **1130 年**和 **1187 年末**。第 01 轮通过可按页定位的文本与地名库证据关闭 Cairo、Jaffa、Edessa 年份与 Tripoli 内陆四项缺口；Cairo 和 Jaffa 被纳入地点约束，Rafaniyya 作为 1130 年次要控制点加入。它们都只构成地点约束，不能直接推出伯国或政权的连续边界。Ascalon 现为唯一被提升到下一轮定向检索的开放缺口；Tortosa 与 Latin survival extent 仍被保留，但尚无已测得的证据情景影响。
 
 冻结的主张决策登记表与按轮次保存的状态变化记录共同使这些判断机器可读。它们保存 source、observation、claim、decision 的增量，避免只在文字中替换基线。
 
@@ -54,17 +54,17 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 项目登记了三套出版物中的四幅地图。公有领域的 Shepherd 与 Johnston 地图用于分类比较；Buck 的精确 1130 地图因合法预览未开放正文，被记录为访问和权利受阻。仓库没有提交扫描页或沿地图集描绘的边界。
 
-比较维度包括具名城市控制、实体存在、邻接与海岸地点顺序。约 1140 年代理图有 17 项可比断言，其中 12 项一致；Shepherd 约 1190 年图的 4 项实体断言全部一致；Johnston 1187—1190 战役图有 14 项城市与实体断言，其中 13 项一致。这些计数表示一致程度，不是历史准确率。
+冻结的 Round-00 比较维度包括具名城市控制、实体存在、邻接与海岸地点顺序。约 1140 年代理图有 17 项可比断言，其中 12 项一致；Shepherd 约 1190 年图的 4 项实体断言全部一致；Johnston 1187—1190 战役图有 14 项城市与实体断言，其中 13 项一致。这些数值表示检索前的一致程度，不是历史准确率；项目没有声称得到 Round-01 的新评分。
 
 ![分类式外部地图比较](cases/crusader_states/public/figures/reference-comparison.png)
 
 ## 不确定性驱动研究
 
-8 个情景分别测试证据资格、自然成本、允许的 projection 等级和 5/10/20 km 格网。统一分析格网把结果分为 stable core、model-sensitive、evidence-sensitive 与 unresolved zone。
+冻结的 Round-00 成组分析覆盖 8 个证据、自然成本、projection 和格网情景，统一分析格网把结果分为 stable core、model-sensitive、evidence-sensitive 与 unresolved zone。当前 Round-01 诊断改用单项证据反事实和三个已声明模型变体，使每个剩余搜索目标都具有可识别的空间效应。
 
 ![情景一致性区域](cases/crusader_states/public/figures/uncertainty-zones.png)
 
-当前结果中模型敏感区占比很大，说明有界 projection 选择对面状结果的影响高于新增争议地点。v0.2 诊断还会测量证据情景改变了哪些格网单元，并把这些变化追溯到尚未关闭的证据缺口。第 00 轮据此生成首批具体搜索任务；第 01 轮保存已关闭缺口并重新计算剩余议程。
+两份记录都显示有界 projection 选择主导当前面状结果：Round 01 在 1130 年测得 5,823 个模型敏感格网与 1 个证据敏感格网，1187 年分别为 5,269 和 0。v0.2 诊断把证据变化追溯到开放缺口。Round 00 生成首批具体搜索任务；Round 01 保存已关闭缺口并重新计算剩余议程。
 
 十字军案例属于回顾性 testbed：外部地图从未进入重建输入或参数调优，但开发期间已经被检查。严格预注册的 held-out evaluation 需要留给未来的新案例。
 
