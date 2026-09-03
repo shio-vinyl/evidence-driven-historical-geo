@@ -1,4 +1,9 @@
-"""External-reference and scenario-agreement evaluation for the public case."""
+"""Frozen Round-00 external-reference and scenario-agreement evaluation.
+
+These figures intentionally use the v0.1 compatibility inputs.  They preserve
+the evaluation state that existed before the first evidence-acquisition round;
+current research-loop diagnostics live under ``research/rounds``.
+"""
 from __future__ import annotations
 
 import json
@@ -26,6 +31,9 @@ MODEL_SCENARIOS = (
 ALL_SCENARIOS = tuple(dict.fromkeys((*EVIDENCE_SCENARIOS, *MODEL_SCENARIOS)))
 ZONE_LABELS = {1: "stable_core", 2: "model_sensitive_zone", 3: "evidence_sensitive_zone", 4: "unresolved_zone"}
 ZONE_COLORS = {1: "#3B7A57", 2: "#E69F00", 3: "#7B61A8", 4: "#B94A48"}
+EVALUATION_STATE = "round-00-initial"
+EXECUTION_PATH = "frozen-v0.1-compatibility"
+CURRENT_DIAGNOSIS_PATH = "research/rounds/01-evidence-update"
 
 
 def _read(path: Path) -> dict[str, Any]:
@@ -61,6 +69,9 @@ def build_reference_comparison(case_dir: Path) -> tuple[Path, dict[str, Any]]:
     register = _read(case / "reference-map-register.json")
     aliases = register["ontology_harmonization"]["entities"]
     report: dict[str, Any] = {
+        "evaluation_state": EVALUATION_STATE,
+        "execution_path": EXECUTION_PATH,
+        "current_research_state_path": CURRENT_DIAGNOSIS_PATH,
         "interpretation": "Categorical agreement with external cartography; no reference is ground truth and no value is a historical accuracy score.",
         "boundary_metrics_computed": False,
         "parameter_tuning_from_references": False,
@@ -125,7 +136,7 @@ def build_reference_comparison(case_dir: Path) -> tuple[Path, dict[str, Any]]:
         ax.set_yticks(y,labels,fontsize=7); ax.invert_yaxis(); ax.set_xlabel('expressed city, entity, and adjacency assertions'); ax.set_title(str(slice_value))
         ax.grid(axis='x',alpha=.25)
     handles,labels=axes[0].get_legend_handles_labels(); fig.legend(handles,labels,loc='lower center',ncol=2)
-    fig.suptitle('External map comparison — categorical assertions, no boundary accuracy score')
+    fig.suptitle('Round 00 frozen external-map comparison — categorical assertions only')
     fig.tight_layout(rect=(0,.08,1,.94)); path=out/'reference-comparison.png'; fig.savefig(path,bbox_inches='tight'); plt.close(fig)
     return path, report
 
@@ -153,6 +164,9 @@ def build_uncertainty_analysis(case_dir: Path) -> tuple[Path, dict[str, Any]]:
     codes={name:i+1 for i,name in enumerate(all_entities)}
     inverse={v:k for k,v in codes.items()}
     report={
+        'evaluation_state':EVALUATION_STATE,
+        'execution_path':EXECUTION_PATH,
+        'current_research_state_path':CURRENT_DIAGNOSIS_PATH,
         'interpretation':'Agreement across the declared scenario set. It is not a probability, confidence interval, or historical truth surface.',
         'analysis_grid_resolution_m':10000,
         'evidence_scenarios':list(EVIDENCE_SCENARIOS),'model_scenarios':list(MODEL_SCENARIOS),
@@ -204,13 +218,14 @@ def build_uncertainty_analysis(case_dir: Path) -> tuple[Path, dict[str, Any]]:
     from matplotlib.patches import Patch
     handles=[Patch(facecolor=ZONE_COLORS[k],label=ZONE_LABELS[k].replace('_',' ')) for k in ZONE_LABELS]
     fig.legend(handles=handles,loc='lower center',ncol=2,fontsize=8)
-    fig.suptitle('Scenario agreement zones — consistency within this scenario set, not probability')
+    fig.suptitle('Round 00 frozen scenario-agreement zones — consistency, not probability')
     fig.tight_layout(rect=(0,.1,1,.94));path=out/'uncertainty-zones.png';fig.savefig(path,bbox_inches='tight');plt.close(fig)
     _write(out/'uncertainty-zones.json',report)
     return path,report
 
 
 def build_research_evaluation(case_dir: Path) -> list[Path]:
+    """Regenerate the frozen Round-00 evaluation through the v0.1 path."""
     case=case_dir.resolve()
     for sl in (1130,1187):
         for scenario in ALL_SCENARIOS:

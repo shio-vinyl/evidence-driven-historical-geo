@@ -19,10 +19,12 @@ _SCENARIO_AXES = frozenset({"baseline", "evidence", "model"})
 
 
 def _schema_path() -> Path:
-    return Path(__file__).resolve().parents[2] / "schemas" / "reconstruction-request.schema.json"
+    return Path(__file__).resolve().parent / "schemas" / "reconstruction-request.schema.json"
 
 
-def _decision_ids(profile: Mapping[str, Any], field: str) -> set[str]:
+def _decision_ids(profile: Mapping[str, Any], field: str, *, required: bool = False) -> set[str]:
+    if required and field not in profile:
+        raise ValueError(f"scenario_profile.{field} is required")
     values = profile.get(field, [])
     if not isinstance(values, list) or not all(isinstance(value, str) and value for value in values):
         raise ValueError(f"scenario_profile.{field} must be a list of decision IDs")
@@ -40,7 +42,7 @@ def _profile(profile: Mapping[str, Any]) -> tuple[str, str, set[str], set[str], 
         raise ValueError("scenario_profile.name must be a non-empty string")
     if axis not in _SCENARIO_AXES:
         raise ValueError(f"scenario_profile.axis must be one of {sorted(_SCENARIO_AXES)}")
-    included = _decision_ids(profile, "included_decision_ids")
+    included = _decision_ids(profile, "included_decision_ids", required=True)
     excluded = _decision_ids(profile, "excluded_decision_ids")
     if included & excluded:
         raise ValueError("scenario_profile cannot both include and exclude a decision")
@@ -75,6 +77,12 @@ def _is_selected(decision: Mapping[str, Any], axis: str, included: set[str], exc
     status = decision["review_status"]
     if status == "excluded":
         return False
+    # Case profiles enumerate control points, while explicit spatial and
+    # traversal assumptions remain active unless separately excluded.  Keeping
+    # that distinction here prevents a newly admitted locality from silently
+    # entering a reviewed scenario before its profile names it.
+    if decision["role"] == "control_point" and status == "admitted":
+        return decision["decision_id"] in included
     if status == "experimental":
         return axis != "baseline" and decision["decision_id"] in included
     return status in {"admitted", "assumption"}
@@ -109,9 +117,11 @@ def compile_reconstruction_request(
 ) -> dict[str, Any]:
     """Select v0.2 research decisions for one deterministic reconstruction request.
 
-    Baselines contain only admitted decisions and explicit assumptions.  Experimental
-    decisions may participate in evidence/model scenarios only when their ID appears
-    in ``included_decision_ids``; excluded decisions can never be activated.
+    ``included_decision_ids`` is an explicit allowlist for control points: an
+    empty list selects no control points.  Other admitted constraints and
+    explicit assumptions remain active unless excluded.  Experimental
+    decisions may participate in evidence/model scenarios only when named in
+    the allowlist; excluded decisions can never be activated.
     """
     if not isinstance(grid, Mapping):
         raise ValueError("grid must be an object")

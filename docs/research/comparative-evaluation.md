@@ -2,51 +2,37 @@
 
 # Comparative Evaluation
 
-## Purpose
+## Scope and evaluation state
 
-This comparison asks a narrow question: where does the reviewed-baseline reconstruction agree with, omit, or differ from published hand-made maps? The maps are external interpretations. None is ground truth, and the counts below are not historical accuracy scores.
+The registered hand-made maps are evaluation-only interpretations. None is ground truth, and the categorical counts below are not historical accuracy scores. The repository contains no atlas scan and no traced atlas boundary. [`reference-map-register.json`](../../cases/crusader_states/public/reference-map-register.json) stores catalog, rights, temporal-fit, and hand-recorded categorical observations; [`reference-comparison.png`](../../cases/crusader_states/public/figures/reference-comparison.png) is an original summary.
 
-The public repository contains no atlas scan and no traced atlas boundary. `reference-map-register.json` stores catalog details, rights, prior use, temporal fit, and hand-recorded categorical observations. `reference-comparison.png` is an original summary chart.
+The checked-in figure and its companion JSON are a **frozen Round-00 evaluation produced through the v0.1 compatibility path**. They describe the reviewed baseline before the first targeted evidence-acquisition round. Round 01 did not consult historical boundary maps while searching for evidence; its [`source-checks.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/source-checks.json) records that guard. No updated held-out comparison count is claimed for Round 01.
 
-## Reference register
+## Registered references
 
-Four items were reviewed.
+Four items were reviewed for the frozen comparison.
 
-- Andrew D. Buck, *The Principality of Antioch and its Frontiers in the Twelfth Century* (Boydell Press, 2017), Map 2, “Northern Syria and Cilicia, 1130,” p. 23. This is the only exact-year scholarly map found for part of the 1130 slice. The legal publisher preview confirms the title and page but does not expose the map body, so no assertions or geometry were extracted.
-- William R. Shepherd, *Historical Atlas* (1926 ed.), “Asia Minor and the States of the Crusaders in Syria, about 1140,” p. 68. It is public domain and covers the full regional pattern, but it is ten years later than the target.
-- Shepherd, *Historical Atlas* (1911), “Europe and the Mediterranean Lands about 1190,” pp. 70–71. It is public domain and useful for entity survival at regional scale. It is too coarse and too late for city or boundary evaluation of end-1187.
-- W. & A. K. Johnston / Reginald Lane Poole, “Syria Showing Saladin’s Conquests 1187–1190,” in *Historical Atlas of Modern Europe* (1902). This public-domain campaign map separates 1187, 1188, later fortress captures, and the 1192 Christian boundary.
+- Andrew D. Buck, *The Principality of Antioch and its Frontiers in the Twelfth Century* (Boydell Press, 2017), Map 2, “Northern Syria and Cilicia, 1130,” p. 23. The legal publisher preview confirms the title and page but does not expose the map body, so no assertion or geometry was extracted.
+- William R. Shepherd, *Historical Atlas* (1926 ed.), “Asia Minor and the States of the Crusaders in Syria, about 1140,” p. 68. This public-domain plate covers the regional pattern ten years after the target slice.
+- Shepherd, *Historical Atlas* (1911), “Europe and the Mediterranean Lands about 1190,” pp. 70–71. This public-domain plate is useful for entity presence at regional scale and too coarse and late for end-1187 boundary evaluation.
+- W. & A. K. Johnston / Reginald Lane Poole, “Syria Showing Saladin’s Conquests 1187–1190,” in *Historical Atlas of Modern Europe* (1902). The public-domain campaign map separates the 1187 and 1188 sequences, later fortress captures, and the 1192 Christian boundary.
 
-## Independence and rights
+The Shepherd and Johnston plates come from different cartographic lineages. Both were registered in a read-only audit before assembly of the public project, so the comparison is non-blind. That audit produced no seed, polygon, model parameter, or evidence claim. Buck also appears in the textual bibliography, and the inaccessible map body contributes no extracted assertion.
 
-The Shepherd and Johnston plates come from different cartographic lineages. Both were listed in a read-only audit before this public project was assembled, so the comparison is non-blind. That audit produced no seed, polygon, model parameter, or evidence claim. They are external comparators without parameter circularity.
+## Round-00 categorical results
 
-Buck’s exact 1130 map is partly independent of the current evidence set, although Buck also appears as a textual source. Its copyrighted map body was not available through the legal preview. The register records this rights and access block instead of reconstructing the page from unauthorized copies.
+Dates were kept literal. The 1130 reconstruction was compared with c.1140 only as a temporal proxy. End-1187 was compared with c.1190 and the 1187–1190 campaign sequence without pulling later Third Crusade states backward. City control, entity presence, adjacency, and coastal place order were recorded separately; generalized fills and campaign colors were not converted into boundary lines.
 
-## Harmonization before comparison
+For **1130**, Shepherd expresses 17 comparable city, entity, and adjacency assertions. Twelve match the Round-00 reviewed baseline. The five reference-only items are Fatimid Egypt as a retained entity, Ascalon and Tortosa as city points, plus two adjacencies involving the omitted Fatimid surface or the Jerusalem–Tripoli contact. No line distance or overlap was calculated because the proxy is temporally mismatched and highly generalized.
 
-Dates were kept literal. The 1130 model is compared with c.1140 only as a temporal proxy. End-1187 is compared with c.1190 and an 1187–1190 campaign sequence; later Third Crusade states were not pulled backward into the target slice.
+For **end-1187**, the c.1190 Shepherd plate expresses four comparable entity-presence assertions and all four match the Round-00 baseline. The Johnston campaign map expresses 14 comparable city and entity assertions: 13 match, while Jaffa is reference-only. At Round 00, the checked text had not yet supported Jaffa as an admissible point-control input.
 
-Entity names were aligned only where the equivalence was straightforward, such as “Empire of Saladin” to “Ayyubid Sultanate.” City control, entity presence, adjacency, and coastal place order were recorded separately. Generalized fills, desert edges, and campaign coloring were not converted into boundary lines.
+## Round-01 status
 
-## Categorical results
+Round 01 changes how the frozen comparison must be read. Textual checks closed the Jaffa gap and admitted `D_1187_JAFFA_SEED`; its isolated spatial effect remains zero cells. Cairo was also admitted and accounts for the 1,162 changed baseline cells, while Jaffa accounts for none. The old “13 of 14, Jaffa reference-only” line is therefore a historical Round-00 result, not a current performance number.
 
-### 1130
+The 1130 baseline gained Rafaniyya, which is absent from the registered comparison assertions and changes zero grid cells. The Round-00 “12 of 17” count has not been recomputed or promoted as a Round-01 score. The correct current evidence and spatial state is recorded in [`round-delta.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/round-delta.json) and the Round-01 diagnosis files.
 
-The Shepherd plate expresses 17 comparable city, entity, and adjacency assertions. Twelve agree with the reviewed baseline. The five reference-only items are Fatimid Egypt as a retained entity, Ascalon and Tortosa as city points, and two adjacencies involving the omitted Fatimid surface or the Jerusalem–Tripoli contact.
+## Interpretation boundary
 
-The result locates the disagreement cleanly. Jerusalem, Damascus, Tripoli, Antioch, and Edessa form the shared core. Ascalon and Tortosa enter the inclusive scenario, where their effect can be inspected without placing them in the baseline. No line distance or overlap was calculated because the c.1140 fills are temporally mismatched and highly generalized.
-
-### End of 1187
-
-The c.1190 Shepherd plate expresses four comparable entity-presence assertions; all four entities appear in the reviewed baseline. The Johnston campaign map expresses 14 comparable city and entity assertions. Thirteen agree. Jaffa is the single reference-only city: Johnston assigns it to the 1187 conquest sequence, while the textual page review still does not support the Jaffa member of the grouped coast claim.
-
-This is evidence tension, not a model error score. Jaffa stays out of the baseline and enters the inclusive scenario. Tyre, Tripoli, Antioch, and the broad Ayyubid pattern are the main points of cross-map agreement.
-
-## Interpretation limits
-
-The register records what each map actually expresses and where it is silent. It does not infer an unprinted boundary, treat an old atlas fill as direct observation, or average maps into a consensus border. The comparison was run after the baseline evidence decisions, and no model parameter was changed in response.
-
-## Human review boundary
-
-A historian still needs to judge whether the 1130 proxy comparison is temporally acceptable, whether Johnston’s campaign categories support a point-level Jaffa interpretation, and whether Buck’s exact-year map can be consulted under lawful access. Those decisions can change the scholarly reading, but they cannot be resolved by the current code.
+The register records only what each reference explicitly expresses and where it is silent. It does not infer unprinted boundaries, convert old atlas fills into direct observations, or average maps into a consensus border. The frozen comparison did not drive parameter tuning. A historian must still decide whether the 1140 proxy is acceptable for 1130, how to interpret Johnston’s campaign categories, and whether Buck’s exact-year map can be consulted lawfully.

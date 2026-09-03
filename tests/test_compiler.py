@@ -58,13 +58,21 @@ def research_bundle() -> dict:
 
 def test_compiler_keeps_only_generic_inputs_and_enforces_scenario_activation() -> None:
     bundle = research_bundle()
-    baseline = compile_reconstruction_request(bundle, 1130, {"name": "baseline", "axis": "baseline"}, {"resolution": 1})
+    baseline = compile_reconstruction_request(
+        bundle,
+        1130,
+        {"name": "baseline", "axis": "baseline", "included_decision_ids": ["DEC_ADMITTED"]},
+        {"resolution": 1},
+    )
     assert {item["decision_id"] for item in baseline["inputs"]} == {"DEC_ADMITTED", "DEC_ASSUMPTION"}
     assert "seeds" not in baseline and "phases" not in baseline and "barriers" not in baseline
 
     evidence = compile_reconstruction_request(
         bundle, 1130,
-        {"name": "with-experiment", "axis": "evidence", "included_decision_ids": ["DEC_EXPERIMENT", "DEC_EXCLUDED"]},
+        {
+            "name": "with-experiment", "axis": "evidence",
+            "included_decision_ids": ["DEC_ADMITTED", "DEC_EXPERIMENT", "DEC_EXCLUDED"],
+        },
         {"resolution": 1},
     )
     assert {item["decision_id"] for item in evidence["inputs"]} == {"DEC_ADMITTED", "DEC_ASSUMPTION", "DEC_EXPERIMENT"}
@@ -73,14 +81,44 @@ def test_compiler_keeps_only_generic_inputs_and_enforces_scenario_activation() -
     assert experiment["source_ids"] == ["SRC"]
 
 
+def test_control_point_allowlist_prevents_unreviewed_profile_drift() -> None:
+    bundle = research_bundle()
+    second = deepcopy(bundle["model_decisions"][0])
+    second["decision_id"] = "DEC_LATER_POINT"
+    second["parameters"] = {**second["parameters"], "name": "Later city"}
+    bundle["model_decisions"].append(second)
+
+    request = compile_reconstruction_request(
+        bundle,
+        1130,
+        {"name": "reviewed", "axis": "baseline", "included_decision_ids": ["DEC_ADMITTED"]},
+        {"resolution": 1},
+    )
+    assert {item["decision_id"] for item in request["inputs"]} == {"DEC_ADMITTED", "DEC_ASSUMPTION"}
+
+
+def test_empty_control_point_allowlist_does_not_mean_include_everything() -> None:
+    request = compile_reconstruction_request(
+        research_bundle(),
+        1130,
+        {"name": "no-points", "axis": "baseline", "included_decision_ids": []},
+        {"resolution": 1},
+    )
+    assert {item["decision_id"] for item in request["inputs"]} == {"DEC_ASSUMPTION"}
+
+
 def test_compiler_output_is_byte_deterministic() -> None:
     first = compile_reconstruction_request(
-        research_bundle(), 1130, {"name": "baseline", "axis": "baseline"}, {"resolution": 1, "bbox": [0, 0, 1, 1]}
+        research_bundle(), 1130,
+        {"name": "baseline", "axis": "baseline", "included_decision_ids": ["DEC_ADMITTED"]},
+        {"resolution": 1, "bbox": [0, 0, 1, 1]}
     )
     reordered = research_bundle()
     reordered["model_decisions"].reverse()
     second = compile_reconstruction_request(
-        reordered, 1130, {"axis": "baseline", "name": "baseline"}, {"bbox": [0, 0, 1, 1], "resolution": 1}
+        reordered, 1130,
+        {"axis": "baseline", "name": "baseline", "included_decision_ids": ["DEC_ADMITTED"]},
+        {"bbox": [0, 0, 1, 1], "resolution": 1}
     )
     assert reconstruction_request_bytes(first) == reconstruction_request_bytes(second)
     assert [item["decision_id"] for item in first["inputs"]] == sorted(item["decision_id"] for item in first["inputs"])
@@ -88,9 +126,22 @@ def test_compiler_output_is_byte_deterministic() -> None:
 
 def test_compiler_requires_explicit_profile_name_and_axis() -> None:
     with pytest.raises(ValueError, match="name"):
-        compile_reconstruction_request(research_bundle(), 1130, {"axis": "baseline"}, {})
+        compile_reconstruction_request(
+            research_bundle(), 1130, {"axis": "baseline", "included_decision_ids": []}, {}
+        )
     with pytest.raises(ValueError, match="axis"):
-        compile_reconstruction_request(research_bundle(), 1130, {"name": "bad", "axis": "experimental"}, {})
+        compile_reconstruction_request(
+            research_bundle(), 1130,
+            {"name": "bad", "axis": "experimental", "included_decision_ids": []},
+            {},
+        )
+
+
+def test_compiler_requires_an_explicit_control_point_allowlist() -> None:
+    with pytest.raises(ValueError, match="included_decision_ids is required"):
+        compile_reconstruction_request(
+            research_bundle(), 1130, {"name": "ambiguous", "axis": "baseline"}, {}
+        )
 
 
 def test_generic_compiler_has_no_solver_or_pipeline_import() -> None:

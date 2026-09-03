@@ -58,9 +58,20 @@ def test_reviewed_figure_qa_and_captions_exist() -> None:
     captions = (PUBLIC_CASE / "figures/README.md").read_text()
     assert "boundary hypotheses" in captions
     assert "not evidence" in captions
+    assert "Round-01 v0.2 epistemic state" in captions
 
 
-def test_reviewed_baseline_excludes_disputed_seeds_and_inclusive_keeps_them() -> None:
+def test_current_anchor_figure_source_includes_round_01_admissions() -> None:
+    from historical_geo.figures import _admitted_anchor_decisions
+
+    admitted_names = {
+        decision["parameters"]["name"]
+        for decision in _admitted_anchor_decisions(PUBLIC_CASE)
+    }
+    assert {"Rafaniyya", "Cairo", "Jaffa"} <= admitted_names
+
+
+def test_frozen_v01_baseline_excludes_disputed_seeds_and_inclusive_keeps_them() -> None:
     from historical_geo.adapter import build_solver_input
 
     baseline_1130 = build_solver_input(PUBLIC_CASE, 1130, scenario="reviewed-baseline")

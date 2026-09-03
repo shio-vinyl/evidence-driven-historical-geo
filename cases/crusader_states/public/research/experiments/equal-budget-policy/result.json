@@ -1,0 +1,136 @@
+{
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.search_policy_experiment_result.v0.1",
+  "evaluation_mode": "deterministic_replay_with_constructed_outcomes",
+  "evidence_budget": 3,
+  "initial_evidence_sensitive_cells": 1640,
+  "interpretation": "This result compares policy mechanics under the declared fixture only. It is not evidence that any policy improves real historical research.",
+  "limitations": [
+    "The search-target document and initial evidence-sensitive cell counts come from round 00; every retrieval outcome is constructed.",
+    "Within-slice cell indices and affected or resolved memberships are deterministic fixtures, not observed raster cells.",
+    "Fixed and broad are declared replay orders, not completed live search traces.",
+    "The result validates equal-budget accounting and policy selection only; it cannot establish real-world policy effectiveness."
+  ],
+  "policy_results": [
+    {
+      "metrics": {
+        "gaps_closed_per_retrieval": 0.666667,
+        "new_evidence_affected_grid_cells": 802,
+        "remaining_evidence_sensitive_cells": 1040
+      },
+      "policy_id": "targeted",
+      "retrievals": [
+        {
+          "closed_gap_ids": [
+            "G_1187_CAIRO_PROXY"
+          ],
+          "index": 1,
+          "newly_affected_grid_cells": 501,
+          "newly_resolved_sensitive_cells": 400,
+          "target_id": "TARGET_G_1187_CAIRO_PROXY"
+        },
+        {
+          "closed_gap_ids": [],
+          "index": 2,
+          "newly_affected_grid_cells": 100,
+          "newly_resolved_sensitive_cells": 0,
+          "target_id": "TARGET_G_1130_EDESSA_DATE"
+        },
+        {
+          "closed_gap_ids": [
+            "G_1130_TRIPOLI_INLAND"
+          ],
+          "index": 3,
+          "newly_affected_grid_cells": 201,
+          "newly_resolved_sensitive_cells": 200,
+          "target_id": "TARGET_G_1130_TRIPOLI_INLAND"
+        }
+      ],
+      "selected_target_ids": [
+        "TARGET_G_1187_CAIRO_PROXY",
+        "TARGET_G_1130_EDESSA_DATE",
+        "TARGET_G_1130_TRIPOLI_INLAND"
+      ]
+    },
+    {
+      "metrics": {
+        "gaps_closed_per_retrieval": 0.333333,
+        "new_evidence_affected_grid_cells": 701,
+        "remaining_evidence_sensitive_cells": 1240
+      },
+      "policy_id": "fixed",
+      "retrievals": [
+        {
+          "closed_gap_ids": [],
+          "index": 1,
+          "newly_affected_grid_cells": 100,
+          "newly_resolved_sensitive_cells": 0,
+          "target_id": "TARGET_G_1130_ASCALON_EVIDENCE"
+        },
+        {
+          "closed_gap_ids": [
+            "G_1187_CAIRO_PROXY"
+          ],
+          "index": 2,
+          "newly_affected_grid_cells": 501,
+          "newly_resolved_sensitive_cells": 400,
+          "target_id": "TARGET_G_1187_CAIRO_PROXY"
+        },
+        {
+          "closed_gap_ids": [],
+          "index": 3,
+          "newly_affected_grid_cells": 100,
+          "newly_resolved_sensitive_cells": 0,
+          "target_id": "TARGET_G_1130_EDESSA_DATE"
+        }
+      ],
+      "selected_target_ids": [
+        "TARGET_G_1130_ASCALON_EVIDENCE",
+        "TARGET_G_1187_CAIRO_PROXY",
+        "TARGET_G_1130_EDESSA_DATE"
+      ]
+    },
+    {
+      "metrics": {
+        "gaps_closed_per_retrieval": 0.333333,
+        "new_evidence_affected_grid_cells": 401,
+        "remaining_evidence_sensitive_cells": 1440
+      },
+      "policy_id": "broad",
+      "retrievals": [
+        {
+          "closed_gap_ids": [],
+          "index": 1,
+          "newly_affected_grid_cells": 100,
+          "newly_resolved_sensitive_cells": 0,
+          "target_id": "TARGET_G_1130_EDESSA_DATE"
+        },
+        {
+          "closed_gap_ids": [
+            "G_1130_TRIPOLI_INLAND"
+          ],
+          "index": 2,
+          "newly_affected_grid_cells": 201,
+          "newly_resolved_sensitive_cells": 200,
+          "target_id": "TARGET_G_1130_TRIPOLI_INLAND"
+        },
+        {
+          "closed_gap_ids": [],
+          "index": 3,
+          "newly_affected_grid_cells": 100,
+          "newly_resolved_sensitive_cells": 0,
+          "target_id": "TARGET_G_1130_ASCALON_EVIDENCE"
+        }
+      ],
+      "selected_target_ids": [
+        "TARGET_G_1130_EDESSA_DATE",
+        "TARGET_G_1130_TRIPOLI_INLAND",
+        "TARGET_G_1130_ASCALON_EVIDENCE"
+      ]
+    }
+  ],
+  "provenance": {
+    "experiment_sha256": "a173c398bfe336f076620502277f6140d8fd9825d8fb1794cfa45e34efa8dc19",
+    "search_targets_sha256": "ab84ed317de6a0f7125df74a2aaeedbb349b9fba7078b3aa965a002325b9aba3"
+  }
+}

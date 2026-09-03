@@ -1,0 +1,104 @@
+{
+  "baseline_scenario": "reviewed-baseline",
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.uncertainty_diagnosis.v0.2",
+  "slices": [
+    {
+      "affected_grid_cells": {
+        "evidence": 1,
+        "model": 5823,
+        "total": 5824
+      },
+      "changed_decision_ids": {
+        "all": [
+          "D_1130_ASCALON_SEED",
+          "D_1130_BURID_DAMASCUS_PHASE",
+          "D_1130_COUNTY_OF_EDESSA_PHASE",
+          "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1130_FATIMID_EGYPT_PHASE",
+          "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ],
+        "evidence": [
+          "D_1130_ASCALON_SEED"
+        ],
+        "model": [
+          "D_1130_BURID_DAMASCUS_PHASE",
+          "D_1130_COUNTY_OF_EDESSA_PHASE",
+          "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1130_FATIMID_EGYPT_PHASE",
+          "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ]
+      },
+      "changed_scenarios": {
+        "evidence": [
+          "isolated-D_1130_ASCALON_SEED"
+        ],
+        "model": [
+          "flat-natural",
+          "projection-expansive",
+          "projection-normal"
+        ]
+      },
+      "classification": "mixed",
+      "scenario_effects": {
+        "evidence": [
+          {
+            "affected_grid_cells": 1,
+            "changed_decision_ids": [
+              "D_1130_ASCALON_SEED"
+            ],
+            "scenario": "isolated-D_1130_ASCALON_SEED"
+          },
+          {
+            "affected_grid_cells": 0,
+            "changed_decision_ids": [
+              "D_1130_TORTOSA_SEED"
+            ],
+            "scenario": "isolated-D_1130_TORTOSA_SEED"
+          }
+        ],
+        "model": [
+          {
+            "affected_grid_cells": 196,
+            "changed_decision_ids": [
+              "D_NATURAL_LEBANON_BARRIER",
+              "D_NATURAL_TAURUS_BARRIER"
+            ],
+            "scenario": "flat-natural"
+          },
+          {
+            "affected_grid_cells": 5736,
+            "changed_decision_ids": [
+              "D_1130_BURID_DAMASCUS_PHASE",
+              "D_1130_COUNTY_OF_EDESSA_PHASE",
+              "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1130_FATIMID_EGYPT_PHASE",
+              "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-expansive"
+          },
+          {
+            "affected_grid_cells": 3412,
+            "changed_decision_ids": [
+              "D_1130_BURID_DAMASCUS_PHASE",
+              "D_1130_COUNTY_OF_EDESSA_PHASE",
+              "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1130_FATIMID_EGYPT_PHASE",
+              "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-normal"
+          }
+        ]
+      },
+      "slice": 1130
+    }
+  ]
+}

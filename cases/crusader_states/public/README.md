@@ -21,14 +21,17 @@ It regenerates **1130** and **end-of-year 1187** from paraphrased claims, biblio
 From the repository root:
 
 ```bash
-PYTHONPATH=src python3 -m historical_geo validate-research cases/crusader_states/public
+PYTHONPATH=src python3 -m historical_geo validate cases/crusader_states/public
 PYTHONPATH=src python3 -m historical_geo compile-request cases/crusader_states/public \
   --slice 1130 --scenario reviewed-baseline
+PYTHONPATH=src python3 -m historical_geo run cases/crusader_states/public --slice 1130
 PYTHONPATH=src python3 -m historical_geo research-loop cases/crusader_states/public --slice 1130
 PYTHONPATH=src python3 -m historical_geo research-loop cases/crusader_states/public --slice 1187
 PYTHONPATH=src python3 -m historical_geo figures cases/crusader_states/public
 ```
 
-The figure command rebuilds the evidence, natural-cost, projection, and grid scenarios needed for comparison. Build intermediates remain in the ignored `build/` directory. Reviewed figures and machine-readable QA are in `figures/`.
+`validate`, `compile-request`, and `run` pass through the v0.2 research compiler and the XTENT backend. The frozen v0.1 adapter is reserved for explicit `legacy-*` compatibility commands. The figure command rebuilds the evidence, natural-cost, projection, and grid scenarios needed for comparison. Build intermediates remain in the ignored `build/` directory. Reviewed figures and machine-readable QA are in `figures/`.
+
+`research/experiments/equal-budget-policy/` is a constructed deterministic replay of targeted, fixed, and broad search orders. It uses declared fixture outcomes to check equal-budget selection and accounting only; it does not evaluate real search effectiveness.
 
 See `ATTRIBUTION.md`, `fixture-manifest.json`, and `figures/README.md` for rights, integrity, and interpretation details.

@@ -2,57 +2,41 @@
 
 # Uncertainty Analysis
 
-## Question
+## What is measured
 
-The uncertainty figure measures agreement inside a declared scenario set. It shows which cells keep the same assignment when evidence eligibility or model choices change. It is not a probability map and does not estimate the chance that an entity historically controlled a cell.
+The research loop reports deterministic sensitivity inside a declared scenario set. An affected cell changes assignment when one named intervention is compared with the reviewed baseline. The counts are diagnostics of the present evidence and backend; they are neither probabilities nor estimates of historical territorial area.
 
-## Scenario set
+Two states must be kept separate:
 
-The evidence axis contains three runs:
+- **Round 00** is the epistemic state before targeted evidence acquisition. Its diagnosis decomposes grouped scenarios into atomic evidence interventions.
+- **Round 01** is the state after the Cairo, Edessa, and Tripoli searches, plus the incidental Jaffa cross-check. Its diagnosis reports only unresolved counterfactuals against the updated baseline.
 
-- `verified-only`: only page-verified locality claims;
-- `reviewed-baseline`: KEEP and accepted DOWNGRADE decisions;
-- `inclusive`: the baseline plus disputed Ascalon and Tortosa in 1130, and Cairo and Jaffa in 1187.
+## Round 00: evidence-search priorities
 
-The model axis holds the reviewed evidence constant and varies the solver:
+The atomic Round-00 diagnosis measured the following evidence effects on the common 10 km grid:
 
-- `flat-natural` removes the Mount Lebanon and Taurus costs;
-- `projection-normal` and `projection-expansive` test the two other allowed projection ordinals against the contracted baseline;
-- `grid-5km` and `grid-20km` bracket the 10 km baseline.
+| Slice | Decision intervention | Affected cells |
+|---|---|---:|
+| 1130 | add Ascalon | 1 |
+| 1130 | restore the Edessa seed | 257 |
+| 1130 | add Tortosa | 0 |
+| 1130 | restore the Tripoli seed | 220 |
+| 1187 | add Cairo | 1,162 |
+| 1187 | add Jaffa | 0 |
 
-All eight named scenarios are defined in `scenario-config.json`. Their effective inputs and run manifests are regenerated before the figure is written.
+These marginal effects generated the first search agenda: Cairo, Edessa, and Tripoli ranked above Ascalon; Tortosa and Jaffa were retained in the diagnosis with zero measured marginal effect. Jaffa was nevertheless checked when the Cairo source trail produced directly relevant material.
 
-## Classification
+The stored source of truth is [`rounds/00-initial/uncertainty-diagnosis.json`](../../cases/crusader_states/public/research/rounds/00-initial/uncertainty-diagnosis.json). The older [`uncertainty-zones.png`](../../cases/crusader_states/public/figures/uncertainty-zones.png) and companion JSON are a **frozen Round-00 v0.1 grouped-scenario figure**. Their 1130/1187 percentage summaries remain reproducibility fixtures for that state; they must not be read as Round-01 results or used to rank individual evidence gaps.
 
-All outputs are rasterized to a common 10 km analysis grid. Four classes are reported:
+## Round 01: updated baseline and residual uncertainty
 
-- **stable core**: evidence scenarios and model scenarios are each unanimous on the same non-zero entity;
-- **model-sensitive zone**: evidence scenarios agree, while at least one model variant changes the assignment;
-- **evidence-sensitive zone**: model scenarios agree, while evidence scenarios change the assignment;
-- **unresolved zone**: both groups vary, the two unanimous groups disagree, or assignment exists only on one axis.
+Round 01 changed the admissibility state before running the same XTENT backend. The baseline-to-baseline delta is recorded in [`round-delta.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/round-delta.json).
 
-Cells unassigned by every scenario are reported separately and left uncolored.
+- **1130:** admitting Rafaniyya as an additional Tripoli control point changed **0 cells**. The resulting surface was identical to the Round-00 baseline on the declared grid. The remaining evidence interventions are Ascalon (**1 cell**) and Tortosa (**0 cells**). Model variants still dominate: flat natural costs affect 196 cells, normal reach 3,412, and expansive reach 5,736.
+- **1187:** admitting Cairo and Jaffa changed **1,162 cells**, all from unassigned to Ayyubid Sultanate. The Round-00 atomic attribution assigns all 1,162 cells to Cairo and zero marginal cells to Jaffa. After both decisions entered the baseline, the Round-01 evidence axis has no remaining variant and therefore affects **0 cells**. The residual diagnosis is model-only: flat natural costs affect 196 cells, normal reach 2,838, and expansive reach 5,182.
 
-## Results
+The current machine-readable diagnoses are [`uncertainty-diagnosis-1130.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/uncertainty-diagnosis-1130.json) and [`uncertainty-diagnosis-1187.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/uncertainty-diagnosis-1187.json). No Round-01 categorical uncertainty-zone PNG is claimed; the JSON diagnostics are the current research state.
 
-### 1130
+## Interpretation boundary
 
-The assessed surface contains 13.65% stable core, 81.59% model-sensitive area, 1.31% evidence-sensitive area, and 3.46% unresolved area. Mean within-axis agreement is 0.9841 for the evidence scenarios and 0.7128 for the model scenarios.
-
-The large model-sensitive share is driven mainly by the allowed projection ordinals, especially the expansive run, rather than by the two disputed localities. Evidence sensitivity is concentrated around the Ascalon/Fatimid and Tortosa additions. The Edessa downgrade affects baseline reach through its lower seed weight and remains part of the research judgment.
-
-### 1187
-
-The assessed surface contains 12.98% stable core, 75.44% model-sensitive area, 2.36% evidence-sensitive area, and 9.22% unresolved area. Mean agreement is 0.9614 on the evidence axis and 0.7191 on the model axis.
-
-Cairo adds a large southwestern field in the inclusive run, while Jaffa changes a smaller coastal area. Their interaction with the projection and grid variants creates the larger unresolved share. The stable cores remain close to the reviewed locality anchors; this stability belongs to the current scenario design and carries no probability meaning.
-
-## Reading the figure
-
-`uncertainty-zones.png` uses categorical colors. A green cell means every run in both scenario groups assigned the same entity. Orange and purple identify which axis caused disagreement. Red marks cells where one-axis attribution would be misleading.
-
-The area values use the 10 km analysis grid, so each counted cell contributes 100 km². They are scenario diagnostics, not measured medieval territorial areas.
-
-## Limits and human review
-
-The scenario set is deliberately small and structured. It does not sample every plausible historical interpretation, calibration, natural feature, or date convention. A historian must still decide whether the downgraded and disputed inputs are admissible and whether the projection range is a useful model stress test.
+Zero marginal effect does not make a claim historically unimportant. It means the current grid, backend, baseline, and intervention order produced no changed assignment. Likewise, the 1,162-cell Cairo expansion records backend response to a newly admitted anchor. It does not validate an Ayyubid boundary or establish historical accuracy. The scenario set remains deliberately bounded, and a historian must still judge source admissibility and the plausibility of the modeled reach classes.

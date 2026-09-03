@@ -134,6 +134,22 @@ def diagnosis() -> dict:
                 "classification": "mixed",
                 "affected_grid_cells": {"evidence": 4, "model": 6, "total": 8},
                 "changed_scenarios": {"evidence": ["inclusive"], "model": ["projection-normal"]},
+                "scenario_effects": {
+                    "evidence": [
+                        {
+                            "scenario": "inclusive",
+                            "changed_decision_ids": ["DEC_CONTROL"],
+                            "affected_grid_cells": 4,
+                        }
+                    ],
+                    "model": [
+                        {
+                            "scenario": "projection-normal",
+                            "changed_decision_ids": ["DEC_ASSUMPTION"],
+                            "affected_grid_cells": 6,
+                        }
+                    ],
+                },
                 "changed_decision_ids": {
                     "evidence": ["DEC_CONTROL"],
                     "model": ["DEC_ASSUMPTION"],

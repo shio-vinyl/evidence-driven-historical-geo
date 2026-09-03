@@ -31,18 +31,34 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
   cases/crusader_states/public --slice 1187 --scenario reviewed-baseline
 ```
 
-`run` 依次执行 `validate -> build-inputs -> reconstruct -> audit -> render`。每次运行会在已忽略的案例 `build/` 目录中写入有效求解器输入、边界假设 GeoJSON、运行清单、渲染 QA 和预览图。
+`run` 依次执行 `validate -> 编译 v0.2 认知状态 -> XTENT 后端 -> reconstruct -> audit -> render`。每次运行会在已忽略的案例 `build/` 目录中写入有效求解器输入、边界假设 GeoJSON、运行清单、渲染 QA 和预览图。`validate`、`compile-request`、`reconstruct` 与 `run` 都经过这条 v0.2 路径。
 
 ## 重建情景集合
 
-登记的情景为 `verified-only`、`reviewed-baseline`、`inclusive`、`flat-natural`、`projection-normal`、`projection-expansive`、`grid-5km` 和 `grid-20km`。单个情景的命令如下：
+登记的 v0.2 情景为 `verified-only`、`reviewed-baseline`、`inclusive`、`flat-natural`、`projection-normal` 和 `projection-expansive`。单个情景的命令如下：
 
 ```bash
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
   cases/crusader_states/public --slice 1130 --scenario verified-only
 ```
 
-对两个切片和上述每个名称重复运行。10 km 审查后基线提供共同分析格网；5 km 与 20 km 只检查格网敏感性，不改变历史证据。
+对两个切片和上述每个名称重复运行。10 km 审查后基线提供共同分析格网；历史上的 5 km 与 20 km 格网检查保留在冻结的图件回归路径中，不再充当默认研究命令。
+
+## 运行诊断并查看研究轮次
+
+```bash
+MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo research-loop \
+  cases/crusader_states/public --slice 1130
+```
+
+该命令会推导单决策证据反事实，把临时诊断和搜索目标写入 `build/research-loop/`，不会覆盖已审查轮次。`research/rounds/00-initial/` 包含冻结的 bundle、情景快照与检索前议程；`research/rounds/01-evidence-update/` 保存已完成的状态变化和重新计算的诊断。轮次增量中的规范化哈希可解析到对应的前后状态。
+
+`research/experiments/equal-budget-policy/` 在同一检索预算下回放 targeted、fixed 与 broad 三种策略顺序。该实验的全部检索结果都是显式声明的构造 fixture；其结果只核验策略机制，不代表真实检索效能。
+
+```bash
+.venv/bin/historical-geo policy-experiment \
+  cases/crusader_states/public/research/experiments/equal-budget-policy/experiment.json
+```
 
 ## 重新生成图件与指标
 
@@ -70,7 +86,7 @@ PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=.cache/matplotlib \
   .venv/bin/pytest -p no:cacheprovider
 ```
 
-当前预期结果：**68 passed**。
+命令必须以零失败结束。
 
 ## 核验输出
 
@@ -81,11 +97,11 @@ PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=.cache/matplotlib \
 ## 合成冒烟案例
 
 ```bash
-MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
+MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo legacy-run \
   cases/crusader_states/fixtures/synthetic_smoke --slice 1130
 ```
 
-该案例在不使用历史或第三方数据的条件下检查软件行为。已接受点种子和标为假设的 phase 进入分配；事件与路线观察不会进入求解器。
+该案例用于检查冻结的 v0.1 兼容行为，不使用历史或第三方数据。已接受点种子和标为假设的 phase 进入分配；事件与路线观察不会进入求解器。
 
 ## 复现边界
 

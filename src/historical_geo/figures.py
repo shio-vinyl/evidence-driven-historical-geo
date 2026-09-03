@@ -12,8 +12,8 @@ from shapely.geometry import LineString,box,shape
 from shapely.ops import transform as transform_geometry
 from pyproj import Transformer
 from historical_geo.attractors import _lines,align_shared_boundary
-from historical_geo.pipeline import reconstruct
 from historical_geo.render import COLORS
+from historical_geo.research_case import reconstruct_research_case
 
 def _read(path:Path)->dict[str,Any]: return json.loads(path.read_text())
 def _geoms(path:Path)->dict[str,Any]:
@@ -35,9 +35,12 @@ def _entity_colors(names): return {n:COLORS[i%len(COLORS)] for i,n in enumerate(
 def _natural(case):
  d=_read(case/"natural-features.geojson"); return {f["properties"]["feature_id"]:shape(f["geometry"]) for f in d["features"]}
 def _land(case): return shape(_read(case/"land.geojson")["features"][0]["geometry"])
+def _admitted_anchor_decisions(case):
+ bundle=_read(case/"research-bundle.json")
+ return [d for d in bundle["model_decisions"] if d["role"]=="control_point" and d["review_status"]=="admitted"]
 
 def _anchors(case,out,bbox):
- lineage=_read(case/"lineage.json"); decisions=[d for d in lineage["model_decisions"] if d["model_role"]=="seed" and d["status"]=="accepted"]
+ decisions=_admitted_anchor_decisions(case)
  colors=_entity_colors({d["parameters"]["entity"] for d in decisions}); land=_land(case); natural=_natural(case)
  fig,axs=plt.subplots(1,2,figsize=(12,7),dpi=160,sharex=True,sharey=True)
  for ax,sl in zip(axs,(1130,1187)):
@@ -114,11 +117,12 @@ def _attractors(case,out,bbox):
 
 def build_case_figures(case_dir:Path)->Path:
  case=case_dir.resolve(); out=case/"figures"; out.mkdir(parents=True,exist_ok=True); bbox=_read(case/"case.json")["grid"]["bbox"]
- for sl in (1130,1187):
-  reconstruct(case,sl,scenario="reviewed-baseline"); reconstruct(case,sl,scenario="flat-natural")
- paths=[_anchors(case,out,bbox),_recon(case,out,bbox)]; ab,abr=_ablation(case,out,bbox); at,atr=_attractors(case,out,bbox); paths += [ab,at]
  from historical_geo.evaluation import build_research_evaluation
- paths += build_research_evaluation(case)
+ frozen_evaluation_paths=build_research_evaluation(case)
+ for sl in (1130,1187):
+  reconstruct_research_case(case,sl,scenario="reviewed-baseline"); reconstruct_research_case(case,sl,scenario="flat-natural")
+ paths=[_anchors(case,out,bbox),_recon(case,out,bbox)]; ab,abr=_ablation(case,out,bbox); at,atr=_attractors(case,out,bbox); paths += [ab,at]
+ paths += frozen_evaluation_paths
  qa={"figures":[_qa(p) for p in paths],"all_nonblank":all(_qa(p)["nonblank"] for p in paths),"natural_ablation_report":"natural-ablation.json","attractor_report":"boundary-attractor-diagnostics.json","reference_comparison_report":"reference-comparison.json","uncertainty_report":"uncertainty-zones.json"}
  (out/"figure-qa.json").write_text(json.dumps(qa,indent=2,sort_keys=True)+"\n")
  return out

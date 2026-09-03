@@ -18,8 +18,7 @@ RESEARCH_BUNDLE_VERSION = "historical_geo.research_bundle.v0.2"
 UNCERTAINTY_DIAGNOSIS_VERSION = "historical_geo.uncertainty_diagnosis.v0.2"
 SEARCH_TARGETS_VERSION = "historical_geo.search_targets.v0.2"
 
-ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_DIR = ROOT / "schemas"
+SCHEMA_DIR = Path(__file__).resolve().parent / "schemas"
 RESEARCH_BUNDLE_SCHEMA = SCHEMA_DIR / "research-bundle.schema.json"
 UNCERTAINTY_DIAGNOSIS_SCHEMA = SCHEMA_DIR / "uncertainty-diagnosis.schema.json"
 SEARCH_TARGETS_SCHEMA = SCHEMA_DIR / "search-targets.schema.json"
@@ -293,6 +292,17 @@ def validate_uncertainty_diagnosis(
                             f"slices[{index}].changed_decision_ids.{axis}",
                             decision_id,
                         )
+            for axis, effects in slice_result.get("scenario_effects", {}).items():
+                for effect_index, effect in enumerate(effects):
+                    for decision_id in effect.get("changed_decision_ids", []):
+                        if decision_id not in decisions:
+                            _issue(
+                                result,
+                                "missing_decision",
+                                f"slices[{index}].scenario_effects.{axis}[{effect_index}]"
+                                ".changed_decision_ids",
+                                decision_id,
+                            )
     return result
 
 

@@ -64,7 +64,19 @@ def compile_case_request(
     validation = validate_research_bundle(bundle)
     validation.require_ok()
     profile = scenario_profile(case_dir, slice_value, scenario)
-    return compile_reconstruction_request(bundle, slice_value, profile, case["grid"])
+    return _compile_profile(bundle, case["grid"], slice_value, profile)
+
+
+def _compile_profile(
+    bundle: Mapping[str, Any], grid: Mapping[str, Any], slice_value: int | str, profile: Mapping[str, Any]
+) -> dict[str, Any]:
+    """Compile an already flattened scenario profile.
+
+    This deliberately remains private: public callers select a checked-in
+    scenario by name, while the research loop may derive isolated diagnostic
+    counterfactuals from that manifest.
+    """
+    return compile_reconstruction_request(bundle, slice_value, profile, grid)
 
 
 def reconstruct_research_case(
@@ -76,30 +88,100 @@ def reconstruct_research_case(
     return reconstruct_solver_input(case_dir, solver_input)
 
 
+def _reconstruct_profile(
+    case_dir: Path, bundle: Mapping[str, Any], grid: Mapping[str, Any], slice_value: int | str,
+    profile: Mapping[str, Any],
+) -> Path:
+    request = _compile_profile(bundle, grid, slice_value, profile)
+    return reconstruct_solver_input(case_dir, compile_xtent_solver_input(request))
+
+
+def _isolated_evidence_profiles(
+    case_dir: Path, slice_value: int | str, raw: Mapping[str, Any]
+) -> dict[str, dict[str, Any]]:
+    """Expand each grouped evidence variant into single-decision interventions.
+
+    A grouped ``inclusive`` or ``verified-only`` scenario is useful for a
+    reconstruction comparison, but it cannot establish the marginal spatial
+    effect of each of its decisions.  The loop therefore derives a separate
+    profile for every changed evidence decision, relative to the same baseline.
+    """
+    baseline_name = raw.get("baseline")
+    if not isinstance(baseline_name, str) or not baseline_name:
+        raise ValueError("research scenarios must declare a baseline")
+    baseline = scenario_profile(case_dir, slice_value, baseline_name)
+    baseline_included = set(baseline.get("included_decision_ids", []))
+    baseline_excluded = set(baseline.get("excluded_decision_ids", []))
+    profiles: dict[str, dict[str, Any]] = {}
+
+    for scenario_name, definition in raw.get("scenarios", {}).items():
+        if not isinstance(definition, Mapping) or definition.get("axis") != "evidence":
+            continue
+        grouped = scenario_profile(case_dir, slice_value, scenario_name)
+        changed = grouped.get("changed_decision_ids", [])
+        if not isinstance(changed, list) or not all(isinstance(value, str) and value for value in changed):
+            raise ValueError(f"evidence scenario {scenario_name!r} needs changed_decision_ids for isolation")
+        # A scenario may legitimately coincide with the new baseline after a
+        # reviewed round closes its former evidence gaps.  It supplies no
+        # counterfactual for this slice and must not manufacture one.
+        if not changed:
+            continue
+        grouped_included = set(grouped.get("included_decision_ids", []))
+        grouped_excluded = set(grouped.get("excluded_decision_ids", []))
+
+        for decision_id in changed:
+            name = f"isolated-{decision_id}"
+            if name in profiles:
+                raise ValueError(f"decision {decision_id!r} appears in more than one evidence scenario")
+            if decision_id in grouped_excluded and decision_id not in baseline_excluded:
+                included = baseline_included - {decision_id}
+                excluded = baseline_excluded | {decision_id}
+            elif decision_id in grouped_included and decision_id not in baseline_included:
+                included = baseline_included | {decision_id}
+                excluded = baseline_excluded
+            else:
+                raise ValueError(
+                    f"cannot derive isolated intervention for {decision_id!r} from evidence scenario "
+                    f"{scenario_name!r}"
+                )
+            profiles[name] = {
+                "name": name,
+                "axis": "evidence",
+                "description": f"Isolated counterfactual for {decision_id} from {scenario_name}.",
+                "changed_decision_ids": [decision_id],
+                "included_decision_ids": sorted(included),
+                "excluded_decision_ids": sorted(excluded),
+            }
+    return profiles
+
+
 def _diagnostic_config(case_dir: Path, slice_value: int | str) -> dict[str, Any]:
     raw = load_json(case_dir.resolve() / RESEARCH_SCENARIOS_FILE)
     baseline = raw.get("baseline")
     scenarios: dict[str, Any] = {}
     for name in raw.get("scenarios", {}):
         profile = scenario_profile(case_dir, slice_value, name)
-        if name != baseline and not profile.get("changed_decision_ids"):
+        if name != baseline and (profile.get("axis") == "evidence" or not profile.get("changed_decision_ids")):
             continue
         scenarios[name] = profile
+    scenarios.update(_isolated_evidence_profiles(case_dir, slice_value, raw))
     return {"baseline": baseline, "scenarios": scenarios}
 
 
 def _assignment_arrays(
-    case_dir: Path, slice_value: int | str, scenario_names: list[str]
+    case_dir: Path, slice_value: int | str, scenario_profiles: Mapping[str, Mapping[str, Any]]
 ) -> dict[str, np.ndarray]:
     case_dir = case_dir.resolve()
-    grid_config = load_case(case_dir)["grid"]
+    case = load_case(case_dir)
+    grid_config = case["grid"]
+    bundle = load_json(case_dir / RESEARCH_BUNDLE_FILE)
     analysis_grid = xtent.build_grid(
         tuple(grid_config["bbox"]), float(grid_config["resolution"]), str(grid_config["crs"])
     )
     surfaces: dict[str, list[dict[str, Any]]] = {}
     entities: set[str] = set()
-    for scenario in scenario_names:
-        run = reconstruct_research_case(case_dir, slice_value, scenario)
+    for scenario, profile in scenario_profiles.items():
+        run = _reconstruct_profile(case_dir, bundle, grid_config, slice_value, profile)
         features = _read_feature_collection(run / "boundary-hypotheses.geojson")
         surfaces[scenario] = features
         entities.update(str(feature["properties"]["entity"]) for feature in features)
@@ -130,7 +212,7 @@ def run_research_loop(case_dir: Path, slice_value: int | str) -> tuple[Path, Pat
     validation = validate_research_bundle(bundle)
     validation.require_ok()
     config = _diagnostic_config(case_dir, slice_value)
-    arrays = _assignment_arrays(case_dir, slice_value, list(config["scenarios"]))
+    arrays = _assignment_arrays(case_dir, slice_value, config["scenarios"])
     diagnosis, targets = build_diagnosis_documents(
         bundle["case_id"], config, {slice_value: arrays}, bundle["evidence_gaps"]
     )

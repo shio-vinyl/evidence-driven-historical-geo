@@ -43,13 +43,13 @@ Agent 的操作顺序可以概括为：**证据检索 → 结构化主张 → �
   -> 排序后的证据搜索目标
 ```
 
-命令链为：
+默认命令链为：
 
 ```text
-validate-research -> compile-request -> research-run -> research-loop
+validate -> compile-request -> reconstruct/run -> research-loop
 ```
 
-`historical-geo run` 对一个切片执行同一条命令链；`historical-geo figures` 进一步生成基线、消融运行和审查图件。
+`validate`、`compile-request`、`reconstruct` 与 `run` 会先编译 v0.2 认知状态，再跨越 XTENT 后端边界。哈希冻结的 v0.1 adapter 只通过明确的 `legacy-*` 命令服务回归 fixture。`historical-geo figures` 保留基线和消融图件检查。
 
 ## 核心数据模型
 
@@ -77,6 +77,8 @@ v0.2 JSON 契约位于 `schemas/`。除 JSON Schema 结构验证外，`historica
 - 通行约束；
 - 明确排除项；
 - 仅用于展示的上下文。
+
+每个情景都带有显式控制点 allowlist；空列表表示不选择任何控制点，不会回退为全部 admitted 点。已纳入的空间或通行假设继续生效，除非情景明确排除。
 
 XTENT 后端把其中受支持的角色翻译为种子、阶段和摩擦要素。其他空间推断后端可以通过自己的翻译器消费同一份认知状态。
 

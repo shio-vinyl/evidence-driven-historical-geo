@@ -3,25 +3,25 @@
   "attractor_report": "boundary-attractor-diagnostics.json",
   "figures": [
     {
-      "bytes": 141700,
+      "bytes": 146368,
       "nonblank": true,
       "path": "evidence-anchors.png",
-      "sha256": "f83dd9464384ca83176ff7ba972eaadf6392c7d86ec09b37b39c9d3d201d047d",
-      "unique_colors": 1604
+      "sha256": "c2df3485008b4b21e2bbaad2c6bb1e360562bd1a728071bed72975c187c5829c",
+      "unique_colors": 1617
     },
     {
-      "bytes": 153510,
+      "bytes": 157282,
       "nonblank": true,
       "path": "reconstruction-slices.png",
-      "sha256": "d69d2850d703019d7c2dded5f081f415213e8d3d67bdfaab2c1ee154ebcf91be",
-      "unique_colors": 5781
+      "sha256": "28377a765d6c9ca7416ae347497c10619491417a19c0c5057aa09886e9e50e03",
+      "unique_colors": 6348
     },
     {
-      "bytes": 173280,
+      "bytes": 183743,
       "nonblank": true,
       "path": "natural-ablation.png",
-      "sha256": "772b1bb1991167bd81b1c0481c711c9547614e3701e6a25223ccad1815a1a396",
-      "unique_colors": 5621
+      "sha256": "6b78174461686d24a1299a09510133980aa60a0ad1dde6b7e54405d217a6944a",
+      "unique_colors": 5803
     },
     {
       "bytes": 89790,
@@ -31,17 +31,17 @@
       "unique_colors": 1157
     },
     {
-      "bytes": 65540,
+      "bytes": 66280,
       "nonblank": true,
       "path": "reference-comparison.png",
-      "sha256": "7772d5b1edb7dacf844fdf0dfbad153c868fb702c5c0947cffd07e53e1d01962",
+      "sha256": "82a428995f8799538e3a25a554d9151d05fd926f968e7b6d16867e6f02fd946f",
       "unique_colors": 261
     },
     {
-      "bytes": 120297,
+      "bytes": 119821,
       "nonblank": true,
       "path": "uncertainty-zones.png",
-      "sha256": "492d69b2d3207ae9a54b4759d561ed35a5fb743776e25ff4dee5e1fd0340b9b7",
+      "sha256": "fe1bd0d4f7b3fa4ad83c93e5c45307d9149bf72758181a5e2746eebf30626c85",
       "unique_colors": 3982
     }
   ],

@@ -31,18 +31,34 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
   cases/crusader_states/public --slice 1187 --scenario reviewed-baseline
 ```
 
-`run` executes `validate -> build-inputs -> reconstruct -> audit -> render`. Each run writes the effective solver input, boundary-hypothesis GeoJSON, manifest, render QA, and preview below the ignored case `build/` directory.
+`run` executes `validate -> compile v0.2 epistemic state -> XTENT backend -> reconstruct -> audit -> render`. Each run writes the effective solver input, boundary-hypothesis GeoJSON, manifest, render QA, and preview below the ignored case `build/` directory. `validate`, `compile-request`, `reconstruct`, and `run` all use this v0.2 path.
 
 ## Rebuild the scenario set
 
-The declared scenarios are `verified-only`, `reviewed-baseline`, `inclusive`, `flat-natural`, `projection-normal`, `projection-expansive`, `grid-5km`, and `grid-20km`. Run any one with:
+The declared v0.2 scenarios are `verified-only`, `reviewed-baseline`, `inclusive`, `flat-natural`, `projection-normal`, and `projection-expansive`. Run any one with:
 
 ```bash
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
   cases/crusader_states/public --slice 1130 --scenario verified-only
 ```
 
-Repeat for both slices and each name above. The 10 km reviewed baseline supplies the common comparison grid. The 5 km and 20 km cases test grid sensitivity without changing historical evidence.
+Repeat for both slices and each name above. The 10 km reviewed baseline supplies the common comparison grid. The historical 5 km and 20 km grid checks remain in the frozen figure-regression path, so they do not become default research commands.
+
+## Run a diagnosis and inspect research rounds
+
+```bash
+MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo research-loop \
+  cases/crusader_states/public --slice 1130
+```
+
+The command derives single-decision evidence counterfactuals, writes transient diagnosis and target documents under `build/research-loop/`, and never overwrites a reviewed round. `research/rounds/00-initial/` includes frozen bundle and scenario snapshots plus the pre-search agenda; `research/rounds/01-evidence-update/` records a completed state change and recomputed diagnoses. Canonical hashes in the round delta resolve to those before/after states.
+
+`research/experiments/equal-budget-policy/` replays targeted, fixed, and broad policy orders at the same retrieval budget. Every retrieval outcome in that experiment is a declared constructed fixture; the result validates policy mechanics, not real search effectiveness.
+
+```bash
+.venv/bin/historical-geo policy-experiment \
+  cases/crusader_states/public/research/experiments/equal-budget-policy/experiment.json
+```
 
 ## Regenerate figures and metrics
 
@@ -70,7 +86,7 @@ PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=.cache/matplotlib \
   .venv/bin/pytest -p no:cacheprovider
 ```
 
-Current expected result: **68 passed**.
+The command must finish with no failures.
 
 ## Verify outputs
 
@@ -80,12 +96,14 @@ For every slice and scenario, the audit must report valid geometry, all expected
 
 ## Synthetic smoke fixture
 
+This fixture checks the frozen v0.1 compatibility behavior without historical or third-party data. Run it explicitly with:
+
 ```bash
-MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
+MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo legacy-run \
   cases/crusader_states/fixtures/synthetic_smoke --slice 1130
 ```
 
-This fixture checks software behavior without historical or third-party data. Accepted point seeds and assumption-labeled phases enter allocation; event and route observations stay outside solver inputs.
+Accepted point seeds and assumption-labeled phases enter allocation; event and route observations stay outside solver inputs.
 
 ## Reproducibility boundary
 

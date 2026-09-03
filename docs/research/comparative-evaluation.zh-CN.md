@@ -2,51 +2,37 @@
 
 # 外部地图比较
 
-## 目的
+## 范围与评估状态
 
-这次比较只回答一个问题：reviewed-baseline 与已出版人工地图在哪些地方一致、缺项或分歧。参考地图是外部解释，不是 ground truth；下文计数也不是历史准确率。
+登记的人工历史地图只用于评估，它们不构成 ground truth；下文分类计数也不代表历史准确率。仓库不保存地图集扫描页或沿参考图描出的边界。[`reference-map-register.json`](../../cases/crusader_states/public/reference-map-register.json) 记录书目信息、权利、时间匹配与人工摘录的分类观察；[`reference-comparison.png`](../../cases/crusader_states/public/figures/reference-comparison.png) 是项目原创汇总图。
 
-公开仓库不保存地图集扫描页，也不保存沿参考图描出的边界。`reference-map-register.json` 记录书目信息、权利、既往使用、时间匹配和人工摘录的分类观察；`reference-comparison.png` 是本项目原创汇总图。
+当前入库的图件及配套 JSON 属于**通过 v0.1 兼容路径生成的冻结 Round-00 评估**，描述第一轮定向取证之前的 reviewed baseline。Round 01 搜索证据时没有查阅历史疆域地图；[`source-checks.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/source-checks.json) 明确记录了这一限制。项目没有声称得到 Round-01 的新版 held-out 比较计数。
 
-## 参考地图登记
+## 登记的参考资料
 
-本轮审查了四项材料。
+冻结比较审查了四项资料。
 
-- Andrew D. Buck，*The Principality of Antioch and its Frontiers in the Twelfth Century*（Boydell Press，2017），Map 2 “Northern Syria and Cilicia, 1130”，p. 23。这是找到的唯一覆盖部分 1130 切片、年份完全一致的学术地图。出版社合法预览只显示图名和页码，没有开放地图正文，因此未提取分类断言或几何。
-- William R. Shepherd，*Historical Atlas*（1926 年版），“Asia Minor and the States of the Crusaders in Syria, about 1140”，p. 68。该图属于公有领域，覆盖区域格局，但比目标年份晚十年。
-- Shepherd，*Historical Atlas*（1911），“Europe and the Mediterranean Lands about 1190”，pp. 70–71。该图属于公有领域，适合检查实体是否仍被表达；比例尺过小、年代偏晚，不适合评价 1187 年末的城市和边界。
-- W. & A. K. Johnston / Reginald Lane Poole，“Syria Showing Saladin’s Conquests 1187–1190”，收录于 *Historical Atlas of Modern Europe*（1902）。这幅公有领域战役图区分 1187、1188、较晚失守的堡垒和 1192 年基督教边界。
+- Andrew D. Buck，*The Principality of Antioch and its Frontiers in the Twelfth Century*（Boydell Press，2017），Map 2 “Northern Syria and Cilicia, 1130”，p. 23。出版社合法预览只确认图名与页码，没有开放地图正文，因此未提取断言或几何。
+- William R. Shepherd，*Historical Atlas*（1926 年版），“Asia Minor and the States of the Crusaders in Syria, about 1140”，p. 68。该公有领域图覆盖区域格局，时间比目标切片晚十年。
+- Shepherd，*Historical Atlas*（1911），“Europe and the Mediterranean Lands about 1190”，pp. 70–71。该公有领域图可用于区域尺度的实体存在检查，比例尺和年代均不支持 1187 年末边界评价。
+- W. & A. K. Johnston / Reginald Lane Poole，“Syria Showing Saladin’s Conquests 1187–1190”，收录于 *Historical Atlas of Modern Europe*（1902）。该公有领域战役图区分 1187、1188、较晚失守的堡垒与 1192 年基督教边界。
 
-## 独立性与权利
+Shepherd 与 Johnston 属于不同制图谱系。两者在公开项目组装前已被只读登记，因此比较并非盲评；该审计没有产生 seed、polygon、模型参数或历史 claim。Buck 同时出现在文字来源中，但无法访问的地图正文没有贡献任何提取断言。
 
-Shepherd 与 Johnston 属于不同制图谱系。两者都曾在公开项目组装前的只读审计中登记，因此这次比较不是盲评。此前审计没有从地图生成种子、多边形、模型参数或历史主张，故可作为无参数循环的外部比较材料。
+## Round-00 分类结果
 
-Buck 的 1130 地图与当前证据集部分独立，但 Buck 同时也是文字来源。出版社合法预览无法访问受版权保护的地图正文。register 直接记录这一权利与访问阻碍，没有从非授权副本恢复页面。
+日期保持原样。1130 重建只把约 1140 年地图当作邻近年份代理；1187 年末与约 1190 年地图及 1187—1190 战役序列比较时，没有把第三次十字军期间的后续状态倒推回目标切片。城市控制、实体存在、邻接和海岸地点顺序分别记录；概化填色与战役分期颜色没有被转换为边界线。
 
-## 比较前统一规则
+**1130 年**的 Shepherd 图表达 17 项可比较的城市、实体与邻接断言，其中 12 项匹配 Round-00 reviewed baseline。5 项参考资料独有内容包括 Fatimid Egypt、Ascalon 与 Tortosa，以及两项涉及缺失 Fatimid 表面或 Jerusalem–Tripoli 接触关系的邻接。代理图存在时间错位与明显概化，因此没有计算线距离或重叠率。
 
-日期按原样保留。1130 模型与约 1140 年地图只能作邻近年份比较；1187 年末与约 1190 年地图、1187—1190 战役序列比较时，也没有把第三次十字军期间的后续状态倒推回 1187 年末。
+**1187 年末**的约 1190 年 Shepherd 图表达 4 项可比较实体存在断言，全部匹配 Round-00 基线。Johnston 战役图表达 14 项可比较城市与实体断言，其中 13 项匹配，Jaffa 是唯一 reference-only 项。Round 00 当时已核查的文字材料尚不足以让 Jaffa 成为准入的点控制输入。
 
-实体只在等价关系明确时统一名称，例如将 “Empire of Saladin” 对应为 “Ayyubid Sultanate”。城市控制、实体存在、邻接和海岸地点顺序分别记录。概化填色、荒漠边缘和战役分期色块没有被转换为边界线。
+## Round-01 状态
 
-## 分类比较结果
+Round 01 改变了冻结比较的适用范围。文字核查关闭 Jaffa 缺口，并准入 `D_1187_JAFFA_SEED`；它的单项空间效应仍为零格网。Cairo 同期获准进入基线并解释全部 1,162 个变化格网，Jaffa 没有贡献变化格网。因此，旧的“13/14，Jaffa 为 reference-only”只是一项 Round-00 历史结果，不能作为当前性能数字。
 
-### 1130 年
-
-Shepherd 地图表达了 17 项可比较的城市、实体和邻接断言，其中 12 项与 reviewed-baseline 一致。5 项参考资料独有内容包括：保留 Fatimid Egypt、阿斯卡隆与托尔托萨两个城市点，以及两项涉及已移除 Fatimid 表面或 Jerusalem–Tripoli 接触关系的邻接。
-
-分歧位置很明确。耶路撒冷、大马士革、的黎波里、安条克和埃德萨构成共同核心；阿斯卡隆与托尔托萨只进入 inclusive 情景，可以查看它们的模型影响而不污染基线。由于约 1140 年填色存在时间错位和明显概化，本轮没有计算线距离或重叠率。
-
-### 1187 年末
-
-约 1190 年 Shepherd 地图表达 4 项可比较的实体存在断言，reviewed-baseline 全部保留。Johnston 战役图表达 14 项可比较的城市与实体断言，其中 13 项一致。唯一的参考资料独有城市是 Jaffa：Johnston 把它放入 1187 年征服序列，现有文字页级审查仍无法支持海岸分组中的 Jaffa 成员。
-
-这项分歧表示证据张力，不是模型错误分数。Jaffa 不进入基线，只进入 inclusive 情景。提尔、的黎波里、安条克和阿尤布王朝的大尺度格局，是多图之间较稳定的共同点。
+1130 基线新增 Rafaniyya；登记的参考断言未涉及该地点，且其加入改变零格网。“12/17”没有被重新计算，也没有被提升为 Round-01 分数。当前证据与空间状态应以 [`round-delta.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/round-delta.json) 和 Round-01 diagnosis 文件为准。
 
 ## 解释边界
 
-register 只记录地图明确表达的内容和沉默处，不推断未绘出的边界，不把旧地图集填色当作直接观察，也不把多图平均成所谓共识边界。比较发生在基线证据决策之后，没有据此调整任何模型参数。
-
-## 人工审查边界
-
-仍需历史学者判断：用 1140 年地图比较 1130 年是否可接受，Johnston 的战役分类能否支持 Jaffa 点级解释，以及能否在合法访问条件下审查 Buck 的精确年份地图。这些问题会影响学术接受，当前代码无法自行裁决。
+register 只记录参考资料明确表达的内容与沉默处，不推断未绘出的边界，不把旧地图集填色转成直接观察，也不把多图平均成共识边界。冻结比较没有驱动模型调参。历史学者仍需判断 1140 代理对 1130 是否可接受、Johnston 战役分类应如何解释，以及能否合法查阅 Buck 的精确年份地图。

@@ -1,0 +1,128 @@
+{
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.search_policy_experiment.v0.1",
+  "evaluation_mode": "deterministic_replay_with_constructed_outcomes",
+  "evidence_budget": 3,
+  "fixture_outcomes": [
+    {
+      "affected_cell_ranges": [
+        {
+          "end_exclusive": 501,
+          "slice": 1187,
+          "start": 0
+        }
+      ],
+      "closed_gap_ids": [
+        "G_1187_CAIRO_PROXY"
+      ],
+      "fixture_note": "Constructed positive outcome used only to exercise the replay accounting.",
+      "outcome_kind": "constructed_fixture",
+      "resolved_sensitive_cell_ranges": [
+        {
+          "end_exclusive": 400,
+          "slice": 1187,
+          "start": 0
+        }
+      ],
+      "target_id": "TARGET_G_1187_CAIRO_PROXY"
+    },
+    {
+      "affected_cell_ranges": [
+        {
+          "end_exclusive": 100,
+          "slice": 1130,
+          "start": 0
+        }
+      ],
+      "closed_gap_ids": [],
+      "fixture_note": "Constructed inconclusive outcome: the hypothesis changes locally but the temporal gap remains open.",
+      "outcome_kind": "constructed_fixture",
+      "resolved_sensitive_cell_ranges": [],
+      "target_id": "TARGET_G_1130_EDESSA_DATE"
+    },
+    {
+      "affected_cell_ranges": [
+        {
+          "end_exclusive": 301,
+          "slice": 1130,
+          "start": 0
+        }
+      ],
+      "closed_gap_ids": [
+        "G_1130_TRIPOLI_INLAND"
+      ],
+      "fixture_note": "Constructed positive outcome used only to exercise the replay accounting.",
+      "outcome_kind": "constructed_fixture",
+      "resolved_sensitive_cell_ranges": [
+        {
+          "end_exclusive": 200,
+          "slice": 1130,
+          "start": 0
+        }
+      ],
+      "target_id": "TARGET_G_1130_TRIPOLI_INLAND"
+    },
+    {
+      "affected_cell_ranges": [
+        {
+          "end_exclusive": 401,
+          "slice": 1130,
+          "start": 301
+        }
+      ],
+      "closed_gap_ids": [],
+      "fixture_note": "Constructed inconclusive outcome with no resolved sensitive cells.",
+      "outcome_kind": "constructed_fixture",
+      "resolved_sensitive_cell_ranges": [],
+      "target_id": "TARGET_G_1130_ASCALON_EVIDENCE"
+    }
+  ],
+  "initial_evidence_sensitive_cell_ranges": [
+    {
+      "end_exclusive": 478,
+      "slice": 1130,
+      "start": 0
+    },
+    {
+      "end_exclusive": 1162,
+      "slice": 1187,
+      "start": 0
+    }
+  ],
+  "limitations": [
+    "The search-target document and initial evidence-sensitive cell counts come from round 00; every retrieval outcome is constructed.",
+    "Within-slice cell indices and affected or resolved memberships are deterministic fixtures, not observed raster cells.",
+    "Fixed and broad are declared replay orders, not completed live search traces.",
+    "The result validates equal-budget accounting and policy selection only; it cannot establish real-world policy effectiveness."
+  ],
+  "policies": [
+    {
+      "policy_id": "targeted",
+      "selection": "descending_spatial_priority",
+      "selection_rationale": "Use the affected-grid-cell priority already present in the real round-00 search-target document."
+    },
+    {
+      "policy_id": "fixed",
+      "selection": "declared_order_without_spatial_feedback",
+      "selection_rationale": "Replay a stable locality-register order with no ranking update from spatial impact.",
+      "target_order": [
+        "TARGET_G_1130_ASCALON_EVIDENCE",
+        "TARGET_G_1187_CAIRO_PROXY",
+        "TARGET_G_1130_EDESSA_DATE",
+        "TARGET_G_1130_TRIPOLI_INLAND"
+      ]
+    },
+    {
+      "policy_id": "broad",
+      "selection": "declared_order_without_spatial_feedback",
+      "selection_rationale": "Replay a coarse polity-and-campaign reading order from northern 1130 narratives toward southern 1187 material; do not inspect spatial priority.",
+      "target_order": [
+        "TARGET_G_1130_EDESSA_DATE",
+        "TARGET_G_1130_TRIPOLI_INLAND",
+        "TARGET_G_1130_ASCALON_EVIDENCE",
+        "TARGET_G_1187_CAIRO_PROXY"
+      ]
+    }
+  ],
+  "search_targets_path": "../../rounds/00-initial/search-targets.json"
+}

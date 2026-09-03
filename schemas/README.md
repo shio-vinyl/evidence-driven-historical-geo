@@ -17,3 +17,5 @@ The frozen v0.1 compatibility contract remains intentionally small:
 - `output-feature.schema.json` defines the lineage and uncertainty properties carried by each boundary hypothesis.
 
 JSON Schema validates structure. `historical_geo.contracts.validate_lineage_bundle` adds referential and semantic checks that JSON Schema alone cannot express, including allocation/display separation, evidence requirements, natural-feature authorization, unknown-coordinate rejection, and bounded ordinal enforcement.
+
+The same files are shipped as `historical_geo/schemas` package data so an installed wheel retains every validation path. A repository test requires the public and packaged copies to remain byte-identical.

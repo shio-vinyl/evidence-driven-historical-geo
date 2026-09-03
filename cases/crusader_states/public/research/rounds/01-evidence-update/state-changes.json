@@ -1,0 +1,152 @@
+{
+  "contract_version": "historical_geo.research_round_state_changes.v0.1",
+  "round_id": "01-evidence-update",
+  "case_id": "crusader-states-public-case",
+  "recorded_at": "2026-09-03",
+  "bundle_hashes": {
+    "before_sha256": "1d0dd14603f00732384fcab5867b022d9b43c818008e3732e570e31d5cfe983d",
+    "after_sha256": "298b3f82e7a85de20f845d0e80d7fed79af362d864c48e2d9062ebaaa6d6f228"
+  },
+  "gap_changes": [
+    {
+      "gap_id": "G_1187_CAIRO_PROXY",
+      "before": "open",
+      "after": "closed",
+      "basis_observation_ids": [
+        "OBS_IBN_SHADDAD_1897_EGYPT_ADMIN",
+        "OBS_LANE_POOLE_1898_CAIRO_JAFFA"
+      ]
+    },
+    {
+      "gap_id": "G_1130_EDESSA_DATE",
+      "before": "open",
+      "after": "closed",
+      "basis_observation_ids": [
+        "OBS_ASBRIDGE_2000_EDESSA_1130",
+        "OBS_CSB1130_010_2"
+      ]
+    },
+    {
+      "gap_id": "G_1130_TRIPOLI_INLAND",
+      "before": "open",
+      "after": "closed",
+      "basis_observation_ids": [
+        "OBS_LEWIS_2017_RAFANIYYA_1130",
+        "OBS_SYRIACA_496"
+      ]
+    },
+    {
+      "gap_id": "G_1187_JAFFA_EVIDENCE",
+      "before": "open",
+      "after": "closed",
+      "basis_observation_ids": [
+        "OBS_LANE_POOLE_1898_CAIRO_JAFFA",
+        "OBS_KAUFFELDT_2019_JAFFA_LETTER"
+      ],
+      "note": "Incidental zero-marginal control, not selected as a high-priority spatial target."
+    }
+  ],
+  "decision_changes": [
+    {
+      "decision_id": "D_1187_CAIRO_SEED",
+      "before_review_status": "experimental",
+      "after_review_status": "admitted",
+      "parameter_change": null
+    },
+    {
+      "decision_id": "D_1130_EDESSA_SEED",
+      "before_review_status": "admitted",
+      "after_review_status": "admitted",
+      "parameter_change": null,
+      "note": "Temporal rationale strengthened; minor weight retained."
+    },
+    {
+      "decision_id": "D_1130_RAFANIYYA_SEED",
+      "before_review_status": null,
+      "after_review_status": "admitted",
+      "parameter_change": {
+        "new_control_point": [
+          36.39298,
+          34.966351
+        ],
+        "weight_class": "minor"
+      }
+    },
+    {
+      "decision_id": "D_1187_JAFFA_SEED",
+      "before_review_status": "experimental",
+      "after_review_status": "admitted",
+      "parameter_change": null,
+      "note": "Single-decision diagnosis measured zero changed grid cells."
+    }
+  ],
+  "claim_changes": [
+    {
+      "claim_id": "E_1187_CAIRO_POINT",
+      "before_status": "unresolved",
+      "after_status": "supported",
+      "before_semantic_role": "disputed",
+      "after_semantic_role": "point_control"
+    },
+    {
+      "claim_id": "E_1130_EDESSA_POINT",
+      "before_status": "supported",
+      "after_status": "supported",
+      "note": "One-year bridge resolved.",
+      "before_semantic_role": "point_control",
+      "after_semantic_role": "point_control"
+    },
+    {
+      "claim_id": "E_1130_RAFANIYYA_POINT",
+      "before_status": null,
+      "after_status": "supported",
+      "before_semantic_role": null,
+      "after_semantic_role": "point_control"
+    },
+    {
+      "claim_id": "E_1187_JAFFA_POINT",
+      "before_status": "unresolved",
+      "after_status": "supported",
+      "before_semantic_role": "disputed",
+      "after_semantic_role": "point_control"
+    }
+  ],
+  "new_object_ids": {
+    "sources": [
+      "SRC_LANE_POOLE_1898",
+      "SRC_KAUFFELDT_2019",
+      "SRC_LEWIS_2017",
+      "SRC_SYRIACA"
+    ],
+    "observations": [
+      "OBS_IBN_SHADDAD_1897_EGYPT_ADMIN",
+      "OBS_LANE_POOLE_1898_CAIRO_JAFFA",
+      "OBS_ASBRIDGE_2000_EDESSA_1130",
+      "OBS_LEWIS_2017_RAFANIYYA_1130",
+      "OBS_SYRIACA_496",
+      "OBS_KAUFFELDT_2019_JAFFA_LETTER"
+    ],
+    "claims": [
+      "E_1130_RAFANIYYA_POINT"
+    ],
+    "model_decisions": [
+      "D_1130_RAFANIYYA_SEED"
+    ]
+  },
+  "spatial_followup": "Completed; see round-delta.json plus the two slice-specific uncertainty-diagnosis and search-targets files in this round directory.",
+  "scenario_changes": [
+    {
+      "scope": "all scenarios, slice 1130",
+      "change": "Add D_1130_RAFANIYYA_SEED to the explicit control-point allowlist so inherited current knowledge is reproducible."
+    },
+    {
+      "scope": "all scenarios, slice 1187",
+      "change": "Add D_1187_CAIRO_SEED and D_1187_JAFFA_SEED to the explicit control-point allowlist."
+    },
+    {
+      "scope": "evidence scenarios",
+      "change": "Remove Cairo, Jaffa, Edessa, and Tripoli from changed_decision_ids after their gaps close; verified-only now coincides with reviewed-baseline, while 1130 inclusive retains only open Ascalon and Tortosa interventions."
+    }
+  ],
+  "hash_method": "SHA-256 over canonical JSON (UTF-8, sorted keys, compact separators, ensure_ascii=false)"
+}

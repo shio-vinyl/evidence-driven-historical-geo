@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/search-policy-experiment-result.schema.json",
+  "title": "Equal-budget evidence-search policy replay result v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "case_id",
+    "evaluation_mode",
+    "evidence_budget",
+    "provenance",
+    "initial_evidence_sensitive_cells",
+    "policy_results",
+    "interpretation",
+    "limitations"
+  ],
+  "properties": {
+    "contract_version": {"const": "historical_geo.search_policy_experiment_result.v0.1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "evaluation_mode": {"const": "deterministic_replay_with_constructed_outcomes"},
+    "evidence_budget": {"type": "integer", "minimum": 1},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["experiment_sha256", "search_targets_sha256"],
+      "properties": {
+        "experiment_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "search_targets_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "initial_evidence_sensitive_cells": {"type": "integer", "minimum": 1},
+    "policy_results": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["policy_id", "selected_target_ids", "retrievals", "metrics"],
+        "properties": {
+          "policy_id": {"enum": ["targeted", "fixed", "broad"]},
+          "selected_target_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "retrievals": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["index", "target_id", "closed_gap_ids", "newly_affected_grid_cells", "newly_resolved_sensitive_cells"],
+              "properties": {
+                "index": {"type": "integer", "minimum": 1},
+                "target_id": {"type": "string", "minLength": 1},
+                "closed_gap_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+                "newly_affected_grid_cells": {"type": "integer", "minimum": 0},
+                "newly_resolved_sensitive_cells": {"type": "integer", "minimum": 0}
+              }
+            }
+          },
+          "metrics": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["gaps_closed_per_retrieval", "new_evidence_affected_grid_cells", "remaining_evidence_sensitive_cells"],
+            "properties": {
+              "gaps_closed_per_retrieval": {"type": "number", "minimum": 0},
+              "new_evidence_affected_grid_cells": {"type": "integer", "minimum": 0},
+              "remaining_evidence_sensitive_cells": {"type": "integer", "minimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "interpretation": {"type": "string", "minLength": 1},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  }
+}

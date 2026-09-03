@@ -4,70 +4,70 @@
 
 ## Review method
 
-This case is built for a research agent. The agent searches catalogues, legal repositories, publisher pages, and page-addressable editions; records access and rights; writes a narrow paraphrase; then decides whether that record may enter a solver. A citation alone is insufficient. Conflicting or incomplete records remain visible in lineage and in the scenario register.
+The research agent searches catalogues, legal repositories, publisher records, and page-addressable editions; records access and rights; writes a narrow paraphrase; and then decides whether the resulting claim may constrain the solver. A bibliographic citation without a checked locator does not meet the public-case threshold. Conflicting, incomplete, or rejected material remains visible in lineage.
 
-The unit of review stays narrow. A city-control statement can support a locality seed. A political title can identify a center without proving control of every named city. Events and routes remain observations. None of these proves a territorial perimeter by itself.
+The review unit is deliberately local. A control statement can support a locality seed. A title or campaign event may supply context, but cannot establish a territorial perimeter. A gazetteer coordinate locates the modern approximation of a named place; it does not reproduce a medieval settlement footprint.
 
-The repository contains no source scan, atlas page, long quotation, or copyrighted book text.
+Round 01 followed the spatial diagnosis without consulting held-out historical boundary maps. Its check selection, locators, outcomes, and limitations are preserved in [`source-checks.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/source-checks.json).
 
-## Status definitions
+## Current machine-readable state
 
-- **Verified** — an accessible page or publisher record directly supports the stored locality-level paraphrase.
-- **Partial** — the record supports only part of a grouped claim, a neighboring date, or a weaker political role.
-- **Unresolved** — the load-bearing locator remains broad or the relevant locality is absent from the checked record.
+The current [`research-bundle.json`](../../cases/crusader_states/public/research-bundle.json) contains 23 sources, 63 observations, 23 claims, 33 model decisions, and nine evidence gaps. Twenty-one claims are `supported` and two are `unresolved`. Restricting the count to locality claims gives 18 supported localities and two unresolved localities: Ascalon and Tortosa in 1130.
 
-`KEEP`, `DOWNGRADE`, `REMOVE`, and `DISPUTED` are input decisions, not alternative evidence statuses. The full record is machine-readable in [`historical-claim-decisions.json`](../../cases/crusader_states/public/historical-claim-decisions.json).
+There are 20 control-point decisions: 18 `admitted` and two `experimental`. The two experimental decisions are the 1130 Ascalon and Tortosa seeds. Four of nine evidence gaps are closed; five remain open.
+
+The frozen round-00 [`research-bundle.snapshot.json`](../../cases/crusader_states/public/research/rounds/00-initial/research-bundle.snapshot.json) and [`research-scenarios.snapshot.json`](../../cases/crusader_states/public/research/rounds/00-initial/research-scenarios.snapshot.json) reproduce the reviewed v0.1 inputs. The legacy [`historical-claim-decisions.json`](../../cases/crusader_states/public/historical-claim-decisions.json) records that initial review pass. Round-01 transitions superseding its Cairo, Jaffa, Edessa, and Tripoli wording are explicitly recorded in [`state-changes.json`](../../cases/crusader_states/public/research/rounds/01-evidence-update/state-changes.json). The research bundle and state-change record are authoritative for the current epistemic state.
 
 ## Claim-level result
 
-| Recovered claim | Review result | Page evidence and limit | Input consequence |
+| Locality or group | Current result | Checked basis and limit | Current solver consequence |
 |---|---|---|---|
-| `CSB1130_001` Jerusalem | verified | William of Tyre, Book XIII, ch. 28, vol. II, pp. 45–46 identifies Jerusalem as the royal residence in the succession narrative. | City point retained. |
-| `CSB1130_004` Damascus | verified | Ibn al-Qalanisi/Gibb, AH 524–525, pp. 200–203 names Buri, Damascus, its army, citadel, and palace. | Political-center point retained. |
-| `CSB1130_005` Ascalon | unresolved | The recovered modern locators remain too broad for a page-level public claim. | `DISPUTED`; absent from baseline, present only in `inclusive`. |
-| `CSB1130_006` Tripoli/Tortosa | partial | William of Tyre, Book XIII, ch. 26, vol. II, pp. 40–42 calls Pons count of Tripoli. The checked pages do not independently establish Tortosa or a continuous county footprint. | `DOWNGRADE`; Tripoli retained, Tortosa deferred to `inclusive`. |
-| `CSB1130_008` Antioch | verified | William of Tyre, Book XIII, ch. 27, vol. II, pp. 43–45 records the succession crisis and custody of Antioch. | City point retained. |
-| `CSB1130_010` Edessa | partial | William of Tyre, Book XIV, ch. 3, vol. II, p. 51 names Joscelin as count of Edessa in the adjacent 1131 narrative. | `DOWNGRADE`; retained at minor seed weight and never used to claim a perimeter. |
-| `CSB1187_001` Cairo/Damascus | partial | Painter, p. 45 styles Saladin sultan of Egypt, Damascus, and Aleppo. It names Damascus, not Cairo, and the title does not define a territory. | `DOWNGRADE`; Damascus retained, Cairo deferred to `inclusive`. |
-| `CSB1187_003` Jerusalem | verified | Ibn Shaddad, 1897 edition, ch. 36, pp. 118–120 records surrender and transfer of possession on 2 October 1187. | City point retained. |
-| `CSB1187_004` captured coast | partial | Ibn Shaddad, ch. 35, pp. 116–117 supports Acre, Sidon, Beirut, Ascalon, and Gaza. Jaffa is absent from the checked pages. | Supported cities retained; Jaffa marked `DISPUTED` and deferred to `inclusive`. |
-| `CSB1187_005` Tyre | verified | Ibn Shaddad, ch. 35, p. 117 and chs. 36–38, pp. 120–122 records the holdout and siege through 30 December. | City point retained for the year-end slice. |
-| `CSB1187_007` Tripoli | verified at city level | Ibn Shaddad, ch. 35, p. 114 identifies Tripoli as a refuge after Hattin; Edbury's publisher summary states that Tripoli held out against Saladin. | `KEEP` the city point; no inland county limit inferred. |
-| `CSB1187_008` Antioch | verified at city level | Edbury's publisher summary states that Antioch held out against Saladin. | `KEEP` the city point; surrounding lordships remain unresolved. |
+| Jerusalem, 1130 | supported | William of Tyre, Book XIII, ch. 28, vol. II, pp. 45–46 identifies Jerusalem as the royal residence in the succession narrative. | City point admitted. |
+| Damascus, 1130 | supported | Ibn al-Qalanisi/Gibb, AH 524–525, pp. 200–203 names Buri, Damascus, its army, citadel, and palace. | Political-center point admitted. |
+| Ascalon, 1130 | unresolved | The recovered modern locators remain too broad for a page-level public claim. | Experimental; absent from baseline and available only in `inclusive`. |
+| Tripoli and Tortosa, 1130 | mixed | William of Tyre, Book XIII, ch. 26, vol. II, pp. 40–42 supports Tripoli as the comital center. The checked material still does not independently establish Tortosa for the slice. | Tripoli admitted; Tortosa remains experimental and `inclusive`-only. |
+| Rafaniyya, 1130 | supported | Lewis, pp. 100–102 and 139, bounds comital possession from 1126 to permanent loss in 1137. Syriaca.org place 496 supplies an approximate coordinate. | New minor control point admitted; no continuous county footprint inferred. |
+| Antioch, 1130 | supported | William of Tyre, Book XIII, ch. 27, vol. II, pp. 43–45 records the succession crisis and custody of Antioch. | City point admitted. |
+| Edessa, 1130 | supported | Asbridge, pp. 125–126, treats Joscelin's leadership through the section's 1130 endpoint; William of Tyre, Book XIV, ch. 3, vol. II, p. 51 supplies adjacent-1131 corroboration. | Temporal gap closed; point remains admitted at minor weight. |
+| Cairo, 1187 | supported at operational-locality level | Lane-Poole, p. 219, names al-Adil marching from Cairo. Ibn Shaddad, pp. 104–105 and 108, supplies Egyptian administrative and military context without naming Cairo in those passages. | Cairo admitted as an operational point; it does not proxy all Egypt. |
+| Damascus, 1187 | supported at political-center level | Painter, p. 45, styles Saladin sultan of Egypt, Damascus, and Aleppo. | Damascus point admitted; the title does not define extent. |
+| Jerusalem, 1187 | supported | Ibn Shaddad, 1897 edition, ch. 36, pp. 118–120 records surrender and transfer of possession on 2 October 1187. | City point admitted. |
+| Acre, Sidon, Beirut, Ascalon, and Gaza, 1187 | supported | Ibn Shaddad, ch. 35, pp. 116–117 and associated checked observations support their capture or surrender. | Locality points admitted; no coastal polygon inferred. |
+| Jaffa, 1187 | supported at locality level | Lane-Poole, p. 219, states that al-Adil took Jaffa by assault. Kauffeldt, p. 78 and n. 225, reproduces a contemporary letter through a citation to Edbury 2007, pp. 160–162. | Jaffa admitted; the mediated transmission remains a stated limitation, and its isolated grid effect is zero. |
+| Tyre, 1187 | supported | Ibn Shaddad, ch. 35, p. 117 and chs. 36–38, pp. 120–122 records the holdout and siege through 30 December. | City point admitted for the year-end slice. |
+| Tripoli, 1187 | supported at city level | Ibn Shaddad, ch. 35, p. 114 identifies Tripoli as a refuge after Hattin; Edbury's publisher summary states that Tripoli held out. | City point admitted; inland extent is not inferred. |
+| Antioch, 1187 | supported at city level | Edbury's publisher summary states that Antioch held out against Saladin. | City point admitted; surrounding lordships remain unmodeled as evidence. |
 
-After the supplemental review the evidence count is **7 verified, 4 partial, and 1 unresolved**. That count describes the twelve recovered claim groups. It does not erase the seven explicit input decisions below.
+“Supported” means that the stored, narrowly worded claim meets this project's review threshold. It does not mean that the source is uncontested or that a historian has accepted the resulting solver decision.
 
-## Load-bearing decisions
+## Round-01 source additions and checks
 
-| Gap | Decision | Baseline treatment |
+- Thomas S. Asbridge, *The Creation of the Principality of Antioch, 1098–1130* (2000), pp. 125–126, [official Google Books record](https://books.google.com/books/about/The_Creation_of_the_Principality_of_Anti.html?id=DvUNedDOoFgC). Copyrighted and citation-only; the preview may not expose the cited pages in every region.
+- Baha al-Din Ibn Shaddad, *The Life of Saladin; or, What Befell Sultan Yusuf* (1897), pp. 104–105 and 108, [Internet Archive record](https://archive.org/details/lifesaladin00condgoog). A page-addressable public-domain edition; these passages support Egyptian context but do not name Cairo.
+- Stanley Lane-Poole, *Saladin and the Fall of the Kingdom of Jerusalem* (1898), p. 219, [public-domain scan](https://upload.wikimedia.org/wikipedia/commons/3/3e/Saladin_and_the_fall_of_the_Kingdom_of_Jerusalem_%28IA_saladinfallofkin00lane%29.pdf). A secondary synthesis that cites Ibn al-Athir.
+- Sebastian Fons Kauffeldt, master's thesis (Roskilde University, 2019), p. 78 and n. 225, [open repository PDF](https://rucforsk.ruc.dk/ws/files/63773770/Speciale_Sebastian_Kauffeldt_Jerusalem_1099_1187.pdf). It mediates the contemporary letter through Edbury 2007; the repository retains only a citation.
+- Kevin James Lewis, *The Counts of Tripoli and Lebanon in the Twelfth Century* (2017), pp. 100–102 and 139, [digital copy](https://api.nla.am/server/api/core/bitstreams/bbc0405c-0d70-411b-ae3e-623e3457c101/content). Copyrighted and citation-only.
+- Syriaca.org, *The Syriac Gazetteer*, [Rafaniyya, place 496](https://syriaca.org/place/496). Used only for an attributed approximate location.
+
+The round was accessed on 2026-09-03. Earlier editions and access decisions remain recorded on their source objects in the research bundle. The repository contains no source scan, atlas page, long quotation, or copyrighted book text.
+
+## Current gap decisions
+
+| Question | Machine status | Human review still required |
 |---|---|---|
-| Jaffa in the 1187 captured-coast group | `DISPUTED` | Omitted; available only in `inclusive`. |
-| Ascalon in 1130 | `DISPUTED` | Omitted with the Fatimid entity; available only in `inclusive`. |
-| Cairo/Damascus in 1187 | `DOWNGRADE` | Damascus retained as a named political center; Cairo deferred. |
-| Antioch at end of 1187 | `KEEP` | City point retained. |
-| Edessa through adjacent 1131 material | `DOWNGRADE` | Point retained at minor weight. |
-| Tripoli/Tortosa in 1130 | `DOWNGRADE` | Tripoli retained; Tortosa deferred. |
-| Tripoli at end of 1187 | `KEEP` | City point retained. |
-
-No reviewed gap was silently filled by a default solver value. No item required `REMOVE`: the unsupported parts already existed as separable seeds and could be deferred without deleting their audit trail.
-
-## Editions and access record
-
-- William of Tyre, *A History of Deeds Done Beyond the Sea*, Babcock/Krey translation (1943), [Internet Archive item `williamoftyrehistory`](https://archive.org/details/williamoftyrehistory), consulted by page; citation-only in the repository.
-- Ibn al-Qalanisi, *The Damascus Chronicle of the Crusades*, Gibb translation (1932), [Internet Archive item `the-damascus-chronicle-of-the-crusades`](https://archive.org/details/the-damascus-chronicle-of-the-crusades); the host record carries a Public Domain Mark.
-- Baha al-Din Ibn Shaddad, *The Life of Saladin; or, What Befell Sultan Yusuf* (1897), [Internet Archive item `libraryofpalesti13paleuoft`](https://archive.org/details/libraryofpalesti13paleuoft), used as a page-addressable public-domain edition.
-- Sidney Painter, “The Third Crusade,” in *A History of the Crusades*, vol. II (1962), p. 45, [JSTOR open-book record](https://www.jstor.org/stable/j.ctv4s7mwv); copyrighted, citation-only.
-- Peter W. Edbury, “The Crusader States,” in *The New Cambridge Medieval History*, vol. V (1999), pp. 590–606, [Cambridge publisher record](https://www.cambridge.org/core/books/abs/new-cambridge-medieval-history/crusader-states/35E282BC04D01A0074105E8B1051F233); publisher summary checked, copyrighted, citation-only.
-- The Internet Archive item `the-chronicle-of-ibn-al-athir-big-file` was rejected because its uploader, edition metadata, and rights status could not support a public audit trail.
-
-Access date: 2026-09-01. Reference-map access and rights are recorded separately in [`reference-map-register.json`](../../cases/crusader_states/public/reference-map-register.json).
+| Ascalon in 1130 | open; seed `experimental` | Decide whether directly locatable evidence supports Fatimid control at the exact slice. |
+| Tortosa in 1130 | open; seed `experimental` | Decide whether a checked source independently establishes locality control near 1130. |
+| Edessa in 1130 | closed; seed `admitted` at minor weight | Accept or reject Asbridge's temporal coverage and the adjacent-year corroboration. |
+| Cairo in 1187 | closed; seed `admitted` | Accept or reject the operational-point inference from Lane-Poole plus Ibn Shaddad's context. |
+| Jaffa in 1187 | closed; seed `admitted` | Accept or reject the locality inference from a secondary account and a mediated contemporary letter. |
+| Tripoli inland evidence in 1130 | closed; Rafaniyya seed `admitted` at minor weight | Accept or reject the dated-possession reading and approximate gazetteer location; no county perimeter follows. |
+| Surviving Latin extent in 1187 | open | Identify additional year-end localities, routes, or explicit exclusions around Tyre, Tripoli, and Antioch. |
+| Reach assumptions in both slices | two open model gaps | Diagnose or replace the current backend assumptions; source search alone cannot close them. |
 
 ## Geospatial source verification
 
-Natural Earth 1:10m physical vectors, version 5.1.2, supply the land and natural-feature geometry. Comparison with fresh official artifacts found an exact normalized geometry multiset match for 4,133 coastline features and for Jordan River `NE_ID 1159114369`. Mount Lebanon `NE_ID 1730071649` and Taurus `NE_ID 1159103077` were topologically equal with zero symmetric difference after Polygon-to-MultiPolygon type promotion.
-
-Archive URLs and SHA-256 values are recorded in [`natural-earth-source-check.json`](../../cases/crusader_states/public/natural-earth-source-check.json). Approximate locality coordinates cite GeoNames records by `geonameId` under CC BY 4.0.
+Natural Earth 1:10m physical vectors, version 5.1.2, supply land and natural-feature geometry. Approximate locality coordinates cite their gazetteers; GeoNames data is attributed under CC BY 4.0, and the new Rafaniyya point cites Syriaca.org directly. Archive URLs and SHA-256 values for Natural Earth inputs are recorded in [`natural-earth-source-check.json`](../../cases/crusader_states/public/natural-earth-source-check.json).
 
 ## Human review boundary
 
-The machine-readable decisions are reproducible, but their scholarly acceptance remains human work. A historian must still judge the 1130 status of Ascalon and Tortosa, the admissibility of the 1131 Edessa bridge, Jaffa in the exact year-end convention, whether Painter's political title is sufficient for a Damascus seed, and how far the surviving cities of Tripoli and Antioch may stand for their surrounding polities. The present project deliberately answers only the locality-level modeling question.
+The machine records reproduce why each input entered, remained experimental, or was excluded. Scholarly acceptance remains human work. In particular, closing Cairo, Jaffa, Edessa, and Rafaniyya gaps records that the project's declared success criteria were met. It does not transform those decisions into settled historical facts, and no locality claim authorizes a recovered territorial boundary by itself.

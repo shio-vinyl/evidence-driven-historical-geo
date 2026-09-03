@@ -1,0 +1,36 @@
+{
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.search_targets.v0.2",
+  "targets": [
+    {
+      "claim_ids": [
+        "E_1130_ASCALON_POINT"
+      ],
+      "decision_ids": [
+        "D_1130_ASCALON_SEED"
+      ],
+      "evidence_gap_ids": [
+        "G_1130_ASCALON_EVIDENCE"
+      ],
+      "preferred_source_types": [
+        "primary chronicle",
+        "page-addressable scholarly study"
+      ],
+      "priority_basis": {
+        "affected_grid_cells": 1,
+        "related_decision_count": 1,
+        "related_decision_ids": [
+          "D_1130_ASCALON_SEED"
+        ],
+        "slices": [
+          1130
+        ]
+      },
+      "question": "Was Ascalon controlled by Fatimid Egypt in the 1130 slice at a standard sufficient for a point-control input?",
+      "status": "open",
+      "stop_condition": "Stop after two directly relevant scholarly or primary-source checks remain inconclusive.",
+      "success_criteria": "A page-addressable source directly supports or rejects locality control at the target slice.",
+      "target_id": "TARGET_G_1130_ASCALON_EVIDENCE"
+    }
+  ]
+}

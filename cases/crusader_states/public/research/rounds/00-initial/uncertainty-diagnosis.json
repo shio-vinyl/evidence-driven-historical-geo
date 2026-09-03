@@ -19,7 +19,6 @@
           "D_1130_FATIMID_EGYPT_PHASE",
           "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
           "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE",
-          "D_1130_TORTOSA_SEED",
           "D_1130_TRIPOLI_SEED",
           "D_NATURAL_LEBANON_BARRIER",
           "D_NATURAL_TAURUS_BARRIER"
@@ -27,7 +26,6 @@
         "evidence": [
           "D_1130_ASCALON_SEED",
           "D_1130_EDESSA_SEED",
-          "D_1130_TORTOSA_SEED",
           "D_1130_TRIPOLI_SEED"
         ],
         "model": [
@@ -43,8 +41,9 @@
       },
       "changed_scenarios": {
         "evidence": [
-          "inclusive",
-          "verified-only"
+          "isolated-D_1130_ASCALON_SEED",
+          "isolated-D_1130_EDESSA_SEED",
+          "isolated-D_1130_TRIPOLI_SEED"
         ],
         "model": [
           "flat-natural",
@@ -53,6 +52,72 @@
         ]
       },
       "classification": "mixed",
+      "scenario_effects": {
+        "evidence": [
+          {
+            "affected_grid_cells": 1,
+            "changed_decision_ids": [
+              "D_1130_ASCALON_SEED"
+            ],
+            "scenario": "isolated-D_1130_ASCALON_SEED"
+          },
+          {
+            "affected_grid_cells": 257,
+            "changed_decision_ids": [
+              "D_1130_EDESSA_SEED"
+            ],
+            "scenario": "isolated-D_1130_EDESSA_SEED"
+          },
+          {
+            "affected_grid_cells": 0,
+            "changed_decision_ids": [
+              "D_1130_TORTOSA_SEED"
+            ],
+            "scenario": "isolated-D_1130_TORTOSA_SEED"
+          },
+          {
+            "affected_grid_cells": 220,
+            "changed_decision_ids": [
+              "D_1130_TRIPOLI_SEED"
+            ],
+            "scenario": "isolated-D_1130_TRIPOLI_SEED"
+          }
+        ],
+        "model": [
+          {
+            "affected_grid_cells": 196,
+            "changed_decision_ids": [
+              "D_NATURAL_LEBANON_BARRIER",
+              "D_NATURAL_TAURUS_BARRIER"
+            ],
+            "scenario": "flat-natural"
+          },
+          {
+            "affected_grid_cells": 5736,
+            "changed_decision_ids": [
+              "D_1130_BURID_DAMASCUS_PHASE",
+              "D_1130_COUNTY_OF_EDESSA_PHASE",
+              "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1130_FATIMID_EGYPT_PHASE",
+              "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-expansive"
+          },
+          {
+            "affected_grid_cells": 3412,
+            "changed_decision_ids": [
+              "D_1130_BURID_DAMASCUS_PHASE",
+              "D_1130_COUNTY_OF_EDESSA_PHASE",
+              "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1130_FATIMID_EGYPT_PHASE",
+              "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-normal"
+          }
+        ]
+      },
       "slice": 1130
     },
     {
@@ -66,15 +131,13 @@
           "D_1187_AYYUBID_SULTANATE_PHASE",
           "D_1187_CAIRO_SEED",
           "D_1187_COUNTY_OF_TRIPOLI_PHASE",
-          "D_1187_JAFFA_SEED",
           "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
           "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE",
           "D_NATURAL_LEBANON_BARRIER",
           "D_NATURAL_TAURUS_BARRIER"
         ],
         "evidence": [
-          "D_1187_CAIRO_SEED",
-          "D_1187_JAFFA_SEED"
+          "D_1187_CAIRO_SEED"
         ],
         "model": [
           "D_1187_AYYUBID_SULTANATE_PHASE",
@@ -87,7 +150,7 @@
       },
       "changed_scenarios": {
         "evidence": [
-          "inclusive"
+          "isolated-D_1187_CAIRO_SEED"
         ],
         "model": [
           "flat-natural",
@@ -96,6 +159,54 @@
         ]
       },
       "classification": "mixed",
+      "scenario_effects": {
+        "evidence": [
+          {
+            "affected_grid_cells": 1162,
+            "changed_decision_ids": [
+              "D_1187_CAIRO_SEED"
+            ],
+            "scenario": "isolated-D_1187_CAIRO_SEED"
+          },
+          {
+            "affected_grid_cells": 0,
+            "changed_decision_ids": [
+              "D_1187_JAFFA_SEED"
+            ],
+            "scenario": "isolated-D_1187_JAFFA_SEED"
+          }
+        ],
+        "model": [
+          {
+            "affected_grid_cells": 196,
+            "changed_decision_ids": [
+              "D_NATURAL_LEBANON_BARRIER",
+              "D_NATURAL_TAURUS_BARRIER"
+            ],
+            "scenario": "flat-natural"
+          },
+          {
+            "affected_grid_cells": 6106,
+            "changed_decision_ids": [
+              "D_1187_AYYUBID_SULTANATE_PHASE",
+              "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-expansive"
+          },
+          {
+            "affected_grid_cells": 2974,
+            "changed_decision_ids": [
+              "D_1187_AYYUBID_SULTANATE_PHASE",
+              "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-normal"
+          }
+        ]
+      },
       "slice": 1187
     }
   ]

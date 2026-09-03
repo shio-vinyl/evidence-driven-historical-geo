@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/search-policy-experiment.schema.json",
+  "title": "Equal-budget evidence-search policy replay v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "case_id",
+    "evaluation_mode",
+    "evidence_budget",
+    "search_targets_path",
+    "initial_evidence_sensitive_cell_ranges",
+    "policies",
+    "fixture_outcomes",
+    "limitations"
+  ],
+  "properties": {
+    "contract_version": {"const": "historical_geo.search_policy_experiment.v0.1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "evaluation_mode": {"const": "deterministic_replay_with_constructed_outcomes"},
+    "evidence_budget": {"type": "integer", "minimum": 1},
+    "search_targets_path": {"type": "string", "minLength": 1},
+    "initial_evidence_sensitive_cell_ranges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/cellRange"}
+    },
+    "policies": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["policy_id", "selection", "selection_rationale"],
+            "properties": {
+              "policy_id": {"const": "targeted"},
+              "selection": {"const": "descending_spatial_priority"},
+              "selection_rationale": {"type": "string", "minLength": 1}
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["policy_id", "selection", "target_order", "selection_rationale"],
+            "properties": {
+              "policy_id": {"enum": ["fixed", "broad"]},
+              "selection": {"const": "declared_order_without_spatial_feedback"},
+              "target_order": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {"$ref": "#/$defs/identifier"}
+              },
+              "selection_rationale": {"type": "string", "minLength": 1}
+            }
+          }
+        ]
+      }
+    },
+    "fixture_outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_id",
+          "outcome_kind",
+          "closed_gap_ids",
+          "affected_cell_ranges",
+          "resolved_sensitive_cell_ranges",
+          "fixture_note"
+        ],
+        "properties": {
+          "target_id": {"$ref": "#/$defs/identifier"},
+          "outcome_kind": {"const": "constructed_fixture"},
+          "closed_gap_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"$ref": "#/$defs/identifier"}
+          },
+          "affected_cell_ranges": {
+            "type": "array",
+            "items": {"$ref": "#/$defs/cellRange"}
+          },
+          "resolved_sensitive_cell_ranges": {
+            "type": "array",
+            "items": {"$ref": "#/$defs/cellRange"}
+          },
+          "fixture_note": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"},
+    "cellRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slice", "start", "end_exclusive"],
+      "properties": {
+        "slice": {"type": ["integer", "string"]},
+        "start": {"type": "integer", "minimum": 0},
+        "end_exclusive": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

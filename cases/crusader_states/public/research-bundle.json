@@ -132,19 +132,20 @@
       "challenging_observation_ids": [],
       "claim_id": "E_1130_EDESSA_POINT",
       "entity": "County of Edessa",
-      "rationale": "The cited observations support this deliberately narrow semantic role.",
+      "rationale": "Asbridge pp. 125-126 treats Joscelin's stable leadership of the County of Edessa through the section's 1130 endpoint; William of Tyre's adjacent 1131 notice supplies a second chronological check.",
       "semantic_role": "point_control",
       "slice": 1130,
       "spatial_scope": {
         "kind": "point"
       },
-      "statement": "Edessa is retained at reduced model weight. The evidence names Joscelin as count of Edessa in the adjacent 1131 narrative, so the one-year bridge remains an explicit uncertainty.",
+      "statement": "Edessa is retained as a County of Edessa control point in 1130. The evidence resolves the one-year temporal bridge but does not authorize an Euphrates boundary.",
       "status": "supported",
       "supporting_observation_ids": [
         "OBS_CSB1130_010_1",
         "OBS_CSB1130_010_2",
         "OBS_CSB1130_010_3",
-        "OBS_GEONAMES_298333"
+        "OBS_GEONAMES_298333",
+        "OBS_ASBRIDGE_2000_EDESSA_1130"
       ],
       "temporal_scope": {
         "slice": 1130
@@ -154,18 +155,20 @@
       "challenging_observation_ids": [],
       "claim_id": "E_1187_CAIRO_POINT",
       "entity": "Ayyubid Sultanate",
-      "rationale": "The recovered material does not yet satisfy the public baseline threshold; the claim remains scenario-only.",
-      "semantic_role": "disputed",
+      "rationale": "Lane-Poole p. 219 explicitly places al-Adil's 1187 march at Cairo, while Ibn Shaddad pp. 104-105 and 108 supply the Egyptian administrative and military context. The inference is limited to a city control point.",
+      "semantic_role": "point_control",
       "slice": 1187,
       "spatial_scope": {
         "kind": "point"
       },
-      "statement": "Cairo is a plausible Ayyubid political center, but the reviewed page names Egypt rather than Cairo. It enters only the inclusive scenario.",
-      "status": "unresolved",
+      "statement": "Cairo is admitted as an Ayyubid operational center in 1187; this point does not stand for the extent of Egypt.",
+      "status": "supported",
       "supporting_observation_ids": [
         "OBS_CSB1187_001_1",
         "OBS_CSB1187_001_2",
-        "OBS_GEONAMES_360630"
+        "OBS_GEONAMES_360630",
+        "OBS_IBN_SHADDAD_1897_EGYPT_ADMIN",
+        "OBS_LANE_POOLE_1898_CAIRO_JAFFA"
       ],
       "temporal_scope": {
         "slice": 1187
@@ -243,19 +246,21 @@
       "challenging_observation_ids": [],
       "claim_id": "E_1187_JAFFA_POINT",
       "entity": "Ayyubid Sultanate",
-      "rationale": "The recovered material does not yet satisfy the public baseline threshold; the claim remains scenario-only.",
-      "semantic_role": "disputed",
+      "rationale": "Lane-Poole p. 219 states that al-Adil took Jaffa by assault. A separately transmitted contemporary letter, checked through Kauffeldt p. 78 and its citation to Edbury pp. 160-162, lists Jaffa's surrender.",
+      "semantic_role": "point_control",
       "slice": 1187,
       "spatial_scope": {
         "kind": "point"
       },
-      "statement": "Jaffa remains unverified in the reviewed primary-source pages. It is excluded from the reviewed baseline and retained only in the inclusive scenario.",
-      "status": "unresolved",
+      "statement": "Jaffa was taken into Ayyubid control after Hattin in 1187; the claim is limited to the locality.",
+      "status": "supported",
       "supporting_observation_ids": [
         "OBS_CSB1187_004_1",
         "OBS_CSB1187_004_2",
         "OBS_CSB1187_004_3",
-        "OBS_GEONAMES_293253"
+        "OBS_GEONAMES_293253",
+        "OBS_LANE_POOLE_1898_CAIRO_JAFFA",
+        "OBS_KAUFFELDT_2019_JAFFA_LETTER"
       ],
       "temporal_scope": {
         "slice": 1187
@@ -479,6 +484,29 @@
       "temporal_scope": {
         "slice": "1130-1187"
       }
+    },
+    {
+      "claim_id": "E_1130_RAFANIYYA_POINT",
+      "supporting_observation_ids": [
+        "OBS_LEWIS_2017_RAFANIYYA_1130",
+        "OBS_SYRIACA_496"
+      ],
+      "challenging_observation_ids": [],
+      "semantic_role": "point_control",
+      "status": "supported",
+      "rationale": "Lewis bounds comital possession from 1126 to its permanent loss in 1137, which includes the 1130 slice; Syriaca.org supplies an explicitly approximate locality coordinate.",
+      "statement": "Rafaniyya supplies one inland control point for the County of Tripoli in 1130. It constrains the hypothesis northeastward but does not establish the intervening boundary or continuous occupation.",
+      "entity": "County of Tripoli",
+      "slice": 1130,
+      "temporal_scope": {
+        "valid_from": 1126,
+        "valid_until": 1137,
+        "slice": 1130
+      },
+      "spatial_scope": {
+        "kind": "point",
+        "gazetteer_uri": "http://syriaca.org/place/496"
+      }
     }
   ],
   "contract_version": "historical_geo.research_bundle.v0.2",
@@ -533,7 +561,7 @@
       "related_decision_ids": [
         "D_1130_EDESSA_SEED"
       ],
-      "status": "open",
+      "status": "closed",
       "stop_condition": "Stop when direct 1130 evidence is found or the strongest accessible accounts only support 1131.",
       "success_criteria": "A source resolves the one-year bridge or provides direct 1130 evidence."
     },
@@ -551,7 +579,7 @@
       "related_decision_ids": [
         "D_1187_CAIRO_SEED"
       ],
-      "status": "open",
+      "status": "closed",
       "stop_condition": "Stop after direct chronicles and two scholarly syntheses fail to name Cairo for this role.",
       "success_criteria": "A source names Cairo as a relevant political or operational center for the exact slice."
     },
@@ -569,7 +597,7 @@
       "related_decision_ids": [
         "D_1187_JAFFA_SEED"
       ],
-      "status": "open",
+      "status": "closed",
       "stop_condition": "Stop after the principal narrative witnesses and two independent studies remain silent or conflicting.",
       "success_criteria": "A page-addressable source explicitly places Jaffa in the 1187 control sequence."
     },
@@ -583,13 +611,15 @@
       ],
       "question": "Which inland settlements, fortresses, routes, or exclusions can constrain the County of Tripoli hypothesis around 1130?",
       "related_claim_ids": [
-        "E_1130_TRIPOLI_POINT"
+        "E_1130_TRIPOLI_POINT",
+        "E_1130_RAFANIYYA_POINT"
       ],
       "related_decision_ids": [
         "D_1130_TRIPOLI_SEED",
-        "D_1130_COUNTY_OF_TRIPOLI_PHASE"
+        "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+        "D_1130_RAFANIYYA_SEED"
       ],
-      "status": "open",
+      "status": "closed",
       "stop_condition": "Stop after a bounded review of the principal narrative and two regional studies yields only the city title.",
       "success_criteria": "At least one reviewed non-capital observation supplies a control point, route, frontier, or explicit exclusion."
     },
@@ -846,14 +876,15 @@
         "type": "capital",
         "weight_class": "minor"
       },
-      "rationale": "DOWNGRADE: keep the city anchor at minor weight; the direct wording is from the adjacent 1131 narrative.",
+      "rationale": "KEEP at minor weight: Asbridge's page-addressable 1119-1130 treatment resolves the temporal bridge. The evidence remains a locality constraint and does not support a county perimeter.",
       "review_status": "admitted",
       "role": "control_point",
       "source_ids": [
         "SRC_CAHEN_1940",
         "SRC_GEONAMES",
         "SRC_MACEVITT_2008",
-        "SRC_WILLIAM_TYRE"
+        "SRC_WILLIAM_TYRE",
+        "SRC_ASBRIDGE_2000"
       ],
       "supporting_claim_ids": [
         "E_1130_EDESSA_POINT"
@@ -874,13 +905,15 @@
         "type": "capital",
         "weight_class": "capital"
       },
-      "rationale": "DOWNGRADE: Egypt is page-supported, Cairo is not named; inclusive scenario only.",
-      "review_status": "experimental",
+      "rationale": "ADMIT as an operational city point: Lane-Poole p. 219 explicitly starts al-Adil's 1187 march from Cairo; the seed does not proxy the whole of Egypt.",
+      "review_status": "admitted",
       "role": "control_point",
       "source_ids": [
         "SRC_GEONAMES",
         "SRC_HOLT_1986",
-        "SRC_IBN_AL_ATHIR"
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD_1897",
+        "SRC_LANE_POOLE_1898"
       ],
       "supporting_claim_ids": [
         "E_1187_CAIRO_POINT"
@@ -987,14 +1020,16 @@
         "type": "city",
         "weight_class": "minor"
       },
-      "rationale": "DISPUTED: omitted from the reviewed baseline; inclusive scenario only.",
-      "review_status": "experimental",
+      "rationale": "ADMIT as a locality point: Lane-Poole p. 219 records capture by assault and a separately transmitted contemporary letter lists Jaffa's surrender. Single-decision diagnosis found zero changed grid cells.",
+      "review_status": "admitted",
       "role": "control_point",
       "source_ids": [
         "SRC_BARBER_2012",
         "SRC_GEONAMES",
         "SRC_IBN_AL_ATHIR",
-        "SRC_IBN_SHADDAD"
+        "SRC_IBN_SHADDAD",
+        "SRC_LANE_POOLE_1898",
+        "SRC_KAUFFELDT_2019"
       ],
       "supporting_claim_ids": [
         "E_1187_JAFFA_POINT"
@@ -1459,6 +1494,32 @@
       "supporting_claim_ids": [
         "E_NE_JORDAN_DISPLAY"
       ]
+    },
+    {
+      "decision_id": "D_1130_RAFANIYYA_SEED",
+      "role": "control_point",
+      "review_status": "admitted",
+      "supporting_claim_ids": [
+        "E_1130_RAFANIYYA_POINT"
+      ],
+      "challenging_claim_ids": [],
+      "source_ids": [
+        "SRC_LEWIS_2017",
+        "SRC_SYRIACA"
+      ],
+      "rationale": "ADMIT at minor weight as the first non-capital inland constraint for Tripoli. The point is temporally bounded by the 1126 recovery and 1137 permanent loss; it does not imply a polygon.",
+      "parameters": {
+        "coordinates": [
+          36.39298,
+          34.966351
+        ],
+        "coordinates_status": "approximate",
+        "entity": "County of Tripoli",
+        "name": "Rafaniyya",
+        "slice": 1130,
+        "type": "city",
+        "weight_class": "minor"
+      }
     }
   ],
   "observations": [
@@ -2243,6 +2304,101 @@
       "slice": 1187,
       "source_id": "SRC_EDBURY_1999",
       "verification_status": "publisher_page_verified"
+    },
+    {
+      "observation_id": "OBS_IBN_SHADDAD_1897_EGYPT_ADMIN",
+      "source_id": "SRC_IBN_SHADDAD_1897",
+      "locator": "chapter XXXIII, pp. 104-105; compare chapter XXXIV, p. 108",
+      "paraphrase": "In 1186 Saladin assigned al-Adil to Egypt as guardian to al-Aziz; the following campaign narrative records Saladin awaiting the armies of Egypt in March 1187. This identifies an organized Egyptian administrative and military component, but does not by itself name Cairo.",
+      "verification_status": "public_domain_scan_page_verified",
+      "observation_type": "administrative_and_military_context",
+      "slice": 1187,
+      "data": {
+        "url": "https://archive.org/details/lifesaladin00condgoog/page/n155/mode/2up",
+        "accessed_at": "2026-09-03",
+        "temporal_note": "The appointment is dated 1186; the army assembly is dated March 1187.",
+        "scope_limit": "Supports Egyptian organization under Saladin; Cairo requires an independent observation."
+      }
+    },
+    {
+      "observation_id": "OBS_LANE_POOLE_1898_CAIRO_JAFFA",
+      "source_id": "SRC_LANE_POOLE_1898",
+      "locator": "p. 219, chapter XIV, 'Conquest of Palestine'",
+      "paraphrase": "Lane-Poole's 1187 campaign narrative states that al-Adil marched from Cairo with Egypt's army and took Mirabel and Jaffa by assault. The statement supplies a Cairo operational origin and explicit Ayyubid seizure of Jaffa, while making no claim about a continuous territorial footprint.",
+      "verification_status": "public_domain_scan_page_verified",
+      "observation_type": "campaign_control_statement",
+      "slice": 1187,
+      "data": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Saladin_and_the_fall_of_the_Kingdom_of_Jerusalem_%28IA_saladinfallofkin00lane%29.pdf",
+        "accessed_at": "2026-09-03",
+        "source_note": "Lane-Poole cites Ibn al-Athir at this passage.",
+        "scope_limit": "A nineteenth-century synthesis; corroborated separately for Jaffa and contextualized by Ibn Shaddad for Egypt."
+      }
+    },
+    {
+      "observation_id": "OBS_ASBRIDGE_2000_EDESSA_1130",
+      "source_id": "SRC_ASBRIDGE_2000",
+      "locator": "pp. 125-126, section 'Relations with Other Latin Settlements in the East: 1113-1130'",
+      "paraphrase": "Asbridge characterizes the county of Edessa as enjoying stable leadership under Joscelin after 1119 and treats Joscelin as count of Edessa within a section explicitly ending in 1130. This independently bridges the model slice to the adjacent 1131 chronicle notice.",
+      "verification_status": "page_checked_citation_and_official_record_verified",
+      "observation_type": "dated_office_and_polity_statement",
+      "slice": 1130,
+      "data": {
+        "url": "https://books.google.com/books/about/The_Creation_of_the_Principality_of_Anti.html?id=DvUNedDOoFgC",
+        "accessed_at": "2026-09-03",
+        "scope_limit": "Supports the temporal bridge and comital polity; it does not define an Euphrates boundary.",
+        "record_note": "Official bibliographic/preview record; the research note retains the checked print-page locator."
+      }
+    },
+    {
+      "observation_id": "OBS_LEWIS_2017_RAFANIYYA_1130",
+      "source_id": "SRC_LEWIS_2017",
+      "locator": "pp. 100-102; retrospective confirmation at p. 139",
+      "paraphrase": "Pons of Tripoli recovered Rafaniyya on 31 March 1126, received the city in its entirety, and the city then formed part of the comital demesne. Lewis later bounds that tenure from at least 1126 until Zengi's permanent conquest in 1137, placing Rafaniyya under the county at the 1130 slice.",
+      "verification_status": "digital_book_pages_verified",
+      "observation_type": "bounded_locality_control",
+      "slice": 1130,
+      "data": {
+        "url": "https://api.nla.am/server/api/core/bitstreams/bbc0405c-0d70-411b-ae3e-623e3457c101/content",
+        "accessed_at": "2026-09-03",
+        "valid_from": 1126,
+        "valid_until": 1137,
+        "scope_limit": "Supports a locality point and northeastward constraint, not a complete county boundary."
+      }
+    },
+    {
+      "observation_id": "OBS_SYRIACA_496",
+      "source_id": "SRC_SYRIACA",
+      "locator": "place/496, Location section",
+      "paraphrase": "The Syriac Gazetteer identifies Rafaniyya as a settlement in western Syria at approximately 34.966351 N, 36.39298 E.",
+      "verification_status": "gazetteer_record_verified",
+      "observation_type": "location",
+      "slice": 1130,
+      "data": {
+        "url": "https://syriaca.org/place/496",
+        "accessed_at": "2026-09-03",
+        "coordinates": [
+          36.39298,
+          34.966351
+        ],
+        "coordinate_interpretation": "scholarly gazetteer point; approximate for the medieval settlement",
+        "gazetteer_uri": "http://syriaca.org/place/496"
+      }
+    },
+    {
+      "observation_id": "OBS_KAUFFELDT_2019_JAFFA_LETTER",
+      "source_id": "SRC_KAUFFELDT_2019",
+      "locator": "p. 78 and n. 225 (the cited source is Edbury 2007, pp. 160-162)",
+      "paraphrase": "The thesis reproduces a translated contemporary letter to Archumbald that lists Jaffa among the places whose inhabitants surrendered to Saladin after Hattin. This corroborates locality control in 1187 but is retained as a mediated transcription rather than a direct manuscript check.",
+      "verification_status": "open_thesis_page_verified_mediated_primary_text",
+      "observation_type": "contemporary_letter_transcription",
+      "slice": 1187,
+      "data": {
+        "url": "https://rucforsk.ruc.dk/ws/files/63773770/Speciale_Sebastian_Kauffeldt_Jerusalem_1099_1187.pdf",
+        "accessed_at": "2026-09-03",
+        "source_chain": "Kauffeldt 2019 p. 78 -> Edbury 2007 pp. 160-162 -> contemporary letter to Archumbald",
+        "scope_limit": "Independent of Lane-Poole's Ibn al-Athir-based synthesis, but checked through a thesis transcription."
+      }
     }
   ],
   "sources": [
@@ -2328,13 +2484,14 @@
       "use_role": "research"
     },
     {
-      "citation": "Thomas S. Asbridge. Boydell Press, 2000.",
+      "citation": "Thomas S. Asbridge. The Creation of the Principality of Antioch, 1098-1130. Boydell Press, 2000, pp. 125-126. Official Google Books bibliographic/preview record: https://books.google.com/books/about/The_Creation_of_the_Principality_of_Anti.html?id=DvUNedDOoFgC (accessed 2026-09-03).",
       "redistribution": "citation_only",
       "rights_status": "copyrighted_citation_only",
       "source_id": "SRC_ASBRIDGE_2000",
       "source_type": "book",
       "title": "The Creation of the Principality of Antioch, 1098-1130",
-      "use_role": "research"
+      "use_role": "research",
+      "locator": "pp. 125-126, section 'Relations with Other Latin Settlements in the East: 1113-1130' (page-checked citation)"
     },
     {
       "citation": "Claude Cahen. Paul Geuthner, 1940.",
@@ -2391,13 +2548,14 @@
       "use_role": "research"
     },
     {
-      "citation": "Baha al-Din Ibn Shaddad; ed. C. W. Wilson; trans. rev. C. R. Conder. Palestine Pilgrims' Text Society, 1897.",
+      "citation": "Baha al-Din Ibn Shaddad; ed. C. W. Wilson; trans. rev. C. R. Conder. The Life of Saladin; or, What Befell Sultan Yusuf. Palestine Pilgrims' Text Society, 1897. Internet Archive full text: https://archive.org/details/lifesaladin00condgoog (accessed 2026-09-03).",
       "redistribution": "citation_only",
       "rights_status": "public_domain_edition",
       "source_id": "SRC_IBN_SHADDAD_1897",
       "source_type": "book",
       "title": "The Life of Saladin; or, What Befell Sultan Yusuf",
-      "use_role": "research"
+      "use_role": "research",
+      "locator": "pp. 104-105, 108, 114, 116-124"
     },
     {
       "citation": "Sidney Painter, in A History of the Crusades, vol. II, University of Wisconsin Press, 1962, pp. 45-86. JSTOR open book record: https://www.jstor.org/stable/j.ctv4s7mwv.11",
@@ -2417,6 +2575,46 @@
       "source_id": "SRC_EDBURY_1999",
       "source_type": "article",
       "title": "The Crusader States",
+      "use_role": "research"
+    },
+    {
+      "source_id": "SRC_LANE_POOLE_1898",
+      "title": "Saladin and the Fall of the Kingdom of Jerusalem",
+      "source_type": "book",
+      "citation": "Stanley Lane-Poole. Saladin and the Fall of the Kingdom of Jerusalem. G. P. Putnam's Sons, 1898, p. 219. Public-domain scan: https://upload.wikimedia.org/wikipedia/commons/3/3e/Saladin_and_the_fall_of_the_Kingdom_of_Jerusalem_%28IA_saladinfallofkin00lane%29.pdf (accessed 2026-09-03).",
+      "locator": "p. 219, chapter XIV, 'Conquest of Palestine'",
+      "rights_status": "public_domain_edition",
+      "redistribution": "allowed",
+      "use_role": "research"
+    },
+    {
+      "source_id": "SRC_KAUFFELDT_2019",
+      "title": "'Deeds done beyond the sea': En undersøgelse af årsagen til nederlaget ved Hattins horn i 1187",
+      "source_type": "other",
+      "citation": "Sebastian Fons Kauffeldt. Master's thesis, Roskilde University, 2019, p. 78. Open repository PDF: https://rucforsk.ruc.dk/ws/files/63773770/Speciale_Sebastian_Kauffeldt_Jerusalem_1099_1187.pdf (accessed 2026-09-03).",
+      "locator": "p. 78 and n. 225 (citing Edbury 2007, pp. 160-162)",
+      "rights_status": "open_repository_copy_copyright_retained",
+      "redistribution": "citation_only",
+      "use_role": "research"
+    },
+    {
+      "source_id": "SRC_LEWIS_2017",
+      "title": "The Counts of Tripoli and Lebanon in the Twelfth Century: Sons of Saint-Gilles",
+      "source_type": "book",
+      "citation": "Kevin James Lewis. The Counts of Tripoli and Lebanon in the Twelfth Century: Sons of Saint-Gilles. Routledge, 2017, pp. 100-102, 139. Digital copy: https://api.nla.am/server/api/core/bitstreams/bbc0405c-0d70-411b-ae3e-623e3457c101/content (accessed 2026-09-03).",
+      "locator": "pp. 100-102 and 139, chapters on Count Pons and Count Raymond II",
+      "rights_status": "copyrighted_citation_only",
+      "redistribution": "citation_only",
+      "use_role": "research"
+    },
+    {
+      "source_id": "SRC_SYRIACA",
+      "title": "The Syriac Gazetteer: Rafaniyya",
+      "source_type": "gazetteer",
+      "citation": "Syriaca.org, The Syriac Gazetteer, place 496, 'Rafaniyya', https://syriaca.org/place/496 (accessed 2026-09-03).",
+      "locator": "place/496, Location and Attestation sections",
+      "rights_status": "citation_and_link_permitted; component data attribution retained",
+      "redistribution": "citation_only",
       "use_role": "research"
     }
   ]

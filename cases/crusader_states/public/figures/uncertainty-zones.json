@@ -6,11 +6,14 @@
     "stable_core": "Evidence and model scenario groups are each unanimous on the same non-zero entity.",
     "unresolved_zone": "Both groups vary, they disagree despite internal unanimity, or assignment appears in only one group."
   },
+  "current_research_state_path": "research/rounds/01-evidence-update",
+  "evaluation_state": "round-00-initial",
   "evidence_scenarios": [
     "verified-only",
     "reviewed-baseline",
     "inclusive"
   ],
+  "execution_path": "frozen-v0.1-compatibility",
   "interpretation": "Agreement across the declared scenario set. It is not a probability, confidence interval, or historical truth surface.",
   "model_scenarios": [
     "reviewed-baseline",

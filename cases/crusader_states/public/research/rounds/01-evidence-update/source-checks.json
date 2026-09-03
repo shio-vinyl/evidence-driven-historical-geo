@@ -1,0 +1,136 @@
+{
+  "contract_version": "historical_geo.source_checks.v0.1",
+  "round_id": "01-evidence-update",
+  "case_id": "crusader-states-public-case",
+  "accessed_at": "2026-09-03",
+  "held_out_guard": "No existing historical boundary map was consulted. All admitted changes derive from text, dated narrative evidence, and a gazetteer point; held-out maps remain evaluation-only.",
+  "selection_basis": {
+    "method": "single-decision counterfactual attribution from round 00",
+    "ranked_targets": [
+      {
+        "gap_id": "G_1187_CAIRO_PROXY",
+        "affected_grid_cells": 1162,
+        "selected": true
+      },
+      {
+        "gap_id": "G_1130_EDESSA_DATE",
+        "affected_grid_cells": 257,
+        "selected": true
+      },
+      {
+        "gap_id": "G_1130_TRIPOLI_INLAND",
+        "affected_grid_cells": 220,
+        "selected": true
+      },
+      {
+        "gap_id": "G_1130_ASCALON_EVIDENCE",
+        "affected_grid_cells": 1,
+        "selected": false
+      },
+      {
+        "gap_id": "G_1187_JAFFA_EVIDENCE",
+        "affected_grid_cells": 0,
+        "selected": false,
+        "selection_role": "incidental zero-marginal cross-check from the Cairo source trail"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "check_id": "CHECK_R01_CAIRO",
+      "gap_id": "G_1187_CAIRO_PROXY",
+      "selection_role": "targeted",
+      "question": "Does evidence for Saladin as ruler of Egypt justify Cairo as a locality control point at end of 1187?",
+      "sources_checked": [
+        {
+          "source_id": "SRC_LANE_POOLE_1898",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Saladin_and_the_fall_of_the_Kingdom_of_Jerusalem_%28IA_saladinfallofkin00lane%29.pdf",
+          "locator": "p. 219",
+          "result": "Names al-Adil marching from Cairo in the 1187 campaign.",
+          "limitations": "Secondary synthesis; the passage cites Ibn al-Athir."
+        },
+        {
+          "source_id": "SRC_IBN_SHADDAD_1897",
+          "url": "https://archive.org/details/lifesaladin00condgoog",
+          "locator": "pp. 104-105 and 108",
+          "result": "Documents al-Adil's assignment to Egypt and the Egyptian army's 1187 mobilization.",
+          "limitations": "Does not itself name Cairo in this passage."
+        }
+      ],
+      "outcome": "success_criteria_met",
+      "state_action": "Close gap; admit Cairo only as an operational locality point."
+    },
+    {
+      "check_id": "CHECK_R01_EDESSA",
+      "gap_id": "G_1130_EDESSA_DATE",
+      "selection_role": "targeted",
+      "question": "Can adjacent 1131 evidence support an Edessa control point for the 1130 slice?",
+      "sources_checked": [
+        {
+          "source_id": "SRC_ASBRIDGE_2000",
+          "url": "https://books.google.com/books/about/The_Creation_of_the_Principality_of_Anti.html?id=DvUNedDOoFgC",
+          "locator": "pp. 125-126, section 1113-1130 (page-checked citation)",
+          "result": "Treats Joscelin's leadership of Edessa as stable through the section's 1130 endpoint.",
+          "limitations": "Supports a polity/locality anchor, not a county boundary; the linked official record may not expose the cited pages in every region."
+        },
+        {
+          "source_id": "SRC_WILLIAM_TYRE",
+          "url": "https://books.google.com/books/about/A_History_of_Deeds_Done_Beyond_the_Sea.html?id=t8RnAAAAMAAJ",
+          "locator": "book XIV, chapter 3, vol. II, p. 51",
+          "result": "Existing checked observation names Joscelin as count of Edessa in adjacent 1131.",
+          "limitations": "Adjacent-year corroboration; not sufficient alone."
+        }
+      ],
+      "outcome": "success_criteria_met",
+      "state_action": "Close temporal gap; retain Edessa as a minor-weight locality point."
+    },
+    {
+      "check_id": "CHECK_R01_TRIPOLI_INLAND",
+      "gap_id": "G_1130_TRIPOLI_INLAND",
+      "selection_role": "targeted",
+      "question": "Which inland settlements, fortresses, routes, or exclusions can constrain the County of Tripoli hypothesis around 1130?",
+      "sources_checked": [
+        {
+          "source_id": "SRC_LEWIS_2017",
+          "url": "https://api.nla.am/server/api/core/bitstreams/bbc0405c-0d70-411b-ae3e-623e3457c101/content",
+          "locator": "pp. 100-102 and 139",
+          "result": "Bounds Rafaniyya's comital possession from 1126 to permanent loss in 1137.",
+          "limitations": "One inland point cannot establish the full county extent."
+        },
+        {
+          "source_id": "SRC_SYRIACA",
+          "url": "https://syriaca.org/place/496",
+          "locator": "Location section",
+          "result": "Supplies an attributed approximate coordinate for Rafaniyya.",
+          "limitations": "Modern scholarly gazetteer point, not a medieval settlement footprint."
+        }
+      ],
+      "outcome": "success_criteria_met",
+      "state_action": "Close gap; add a minor-weight Rafaniyya control point, explicitly without a polygon inference."
+    },
+    {
+      "check_id": "CHECK_R01_JAFFA_CONTROL",
+      "gap_id": "G_1187_JAFFA_EVIDENCE",
+      "selection_role": "incidental_zero_marginal_control",
+      "question": "Was Jaffa captured and controlled by the Ayyubid polity by the end-of-year 1187 convention?",
+      "sources_checked": [
+        {
+          "source_id": "SRC_LANE_POOLE_1898",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Saladin_and_the_fall_of_the_Kingdom_of_Jerusalem_%28IA_saladinfallofkin00lane%29.pdf",
+          "locator": "p. 219",
+          "result": "States that al-Adil took Jaffa by assault in 1187.",
+          "limitations": "Secondary synthesis based here on Ibn al-Athir."
+        },
+        {
+          "source_id": "SRC_KAUFFELDT_2019",
+          "url": "https://rucforsk.ruc.dk/ws/files/63773770/Speciale_Sebastian_Kauffeldt_Jerusalem_1099_1187.pdf",
+          "locator": "p. 78 and n. 225",
+          "result": "Reproduces a contemporary letter listing Jaffa's surrender after Hattin.",
+          "limitations": "Mediated transcription; direct source is Edbury 2007, pp. 160-162."
+        }
+      ],
+      "outcome": "success_criteria_met_but_zero_spatial_marginal_effect",
+      "state_action": "Close gap and admit locality point; retain as evidence that gap closure need not alter the surface."
+    }
+  ]
+}

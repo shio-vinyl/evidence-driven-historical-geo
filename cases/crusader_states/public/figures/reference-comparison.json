@@ -1,5 +1,8 @@
 {
   "boundary_metrics_computed": false,
+  "current_research_state_path": "research/rounds/01-evidence-update",
+  "evaluation_state": "round-00-initial",
+  "execution_path": "frozen-v0.1-compatibility",
   "interpretation": "Categorical agreement with external cartography; no reference is ground truth and no value is a historical accuracy score.",
   "interpretive_zones": {
     "1130": {

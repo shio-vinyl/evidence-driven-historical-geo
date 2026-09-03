@@ -32,7 +32,8 @@
           "D_1130_DAMASCUS_SEED",
           "D_1130_ANTIOCH_SEED",
           "D_1130_TRIPOLI_SEED",
-          "D_1130_EDESSA_SEED"
+          "D_1130_EDESSA_SEED",
+          "D_1130_RAFANIYYA_SEED"
         ],
         "1187": [
           "D_1187_DAMASCUS_SEED",
@@ -44,7 +45,9 @@
           "D_1187_BEIRUT_SEED",
           "D_1187_TYRE_SEED",
           "D_1187_TRIPOLI_SEED",
-          "D_1187_ANTIOCH_SEED"
+          "D_1187_ANTIOCH_SEED",
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
         ]
       },
       "name": "flat-natural"
@@ -56,10 +59,7 @@
           "D_1130_ASCALON_SEED",
           "D_1130_TORTOSA_SEED"
         ],
-        "1187": [
-          "D_1187_CAIRO_SEED",
-          "D_1187_JAFFA_SEED"
-        ]
+        "1187": []
       },
       "description": "Baseline plus experimental locality decisions.",
       "included_decision_ids": {
@@ -70,7 +70,8 @@
           "D_1130_TRIPOLI_SEED",
           "D_1130_EDESSA_SEED",
           "D_1130_ASCALON_SEED",
-          "D_1130_TORTOSA_SEED"
+          "D_1130_TORTOSA_SEED",
+          "D_1130_RAFANIYYA_SEED"
         ],
         "1187": [
           "D_1187_DAMASCUS_SEED",
@@ -114,7 +115,8 @@
           "D_1130_DAMASCUS_SEED",
           "D_1130_ANTIOCH_SEED",
           "D_1130_TRIPOLI_SEED",
-          "D_1130_EDESSA_SEED"
+          "D_1130_EDESSA_SEED",
+          "D_1130_RAFANIYYA_SEED"
         ],
         "1187": [
           "D_1187_DAMASCUS_SEED",
@@ -126,7 +128,9 @@
           "D_1187_BEIRUT_SEED",
           "D_1187_TYRE_SEED",
           "D_1187_TRIPOLI_SEED",
-          "D_1187_ANTIOCH_SEED"
+          "D_1187_ANTIOCH_SEED",
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
         ]
       },
       "name": "projection-expansive",
@@ -159,7 +163,8 @@
           "D_1130_DAMASCUS_SEED",
           "D_1130_ANTIOCH_SEED",
           "D_1130_TRIPOLI_SEED",
-          "D_1130_EDESSA_SEED"
+          "D_1130_EDESSA_SEED",
+          "D_1130_RAFANIYYA_SEED"
         ],
         "1187": [
           "D_1187_DAMASCUS_SEED",
@@ -171,7 +176,9 @@
           "D_1187_BEIRUT_SEED",
           "D_1187_TYRE_SEED",
           "D_1187_TRIPOLI_SEED",
-          "D_1187_ANTIOCH_SEED"
+          "D_1187_ANTIOCH_SEED",
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
         ]
       },
       "name": "projection-normal",
@@ -188,7 +195,8 @@
           "D_1130_DAMASCUS_SEED",
           "D_1130_ANTIOCH_SEED",
           "D_1130_TRIPOLI_SEED",
-          "D_1130_EDESSA_SEED"
+          "D_1130_EDESSA_SEED",
+          "D_1130_RAFANIYYA_SEED"
         ],
         "1187": [
           "D_1187_DAMASCUS_SEED",
@@ -200,7 +208,9 @@
           "D_1187_BEIRUT_SEED",
           "D_1187_TYRE_SEED",
           "D_1187_TRIPOLI_SEED",
-          "D_1187_ANTIOCH_SEED"
+          "D_1187_ANTIOCH_SEED",
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
         ]
       },
       "name": "reviewed-baseline"
@@ -208,25 +218,22 @@
     "verified-only": {
       "axis": "evidence",
       "changed_decision_ids": {
-        "1130": [
-          "D_1130_TRIPOLI_SEED",
-          "D_1130_EDESSA_SEED"
-        ],
+        "1130": [],
         "1187": []
       },
-      "description": "Only direct-page-verified locality decisions.",
+      "description": "All currently admitted locality decisions have page-checked support after round 01; this profile now coincides with the reviewed baseline.",
       "excluded_decision_ids": {
-        "1130": [
-          "D_1130_TRIPOLI_SEED",
-          "D_1130_EDESSA_SEED"
-        ],
+        "1130": [],
         "1187": []
       },
       "included_decision_ids": {
         "1130": [
           "D_1130_JERUSALEM_SEED",
           "D_1130_DAMASCUS_SEED",
-          "D_1130_ANTIOCH_SEED"
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED",
+          "D_1130_RAFANIYYA_SEED"
         ],
         "1187": [
           "D_1187_DAMASCUS_SEED",
@@ -238,7 +245,9 @@
           "D_1187_BEIRUT_SEED",
           "D_1187_TYRE_SEED",
           "D_1187_TRIPOLI_SEED",
-          "D_1187_ANTIOCH_SEED"
+          "D_1187_ANTIOCH_SEED",
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
         ]
       },
       "name": "verified-only"

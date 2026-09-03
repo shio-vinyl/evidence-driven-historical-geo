@@ -44,7 +44,6 @@ def _scenario_definitions(config: Mapping[str, Any]) -> tuple[str, dict[str, dic
         )
 
     variants: dict[str, dict[str, Any]] = {}
-    axis_counts = {axis: 0 for axis in _AXES}
     for name, raw in scenarios.items():
         if not isinstance(name, str) or not name.strip():
             raise ValueError("scenario names must be non-empty strings")
@@ -67,11 +66,6 @@ def _scenario_definitions(config: Mapping[str, Any]) -> tuple[str, dict[str, dic
         if not changed_ids:
             raise ValueError(f"scenario {name!r} must name at least one changed decision ID")
         variants[name] = {"axis": axis, "changed_decision_ids": changed_ids}
-        axis_counts[axis] += 1
-
-    for axis, count in axis_counts.items():
-        if not count:
-            raise ValueError(f"scenario_config requires at least one {axis} variant")
     return baseline, variants
 
 
@@ -187,6 +181,7 @@ def diagnose_uncertainty(
                 f"baseline has {baseline.shape}, analysis grid has {analysis_shape}"
             )
         masks: dict[str, dict[str, np.ndarray]] = {axis: {} for axis in _AXES}
+        scenario_effects: dict[str, list[dict[str, Any]]] = {axis: [] for axis in _AXES}
         for name in sorted(variants):
             current = _assignment(raw_slice[name], f"assignments[{slice_id!r}].{name}")
             if current.shape != baseline.shape:
@@ -195,8 +190,15 @@ def diagnose_uncertainty(
                     f"{name} has {current.shape}, baseline has {baseline.shape}"
                 )
             difference = current != baseline
+            axis = variants[name]["axis"]
+            scenario_effects[axis].append(
+                {
+                    "scenario": name,
+                    "changed_decision_ids": list(variants[name]["changed_decision_ids"]),
+                    "affected_grid_cells": int(difference.sum()),
+                }
+            )
             if difference.any():
-                axis = variants[name]["axis"]
                 masks[axis][name] = difference
                 if axis == "evidence":
                     evidence_effects.setdefault(name, []).append((slice_id, difference))
@@ -239,6 +241,7 @@ def diagnose_uncertainty(
                 "changed_scenarios": {
                     axis: sorted(masks[axis]) for axis in _AXES
                 },
+                "scenario_effects": scenario_effects,
                 "changed_decision_ids": {
                     **changed_ids,
                     "all": sorted(set(changed_ids["evidence"]) | set(changed_ids["model"])),

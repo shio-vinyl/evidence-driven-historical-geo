@@ -6,6 +6,11 @@ Regenerate every figure and metric from the repository root:
 PYTHONPATH=src python3 -m historical_geo figures cases/crusader_states/public
 ```
 
+The evidence-anchor, reconstruction, natural-ablation, and boundary-attractor
+figures use the current **Round-01 v0.2 epistemic state**. The external-map
+comparison and scenario-agreement figures remain explicitly frozen Round-00
+evaluations so the post-search state cannot rewrite its own baseline.
+
 ## `evidence-anchors.png`
 
 Named locality anchors recovered from historical claims. GeoNames coordinates are approximate. Mountain polygons and the Jordan River provide modern geographic context; they do not independently prove political control.
@@ -24,10 +29,21 @@ A synthetic near-parallel candidate is accepted only after topology and area gua
 
 ## `reference-comparison.png`
 
-Project-authored counts of categorical assertions from the registered external maps: named city control, retained entities, and expressed adjacency. A rights-blocked 1130 map remains in the register but contributes no extracted assertion. `reference-comparison.json` stores the item-level result. No atlas scan, traced boundary, IoU, or historical accuracy score appears here.
+Frozen Round-00 counts of categorical assertions from the registered external
+maps: named city control, retained entities, and expressed adjacency. A
+rights-blocked 1130 map remains in the register but contributes no extracted
+assertion. `reference-comparison.json` identifies the evaluation state and
+stores the item-level result. No atlas scan, traced boundary, IoU, or historical
+accuracy score appears here. Round 01 later closes the Jaffa text-evidence gap;
+the old count is retained strictly as a pre-search comparison.
 
 ## `uncertainty-zones.png`
 
-Agreement classes across the declared evidence and model scenarios on a common 10 km analysis grid. Stable core, evidence-sensitive, model-sensitive, and unresolved indicate behavior within this scenario set. They are not probabilities or confidence intervals. Exact area and agreement summaries are in `uncertainty-zones.json`.
+Frozen Round-00 agreement classes across grouped evidence and model scenarios
+on a common 10 km analysis grid. Stable core, evidence-sensitive,
+model-sensitive, and unresolved indicate behavior within that scenario set.
+They are not probabilities or confidence intervals. Exact archived area and
+agreement summaries are in `uncertainty-zones.json`; current atomic diagnostics
+are in the Round-01 research directory.
 
 `figure-qa.json` records dimensions, nonblank checks, and SHA-256 values for all six PNG files after regeneration.

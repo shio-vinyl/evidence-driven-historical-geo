@@ -34,36 +34,6 @@
     },
     {
       "claim_ids": [
-        "E_1187_JAFFA_POINT"
-      ],
-      "decision_ids": [
-        "D_1187_JAFFA_SEED"
-      ],
-      "evidence_gap_ids": [
-        "G_1187_JAFFA_EVIDENCE"
-      ],
-      "preferred_source_types": [
-        "primary chronicle",
-        "page-addressable scholarly study"
-      ],
-      "priority_basis": {
-        "affected_grid_cells": 1162,
-        "related_decision_count": 1,
-        "related_decision_ids": [
-          "D_1187_JAFFA_SEED"
-        ],
-        "slices": [
-          1187
-        ]
-      },
-      "question": "Was Jaffa captured and controlled by the Ayyubid polity by the end-of-year 1187 convention?",
-      "status": "open",
-      "stop_condition": "Stop after the principal narrative witnesses and two independent studies remain silent or conflicting.",
-      "success_criteria": "A page-addressable source explicitly places Jaffa in the 1187 control sequence.",
-      "target_id": "TARGET_G_1187_JAFFA_EVIDENCE"
-    },
-    {
-      "claim_ids": [
         "E_1130_EDESSA_POINT"
       ],
       "decision_ids": [
@@ -77,7 +47,7 @@
         "dated scholarly study"
       ],
       "priority_basis": {
-        "affected_grid_cells": 477,
+        "affected_grid_cells": 257,
         "related_decision_count": 1,
         "related_decision_ids": [
           "D_1130_EDESSA_SEED"
@@ -108,7 +78,7 @@
         "fortress or route study"
       ],
       "priority_basis": {
-        "affected_grid_cells": 477,
+        "affected_grid_cells": 220,
         "related_decision_count": 1,
         "related_decision_ids": [
           "D_1130_TRIPOLI_SEED"
@@ -152,36 +122,6 @@
       "stop_condition": "Stop after two directly relevant scholarly or primary-source checks remain inconclusive.",
       "success_criteria": "A page-addressable source directly supports or rejects locality control at the target slice.",
       "target_id": "TARGET_G_1130_ASCALON_EVIDENCE"
-    },
-    {
-      "claim_ids": [
-        "E_1130_TORTOSA_POINT"
-      ],
-      "decision_ids": [
-        "D_1130_TORTOSA_SEED"
-      ],
-      "evidence_gap_ids": [
-        "G_1130_TORTOSA_EVIDENCE"
-      ],
-      "preferred_source_types": [
-        "primary chronicle",
-        "page-addressable scholarly study"
-      ],
-      "priority_basis": {
-        "affected_grid_cells": 1,
-        "related_decision_count": 1,
-        "related_decision_ids": [
-          "D_1130_TORTOSA_SEED"
-        ],
-        "slices": [
-          1130
-        ]
-      },
-      "question": "Does the checked 1130 evidence support Tortosa as a County of Tripoli control point, independently of the title of the count?",
-      "status": "open",
-      "stop_condition": "Stop after the accessible primary narrative and two independent scholarly treatments have been checked.",
-      "success_criteria": "A locatable statement identifies Tortosa control close to 1130 without inferring a county footprint.",
-      "target_id": "TARGET_G_1130_TORTOSA_EVIDENCE"
     }
   ]
 }

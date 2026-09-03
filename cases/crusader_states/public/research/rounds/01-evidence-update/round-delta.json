@@ -1,0 +1,107 @@
+{
+  "contract_version": "historical_geo.research_round_delta.v0.1",
+  "round_id": "01-evidence-update",
+  "case_id": "crusader-states-public-case",
+  "comparison": "round-00 checked-in epistemic state to round-01 updated epistemic state",
+  "bundle_hashes": {
+    "round_00_canonical_sha256": "1d0dd14603f00732384fcab5867b022d9b43c818008e3732e570e31d5cfe983d",
+    "round_01_canonical_sha256": "298b3f82e7a85de20f845d0e80d7fed79af362d864c48e2d9062ebaaa6d6f228"
+  },
+  "scenario_hashes": {
+    "round_00_canonical_sha256": "e6d7912462f13aaf70bf88c75fa809dafa47ad35bc45fdee51741ff5c9fb8108",
+    "round_01_canonical_sha256": "af3aae7232c46df4596c8df84c90851fa8a9cf82007ad69ce1a8a687703814ae"
+  },
+  "method": {
+    "backend": "XTENT ordinal backend used by the public case",
+    "grid": {
+      "bbox": [
+        30.0,
+        28.5,
+        42.0,
+        39.0
+      ],
+      "crs": "+proj=lcc +lat_1=30 +lat_2=37 +lat_0=33.75 +lon_0=36 +datum=WGS84 +units=m +no_defs",
+      "friction_profile": "settled",
+      "land_path": "land.geojson",
+      "natural_features_path": "natural-features.geojson",
+      "resolution": 10000
+    },
+    "procedure": "Reconstruct reviewed-baseline independently from archived round-00 and current round-01 bundle/scenario files; rasterize entity polygons to the declared analysis grid with stable entity codes; count cells whose assigned entity differs.",
+    "reproducibility_note": "Round inputs were copied to isolated case directories before execution so one run could not overwrite the other."
+  },
+  "slices": [
+    {
+      "slice": 1130,
+      "baseline_scenario": "reviewed-baseline",
+      "round_00_effective_input_sha256": "e2d6fbe29c5c2b67ef0bede23fe428fbabc6e64c93317727780353fbf3669f42",
+      "round_01_effective_input_sha256": "054b8424500b101a302f81674c0f864ddfa458dc7c91102018bbdf57b26c6c09",
+      "round_00_surface_sha256": "87906d6872cd53e043f8d2d197f5ca54a6da1990a7ff42f03caa86ac6ef93eab",
+      "round_01_surface_sha256": "f8781191f9229828d15a98526056c5e1dafa0c37cf326404f63d13113873168a",
+      "newly_admitted_control_point_decision_ids": [
+        "D_1130_RAFANIYYA_SEED"
+      ],
+      "analysis_grid_cells": 13924,
+      "assigned_union_grid_cells": 4557,
+      "changed_grid_cells": 0,
+      "changed_share_of_analysis_grid": 0.0,
+      "changed_share_of_assigned_union": 0.0,
+      "assignment_counts_round_00": {
+        "unassigned": 9367,
+        "Burid Damascus": 1035,
+        "County of Edessa": 257,
+        "County of Tripoli": 220,
+        "Kingdom of Jerusalem": 1565,
+        "Principality of Antioch": 1480
+      },
+      "assignment_counts_round_01": {
+        "unassigned": 9367,
+        "Burid Damascus": 1035,
+        "County of Edessa": 257,
+        "County of Tripoli": 220,
+        "Kingdom of Jerusalem": 1565,
+        "Principality of Antioch": 1480
+      },
+      "changed_cell_transitions": []
+    },
+    {
+      "slice": 1187,
+      "baseline_scenario": "reviewed-baseline",
+      "round_00_effective_input_sha256": "4bd42417f46b002781184df7a617f7284d27835a3de07dd5087ee77d237bc8dd",
+      "round_01_effective_input_sha256": "ba324a1baaf93a282ff829435a43e50106efb6536f98cddaeae627d46df312ef",
+      "round_00_surface_sha256": "d7ab01d86119feba0b7789ee89ee114e36fe5ca177dd8510e1e37b7d3e027d66",
+      "round_01_surface_sha256": "5f32ba7709c1e5fdef051ecbec32423329330af42329f0a5057e11cc1a31a4fb",
+      "newly_admitted_control_point_decision_ids": [
+        "D_1187_CAIRO_SEED",
+        "D_1187_JAFFA_SEED"
+      ],
+      "analysis_grid_cells": 13924,
+      "assigned_union_grid_cells": 4852,
+      "changed_grid_cells": 1162,
+      "changed_share_of_analysis_grid": 0.08345303,
+      "changed_share_of_assigned_union": 0.23948887,
+      "assignment_counts_round_00": {
+        "unassigned": 10234,
+        "Ayyubid Sultanate": 1854,
+        "County of Tripoli": 219,
+        "Kingdom of Jerusalem": 1,
+        "Principality of Antioch": 1616
+      },
+      "assignment_counts_round_01": {
+        "unassigned": 9072,
+        "Ayyubid Sultanate": 3016,
+        "County of Tripoli": 219,
+        "Kingdom of Jerusalem": 1,
+        "Principality of Antioch": 1616
+      },
+      "changed_cell_transitions": [
+        {
+          "from": "unassigned",
+          "to": "Ayyubid Sultanate",
+          "grid_cells": 1162
+        }
+      ]
+    }
+  ],
+  "interpretation_limit": "Changed cells measure the current backend response to audited state changes. They do not measure historical accuracy, validate a boundary, or use the held-out reference map.",
+  "hash_method": "SHA-256 over canonical JSON (UTF-8, sorted keys, compact separators, ensure_ascii=false)"
+}

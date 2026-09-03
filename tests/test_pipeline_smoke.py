@@ -43,9 +43,9 @@ def test_minimum_renderer_is_nonblank_and_semantic(tmp_path: Path) -> None:
     assert qa["feature_count"] == 2
 
 
-def test_one_command_path_runs_validate_to_render(tmp_path: Path) -> None:
+def test_explicit_legacy_command_runs_validate_to_render_for_synthetic_fixture(tmp_path: Path) -> None:
     case = copied_case(tmp_path)
-    assert main(["run", str(case), "--slice", "1130"]) == 0
+    assert main(["legacy-run", str(case), "--slice", "1130"]) == 0
     run_dir = case / "build/run-1130"
     assert (run_dir / "effective-solver-input.json").exists()
     assert (run_dir / "boundary-hypotheses.geojson").exists()

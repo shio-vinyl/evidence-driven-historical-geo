@@ -43,13 +43,13 @@ source
   -> ranked evidence search targets
 ```
 
-The command path is:
+The default command path is:
 
 ```text
-validate-research -> compile-request -> research-run -> research-loop
+validate -> compile-request -> reconstruct/run -> research-loop
 ```
 
-`historical-geo run` executes the same path for one slice. `historical-geo figures` adds baseline/ablation runs and review figures.
+`validate`, `compile-request`, `reconstruct`, and `run` compile the v0.2 epistemic state before crossing the XTENT backend boundary. The hash-frozen v0.1 adapter is available only through explicit `legacy-*` commands for regression fixtures. `historical-geo figures` preserves the baseline and ablation figure checks.
 
 ## Core data model
 
@@ -77,6 +77,8 @@ The research compiler converts reviewed decisions into a deterministic reconstru
 - traversal constraints;
 - explicit exclusions;
 - display-only context.
+
+Every scenario carries an explicit control-point allowlist. An empty allowlist means that no control points are selected; it never falls back to every admitted point. Admitted spatial/traversal assumptions remain active unless explicitly excluded.
 
 The XTENT backend translates the supported subset into seeds, phases, and friction features. Another spatial inference backend can consume the same epistemic state through its own translator.
 

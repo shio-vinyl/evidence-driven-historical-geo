@@ -1,0 +1,76 @@
+{
+  "baseline_scenario": "reviewed-baseline",
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.uncertainty_diagnosis.v0.2",
+  "slices": [
+    {
+      "affected_grid_cells": {
+        "evidence": 0,
+        "model": 5269,
+        "total": 5269
+      },
+      "changed_decision_ids": {
+        "all": [
+          "D_1187_AYYUBID_SULTANATE_PHASE",
+          "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ],
+        "evidence": [],
+        "model": [
+          "D_1187_AYYUBID_SULTANATE_PHASE",
+          "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ]
+      },
+      "changed_scenarios": {
+        "evidence": [],
+        "model": [
+          "flat-natural",
+          "projection-expansive",
+          "projection-normal"
+        ]
+      },
+      "classification": "model_sensitivity",
+      "scenario_effects": {
+        "evidence": [],
+        "model": [
+          {
+            "affected_grid_cells": 196,
+            "changed_decision_ids": [
+              "D_NATURAL_LEBANON_BARRIER",
+              "D_NATURAL_TAURUS_BARRIER"
+            ],
+            "scenario": "flat-natural"
+          },
+          {
+            "affected_grid_cells": 5182,
+            "changed_decision_ids": [
+              "D_1187_AYYUBID_SULTANATE_PHASE",
+              "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-expansive"
+          },
+          {
+            "affected_grid_cells": 2838,
+            "changed_decision_ids": [
+              "D_1187_AYYUBID_SULTANATE_PHASE",
+              "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+              "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+              "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE"
+            ],
+            "scenario": "projection-normal"
+          }
+        ]
+      },
+      "slice": 1187
+    }
+  ]
+}

@@ -163,7 +163,6 @@ def test_mixed_slice_does_not_search_for_gap_linked_only_to_model_change() -> No
     "mutate, message",
     [
         (lambda cfg, data: cfg.update({"baseline": "missing"}), "does not match the declared baseline"),
-        (lambda cfg, data: cfg["scenarios"].pop("model-a"), "at least one model variant"),
         (
             lambda cfg, data: cfg["scenarios"]["evidence-a"].update({"changed_decision_ids": []}),
             "at least one changed decision ID",
@@ -202,6 +201,24 @@ def test_omits_unchanged_slices_and_is_deterministic() -> None:
     second = diagnose_uncertainty(config(), assignments, [gap("G", ["D_E1"])])
 
     assert first == second == {"slices": [], "search_targets": []}
+
+
+def test_model_only_scenario_set_emits_no_historical_search_targets() -> None:
+    model_only = {
+        "baseline": "baseline",
+        "scenarios": {
+            "baseline": {"axis": "baseline"},
+            "model-a": {"axis": "model", "changed_decision_ids": ["D_M1"]},
+        },
+    }
+    result = diagnose_uncertainty(
+        model_only,
+        {"slice": {"baseline": [1, 1, 1], "model-a": [1, 2, 1]}},
+        [gap("G_MODEL", ["D_M1"])],
+    )
+    assert result["slices"][0]["classification"] == "model_sensitivity"
+    assert result["slices"][0]["changed_scenarios"]["evidence"] == []
+    assert result["search_targets"] == []
 
 
 def test_rejects_different_analysis_grid_between_slices() -> None:

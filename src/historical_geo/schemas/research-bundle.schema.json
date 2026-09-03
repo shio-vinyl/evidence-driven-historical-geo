@@ -1,0 +1,438 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/research-bundle.schema.json",
+  "title": "Historical geography research bundle v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "case_id",
+    "sources",
+    "observations",
+    "claims",
+    "model_decisions",
+    "evidence_gaps"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "historical_geo.research_bundle.v0.2"
+    },
+    "case_id": {
+      "$ref": "#/$defs/nonEmptyText"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/observation"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "model_decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/modelDecision"
+      }
+    },
+    "evidence_gaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidenceGap"
+      }
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "nonEmptyText": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identifierList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/identifier"
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "title",
+        "source_type",
+        "rights_status",
+        "redistribution",
+        "use_role"
+      ],
+      "properties": {
+        "source_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "source_type": {
+          "enum": [
+            "book",
+            "article",
+            "dataset",
+            "map",
+            "gazetteer",
+            "archive",
+            "synthetic_fixture",
+            "other"
+          ]
+        },
+        "citation": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "locator": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "rights_status": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "redistribution": {
+          "enum": [
+            "allowed",
+            "citation_only",
+            "unknown"
+          ]
+        },
+        "use_role": {
+          "enum": [
+            "research",
+            "evaluation_only"
+          ]
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observation_id",
+        "source_id",
+        "locator",
+        "paraphrase",
+        "verification_status"
+      ],
+      "properties": {
+        "observation_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "source_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "locator": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "paraphrase": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "verification_status": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "observation_type": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "slice": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "data": {
+          "type": "object"
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "supporting_observation_ids",
+        "challenging_observation_ids",
+        "semantic_role",
+        "status",
+        "rationale",
+        "statement",
+        "entity",
+        "slice"
+      ],
+      "properties": {
+        "claim_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "supporting_observation_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "challenging_observation_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "semantic_role": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "status": {
+          "enum": [
+            "supported",
+            "disputed",
+            "unsupported",
+            "unresolved"
+          ]
+        },
+        "rationale": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "statement": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "entity": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "slice": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "temporal_scope": {
+          "type": "object"
+        },
+        "spatial_scope": {
+          "type": "object"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "supported"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "supporting_observation_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "disputed"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "supporting_observation_ids": {
+                "minItems": 1
+              },
+              "challenging_observation_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "unsupported"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "challenging_observation_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "modelDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_id",
+        "role",
+        "review_status",
+        "supporting_claim_ids",
+        "challenging_claim_ids",
+        "source_ids",
+        "rationale",
+        "parameters"
+      ],
+      "properties": {
+        "decision_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "role": {
+          "enum": [
+            "control_point",
+            "spatial_constraint",
+            "traversal_constraint",
+            "exclusion",
+            "display_context"
+          ]
+        },
+        "review_status": {
+          "enum": [
+            "admitted",
+            "experimental",
+            "excluded",
+            "assumption"
+          ]
+        },
+        "supporting_claim_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "challenging_claim_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "source_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "rationale": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "assumption_reason": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "parameters": {
+          "type": "object"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "review_status": {
+                "const": "assumption"
+              }
+            },
+            "required": [
+              "review_status"
+            ]
+          },
+          "then": {
+            "required": [
+              "assumption_reason"
+            ]
+          }
+        }
+      ]
+    },
+    "evidenceGap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gap_id",
+        "cause",
+        "status",
+        "question",
+        "success_criteria",
+        "stop_condition",
+        "preferred_source_types",
+        "related_claim_ids",
+        "related_decision_ids"
+      ],
+      "properties": {
+        "gap_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "cause": {
+          "enum": [
+            "missing_evidence",
+            "conflicting_evidence",
+            "temporal_ambiguity",
+            "spatial_ambiguity",
+            "model_sensitivity",
+            "mixed"
+          ]
+        },
+        "status": {
+          "enum": [
+            "open",
+            "closed",
+            "deferred"
+          ]
+        },
+        "question": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "success_criteria": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "stop_condition": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "preferred_source_types": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyText"
+          }
+        },
+        "related_claim_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "related_decision_ids": {
+          "$ref": "#/$defs/identifierList"
+        }
+      },
+      "allOf": [
+        {
+          "anyOf": [
+            {
+              "properties": {
+                "related_claim_ids": {
+                  "minItems": 1
+                }
+              }
+            },
+            {
+              "properties": {
+                "related_decision_ids": {
+                  "minItems": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

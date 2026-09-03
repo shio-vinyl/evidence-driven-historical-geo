@@ -19,7 +19,7 @@ SCENARIO_ALIASES = {"baseline": "reviewed-baseline", "flat": "flat-natural"}
 
 
 def _schema_dir() -> Path:
-    return Path(__file__).resolve().parents[2] / "schemas"
+    return Path(__file__).resolve().parent / "schemas"
 
 
 def _safe_relative(base: Path, value: str) -> Path:
