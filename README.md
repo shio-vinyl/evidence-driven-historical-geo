@@ -8,6 +8,16 @@ This project tests whether a research agent can build an acceptable historical-g
 
 ![1130 and end-of-1187 boundary hypotheses](cases/crusader_states/public/figures/reconstruction-slices.png)
 
+```mermaid
+flowchart LR
+    A[Evidence search] --> B[Epistemic state]
+    B --> C[Spatial hypothesis]
+    C --> D[Uncertainty diagnosis]
+    D --> E[Ranked search targets]
+    E --> A
+    C --> F[Held-out evaluation]
+```
+
 ## What the agent does
 
 For each case, the agent works through a research loop:
@@ -34,9 +44,9 @@ The v0.2 contract treats `Source → Observation → Claim → Model Decision �
 
 ## Flagship case: Crusader States
 
-The case covers **1130** and **end of 1187**. After a second source review, the 1130 baseline retains five entities; Fatimid Egypt appears only in the inclusive scenario through the disputed Ascalon anchor. The 1187 baseline retains four entities and omits disputed Cairo and Jaffa points.
+The case covers **1130** and **end of 1187**. Round 01 closes the Cairo, Jaffa, Edessa-date, and Tripoli-inland gaps through page-addressable text and gazetteer evidence; it admits Cairo and Jaffa as locality points and adds Rafaniyya as a minor 1130 control point. These changes remain locality constraints, never direct county or state perimeters. The Ascalon gap remains open and its disputed anchor stays an evidence scenario.
 
-Seven load-bearing gaps now have explicit decisions: two KEEP, three DOWNGRADE, and two DISPUTED. The decisions are stored in `historical-claim-decisions.json`, not left in prose alone.
+The frozen claim-decision register and the round-specific state-change record keep these judgments machine-readable. They record the source/observation/claim/decision delta instead of leaving a revised baseline in prose alone.
 
 ![Evidence-backed locality anchors](cases/crusader_states/public/figures/evidence-anchors.png)
 
@@ -54,9 +64,15 @@ Eight scenarios test evidence eligibility, natural costs, the allowed projection
 
 ![Scenario agreement zones](cases/crusader_states/public/figures/uncertainty-zones.png)
 
-The large model-sensitive share shows that bounded projection choices dominate the current areal result. The v0.2 diagnosis also measures which evidence scenarios change the assignment and links those changed cells back to open evidence gaps. The checked-in first research round then ranks concrete searches with source types, success criteria, and stop conditions.
+The large model-sensitive share shows that bounded projection choices dominate the current areal result. The v0.2 diagnosis also measures which evidence scenarios change the assignment and links those changed cells back to open evidence gaps. Round 00 ranks the first concrete searches; round 01 records which gaps were closed and recomputes the residual agenda.
 
 The Crusader case is a retrospective testbed: external maps never enter reconstruction inputs or parameter tuning, although they were already inspected during development. A future case is required for a strict pre-registered held-out evaluation.
+
+## Research rounds and policy experiment
+
+`research/rounds/00-initial/` preserves frozen pre-search bundle/scenario snapshots together with the diagnosis and agenda; `research/rounds/01-evidence-update/` preserves its source checks, state changes, and recomputed slice diagnoses. A reviewed round records the source/observation/claim/decision delta together with the diagnosis and search targets that justified the next action; transient solver runs remain under ignored `build/` directories. Canonical hashes bind the before/after snapshots to the round delta.
+
+`research/experiments/equal-budget-policy/` contains a **constructed deterministic replay** of targeted, fixed-order, and broad-order search policies at equal budget. Its declared fixture outcomes appear in the input and result files. The experiment verifies selection and accounting mechanics only; it does not demonstrate that one policy improves real historical research.
 
 ## Implemented components
 
@@ -76,24 +92,28 @@ The Crusader case is a retrospective testbed: external maps never enter reconstr
 python3 -m venv .venv
 .venv/bin/pip install -e '.[test]'
 
-.venv/bin/historical-geo validate-research cases/crusader_states/public
+.venv/bin/historical-geo validate cases/crusader_states/public
 .venv/bin/historical-geo compile-request cases/crusader_states/public \
   --slice 1130 --scenario reviewed-baseline
+MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
+  cases/crusader_states/public --slice 1130
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo research-loop \
   cases/crusader_states/public --slice 1130
+.venv/bin/historical-geo policy-experiment \
+  cases/crusader_states/public/research/experiments/equal-budget-policy/experiment.json
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
   cases/crusader_states/public
 .venv/bin/pytest
 ```
 
-Generated runs remain under ignored `build/` directories. Reviewed figures and machine-readable metrics are kept under `cases/crusader_states/public/figures/`.
+`validate`, `compile-request`, `reconstruct`, and `run` use the v0.2 epistemic-state compiler followed by the XTENT backend. The hash-frozen v0.1 adapter survives only through `legacy-*` commands for regression fixtures. Generated runs remain under ignored `build/` directories. Reviewed figures and machine-readable metrics are kept under `cases/crusader_states/public/figures/`.
 
 ## Verified state
 
-- 101 tests pass.
+- CI runs the full test suite on supported Python versions.
 - The legacy v0.1 baseline is hash-frozen before migration.
 - The v0.2 bundle, diagnosis, and search-target documents pass structural and referential validation.
-- Backend-boundary tests show that compiled v0.2 case inputs preserve the reviewed v0.1 XTENT behavior.
+- Backend-boundary tests show that the frozen round-00 v0.2 snapshots reproduce the reviewed v0.1 XTENT baseline; round 01 then records and hashes its intentional input and surface changes.
 - Public lineage validation reports zero errors.
 - Required scenarios for both slices rebuild successfully.
 - Every run retains its expected scenario entities; geometry is valid and non-overlapping.
@@ -113,3 +133,4 @@ These checks establish reproducibility and auditability. Historical acceptance s
 - [Uncertainty analysis](docs/research/uncertainty-analysis.md)
 - [Reproducibility guide](docs/operations/reproducibility.md)
 - [Fixture attribution and rights](cases/crusader_states/public/ATTRIBUTION.md)
+- [Software license](LICENSE) and [data/content terms](DATA-LICENSE.md)

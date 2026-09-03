@@ -1,0 +1,46 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Upgrade installer
+        run: python -m pip install --upgrade pip
+      - name: Install package and test dependencies
+        run: python -m pip install -e '.[test]'
+      - name: Run test suite
+        env:
+          MPLBACKEND: Agg
+          MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -m pytest -p no:cacheprovider
+      - name: Build and smoke-test wheel
+        env:
+          MPLBACKEND: Agg
+          MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+        run: |
+          python -m pip wheel --no-deps --wheel-dir "${{ runner.temp }}/wheel" .
+          python -m pip install --force-reinstall --no-deps "${{ runner.temp }}"/wheel/*.whl
+          cd "${{ runner.temp }}"
+          historical-geo validate "$GITHUB_WORKSPACE/cases/crusader_states/public"

@@ -1,22 +1,19 @@
 # Agent Guide
 
-This directory is a clean staging repository for a future public GitHub release.
+This directory is a public-facing research software repository.
 
 ## Read Order
 
 1. `README.md`
-2. `.ops/roadmap.md`
-3. the active plan and relevant task
-4. only the documentation required by that task
+2. `docs/architecture/methodology.md`
+3. the relevant case README and machine-readable research round
 
-## Source Preservation
+## Evidence and Data Preservation
 
-- Treat the external compiler worktree supplied by the active recovery task as read-only unless the task explicitly says otherwise.
-- Treat the external publisher archive supplied by the active recovery task as an immutable snapshot.
 - Treat external atlas/vectorization material as private research material by default.
-- Keep external machine paths in the task context, never in public repository files.
-- Copy only files listed in the recovery manifest; do not bulk-copy an old project or generated-output tree.
-- Record the origin and transformation of recovered code, data, and documentation.
+- Keep external machine paths in task context, never in public repository files.
+- Record the origin, rights status, and transformation of incorporated code, data, and documentation.
+- Do not replace frozen research-round inputs; add a new reviewed round when epistemic state changes.
 
 ## Public Claims
 
@@ -29,10 +26,11 @@ This directory is a clean staging repository for a future public GitHub release.
 
 - Do not add source PDFs, book scans, copyrighted atlas pages, large raw datasets, secrets, local settings, caches, or absolute machine paths.
 - Prefer clipped, redistributable fixtures with explicit attribution and licenses.
-- Public-facing narrative documentation is maintained in paired English and Simplified Chinese versions. `README.md` is the English landing page, `README.zh-CN.md` is its Chinese pair, and documents use the `.zh-CN.md` suffix. Keep paired documents structurally aligned. Internal `.ops` documents may use either language.
+- Public-facing narrative documentation is maintained in paired English and Simplified Chinese versions. `README.md` is the English landing page, `README.zh-CN.md` is its Chinese pair, and documents use the `.zh-CN.md` suffix. Keep paired documents structurally aligned.
 
-## Project Operations
+## Repository maintenance
 
-- `.ops/tasks/**` is the execution source.
-- `docs/` contains the paired public methodology, case-study, source-review, and reproducibility series; development history stays under the ignored `.ops/` tree.
-- Stop before publishing, pushing, choosing a license for third-party material, or declaring a historical result validated without human review.
+- Keep execution state in code, tests, case artifacts, and concise public documentation.
+- `docs/` contains the paired public methodology, case-study, source-review, and reproducibility series.
+- The MIT license covers original software and documentation. Preserve the separate third-party terms and attribution in `DATA-LICENSE.md` and case attribution records.
+- Stop before pushing or declaring a historical result validated without human review unless the user explicitly authorizes it.

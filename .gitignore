@@ -3,6 +3,8 @@
 .pytest_cache/
 __pycache__/
 *.py[cod]
+*.egg-info/
+dist/
+*.whl
 cases/**/build/
 .DS_Store
-.ops/

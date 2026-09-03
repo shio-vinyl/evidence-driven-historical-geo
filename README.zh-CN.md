@@ -8,6 +8,16 @@
 
 ![1130 年与 1187 年末的边界假说](cases/crusader_states/public/figures/reconstruction-slices.png)
 
+```mermaid
+flowchart LR
+    A[证据检索] --> B[认知状态]
+    B --> C[空间假说]
+    C --> D[不确定性诊断]
+    D --> E[排序后的搜索目标]
+    E --> A
+    C --> F[留出评估]
+```
+
 ## Agent 负责什么
 
 每个案例都经过同一条研究链：
@@ -34,9 +44,9 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 ## 核心案例：十字军诸国
 
-案例覆盖 **1130 年**和 **1187 年末**。第二轮来源审查后，1130 基线保留 5 个实体；Fatimid Egypt 只通过有争议的 Ascalon 锚点出现在 inclusive 情景。1187 基线保留 4 个实体，并移除有争议的 Cairo 与 Jaffa 点。
+案例覆盖 **1130 年**和 **1187 年末**。第 01 轮通过可按页定位的文本与地名库证据关闭 Cairo、Jaffa、Edessa 年份与 Tripoli 内陆四项缺口；Cairo 和 Jaffa 被纳入地点约束，Rafaniyya 作为 1130 年次要控制点加入。它们都只构成地点约束，不能直接推出伯国或政权的连续边界。Ascalon 缺口仍然开放，其争议锚点保留在证据情景中。
 
-7 组承重缺口已经全部决策：2 组 KEEP、3 组 DOWNGRADE、2 组 DISPUTED。决策写入 `historical-claim-decisions.json`，不只停留在说明文字中。
+冻结的主张决策登记表与按轮次保存的状态变化记录共同使这些判断机器可读。它们保存 source、observation、claim、decision 的增量，避免只在文字中替换基线。
 
 ![有证据支持的地点锚点](cases/crusader_states/public/figures/evidence-anchors.png)
 
@@ -54,9 +64,15 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 ![情景一致性区域](cases/crusader_states/public/figures/uncertainty-zones.png)
 
-当前结果中模型敏感区占比很大，说明有界 projection 选择对面状结果的影响高于新增争议地点。v0.2 诊断还会测量证据情景改变了哪些格网单元，并把这些变化追溯到尚未关闭的证据缺口。仓库保存的首轮研究结果据此生成具体搜索任务，包含目标资料类型、成功标准和停止条件。
+当前结果中模型敏感区占比很大，说明有界 projection 选择对面状结果的影响高于新增争议地点。v0.2 诊断还会测量证据情景改变了哪些格网单元，并把这些变化追溯到尚未关闭的证据缺口。第 00 轮据此生成首批具体搜索任务；第 01 轮保存已关闭缺口并重新计算剩余议程。
 
 十字军案例属于回顾性 testbed：外部地图从未进入重建输入或参数调优，但开发期间已经被检查。严格预注册的 held-out evaluation 需要留给未来的新案例。
+
+## 研究轮次与搜索策略实验
+
+`research/rounds/00-initial/` 保存冻结的检索前 bundle、情景快照、诊断与议程；`research/rounds/01-evidence-update/` 保存其来源核查、状态变化和重新计算的切片诊断。经过审查的每一轮都会记录 source、observation、claim、decision 的增量，以及支撑下一步行动的诊断和搜索目标；临时求解结果仍位于已忽略的 `build/` 目录。规范化哈希把前后快照与轮次增量绑定在一起。
+
+`research/experiments/equal-budget-policy/` 保存 targeted、fixed-order 与 broad-order 三种搜索策略的等预算**构造性确定性回放**。声明的 fixture 结果均在输入和结果文件中明示。该实验只核验选择与计量机制，不能证明任一策略会提升真实历史研究。
 
 ## 已实现组件
 
@@ -76,24 +92,28 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 python3 -m venv .venv
 .venv/bin/pip install -e '.[test]'
 
-.venv/bin/historical-geo validate-research cases/crusader_states/public
+.venv/bin/historical-geo validate cases/crusader_states/public
 .venv/bin/historical-geo compile-request cases/crusader_states/public \
   --slice 1130 --scenario reviewed-baseline
+MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
+  cases/crusader_states/public --slice 1130
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo research-loop \
   cases/crusader_states/public --slice 1130
+.venv/bin/historical-geo policy-experiment \
+  cases/crusader_states/public/research/experiments/equal-budget-policy/experiment.json
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
   cases/crusader_states/public
 .venv/bin/pytest
 ```
 
-运行中间结果保存在已忽略的 `build/` 目录。审查后的图件与机器可读指标位于 `cases/crusader_states/public/figures/`。
+`validate`、`compile-request`、`reconstruct` 与 `run` 会经过 v0.2 认知状态编译器，再进入 XTENT 后端。哈希冻结的 v0.1 adapter 只通过 `legacy-*` 命令服务回归 fixture。运行中间结果保存在已忽略的 `build/` 目录。审查后的图件与机器可读指标位于 `cases/crusader_states/public/figures/`。
 
 ## 已核验状态
 
-- 101 项测试通过。
+- CI 会在受支持的 Python 版本上运行完整测试集。
 - v0.1 旧基线在迁移前已经完成哈希冻结。
 - v0.2 bundle、诊断与搜索目标文档通过结构和引用校验。
-- 后端边界测试证明，v0.2 编译后的案例输入保持了已审查的 v0.1 XTENT 行为。
+- 后端边界测试证明，冻结的第 00 轮 v0.2 快照复现了已审查的 v0.1 XTENT 基线；第 01 轮则明确记录并哈希其有意引入的输入与表面变化。
 - 公开谱系验证为零错误。
 - 两个切片的必要情景均可重建。
 - 每个运行都保留该情景预期实体，几何有效且无重叠。
@@ -113,3 +133,4 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - [不确定性分析](docs/research/uncertainty-analysis.zh-CN.md)
 - [复现指南](docs/operations/reproducibility.zh-CN.md)
 - [案例数据归属与权利说明（英文）](cases/crusader_states/public/ATTRIBUTION.md)
+- [软件许可证（英文）](LICENSE)与[数据及内容条款（英文）](DATA-LICENSE.md)
