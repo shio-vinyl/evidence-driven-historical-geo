@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/solver-input.schema.json",
+  "title": "Reviewed XTENT solver input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "case_id",
+    "slice",
+    "scenario",
+    "grid",
+    "seeds",
+    "phases",
+    "barriers",
+    "gates",
+    "corridors",
+    "lineage"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "historical_geo.solver_input.v0.1"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slice": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "grid": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bbox",
+        "resolution",
+        "crs",
+        "friction_profile",
+        "land_path",
+        "natural_features_path"
+      ],
+      "properties": {
+        "bbox": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "resolution": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "crs": {
+          "type": "string",
+          "minLength": 1
+        },
+        "friction_profile": {
+          "enum": [
+            "settled",
+            "maritime",
+            "nomadic"
+          ]
+        },
+        "land_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "natural_features_path": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "seeds": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/inputRecord"
+      }
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/inputRecord"
+      }
+    },
+    "barriers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/inputRecord"
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/inputRecord"
+      }
+    },
+    "corridors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/inputRecord"
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "scenario": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "inputRecord": {
+      "type": "object",
+      "required": [
+        "decision_id",
+        "evidence_ids",
+        "source_ids",
+        "parameters"
+      ],
+      "properties": {
+        "decision_id": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "assumption_reason": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

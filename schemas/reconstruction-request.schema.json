@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/reconstruction-request.schema.json",
+  "title": "Backend-neutral reconstruction request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "case_id", "slice", "scenario", "grid", "inputs"],
+  "properties": {
+    "contract_version": {"const": "historical_geo.reconstruction_request.v0.2"},
+    "case_id": {"type": "string", "minLength": 1},
+    "slice": {"type": ["integer", "string"]},
+    "scenario": {"type": "string", "minLength": 1},
+    "grid": {"type": "object"},
+    "inputs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/input"}
+    }
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"},
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_id",
+        "role",
+        "review_status",
+        "claim_ids",
+        "source_ids",
+        "rationale",
+        "parameters"
+      ],
+      "properties": {
+        "decision_id": {"$ref": "#/$defs/identifier"},
+        "role": {
+          "enum": [
+            "control_point",
+            "spatial_constraint",
+            "traversal_constraint",
+            "exclusion",
+            "display_context"
+          ]
+        },
+        "review_status": {"enum": ["admitted", "experimental", "excluded", "assumption"]},
+        "claim_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "rationale": {"type": "string", "minLength": 1},
+        "assumption_reason": {"type": "string", "minLength": 1},
+        "parameters": {"type": "object"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"review_status": {"const": "assumption"}}, "required": ["review_status"]},
+          "then": {"required": ["assumption_reason"]}
+        }
+      ]
+    }
+  }
+}

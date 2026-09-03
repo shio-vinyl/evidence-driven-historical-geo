@@ -1,0 +1,1953 @@
+{
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.lineage.v0.1",
+  "evidence_claims": [
+    {
+      "claim": "Jerusalem is retained as a point-control anchor only. Jerusalem was the royal center in 1130; this supports a city anchor, not a continuous border.",
+      "confidence": 0.9,
+      "entity": "Kingdom of Jerusalem",
+      "evidence_id": "E_1130_JERUSALEM_POINT",
+      "observation_ids": [
+        "OBS_CSB1130_001_1",
+        "OBS_CSB1130_001_2",
+        "OBS_GEONAMES_281184"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1130
+    },
+    {
+      "claim": "Damascus is retained as a point-control anchor only. Damascus was the center of an active Burid polity in 1130; frontier relations do not imply a precise boundary.",
+      "confidence": 0.85,
+      "entity": "Burid Damascus",
+      "evidence_id": "E_1130_DAMASCUS_POINT",
+      "observation_ids": [
+        "OBS_CSB1130_004_1",
+        "OBS_CSB1130_004_2",
+        "OBS_GEONAMES_170654"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1130
+    },
+    {
+      "claim": "Ascalon is retained only as a disputed 1130 scenario anchor. The available locators do not yet meet the page-level standard for the reviewed baseline.",
+      "confidence": 0.4,
+      "entity": "Fatimid Egypt",
+      "evidence_id": "E_1130_ASCALON_POINT",
+      "observation_ids": [
+        "OBS_CSB1130_005_1",
+        "OBS_CSB1130_005_2",
+        "OBS_GEONAMES_293400"
+      ],
+      "semantic_role": "disputed",
+      "slice": 1130
+    },
+    {
+      "claim": "Tripoli is retained as the county center in 1130. The claim is limited to the city; it does not establish a county footprint.",
+      "confidence": 0.75,
+      "entity": "County of Tripoli",
+      "evidence_id": "E_1130_TRIPOLI_POINT",
+      "observation_ids": [
+        "OBS_CSB1130_006_1",
+        "OBS_CSB1130_006_2",
+        "OBS_GEONAMES_266826"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1130
+    },
+    {
+      "claim": "Tortosa is plausible as part of the county core, but the reviewed pages do not independently establish this point for 1130. It enters only the inclusive scenario.",
+      "confidence": 0.45,
+      "entity": "County of Tripoli",
+      "evidence_id": "E_1130_TORTOSA_POINT",
+      "observation_ids": [
+        "OBS_CSB1130_006_1",
+        "OBS_CSB1130_006_2",
+        "OBS_GEONAMES_163345"
+      ],
+      "semantic_role": "disputed",
+      "slice": 1130
+    },
+    {
+      "claim": "Antioch is retained as a point-control anchor only. Antioch identifies the principality core in 1130; the city anchor does not define its perimeter.",
+      "confidence": 0.65,
+      "entity": "Principality of Antioch",
+      "evidence_id": "E_1130_ANTIOCH_POINT",
+      "observation_ids": [
+        "OBS_CSB1130_008_1",
+        "OBS_CSB1130_008_2",
+        "OBS_GEONAMES_323779",
+        "OBS_CSB1130_008_3"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1130
+    },
+    {
+      "claim": "Edessa is retained at reduced model weight. The evidence names Joscelin as count of Edessa in the adjacent 1131 narrative, so the one-year bridge remains an explicit uncertainty.",
+      "confidence": 0.55,
+      "entity": "County of Edessa",
+      "evidence_id": "E_1130_EDESSA_POINT",
+      "observation_ids": [
+        "OBS_CSB1130_010_1",
+        "OBS_CSB1130_010_2",
+        "OBS_CSB1130_010_3",
+        "OBS_GEONAMES_298333"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1130
+    },
+    {
+      "claim": "Cairo is a plausible Ayyubid political center, but the reviewed page names Egypt rather than Cairo. It enters only the inclusive scenario.",
+      "confidence": 0.45,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_CAIRO_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_001_1",
+        "OBS_CSB1187_001_2",
+        "OBS_GEONAMES_360630"
+      ],
+      "semantic_role": "disputed",
+      "slice": 1187
+    },
+    {
+      "claim": "Damascus is retained as an Ayyubid political-center anchor. A page-addressable scholarly account styles Saladin sultan of Damascus in the 1187 narrative; no imperial perimeter follows from the point.",
+      "confidence": 0.8,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_DAMASCUS_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_001_1",
+        "OBS_CSB1187_001_2",
+        "OBS_GEONAMES_170654",
+        "OBS_CSB1187_001_3"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Jerusalem is retained as a point-control anchor only. Jerusalem was under Ayyubid control by the end-of-year 1187 convention.",
+      "confidence": 0.9,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_JERUSALEM_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_003_1",
+        "OBS_CSB1187_003_2",
+        "OBS_CSB1187_003_3",
+        "OBS_GEONAMES_281184",
+        "OBS_CSB1187_003_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Acre is retained as a point-control anchor because the reviewed Ibn Shaddad pages name its 1187 capture or surrender. The point does not establish a coastal polygon.",
+      "confidence": 0.85,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_ACRE_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_004_1",
+        "OBS_CSB1187_004_2",
+        "OBS_CSB1187_004_3",
+        "OBS_GEONAMES_295721",
+        "OBS_CSB1187_004_ACRE_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Jaffa remains unverified in the reviewed primary-source pages. It is excluded from the reviewed baseline and retained only in the inclusive scenario.",
+      "confidence": 0.4,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_JAFFA_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_004_1",
+        "OBS_CSB1187_004_2",
+        "OBS_CSB1187_004_3",
+        "OBS_GEONAMES_293253"
+      ],
+      "semantic_role": "disputed",
+      "slice": 1187
+    },
+    {
+      "claim": "Ascalon is retained as a point-control anchor because the reviewed Ibn Shaddad pages name its 1187 capture or surrender. The point does not establish a coastal polygon.",
+      "confidence": 0.85,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_ASCALON_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_004_1",
+        "OBS_CSB1187_004_2",
+        "OBS_CSB1187_004_3",
+        "OBS_GEONAMES_293400",
+        "OBS_CSB1187_004_ASCALON_GAZA_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Gaza is retained as a point-control anchor because the reviewed Ibn Shaddad pages name its 1187 capture or surrender. The point does not establish a coastal polygon.",
+      "confidence": 0.85,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_GAZA_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_004_1",
+        "OBS_CSB1187_004_2",
+        "OBS_CSB1187_004_3",
+        "OBS_GEONAMES_281133",
+        "OBS_CSB1187_004_ASCALON_GAZA_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Sidon is retained as a point-control anchor because the reviewed Ibn Shaddad pages name its 1187 capture or surrender. The point does not establish a coastal polygon.",
+      "confidence": 0.85,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_SIDON_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_004_1",
+        "OBS_CSB1187_004_2",
+        "OBS_CSB1187_004_3",
+        "OBS_GEONAMES_268064",
+        "OBS_CSB1187_004_SIDON_BEIRUT_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Beirut is retained as a point-control anchor because the reviewed Ibn Shaddad pages name its 1187 capture or surrender. The point does not establish a coastal polygon.",
+      "confidence": 0.85,
+      "entity": "Ayyubid Sultanate",
+      "evidence_id": "E_1187_BEIRUT_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_004_1",
+        "OBS_CSB1187_004_2",
+        "OBS_CSB1187_004_3",
+        "OBS_GEONAMES_276781",
+        "OBS_CSB1187_004_SIDON_BEIRUT_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Tyre is retained as a point-control anchor only. Tyre remained a Latin coastal holdout at end-1187; it is modeled as a point remnant.",
+      "confidence": 0.9,
+      "entity": "Kingdom of Jerusalem",
+      "evidence_id": "E_1187_TYRE_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_005_1",
+        "OBS_CSB1187_005_2",
+        "OBS_CSB1187_005_3",
+        "OBS_GEONAMES_267008",
+        "OBS_CSB1187_005_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Tripoli is retained as a surviving Latin city at the end of 1187. The evidence does not establish the county's inland extent.",
+      "confidence": 0.8,
+      "entity": "County of Tripoli",
+      "evidence_id": "E_1187_TRIPOLI_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_007_1",
+        "OBS_CSB1187_007_2",
+        "OBS_CSB1187_007_3",
+        "OBS_GEONAMES_266826",
+        "OBS_CSB1187_007_4",
+        "OBS_CSB1187_007_5"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Antioch is retained as a surviving Latin city at the end of 1187. The evidence does not establish the principality's surrounding lordships.",
+      "confidence": 0.8,
+      "entity": "Principality of Antioch",
+      "evidence_id": "E_1187_ANTIOCH_POINT",
+      "observation_ids": [
+        "OBS_CSB1187_008_1",
+        "OBS_CSB1187_008_2",
+        "OBS_CSB1187_008_3",
+        "OBS_GEONAMES_323779",
+        "OBS_CSB1187_008_4"
+      ],
+      "semantic_role": "point_control",
+      "slice": 1187
+    },
+    {
+      "claim": "Generalized Mount Lebanon geometry for display and sensitivity testing only.",
+      "confidence": 1.0,
+      "entity": "Natural context",
+      "evidence_id": "E_NE_LEBANON_DISPLAY",
+      "observation_ids": [
+        "OBS_NE_LEBANON"
+      ],
+      "semantic_role": "display_context",
+      "slice": "1130-1187"
+    },
+    {
+      "claim": "Generalized Taurus geometry for display and sensitivity testing only.",
+      "confidence": 1.0,
+      "entity": "Natural context",
+      "evidence_id": "E_NE_TAURUS_DISPLAY",
+      "observation_ids": [
+        "OBS_NE_TAURUS"
+      ],
+      "semantic_role": "display_context",
+      "slice": "1130-1187"
+    },
+    {
+      "claim": "Generalized Jordan centerline; not evidence of a target political boundary.",
+      "confidence": 1.0,
+      "entity": "Natural context",
+      "evidence_id": "E_NE_JORDAN_DISPLAY",
+      "observation_ids": [
+        "OBS_NE_JORDAN"
+      ],
+      "semantic_role": "display_context",
+      "slice": "1130-1187"
+    }
+  ],
+  "model_decisions": [
+    {
+      "decision_id": "D_1130_JERUSALEM_SEED",
+      "evidence_ids": [
+        "E_1130_JERUSALEM_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.21633,
+          31.76904
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Kingdom of Jerusalem",
+        "name": "Jerusalem",
+        "slice": 1130,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_GEONAMES",
+        "SRC_RICHARD_1985",
+        "SRC_WILLIAM_TYRE"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1130_DAMASCUS_SEED",
+      "evidence_ids": [
+        "E_1130_DAMASCUS_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          36.29128,
+          33.5102
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Burid Damascus",
+        "name": "Damascus",
+        "slice": 1130,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_GEONAMES",
+        "SRC_IBN_QALANISI",
+        "SRC_KOEHLER_2013"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1130_ASCALON_SEED",
+      "evidence_ids": [
+        "E_1130_ASCALON_POINT"
+      ],
+      "is_allocation_input": false,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          34.54907,
+          31.65996
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Fatimid Egypt",
+        "name": "Ascalon",
+        "slice": 1130,
+        "type": "city",
+        "weight_ordinal": "major"
+      },
+      "rationale": "DISPUTED: unresolved page evidence; inclusive scenario only.",
+      "source_ids": [
+        "SRC_GEONAMES",
+        "SRC_HOLT_1986",
+        "SRC_RUNCIMAN_1952"
+      ],
+      "status": "deferred"
+    },
+    {
+      "decision_id": "D_1130_TRIPOLI_SEED",
+      "evidence_ids": [
+        "E_1130_TRIPOLI_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.84415,
+          34.43352
+        ],
+        "coordinates_status": "approximate",
+        "entity": "County of Tripoli",
+        "name": "Tripoli",
+        "slice": 1130,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_WILLIAM_TYRE"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1130_TORTOSA_SEED",
+      "evidence_ids": [
+        "E_1130_TORTOSA_POINT"
+      ],
+      "is_allocation_input": false,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.88659,
+          34.88902
+        ],
+        "coordinates_status": "approximate",
+        "entity": "County of Tripoli",
+        "name": "Tortosa",
+        "slice": 1130,
+        "type": "city",
+        "weight_ordinal": "minor"
+      },
+      "rationale": "DISPUTED within a downgraded group: Tripoli remains baseline; Tortosa is inclusive only.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_WILLIAM_TYRE"
+      ],
+      "status": "deferred"
+    },
+    {
+      "decision_id": "D_1130_ANTIOCH_SEED",
+      "evidence_ids": [
+        "E_1130_ANTIOCH_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          36.15722,
+          36.20655
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Principality of Antioch",
+        "name": "Antioch",
+        "slice": 1130,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_ASBRIDGE_2000",
+        "SRC_CAHEN_1940",
+        "SRC_GEONAMES",
+        "SRC_WILLIAM_TYRE"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1130_EDESSA_SEED",
+      "evidence_ids": [
+        "E_1130_EDESSA_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          38.79392,
+          37.16708
+        ],
+        "coordinates_status": "approximate",
+        "entity": "County of Edessa",
+        "name": "Edessa",
+        "slice": 1130,
+        "type": "capital",
+        "weight_ordinal": "minor"
+      },
+      "rationale": "DOWNGRADE: keep the city anchor at minor weight; the direct wording is from the adjacent 1131 narrative.",
+      "source_ids": [
+        "SRC_CAHEN_1940",
+        "SRC_GEONAMES",
+        "SRC_MACEVITT_2008",
+        "SRC_WILLIAM_TYRE"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_CAIRO_SEED",
+      "evidence_ids": [
+        "E_1187_CAIRO_POINT"
+      ],
+      "is_allocation_input": false,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          31.24967,
+          30.06263
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Cairo",
+        "slice": 1187,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "DOWNGRADE: Egypt is page-supported, Cairo is not named; inclusive scenario only.",
+      "source_ids": [
+        "SRC_GEONAMES",
+        "SRC_HOLT_1986",
+        "SRC_IBN_AL_ATHIR"
+      ],
+      "status": "deferred"
+    },
+    {
+      "decision_id": "D_1187_DAMASCUS_SEED",
+      "evidence_ids": [
+        "E_1187_DAMASCUS_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          36.29128,
+          33.5102
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Damascus",
+        "slice": 1187,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "DOWNGRADE group split: retain named Damascus; defer Cairo.",
+      "source_ids": [
+        "SRC_GEONAMES",
+        "SRC_HOLT_1986",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_PAINTER_1962"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_JERUSALEM_SEED",
+      "evidence_ids": [
+        "E_1187_JERUSALEM_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.21633,
+          31.76904
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Jerusalem",
+        "slice": 1187,
+        "type": "city",
+        "weight_ordinal": "major"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD",
+        "SRC_IBN_SHADDAD_1897"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_ACRE_SEED",
+      "evidence_ids": [
+        "E_1187_ACRE_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.07647,
+          32.92814
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Acre",
+        "slice": 1187,
+        "type": "city",
+        "weight_ordinal": "major"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD",
+        "SRC_IBN_SHADDAD_1897"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_JAFFA_SEED",
+      "evidence_ids": [
+        "E_1187_JAFFA_POINT"
+      ],
+      "is_allocation_input": false,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          34.75224,
+          32.05043
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Jaffa",
+        "slice": 1187,
+        "type": "city",
+        "weight_ordinal": "minor"
+      },
+      "rationale": "DISPUTED: omitted from the reviewed baseline; inclusive scenario only.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD"
+      ],
+      "status": "deferred"
+    },
+    {
+      "decision_id": "D_1187_ASCALON_SEED",
+      "evidence_ids": [
+        "E_1187_ASCALON_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          34.54907,
+          31.65996
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Ascalon",
+        "slice": 1187,
+        "type": "city",
+        "weight_ordinal": "minor"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD",
+        "SRC_IBN_SHADDAD_1897"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_GAZA_SEED",
+      "evidence_ids": [
+        "E_1187_GAZA_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          34.46672,
+          31.50161
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Gaza",
+        "slice": 1187,
+        "type": "city",
+        "weight_ordinal": "minor"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD",
+        "SRC_IBN_SHADDAD_1897"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_SIDON_SEED",
+      "evidence_ids": [
+        "E_1187_SIDON_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.37148,
+          33.55751
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Sidon",
+        "slice": 1187,
+        "type": "city",
+        "weight_ordinal": "minor"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD",
+        "SRC_IBN_SHADDAD_1897"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_BEIRUT_SEED",
+      "evidence_ids": [
+        "E_1187_BEIRUT_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.50157,
+          33.89332
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Ayyubid Sultanate",
+        "name": "Beirut",
+        "slice": 1187,
+        "type": "city",
+        "weight_ordinal": "minor"
+      },
+      "rationale": "The recovered claim names this controlled center; its gazetteer point is used only as an approximate allocation seed.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD",
+        "SRC_IBN_SHADDAD_1897"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_TYRE_SEED",
+      "evidence_ids": [
+        "E_1187_TYRE_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.19389,
+          33.27333
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Kingdom of Jerusalem",
+        "name": "Tyre",
+        "slice": 1187,
+        "type": "capital",
+        "weight_ordinal": "outpost"
+      },
+      "rationale": "Tyre is retained as an approximate point-control anchor; the lowest reach ordinal encodes the documented remnant convention, not the city’s political importance.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD_1897",
+        "SRC_MORTON_2020"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_TRIPOLI_SEED",
+      "evidence_ids": [
+        "E_1187_TRIPOLI_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          35.84415,
+          34.43352
+        ],
+        "coordinates_status": "approximate",
+        "entity": "County of Tripoli",
+        "name": "Tripoli",
+        "slice": 1187,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "KEEP the city point; no inland county extent is inferred.",
+      "source_ids": [
+        "SRC_BARBER_2012",
+        "SRC_EDBURY_1999",
+        "SRC_GEONAMES",
+        "SRC_IBN_AL_ATHIR",
+        "SRC_IBN_SHADDAD_1897",
+        "SRC_MORTON_2020"
+      ],
+      "status": "accepted"
+    },
+    {
+      "decision_id": "D_1187_ANTIOCH_SEED",
+      "evidence_ids": [
+        "E_1187_ANTIOCH_POINT"
+      ],
+      "is_allocation_input": true,
+      "model_role": "seed",
+      "parameters": {
+        "coordinates": [
+          36.15722,
+          36.20655
+        ],
+        "coordinates_status": "approximate",
+        "entity": "Principality of Antioch",
+        "name": "Antioch",
+        "slice": 1187,
+        "type": "capital",
+        "weight_ordinal": "capital"
+      },
+      "rationale": "KEEP the city point; surrounding lordships remain unresolved.",
+      "source_ids": [
+        "SRC_BUCK_2017",
+        "SRC_CAHEN_1940",
+        "SRC_EDBURY_1999",
+        "SRC_GEONAMES",
+        "SRC_MORTON_2020"
+      ],
+      "status": "accepted"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1130_BURID_DAMASCUS_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "Burid Damascus",
+        "projection": "contracted",
+        "time_span": [
+          1130,
+          1130
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1130_COUNTY_OF_EDESSA_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "County of Edessa",
+        "projection": "contracted",
+        "time_span": [
+          1130,
+          1130
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "County of Tripoli",
+        "projection": "contracted",
+        "time_span": [
+          1130,
+          1130
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1130_FATIMID_EGYPT_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "Fatimid Egypt",
+        "projection": "contracted",
+        "time_span": [
+          1130,
+          1130
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "Kingdom of Jerusalem",
+        "projection": "contracted",
+        "time_span": [
+          1130,
+          1130
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "Principality of Antioch",
+        "projection": "contracted",
+        "time_span": [
+          1130,
+          1130
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1187_AYYUBID_SULTANATE_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "Ayyubid Sultanate",
+        "projection": "contracted",
+        "time_span": [
+          1187,
+          1187
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "County of Tripoli",
+        "projection": "contracted",
+        "time_span": [
+          1187,
+          1187
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "Kingdom of Jerusalem",
+        "projection": "contracted",
+        "time_span": [
+          1187,
+          1187
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "The contracted projection ordinal is a model choice, not a historical boundary claim.",
+      "decision_id": "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "phase",
+      "parameters": {
+        "entity": "Principality of Antioch",
+        "projection": "contracted",
+        "time_span": [
+          1187,
+          1187
+        ]
+      },
+      "rationale": "A bounded projection class is required to form a hypothesis surface from points.",
+      "source_ids": [],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "Geometry establishes location, but no reviewed historical evidence calibrates this feature as a movement barrier.",
+      "decision_id": "D_NATURAL_LEBANON_BARRIER",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "barrier",
+      "parameters": {
+        "feature_id": "natural-earth:lebanon-mountains",
+        "natural_role": "allocation_barrier",
+        "strength": "soft",
+        "time_span": [
+          1130,
+          1187
+        ]
+      },
+      "rationale": "Include bounded friction for an explicit natural-feature ablation.",
+      "source_ids": [
+        "SRC_NATURAL_EARTH"
+      ],
+      "status": "assumption"
+    },
+    {
+      "assumption_reason": "Geometry establishes location, but no reviewed historical evidence calibrates this feature as a movement barrier.",
+      "decision_id": "D_NATURAL_TAURUS_BARRIER",
+      "evidence_ids": [],
+      "is_allocation_input": true,
+      "model_role": "barrier",
+      "parameters": {
+        "feature_id": "natural-earth:taurus-mountains",
+        "natural_role": "allocation_barrier",
+        "strength": "porous",
+        "time_span": [
+          1130,
+          1187
+        ]
+      },
+      "rationale": "Include bounded friction for an explicit natural-feature ablation.",
+      "source_ids": [
+        "SRC_NATURAL_EARTH"
+      ],
+      "status": "assumption"
+    },
+    {
+      "decision_id": "D_JORDAN_ATTRACTOR_REJECTED",
+      "evidence_ids": [
+        "E_NE_JORDAN_DISPLAY"
+      ],
+      "is_allocation_input": false,
+      "model_role": "boundary_attractor",
+      "parameters": {
+        "display_class": "rejected_candidate",
+        "feature_id": "natural-earth:jordan-river",
+        "time_span": [
+          1130,
+          1187
+        ]
+      },
+      "rationale": "No reviewed natural-boundary evidence supports snapping; the guarded diagnostic must leave geometry unchanged on rejection.",
+      "source_ids": [
+        "SRC_NATURAL_EARTH"
+      ],
+      "status": "excluded"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "OBS_CSB1130_001_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Book XIII, ch. 28, vol. II, pp. 45-46.",
+        "paraphrase": "Jerusalem was the royal center in 1130; this supports a city anchor, not a continuous border.",
+        "recovered_claim_id": "CSB1130_001",
+        "verification_note": "Jerusalem, the royal palace, succession arrangements, and Baldwin II are explicit; the source supports a royal-center point, not a perimeter.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1130,
+      "source_id": "SRC_WILLIAM_TYRE"
+    },
+    {
+      "observation_id": "OBS_CSB1130_001_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "pp. 193-250.",
+        "paraphrase": "Jerusalem was the royal center in 1130; this supports a city anchor, not a continuous border.",
+        "recovered_claim_id": "CSB1130_001"
+      },
+      "slice": 1130,
+      "source_id": "SRC_RICHARD_1985"
+    },
+    {
+      "observation_id": "OBS_CSB1130_004_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "AH 524-525 entries, pp. 200-203.",
+        "paraphrase": "Damascus was the center of an active Burid polity in 1130; frontier relations do not imply a precise boundary.",
+        "recovered_claim_id": "CSB1130_004",
+        "verification_note": "Buri, the Damascus army, Damascus, its citadel, and palace appear in the dated narrative; no boundary is inferred.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1130,
+      "source_id": "SRC_IBN_QALANISI"
+    },
+    {
+      "observation_id": "OBS_CSB1130_004_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Frankish-Damascene diplomacy sections; broad locator requiring spot-check.",
+        "paraphrase": "Damascus was the center of an active Burid polity in 1130; frontier relations do not imply a precise boundary.",
+        "recovered_claim_id": "CSB1130_004"
+      },
+      "slice": 1130,
+      "source_id": "SRC_KOEHLER_2013"
+    },
+    {
+      "observation_id": "OBS_CSB1130_005_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Fatimid Egypt and early twelfth-century frontier sections; broad locator requiring spot-check.",
+        "paraphrase": "Ascalon was a named Fatimid-held southern frontier center before 1153; the point does not define Egypt.",
+        "recovered_claim_id": "CSB1130_005"
+      },
+      "slice": 1130,
+      "source_id": "SRC_HOLT_1986"
+    },
+    {
+      "observation_id": "OBS_CSB1130_005_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Volume II, early kingdom chapters on Ascalon; broad locator requiring spot-check.",
+        "paraphrase": "Ascalon was a named Fatimid-held southern frontier center before 1153; the point does not define Egypt.",
+        "recovered_claim_id": "CSB1130_005"
+      },
+      "slice": 1130,
+      "source_id": "SRC_RUNCIMAN_1952"
+    },
+    {
+      "observation_id": "OBS_CSB1130_006_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Book XIII, ch. 26, vol. II, pp. 40-42; compare Book XIII context.",
+        "paraphrase": "Tripoli and Tortosa identify a coastal county core; inland extent remains unsupported here.",
+        "recovered_claim_id": "CSB1130_006",
+        "verification_note": "Pons is explicitly styled count of Tripoli. This spot-check does not independently establish the Tortosa point or a county footprint.",
+        "verification_status": "direct_page_partial"
+      },
+      "slice": 1130,
+      "source_id": "SRC_WILLIAM_TYRE"
+    },
+    {
+      "observation_id": "OBS_CSB1130_006_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "County of Tripoli sections; broad locator requiring spot-check.",
+        "paraphrase": "Tripoli and Tortosa identify a coastal county core; inland extent remains unsupported here.",
+        "recovered_claim_id": "CSB1130_006"
+      },
+      "slice": 1130,
+      "source_id": "SRC_BARBER_2012"
+    },
+    {
+      "observation_id": "OBS_CSB1130_008_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Chapters through 1130; broad locator requiring spot-check.",
+        "paraphrase": "Antioch identifies the principality core in 1130; the city anchor does not define its perimeter.",
+        "recovered_claim_id": "CSB1130_008"
+      },
+      "slice": 1130,
+      "source_id": "SRC_ASBRIDGE_2000"
+    },
+    {
+      "observation_id": "OBS_CSB1130_008_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Northern Syria and Antioch chapters; broad locator requiring spot-check.",
+        "paraphrase": "Antioch identifies the principality core in 1130; the city anchor does not define its perimeter.",
+        "recovered_claim_id": "CSB1130_008"
+      },
+      "slice": 1130,
+      "source_id": "SRC_CAHEN_1940"
+    },
+    {
+      "observation_id": "OBS_CSB1130_010_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Edessa and eastern Christian communities chapters; broad locator requiring spot-check.",
+        "paraphrase": "Edessa identifies a surviving comital center in 1130; the anchor does not authorize an Euphrates border.",
+        "recovered_claim_id": "CSB1130_010"
+      },
+      "slice": 1130,
+      "source_id": "SRC_MACEVITT_2008"
+    },
+    {
+      "observation_id": "OBS_CSB1130_010_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Book XIV, ch. 3, vol. II, p. 51.",
+        "paraphrase": "Edessa identifies a surviving comital center in 1130; the anchor does not authorize an Euphrates border.",
+        "recovered_claim_id": "CSB1130_010",
+        "verification_note": "Joscelin is explicitly styled count of Edessa in the immediately adjacent 1131 narrative; the city footprint and a precise 1130 perimeter remain unverified.",
+        "verification_status": "direct_page_partial"
+      },
+      "slice": 1130,
+      "source_id": "SRC_WILLIAM_TYRE"
+    },
+    {
+      "observation_id": "OBS_CSB1130_010_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Edessa-adjacent northern Syria sections; broad locator requiring spot-check.",
+        "paraphrase": "Edessa identifies a surviving comital center in 1130; the anchor does not authorize an Euphrates border.",
+        "recovered_claim_id": "CSB1130_010"
+      },
+      "slice": 1130,
+      "source_id": "SRC_CAHEN_1940"
+    },
+    {
+      "observation_id": "OBS_CSB1187_001_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Saladin's rise and Ayyubid state chapters; broad locator requiring spot-check.",
+        "paraphrase": "Cairo and Damascus identify Saladin's Egyptian and Syrian bases by end-1187, not an imperial perimeter.",
+        "recovered_claim_id": "CSB1187_001"
+      },
+      "slice": 1187,
+      "source_id": "SRC_HOLT_1986"
+    },
+    {
+      "observation_id": "OBS_CSB1187_001_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "AH 582-583 / 1186-1188 entries.",
+        "paraphrase": "Cairo and Damascus identify Saladin's Egyptian and Syrian bases by end-1187, not an imperial perimeter.",
+        "recovered_claim_id": "CSB1187_001"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_AL_ATHIR"
+    },
+    {
+      "observation_id": "OBS_CSB1187_003_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "AH 583 entry for Jerusalem's surrender.",
+        "paraphrase": "Jerusalem was under Ayyubid control by the end-of-year 1187 convention.",
+        "recovered_claim_id": "CSB1187_003"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_AL_ATHIR"
+    },
+    {
+      "observation_id": "OBS_CSB1187_003_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Jerusalem conquest and surrender section; broad locator requiring spot-check.",
+        "paraphrase": "Jerusalem was under Ayyubid control by the end-of-year 1187 convention.",
+        "recovered_claim_id": "CSB1187_003"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD"
+    },
+    {
+      "observation_id": "OBS_CSB1187_003_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Hattin and Jerusalem sections; broad locator requiring spot-check.",
+        "paraphrase": "Jerusalem was under Ayyubid control by the end-of-year 1187 convention.",
+        "recovered_claim_id": "CSB1187_003"
+      },
+      "slice": 1187,
+      "source_id": "SRC_BARBER_2012"
+    },
+    {
+      "observation_id": "OBS_CSB1187_004_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "AH 583 entries after Hattin.",
+        "paraphrase": "Acre, Jaffa, Ascalon, Gaza, Sidon, and Beirut were named captured centers; the points do not authorize a smoothed coast polygon.",
+        "recovered_claim_id": "CSB1187_004"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_AL_ATHIR"
+    },
+    {
+      "observation_id": "OBS_CSB1187_004_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Post-Hattin campaign sections; broad locator requiring spot-check.",
+        "paraphrase": "Acre, Jaffa, Ascalon, Gaza, Sidon, and Beirut were named captured centers; the points do not authorize a smoothed coast polygon.",
+        "recovered_claim_id": "CSB1187_004"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD"
+    },
+    {
+      "observation_id": "OBS_CSB1187_004_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Kingdom's collapse after Hattin sections; broad locator requiring spot-check.",
+        "paraphrase": "Acre, Jaffa, Ascalon, Gaza, Sidon, and Beirut were named captured centers; the points do not authorize a smoothed coast polygon.",
+        "recovered_claim_id": "CSB1187_004"
+      },
+      "slice": 1187,
+      "source_id": "SRC_BARBER_2012"
+    },
+    {
+      "observation_id": "OBS_CSB1187_005_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "AH 583 entries on Tyre.",
+        "paraphrase": "Tyre remained a Latin coastal holdout at end-1187; it is modeled as a point remnant.",
+        "recovered_claim_id": "CSB1187_005"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_AL_ATHIR"
+    },
+    {
+      "observation_id": "OBS_CSB1187_005_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Conrad and Tyre sections; broad locator requiring spot-check.",
+        "paraphrase": "Tyre remained a Latin coastal holdout at end-1187; it is modeled as a point remnant.",
+        "recovered_claim_id": "CSB1187_005"
+      },
+      "slice": 1187,
+      "source_id": "SRC_BARBER_2012"
+    },
+    {
+      "observation_id": "OBS_CSB1187_005_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Aftermath of Hattin sections; broad locator requiring spot-check.",
+        "paraphrase": "Tyre remained a Latin coastal holdout at end-1187; it is modeled as a point remnant.",
+        "recovered_claim_id": "CSB1187_005"
+      },
+      "slice": 1187,
+      "source_id": "SRC_MORTON_2020"
+    },
+    {
+      "observation_id": "OBS_CSB1187_007_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Northern Latin states after Hattin; broad locator requiring spot-check.",
+        "paraphrase": "Tripoli remained a surviving northern Latin center at end-1187; inland limits remain a gap.",
+        "recovered_claim_id": "CSB1187_007"
+      },
+      "slice": 1187,
+      "source_id": "SRC_BARBER_2012"
+    },
+    {
+      "observation_id": "OBS_CSB1187_007_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "1187 and neighboring polities; broad locator requiring spot-check.",
+        "paraphrase": "Tripoli remained a surviving northern Latin center at end-1187; inland limits remain a gap.",
+        "recovered_claim_id": "CSB1187_007"
+      },
+      "slice": 1187,
+      "source_id": "SRC_MORTON_2020"
+    },
+    {
+      "observation_id": "OBS_CSB1187_007_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "AH 583 post-Hattin entries.",
+        "paraphrase": "Tripoli remained a surviving northern Latin center at end-1187; inland limits remain a gap.",
+        "recovered_claim_id": "CSB1187_007"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_AL_ATHIR"
+    },
+    {
+      "observation_id": "OBS_CSB1187_008_1",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Twelfth-century Antiochene frontiers chapters; broad locator requiring spot-check.",
+        "paraphrase": "Antioch remained a northern Latin center at end-1187; frontier lordships are unresolved.",
+        "recovered_claim_id": "CSB1187_008"
+      },
+      "slice": 1187,
+      "source_id": "SRC_BUCK_2017"
+    },
+    {
+      "observation_id": "OBS_CSB1187_008_2",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Northern Syria and Antioch chapters; broad locator requiring spot-check.",
+        "paraphrase": "Antioch remained a northern Latin center at end-1187; frontier lordships are unresolved.",
+        "recovered_claim_id": "CSB1187_008"
+      },
+      "slice": 1187,
+      "source_id": "SRC_CAHEN_1940"
+    },
+    {
+      "observation_id": "OBS_CSB1187_008_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "1187 endpoint sections; broad locator requiring spot-check.",
+        "paraphrase": "Antioch remained a northern Latin center at end-1187; frontier lordships are unresolved.",
+        "recovered_claim_id": "CSB1187_008"
+      },
+      "slice": 1187,
+      "source_id": "SRC_MORTON_2020"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_281184",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          35.21633,
+          31.76904
+        ],
+        "geoname_id": 281184,
+        "name": "Jerusalem"
+      },
+      "slice": 1130,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_170654",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          36.29128,
+          33.5102
+        ],
+        "geoname_id": 170654,
+        "name": "Damascus"
+      },
+      "slice": 1130,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_293400",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          34.54907,
+          31.65996
+        ],
+        "geoname_id": 293400,
+        "name": "Ascalon"
+      },
+      "slice": 1130,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_266826",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          35.84415,
+          34.43352
+        ],
+        "geoname_id": 266826,
+        "name": "Tripoli"
+      },
+      "slice": 1130,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_163345",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          35.88659,
+          34.88902
+        ],
+        "geoname_id": 163345,
+        "name": "Tortosa"
+      },
+      "slice": 1130,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_323779",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          36.15722,
+          36.20655
+        ],
+        "geoname_id": 323779,
+        "name": "Antioch"
+      },
+      "slice": 1130,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_298333",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          38.79392,
+          37.16708
+        ],
+        "geoname_id": 298333,
+        "name": "Edessa"
+      },
+      "slice": 1130,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_360630",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          31.24967,
+          30.06263
+        ],
+        "geoname_id": 360630,
+        "name": "Cairo"
+      },
+      "slice": 1187,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_295721",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          35.07647,
+          32.92814
+        ],
+        "geoname_id": 295721,
+        "name": "Acre"
+      },
+      "slice": 1187,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_293253",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          34.75224,
+          32.05043
+        ],
+        "geoname_id": 293253,
+        "name": "Jaffa"
+      },
+      "slice": 1187,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_281133",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          34.46672,
+          31.50161
+        ],
+        "geoname_id": 281133,
+        "name": "Gaza"
+      },
+      "slice": 1187,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_268064",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          35.37148,
+          33.55751
+        ],
+        "geoname_id": 268064,
+        "name": "Sidon"
+      },
+      "slice": 1187,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_276781",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          35.50157,
+          33.89332
+        ],
+        "geoname_id": 276781,
+        "name": "Beirut"
+      },
+      "slice": 1187,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_GEONAMES_267008",
+      "observation_type": "location",
+      "payload": {
+        "coordinate_interpretation": "gazetteer locality point; approximate for historical settlement extent",
+        "coordinates": [
+          35.19389,
+          33.27333
+        ],
+        "geoname_id": 267008,
+        "name": "Tyre"
+      },
+      "slice": 1187,
+      "source_id": "SRC_GEONAMES"
+    },
+    {
+      "observation_id": "OBS_NE_LEBANON",
+      "observation_type": "natural_feature_statement",
+      "payload": {
+        "feature_id": "natural-earth:lebanon-mountains",
+        "upstream_ne_id": 1730071649
+      },
+      "source_id": "SRC_NATURAL_EARTH"
+    },
+    {
+      "observation_id": "OBS_NE_TAURUS",
+      "observation_type": "natural_feature_statement",
+      "payload": {
+        "feature_id": "natural-earth:taurus-mountains",
+        "upstream_ne_id": 1159103077
+      },
+      "source_id": "SRC_NATURAL_EARTH"
+    },
+    {
+      "observation_id": "OBS_NE_JORDAN",
+      "observation_type": "natural_feature_statement",
+      "payload": {
+        "feature_id": "natural-earth:jordan-river",
+        "upstream_ne_id": 1159114369
+      },
+      "source_id": "SRC_NATURAL_EARTH"
+    },
+    {
+      "observation_id": "OBS_CSB1130_008_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "Book XIII, ch. 27, vol. II, pp. 43-45.",
+        "paraphrase": "Antioch identifies the principality core in 1130; the city anchor does not define its perimeter.",
+        "recovered_claim_id": "CSB1130_008",
+        "verification_note": "The dated succession crisis explicitly concerns Antioch, entry into the city, and custody of the principality after Bohemond II; no perimeter is inferred.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1130,
+      "source_id": "SRC_WILLIAM_TYRE"
+    },
+    {
+      "observation_id": "OBS_CSB1187_003_4",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "ch. 36, pp. 118-120.",
+        "paraphrase": "Jerusalem was under Ayyubid control by the end-of-year 1187 convention.",
+        "recovered_claim_id": "CSB1187_003",
+        "verification_note": "The surrender and transfer of possession on 2 October 1187 are explicit.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD_1897"
+    },
+    {
+      "observation_id": "OBS_CSB1187_004_ACRE_4",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "ch. 35, p. 116.",
+        "paraphrase": "Acre was a named captured center after Hattin; the point does not authorize a smoothed coast polygon.",
+        "recovered_claim_id": "CSB1187_004",
+        "verification_note": "The date and capture of Acre are explicit.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD_1897"
+    },
+    {
+      "observation_id": "OBS_CSB1187_004_SIDON_BEIRUT_4",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "ch. 35, pp. 116-117.",
+        "paraphrase": "Sidon and Beirut were named captured centers after Hattin; the points do not authorize a smoothed coast polygon.",
+        "recovered_claim_id": "CSB1187_004",
+        "verification_note": "The narrative explicitly reports the capture of both centers.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD_1897"
+    },
+    {
+      "observation_id": "OBS_CSB1187_004_ASCALON_GAZA_4",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "ch. 35, p. 117.",
+        "paraphrase": "Ascalon and Gaza were named captured centers after Hattin; the points do not authorize a smoothed coast polygon.",
+        "recovered_claim_id": "CSB1187_004",
+        "verification_note": "The narrative explicitly reports the capture of Ascalon and the surrender of Gaza.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD_1897"
+    },
+    {
+      "observation_id": "OBS_CSB1187_005_4",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "ch. 35, p. 117; chs. 36-38, pp. 120-122.",
+        "paraphrase": "Tyre remained a Latin coastal holdout at end-1187; it is modeled as a point remnant.",
+        "recovered_claim_id": "CSB1187_005",
+        "verification_note": "The source describes the concentration of Franks at Tyre, the subsequent failed siege, and the siege continuing through 30 December 1187.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD_1897"
+    },
+    {
+      "observation_id": "OBS_CSB1187_007_4",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "ch. 35, p. 114.",
+        "paraphrase": "Tripoli remained a surviving northern Latin center after Hattin; inland limits remain a gap.",
+        "recovered_claim_id": "CSB1187_007",
+        "verification_note": "Tripoli is an explicit refuge immediately after Hattin. This page alone does not establish its full end-of-year status or inland extent.",
+        "verification_status": "direct_page_partial"
+      },
+      "slice": 1187,
+      "source_id": "SRC_IBN_SHADDAD_1897"
+    },
+    {
+      "observation_id": "OBS_CSB1187_001_3",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "p. 45",
+        "paraphrase": "At Hattin Saladin is styled sultan of Egypt, Damascus, and Aleppo. This supports Damascus as a political center; Egypt does not by itself establish a Cairo city-control point.",
+        "recovered_claim_id": "CSB1187_001",
+        "verification_note": "The page names Damascus in Saladin's title. Cairo is not named.",
+        "verification_status": "direct_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_PAINTER_1962"
+    },
+    {
+      "observation_id": "OBS_CSB1187_007_5",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "publisher chapter summary; chapter pp. 590-606",
+        "paraphrase": "Tripoli held out against Saladin and survived as a Latin city after the disasters of 1187.",
+        "recovered_claim_id": "CSB1187_007",
+        "verification_note": "Supports the city-survival claim. It does not define the county's inland boundary.",
+        "verification_status": "publisher_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_EDBURY_1999"
+    },
+    {
+      "observation_id": "OBS_CSB1187_008_4",
+      "observation_type": "control_statement",
+      "payload": {
+        "locator": "publisher chapter summary; chapter pp. 590-606",
+        "paraphrase": "Antioch held out against Saladin and survived as a Latin city after the disasters of 1187.",
+        "recovered_claim_id": "CSB1187_008",
+        "verification_note": "Supports the city-survival claim. It does not establish surrounding lordships or a perimeter.",
+        "verification_status": "publisher_page_verified"
+      },
+      "slice": 1187,
+      "source_id": "SRC_EDBURY_1999"
+    }
+  ],
+  "sources": [
+    {
+      "citation": "GeoNames named feature records cited by geonameId. https://www.geonames.org/",
+      "redistribution": "allowed",
+      "rights_status": "CC BY 4.0",
+      "source_id": "SRC_GEONAMES",
+      "source_type": "dataset",
+      "title": "GeoNames geographical database"
+    },
+    {
+      "citation": "Natural Earth physical regions, rivers, and coastlines. https://www.naturalearthdata.com/",
+      "redistribution": "allowed",
+      "rights_status": "public_domain",
+      "source_id": "SRC_NATURAL_EARTH",
+      "source_type": "dataset",
+      "title": "Natural Earth 1:10m physical vectors, version 5.1.2"
+    },
+    {
+      "citation": "William of Tyre; trans. E. A. Babcock and A. C. Krey. Columbia University Press, 1943.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_WILLIAM_TYRE",
+      "source_type": "book",
+      "title": "A History of Deeds Done Beyond the Sea"
+    },
+    {
+      "citation": "Jean Richard, in A History of the Crusades V, 1985, pp. 193-250.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_RICHARD_1985",
+      "source_type": "article",
+      "title": "The Political and Ecclesiastical Organization of the Crusader States"
+    },
+    {
+      "citation": "Ibn al-Qalanisi; trans. H. A. R. Gibb. Luzac, 1932.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_IBN_QALANISI",
+      "source_type": "book",
+      "title": "The Damascus Chronicle of the Crusades"
+    },
+    {
+      "citation": "Michael A. Koehler; trans. Peter M. Holt. Brill, 2013.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_KOEHLER_2013",
+      "source_type": "book",
+      "title": "Alliances and Treaties between Frankish and Muslim Rulers in the Middle East"
+    },
+    {
+      "citation": "P. M. Holt. Longman, 1986.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_HOLT_1986",
+      "source_type": "book",
+      "title": "The Age of the Crusades"
+    },
+    {
+      "citation": "Steven Runciman. Cambridge University Press, 1952.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_RUNCIMAN_1952",
+      "source_type": "book",
+      "title": "A History of the Crusades, Volume II"
+    },
+    {
+      "citation": "Malcolm Barber. Yale University Press, 2012.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_BARBER_2012",
+      "source_type": "book",
+      "title": "The Crusader States"
+    },
+    {
+      "citation": "Thomas S. Asbridge. Boydell Press, 2000.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_ASBRIDGE_2000",
+      "source_type": "book",
+      "title": "The Creation of the Principality of Antioch, 1098-1130"
+    },
+    {
+      "citation": "Claude Cahen. Paul Geuthner, 1940.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_CAHEN_1940",
+      "source_type": "book",
+      "title": "La Syrie du Nord a l'epoque des Croisades"
+    },
+    {
+      "citation": "Christopher MacEvitt. University of Pennsylvania Press, 2008.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_MACEVITT_2008",
+      "source_type": "book",
+      "title": "The Crusades and the Christian World of the East"
+    },
+    {
+      "citation": "Ibn al-Athir; trans. D. S. Richards. Ashgate, 2007.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_IBN_AL_ATHIR",
+      "source_type": "book",
+      "title": "The Chronicle of Ibn al-Athir for the Crusading Period, Part 2"
+    },
+    {
+      "citation": "Baha al-Din Ibn Shaddad; trans. D. S. Richards. Ashgate, 2001.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_IBN_SHADDAD",
+      "source_type": "book",
+      "title": "The Rare and Excellent History of Saladin"
+    },
+    {
+      "citation": "Nicholas Morton. Oxford University Press, 2020.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_MORTON_2020",
+      "source_type": "book",
+      "title": "The Crusader States and their Neighbours"
+    },
+    {
+      "citation": "Andrew D. Buck. Boydell Press, 2017.",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_BUCK_2017",
+      "source_type": "book",
+      "title": "The Principality of Antioch and its Frontiers in the Twelfth Century"
+    },
+    {
+      "citation": "Baha al-Din Ibn Shaddad; ed. C. W. Wilson; trans. rev. C. R. Conder. Palestine Pilgrims' Text Society, 1897.",
+      "redistribution": "citation_only",
+      "rights_status": "public_domain_edition",
+      "source_id": "SRC_IBN_SHADDAD_1897",
+      "source_type": "book",
+      "title": "The Life of Saladin; or, What Befell Sultan Yusuf"
+    },
+    {
+      "citation": "Sidney Painter, in A History of the Crusades, vol. II, University of Wisconsin Press, 1962, pp. 45-86. JSTOR open book record: https://www.jstor.org/stable/j.ctv4s7mwv.11",
+      "locator": "p. 45",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_PAINTER_1962",
+      "source_type": "article",
+      "title": "The Third Crusade: Richard the Lionhearted and Philip Augustus"
+    },
+    {
+      "citation": "Peter W. Edbury, in The New Cambridge Medieval History, vol. V, Cambridge University Press, 1999, pp. 590-606. DOI: 10.1017/CHOL9780521362894.028",
+      "locator": "publisher chapter summary and pp. 590-606",
+      "redistribution": "citation_only",
+      "rights_status": "copyrighted_citation_only",
+      "source_id": "SRC_EDBURY_1999",
+      "source_type": "article",
+      "title": "The Crusader States"
+    }
+  ]
+}

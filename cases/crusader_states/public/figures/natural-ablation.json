@@ -1,0 +1,55 @@
+{
+  "area_crs": "ESRI:102025",
+  "interpretation": "Symmetric-difference area measures model sensitivity, not historical accuracy.",
+  "slices": {
+    "1130": {
+      "Burid Damascus": {
+        "baseline_area_km2": 103473.5,
+        "flat_area_km2": 95371.3,
+        "symmetric_difference_km2": 8702.1
+      },
+      "County of Edessa": {
+        "baseline_area_km2": 25583.7,
+        "flat_area_km2": 25583.7,
+        "symmetric_difference_km2": 0.0
+      },
+      "County of Tripoli": {
+        "baseline_area_km2": 21991.5,
+        "flat_area_km2": 30093.7,
+        "symmetric_difference_km2": 8702.1
+      },
+      "Kingdom of Jerusalem": {
+        "baseline_area_km2": 156080.6,
+        "flat_area_km2": 156080.6,
+        "symmetric_difference_km2": 0.0
+      },
+      "Principality of Antioch": {
+        "baseline_area_km2": 147387.7,
+        "flat_area_km2": 158246.6,
+        "symmetric_difference_km2": 10858.8
+      }
+    },
+    "1187": {
+      "Ayyubid Sultanate": {
+        "baseline_area_km2": 185238.7,
+        "flat_area_km2": 177136.6,
+        "symmetric_difference_km2": 8702.2
+      },
+      "County of Tripoli": {
+        "baseline_area_km2": 21891.5,
+        "flat_area_km2": 29993.7,
+        "symmetric_difference_km2": 8702.1
+      },
+      "Kingdom of Jerusalem": {
+        "baseline_area_km2": 100.0,
+        "flat_area_km2": 100.0,
+        "symmetric_difference_km2": 0.0
+      },
+      "Principality of Antioch": {
+        "baseline_area_km2": 160929.6,
+        "flat_area_km2": 171788.4,
+        "symmetric_difference_km2": 10858.8
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/lineage-bundle.schema.json",
+  "title": "Historical geography lineage bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "case_id", "sources", "observations", "evidence_claims", "model_decisions"],
+  "properties": {
+    "contract_version": {"const": "historical_geo.lineage.v0.1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
+    "evidence_claims": {"type": "array", "items": {"$ref": "#/$defs/evidenceClaim"}},
+    "model_decisions": {"type": "array", "items": {"$ref": "#/$defs/modelDecision"}}
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_id", "title", "source_type", "rights_status", "redistribution"],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/identifier"},
+        "title": {"type": "string", "minLength": 1},
+        "source_type": {"enum": ["book", "article", "dataset", "map", "gazetteer", "synthetic_fixture", "other"]},
+        "citation": {"type": "string"},
+        "locator": {"type": "string"},
+        "rights_status": {"type": "string", "minLength": 1},
+        "redistribution": {"enum": ["allowed", "citation_only", "unknown"]}
+      }
+    },
+    "observation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["observation_id", "source_id", "observation_type", "payload"],
+      "properties": {
+        "observation_id": {"$ref": "#/$defs/identifier"},
+        "source_id": {"$ref": "#/$defs/identifier"},
+        "observation_type": {"enum": ["location", "control_statement", "natural_feature_statement", "event", "route", "map_measurement", "synthetic_fixture"]},
+        "slice": {"type": ["integer", "string"]},
+        "payload": {"type": "object"}
+      }
+    },
+    "evidenceClaim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["evidence_id", "observation_ids", "entity", "slice", "semantic_role", "claim", "confidence"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/identifier"},
+        "observation_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/identifier"}},
+        "entity": {"type": "string", "minLength": 1},
+        "slice": {"type": ["integer", "string"]},
+        "semantic_role": {"enum": ["point_control", "area_control", "route_control", "frontier", "event", "disputed", "influence", "claim", "natural_barrier", "natural_boundary", "display_context", "exclusion"]},
+        "claim": {"type": "string", "minLength": 1},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "modelDecision": {
+      "type": "object", "additionalProperties": false,
+      "required": ["decision_id", "status", "model_role", "evidence_ids", "source_ids", "rationale", "is_allocation_input", "parameters"],
+      "properties": {
+        "decision_id": {"$ref": "#/$defs/identifier"},
+        "status": {"enum": ["accepted", "excluded", "deferred", "assumption"]},
+        "model_role": {"enum": ["seed", "phase", "barrier", "gate", "corridor", "boundary_attractor", "display_only", "research_gap"]},
+        "evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/identifier"}},
+        "source_ids": {"type": "array", "items": {"$ref": "#/$defs/identifier"}},
+        "rationale": {"type": "string", "minLength": 1},
+        "assumption_reason": {"type": "string", "minLength": 1},
+        "is_allocation_input": {"type": "boolean"},
+        "parameters": {"type": "object"}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "assumption"}}}, "then": {"required": ["assumption_reason"]}},
+        {"if": {"properties": {"model_role": {"const": "display_only"}}}, "then": {"properties": {"is_allocation_input": {"const": false}}}},
+        {"if": {"properties": {"status": {"enum": ["excluded", "deferred"]}}}, "then": {"properties": {"is_allocation_input": {"const": false}}}}
+      ]
+    }
+  }
+}

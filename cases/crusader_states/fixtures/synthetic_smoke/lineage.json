@@ -1,0 +1,157 @@
+{
+  "contract_version": "historical_geo.lineage.v0.1",
+  "case_id": "crusader-states-synthetic-smoke",
+  "sources": [
+    {
+      "source_id": "SRC_FIXTURE",
+      "title": "Synthetic minimum-pipeline fixture",
+      "source_type": "synthetic_fixture",
+      "citation": "Generated for software verification; not historical evidence.",
+      "rights_status": "generated_test_fixture",
+      "redistribution": "allowed"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "OBS_WEST_LOCATION",
+      "source_id": "SRC_FIXTURE",
+      "observation_type": "synthetic_fixture",
+      "slice": 1130,
+      "payload": {"name": "West Anchor", "coordinates": [2.0, 3.0]}
+    },
+    {
+      "observation_id": "OBS_EAST_LOCATION",
+      "source_id": "SRC_FIXTURE",
+      "observation_type": "synthetic_fixture",
+      "slice": 1130,
+      "payload": {"name": "East Anchor", "coordinates": [8.0, 3.0]}
+    },
+    {
+      "observation_id": "OBS_EVENT_CONTEXT",
+      "source_id": "SRC_FIXTURE",
+      "observation_type": "event",
+      "slice": 1130,
+      "payload": {"name": "Fixture event", "coordinates": [5.0, 3.0]}
+    },
+    {
+      "observation_id": "OBS_ROUTE_CONTEXT",
+      "source_id": "SRC_FIXTURE",
+      "observation_type": "route",
+      "slice": 1130,
+      "payload": {"name": "Fixture route"}
+    }
+  ],
+  "evidence_claims": [
+    {
+      "evidence_id": "E_WEST_POINT",
+      "observation_ids": ["OBS_WEST_LOCATION"],
+      "entity": "Fixture West",
+      "slice": 1130,
+      "semantic_role": "point_control",
+      "claim": "Synthetic point anchor for the western fixture entity.",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "E_EAST_POINT",
+      "observation_ids": ["OBS_EAST_LOCATION"],
+      "entity": "Fixture East",
+      "slice": 1130,
+      "semantic_role": "point_control",
+      "claim": "Synthetic point anchor for the eastern fixture entity.",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "E_EVENT_CONTEXT",
+      "observation_ids": ["OBS_EVENT_CONTEXT"],
+      "entity": "Fixture West",
+      "slice": 1130,
+      "semantic_role": "event",
+      "claim": "Synthetic event context that must not become an areal seed.",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "E_ROUTE_CONTEXT",
+      "observation_ids": ["OBS_ROUTE_CONTEXT"],
+      "entity": "Fixture East",
+      "slice": 1130,
+      "semantic_role": "route_control",
+      "claim": "Synthetic route context excluded from areal seeding.",
+      "confidence": 1.0
+    }
+  ],
+  "model_decisions": [
+    {
+      "decision_id": "D_WEST_SEED",
+      "status": "accepted",
+      "model_role": "seed",
+      "evidence_ids": ["E_WEST_POINT"],
+      "source_ids": ["SRC_FIXTURE"],
+      "rationale": "A reviewed point-control claim may enter the synthetic allocation fixture.",
+      "is_allocation_input": true,
+      "parameters": {"slice": 1130, "name": "West Anchor", "entity": "Fixture West", "type": "capital", "weight_ordinal": "capital", "coordinates": [2.0, 3.0], "coordinates_status": "verified"}
+    },
+    {
+      "decision_id": "D_EAST_SEED",
+      "status": "accepted",
+      "model_role": "seed",
+      "evidence_ids": ["E_EAST_POINT"],
+      "source_ids": ["SRC_FIXTURE"],
+      "rationale": "A reviewed point-control claim may enter the synthetic allocation fixture.",
+      "is_allocation_input": true,
+      "parameters": {"slice": 1130, "name": "East Anchor", "entity": "Fixture East", "type": "capital", "weight_ordinal": "capital", "coordinates": [8.0, 3.0], "coordinates_status": "verified"}
+    },
+    {
+      "decision_id": "D_WEST_PHASE",
+      "status": "assumption",
+      "model_role": "phase",
+      "evidence_ids": [],
+      "source_ids": [],
+      "rationale": "Exercise a bounded projection without presenting it as historical evidence.",
+      "assumption_reason": "Synthetic smoke-test phase and projection.",
+      "is_allocation_input": true,
+      "parameters": {"entity": "Fixture West", "time_span": [1130, 1130], "projection": "normal"}
+    },
+    {
+      "decision_id": "D_EAST_PHASE",
+      "status": "assumption",
+      "model_role": "phase",
+      "evidence_ids": [],
+      "source_ids": [],
+      "rationale": "Exercise a bounded projection without presenting it as historical evidence.",
+      "assumption_reason": "Synthetic smoke-test phase and projection.",
+      "is_allocation_input": true,
+      "parameters": {"entity": "Fixture East", "time_span": [1130, 1130], "projection": "normal"}
+    },
+    {
+      "decision_id": "D_SYNTHETIC_BARRIER",
+      "status": "assumption",
+      "model_role": "barrier",
+      "evidence_ids": [],
+      "source_ids": [],
+      "rationale": "Exercise bounded natural-feature friction without making a historical claim.",
+      "assumption_reason": "Synthetic barrier used only for software verification.",
+      "is_allocation_input": true,
+      "parameters": {"slice": 1130, "feature_id": "mountain:synthetic", "natural_role": "allocation_barrier", "strength": "soft"}
+    },
+    {
+      "decision_id": "D_EVENT_DISPLAY_ONLY",
+      "status": "excluded",
+      "model_role": "display_only",
+      "evidence_ids": ["E_EVENT_CONTEXT"],
+      "source_ids": ["SRC_FIXTURE"],
+      "rationale": "Events are valid context but cannot seed an areal allocation.",
+      "is_allocation_input": false,
+      "parameters": {"slice": 1130, "display_class": "event"}
+    },
+    {
+      "decision_id": "D_ROUTE_EXCLUDED",
+      "status": "excluded",
+      "model_role": "seed",
+      "evidence_ids": ["E_ROUTE_CONTEXT"],
+      "source_ids": ["SRC_FIXTURE"],
+      "rationale": "Route evidence is not point-control evidence and must not become an areal seed.",
+      "is_allocation_input": false,
+      "parameters": {"slice": 1130, "name": "Fixture route"}
+    }
+  ]
+}

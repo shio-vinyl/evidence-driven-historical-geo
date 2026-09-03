@@ -1,0 +1,76 @@
+{
+  "contract_version": "historical_geo.claim_review.v0.1",
+  "decision_vocabulary": [
+    "KEEP",
+    "DOWNGRADE",
+    "REMOVE",
+    "DISPUTED"
+  ],
+  "groups": [
+    {
+      "baseline_effect": "D_1187_JAFFA_SEED is deferred and absent.",
+      "basis": "The reviewed Ibn Shaddad pages support Acre, Sidon, Beirut, Ascalon, and Gaza, but do not name Jaffa. The Johnston campaign map is external comparison material and does not repair the source gap.",
+      "claim_group": "CSB1187_004_JAFFA",
+      "decision": "DISPUTED",
+      "human_review_required": true,
+      "inclusive_effect": "The deferred Jaffa seed is activated.",
+      "topic": "Jaffa in the captured-coast group"
+    },
+    {
+      "baseline_effect": "Fatimid Egypt has no 1130 baseline seed and is not materialized.",
+      "basis": "The historical proposition is plausible, but the two recovered secondary locators remain too broad for the public lineage standard.",
+      "claim_group": "CSB1130_005",
+      "decision": "DISPUTED",
+      "human_review_required": true,
+      "inclusive_effect": "The deferred Ascalon seed restores the entity as a scenario test.",
+      "topic": "Ascalon in 1130"
+    },
+    {
+      "baseline_effect": "Damascus remains a named political-center seed; Cairo is deferred.",
+      "basis": "Painter p. 45 names Saladin as sultan of Damascus and Egypt. It does not name Cairo, and a title does not establish a territorial perimeter.",
+      "claim_group": "CSB1187_001",
+      "decision": "DOWNGRADE",
+      "human_review_required": true,
+      "inclusive_effect": "Cairo is added as a weak proxy.",
+      "topic": "Cairo and Damascus in 1187"
+    },
+    {
+      "baseline_effect": "Antioch remains a city-point seed.",
+      "basis": "Edbury states that Antioch held out against Saladin. The decision is limited to the city; surrounding lordships stay unresolved.",
+      "claim_group": "CSB1187_008",
+      "decision": "KEEP",
+      "human_review_required": true,
+      "inclusive_effect": "No change.",
+      "topic": "Antioch at end of 1187"
+    },
+    {
+      "baseline_effect": "Edessa remains at minor rather than capital seed weight.",
+      "basis": "William of Tyre names Joscelin count of Edessa in the adjacent 1131 narrative. The one-year bridge is explicit and cannot support a perimeter.",
+      "claim_group": "CSB1130_010",
+      "decision": "DOWNGRADE",
+      "human_review_required": true,
+      "inclusive_effect": "No change.",
+      "topic": "Edessa using adjacent 1131 material"
+    },
+    {
+      "baseline_effect": "Tripoli remains; Tortosa is deferred.",
+      "basis": "William of Tyre directly names Pons count of Tripoli. The checked pages do not independently establish Tortosa or continuous county territory.",
+      "claim_group": "CSB1130_006",
+      "decision": "DOWNGRADE",
+      "human_review_required": true,
+      "inclusive_effect": "Tortosa is added.",
+      "topic": "Tripoli and Tortosa as a county core"
+    },
+    {
+      "baseline_effect": "Tripoli remains a city-point seed.",
+      "basis": "Ibn Shaddad names Tripoli as a refuge after Hattin, and Edbury states that the city held out against Saladin. Inland limits remain open.",
+      "claim_group": "CSB1187_007",
+      "decision": "KEEP",
+      "human_review_required": true,
+      "inclusive_effect": "No change.",
+      "topic": "Tripoli at end of 1187"
+    }
+  ],
+  "review_date": "2026-09-01",
+  "rule": "A baseline seed requires a reviewed locality-control claim. Political centers, events, routes, and territorial extent are recorded separately and cannot be promoted by defaults."
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/output-feature.schema.json",
+  "title": "Boundary-hypothesis output feature properties",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["output_feature_id", "entity", "slice", "model_label", "decision_ids", "evidence_ids", "source_ids", "geometry_adjustment", "uncertainty"],
+  "properties": {
+    "output_feature_id": {"type": "string", "minLength": 1},
+    "entity": {"type": "string", "minLength": 1},
+    "slice": {"type": ["integer", "string"]},
+    "model_label": {"const": "boundary_hypothesis"},
+    "decision_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "source_ids": {"type": "array", "items": {"type": "string"}},
+    "geometry_adjustment": {"enum": ["none", "cleanup", "boundary_attractor"]},
+    "uncertainty": {"enum": ["modeled", "assumption-heavy", "diagnostic"]}
+  }
+}

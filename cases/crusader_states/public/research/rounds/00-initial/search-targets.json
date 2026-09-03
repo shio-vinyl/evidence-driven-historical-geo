@@ -1,0 +1,187 @@
+{
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.search_targets.v0.2",
+  "targets": [
+    {
+      "claim_ids": [
+        "E_1187_CAIRO_POINT"
+      ],
+      "decision_ids": [
+        "D_1187_CAIRO_SEED"
+      ],
+      "evidence_gap_ids": [
+        "G_1187_CAIRO_PROXY"
+      ],
+      "preferred_source_types": [
+        "primary chronicle",
+        "page-addressable scholarly study"
+      ],
+      "priority_basis": {
+        "affected_grid_cells": 1162,
+        "related_decision_count": 1,
+        "related_decision_ids": [
+          "D_1187_CAIRO_SEED"
+        ],
+        "slices": [
+          1187
+        ]
+      },
+      "question": "Does evidence for Saladin as ruler of Egypt justify Cairo as a locality control point at end of 1187?",
+      "status": "open",
+      "stop_condition": "Stop after direct chronicles and two scholarly syntheses fail to name Cairo for this role.",
+      "success_criteria": "A source names Cairo as a relevant political or operational center for the exact slice.",
+      "target_id": "TARGET_G_1187_CAIRO_PROXY"
+    },
+    {
+      "claim_ids": [
+        "E_1187_JAFFA_POINT"
+      ],
+      "decision_ids": [
+        "D_1187_JAFFA_SEED"
+      ],
+      "evidence_gap_ids": [
+        "G_1187_JAFFA_EVIDENCE"
+      ],
+      "preferred_source_types": [
+        "primary chronicle",
+        "page-addressable scholarly study"
+      ],
+      "priority_basis": {
+        "affected_grid_cells": 1162,
+        "related_decision_count": 1,
+        "related_decision_ids": [
+          "D_1187_JAFFA_SEED"
+        ],
+        "slices": [
+          1187
+        ]
+      },
+      "question": "Was Jaffa captured and controlled by the Ayyubid polity by the end-of-year 1187 convention?",
+      "status": "open",
+      "stop_condition": "Stop after the principal narrative witnesses and two independent studies remain silent or conflicting.",
+      "success_criteria": "A page-addressable source explicitly places Jaffa in the 1187 control sequence.",
+      "target_id": "TARGET_G_1187_JAFFA_EVIDENCE"
+    },
+    {
+      "claim_ids": [
+        "E_1130_EDESSA_POINT"
+      ],
+      "decision_ids": [
+        "D_1130_EDESSA_SEED"
+      ],
+      "evidence_gap_ids": [
+        "G_1130_EDESSA_DATE"
+      ],
+      "preferred_source_types": [
+        "primary chronicle",
+        "dated scholarly study"
+      ],
+      "priority_basis": {
+        "affected_grid_cells": 477,
+        "related_decision_count": 1,
+        "related_decision_ids": [
+          "D_1130_EDESSA_SEED"
+        ],
+        "slices": [
+          1130
+        ]
+      },
+      "question": "Can adjacent 1131 evidence support an Edessa control point for the 1130 slice?",
+      "status": "open",
+      "stop_condition": "Stop when direct 1130 evidence is found or the strongest accessible accounts only support 1131.",
+      "success_criteria": "A source resolves the one-year bridge or provides direct 1130 evidence.",
+      "target_id": "TARGET_G_1130_EDESSA_DATE"
+    },
+    {
+      "claim_ids": [
+        "E_1130_TRIPOLI_POINT"
+      ],
+      "decision_ids": [
+        "D_1130_TRIPOLI_SEED"
+      ],
+      "evidence_gap_ids": [
+        "G_1130_TRIPOLI_INLAND"
+      ],
+      "preferred_source_types": [
+        "primary chronicle",
+        "regional historical geography",
+        "fortress or route study"
+      ],
+      "priority_basis": {
+        "affected_grid_cells": 477,
+        "related_decision_count": 1,
+        "related_decision_ids": [
+          "D_1130_TRIPOLI_SEED"
+        ],
+        "slices": [
+          1130
+        ]
+      },
+      "question": "Which inland settlements, fortresses, routes, or exclusions can constrain the County of Tripoli hypothesis around 1130?",
+      "status": "open",
+      "stop_condition": "Stop after a bounded review of the principal narrative and two regional studies yields only the city title.",
+      "success_criteria": "At least one reviewed non-capital observation supplies a control point, route, frontier, or explicit exclusion.",
+      "target_id": "TARGET_G_1130_TRIPOLI_INLAND"
+    },
+    {
+      "claim_ids": [
+        "E_1130_ASCALON_POINT"
+      ],
+      "decision_ids": [
+        "D_1130_ASCALON_SEED"
+      ],
+      "evidence_gap_ids": [
+        "G_1130_ASCALON_EVIDENCE"
+      ],
+      "preferred_source_types": [
+        "primary chronicle",
+        "page-addressable scholarly study"
+      ],
+      "priority_basis": {
+        "affected_grid_cells": 1,
+        "related_decision_count": 1,
+        "related_decision_ids": [
+          "D_1130_ASCALON_SEED"
+        ],
+        "slices": [
+          1130
+        ]
+      },
+      "question": "Was Ascalon controlled by Fatimid Egypt in the 1130 slice at a standard sufficient for a point-control input?",
+      "status": "open",
+      "stop_condition": "Stop after two directly relevant scholarly or primary-source checks remain inconclusive.",
+      "success_criteria": "A page-addressable source directly supports or rejects locality control at the target slice.",
+      "target_id": "TARGET_G_1130_ASCALON_EVIDENCE"
+    },
+    {
+      "claim_ids": [
+        "E_1130_TORTOSA_POINT"
+      ],
+      "decision_ids": [
+        "D_1130_TORTOSA_SEED"
+      ],
+      "evidence_gap_ids": [
+        "G_1130_TORTOSA_EVIDENCE"
+      ],
+      "preferred_source_types": [
+        "primary chronicle",
+        "page-addressable scholarly study"
+      ],
+      "priority_basis": {
+        "affected_grid_cells": 1,
+        "related_decision_count": 1,
+        "related_decision_ids": [
+          "D_1130_TORTOSA_SEED"
+        ],
+        "slices": [
+          1130
+        ]
+      },
+      "question": "Does the checked 1130 evidence support Tortosa as a County of Tripoli control point, independently of the title of the count?",
+      "status": "open",
+      "stop_condition": "Stop after the accessible primary narrative and two independent scholarly treatments have been checked.",
+      "success_criteria": "A locatable statement identifies Tortosa control close to 1130 without inferring a county footprint.",
+      "target_id": "TARGET_G_1130_TORTOSA_EVIDENCE"
+    }
+  ]
+}

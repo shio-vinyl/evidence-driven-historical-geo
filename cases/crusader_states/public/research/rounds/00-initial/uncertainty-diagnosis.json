@@ -1,0 +1,102 @@
+{
+  "baseline_scenario": "reviewed-baseline",
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.uncertainty_diagnosis.v0.2",
+  "slices": [
+    {
+      "affected_grid_cells": {
+        "evidence": 478,
+        "model": 5823,
+        "total": 6042
+      },
+      "changed_decision_ids": {
+        "all": [
+          "D_1130_ASCALON_SEED",
+          "D_1130_BURID_DAMASCUS_PHASE",
+          "D_1130_COUNTY_OF_EDESSA_PHASE",
+          "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1130_EDESSA_SEED",
+          "D_1130_FATIMID_EGYPT_PHASE",
+          "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_1130_TORTOSA_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ],
+        "evidence": [
+          "D_1130_ASCALON_SEED",
+          "D_1130_EDESSA_SEED",
+          "D_1130_TORTOSA_SEED",
+          "D_1130_TRIPOLI_SEED"
+        ],
+        "model": [
+          "D_1130_BURID_DAMASCUS_PHASE",
+          "D_1130_COUNTY_OF_EDESSA_PHASE",
+          "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1130_FATIMID_EGYPT_PHASE",
+          "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ]
+      },
+      "changed_scenarios": {
+        "evidence": [
+          "inclusive",
+          "verified-only"
+        ],
+        "model": [
+          "flat-natural",
+          "projection-expansive",
+          "projection-normal"
+        ]
+      },
+      "classification": "mixed",
+      "slice": 1130
+    },
+    {
+      "affected_grid_cells": {
+        "evidence": 1162,
+        "model": 6193,
+        "total": 6430
+      },
+      "changed_decision_ids": {
+        "all": [
+          "D_1187_AYYUBID_SULTANATE_PHASE",
+          "D_1187_CAIRO_SEED",
+          "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1187_JAFFA_SEED",
+          "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ],
+        "evidence": [
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
+        ],
+        "model": [
+          "D_1187_AYYUBID_SULTANATE_PHASE",
+          "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE",
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ]
+      },
+      "changed_scenarios": {
+        "evidence": [
+          "inclusive"
+        ],
+        "model": [
+          "flat-natural",
+          "projection-expansive",
+          "projection-normal"
+        ]
+      },
+      "classification": "mixed",
+      "slice": 1187
+    }
+  ]
+}

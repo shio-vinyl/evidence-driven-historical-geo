@@ -1,0 +1,6 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "properties": {"feature_id": "land:synthetic", "fixture": true}, "geometry": {"type": "Polygon", "coordinates": [[[0,0],[10,0],[10,6],[0,6],[0,0]]]}}
+  ]
+}

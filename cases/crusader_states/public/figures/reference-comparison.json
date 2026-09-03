@@ -1,0 +1,415 @@
+{
+  "boundary_metrics_computed": false,
+  "interpretation": "Categorical agreement with external cartography; no reference is ground truth and no value is a historical accuracy score.",
+  "interpretive_zones": {
+    "1130": {
+      "periphery": "The atlas's continuous fills and desert edges are too generalized for line comparison.",
+      "reference_only": "Shepherd depicts Fatimid Ascalon and Tortosa; both are reserved for the inclusive scenario.",
+      "stable_core": "Jerusalem, Damascus, Tripoli, Antioch, and Edessa are present in the reviewed baseline and the c.1140 comparator."
+    },
+    "1187": {
+      "periphery": "Neither c.1190 plate is treated as an end-of-year 1187 boundary.",
+      "reference_only": "Johnston assigns Jaffa to the 1187 conquest sequence; the reviewed baseline omits it because the textual page check remains unresolved.",
+      "stable_core": "The compared works retain an Ayyubid domain and Latin centers at Tyre, Tripoli, and Antioch."
+    }
+  },
+  "parameter_tuning_from_references": false,
+  "slices": {
+    "1130": {
+      "references": [
+        {
+          "adjacencies": {
+            "expressed": 0,
+            "matched": 0,
+            "reference_only": 0
+          },
+          "city_control": {
+            "different": 0,
+            "expressed": 0,
+            "matched": 0,
+            "reference_only": 0
+          },
+          "comparison_status": "rights_or_access_blocked",
+          "date_alignment": "exact year; regional northern coverage only",
+          "entities": {
+            "expressed": 0,
+            "matched": 0,
+            "reference_only": 0
+          },
+          "reference_id": "BUCK_2017_MAP2_1130"
+        },
+        {
+          "adjacencies": {
+            "expressed": 4,
+            "items": [
+              {
+                "entities": [
+                  "County of Edessa",
+                  "Principality of Antioch"
+                ],
+                "status": "matched"
+              },
+              {
+                "entities": [
+                  "County of Tripoli",
+                  "Principality of Antioch"
+                ],
+                "status": "matched"
+              },
+              {
+                "entities": [
+                  "County of Tripoli",
+                  "Kingdom of Jerusalem"
+                ],
+                "status": "reference_only"
+              },
+              {
+                "entities": [
+                  "Fatimid Egypt",
+                  "Kingdom of Jerusalem"
+                ],
+                "status": "reference_only"
+              }
+            ],
+            "matched": 2,
+            "reference_only": 2
+          },
+          "city_control": {
+            "different": 0,
+            "expressed": 7,
+            "items": [
+              {
+                "city": "Antioch",
+                "model_entity": "Principality of Antioch",
+                "reference_entity": "Principality of Antioch",
+                "status": "matched"
+              },
+              {
+                "city": "Ascalon",
+                "model_entity": null,
+                "reference_entity": "Fatimid Egypt",
+                "status": "reference_only"
+              },
+              {
+                "city": "Damascus",
+                "model_entity": "Burid Damascus",
+                "reference_entity": "Burid Damascus",
+                "status": "matched"
+              },
+              {
+                "city": "Edessa",
+                "model_entity": "County of Edessa",
+                "reference_entity": "County of Edessa",
+                "status": "matched"
+              },
+              {
+                "city": "Jerusalem",
+                "model_entity": "Kingdom of Jerusalem",
+                "reference_entity": "Kingdom of Jerusalem",
+                "status": "matched"
+              },
+              {
+                "city": "Tortosa",
+                "model_entity": null,
+                "reference_entity": "County of Tripoli",
+                "status": "reference_only"
+              },
+              {
+                "city": "Tripoli",
+                "model_entity": "County of Tripoli",
+                "reference_entity": "County of Tripoli",
+                "status": "matched"
+              }
+            ],
+            "matched": 5,
+            "reference_only": 2
+          },
+          "coastal_sequence": {
+            "expressed": [
+              "Tortosa",
+              "Tripoli",
+              "Beirut",
+              "Sidon",
+              "Tyre",
+              "Acre",
+              "Caesarea",
+              "Jaffa",
+              "Ascalon",
+              "Gaza"
+            ],
+            "method": "ordered named-place context only; no continuous coast polygon inferred"
+          },
+          "comparison_status": "qualitative_compared",
+          "date_alignment": "c.1140; ten-year proxy, not an exact slice match",
+          "entities": {
+            "expressed": 6,
+            "items": [
+              {
+                "entity": "County of Edessa",
+                "status": "matched"
+              },
+              {
+                "entity": "Principality of Antioch",
+                "status": "matched"
+              },
+              {
+                "entity": "County of Tripoli",
+                "status": "matched"
+              },
+              {
+                "entity": "Kingdom of Jerusalem",
+                "status": "matched"
+              },
+              {
+                "entity": "Fatimid Egypt",
+                "status": "reference_only"
+              },
+              {
+                "entity": "Burid Damascus",
+                "status": "matched"
+              }
+            ],
+            "matched": 5,
+            "reference_only": 1
+          },
+          "reference_id": "SHEPHERD_1926_C1140"
+        }
+      ],
+      "reviewed_baseline": {
+        "adjacencies": [
+          [
+            "Burid Damascus",
+            "County of Tripoli"
+          ],
+          [
+            "Burid Damascus",
+            "Kingdom of Jerusalem"
+          ],
+          [
+            "County of Edessa",
+            "Principality of Antioch"
+          ],
+          [
+            "County of Tripoli",
+            "Principality of Antioch"
+          ]
+        ],
+        "city_control": {
+          "Antioch": "Principality of Antioch",
+          "Damascus": "Burid Damascus",
+          "Edessa": "County of Edessa",
+          "Jerusalem": "Kingdom of Jerusalem",
+          "Tripoli": "County of Tripoli"
+        },
+        "entities": [
+          "Burid Damascus",
+          "County of Edessa",
+          "County of Tripoli",
+          "Kingdom of Jerusalem",
+          "Principality of Antioch"
+        ]
+      }
+    },
+    "1187": {
+      "references": [
+        {
+          "adjacencies": {
+            "expressed": 0,
+            "items": [],
+            "matched": 0,
+            "reference_only": 0
+          },
+          "city_control": {
+            "different": 0,
+            "expressed": 0,
+            "items": [],
+            "matched": 0,
+            "reference_only": 0
+          },
+          "coastal_sequence": {
+            "expressed": [],
+            "method": "ordered named-place context only; no continuous coast polygon inferred"
+          },
+          "comparison_status": "qualitative_compared",
+          "date_alignment": "c.1190; post-slice proxy affected by later campaigning",
+          "entities": {
+            "expressed": 4,
+            "items": [
+              {
+                "entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "entity": "Principality of Antioch",
+                "status": "matched"
+              },
+              {
+                "entity": "County of Tripoli",
+                "status": "matched"
+              },
+              {
+                "entity": "Kingdom of Jerusalem",
+                "status": "matched"
+              }
+            ],
+            "matched": 4,
+            "reference_only": 0
+          },
+          "reference_id": "SHEPHERD_1911_C1190"
+        },
+        {
+          "adjacencies": {
+            "expressed": 0,
+            "items": [],
+            "matched": 0,
+            "reference_only": 0
+          },
+          "city_control": {
+            "different": 0,
+            "expressed": 10,
+            "items": [
+              {
+                "city": "Acre",
+                "model_entity": "Ayyubid Sultanate",
+                "reference_entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "city": "Antioch",
+                "model_entity": "Principality of Antioch",
+                "reference_entity": "Principality of Antioch",
+                "status": "matched"
+              },
+              {
+                "city": "Ascalon",
+                "model_entity": "Ayyubid Sultanate",
+                "reference_entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "city": "Beirut",
+                "model_entity": "Ayyubid Sultanate",
+                "reference_entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "city": "Gaza",
+                "model_entity": "Ayyubid Sultanate",
+                "reference_entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "city": "Jaffa",
+                "model_entity": null,
+                "reference_entity": "Ayyubid Sultanate",
+                "status": "reference_only"
+              },
+              {
+                "city": "Jerusalem",
+                "model_entity": "Ayyubid Sultanate",
+                "reference_entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "city": "Sidon",
+                "model_entity": "Ayyubid Sultanate",
+                "reference_entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "city": "Tripoli",
+                "model_entity": "County of Tripoli",
+                "reference_entity": "County of Tripoli",
+                "status": "matched"
+              },
+              {
+                "city": "Tyre",
+                "model_entity": "Kingdom of Jerusalem",
+                "reference_entity": "Kingdom of Jerusalem",
+                "status": "matched"
+              }
+            ],
+            "matched": 9,
+            "reference_only": 1
+          },
+          "coastal_sequence": {
+            "expressed": [
+              "Antioch",
+              "Tortosa",
+              "Tripoli",
+              "Beirut",
+              "Sidon",
+              "Tyre",
+              "Acre",
+              "Caesarea",
+              "Jaffa",
+              "Ascalon",
+              "Gaza"
+            ],
+            "method": "ordered named-place context only; no continuous coast polygon inferred"
+          },
+          "comparison_status": "qualitative_compared",
+          "date_alignment": "campaign sequence separates 1187 from 1188 and later events, but is not a single-state snapshot",
+          "entities": {
+            "expressed": 4,
+            "items": [
+              {
+                "entity": "Ayyubid Sultanate",
+                "status": "matched"
+              },
+              {
+                "entity": "Principality of Antioch",
+                "status": "matched"
+              },
+              {
+                "entity": "County of Tripoli",
+                "status": "matched"
+              },
+              {
+                "entity": "Kingdom of Jerusalem",
+                "status": "matched"
+              }
+            ],
+            "matched": 4,
+            "reference_only": 0
+          },
+          "reference_id": "JOHNSTON_POOLE_1187_1190"
+        }
+      ],
+      "reviewed_baseline": {
+        "adjacencies": [
+          [
+            "Ayyubid Sultanate",
+            "County of Tripoli"
+          ],
+          [
+            "Ayyubid Sultanate",
+            "Kingdom of Jerusalem"
+          ],
+          [
+            "County of Tripoli",
+            "Principality of Antioch"
+          ]
+        ],
+        "city_control": {
+          "Acre": "Ayyubid Sultanate",
+          "Antioch": "Principality of Antioch",
+          "Ascalon": "Ayyubid Sultanate",
+          "Beirut": "Ayyubid Sultanate",
+          "Damascus": "Ayyubid Sultanate",
+          "Gaza": "Ayyubid Sultanate",
+          "Jerusalem": "Ayyubid Sultanate",
+          "Sidon": "Ayyubid Sultanate",
+          "Tripoli": "County of Tripoli",
+          "Tyre": "Kingdom of Jerusalem"
+        },
+        "entities": [
+          "Ayyubid Sultanate",
+          "County of Tripoli",
+          "Kingdom of Jerusalem",
+          "Principality of Antioch"
+        ]
+      }
+    }
+  }
+}

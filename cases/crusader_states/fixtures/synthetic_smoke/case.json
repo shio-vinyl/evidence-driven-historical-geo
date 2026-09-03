@@ -1,0 +1,13 @@
+{
+  "case_id": "crusader-states-synthetic-smoke",
+  "fixture_kind": "synthetic_smoke",
+  "lineage_path": "lineage.json",
+  "grid": {
+    "bbox": [0.0, 0.0, 10.0, 6.0],
+    "resolution": 0.2,
+    "crs": "EPSG:4326",
+    "friction_profile": "settled",
+    "land_path": "land.geojson",
+    "natural_features_path": "natural-features.geojson"
+  }
+}

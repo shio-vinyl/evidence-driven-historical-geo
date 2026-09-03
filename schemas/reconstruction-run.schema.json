@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/reconstruction-run.schema.json",
+  "title": "Reconstruction run manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "run_id",
+    "case_id",
+    "slice",
+    "scenario",
+    "calibration_version",
+    "effective_input_sha256",
+    "outputs",
+    "entity_counts",
+    "validation"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "historical_geo.run.v0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slice": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "scenario": {
+      "type": "string",
+      "minLength": 1
+    },
+    "calibration_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_input_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "entity_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "expected",
+        "materialized"
+      ],
+      "properties": {
+        "expected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "materialized": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "valid",
+        "non_overlapping",
+        "entities_retained"
+      ],
+      "properties": {
+        "valid": {
+          "type": "boolean"
+        },
+        "non_overlapping": {
+          "type": "boolean"
+        },
+        "entities_retained": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

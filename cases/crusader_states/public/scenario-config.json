@@ -1,0 +1,221 @@
+{
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.scenarios.v0.1",
+  "interpretation": "Scenarios are bounded tests of reviewed evidence and model choices. Their agreement is not a probability or historical truth value.",
+  "scenarios": {
+    "flat-natural": {
+      "axis": "model",
+      "description": "Reviewed baseline with natural polygon costs removed.",
+      "include_natural_costs": false,
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      }
+    },
+    "grid-20km": {
+      "axis": "model",
+      "description": "Reviewed baseline at a 20 km working grid.",
+      "include_natural_costs": true,
+      "resolution": 20000,
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      }
+    },
+    "grid-5km": {
+      "axis": "model",
+      "description": "Reviewed baseline at a 5 km working grid.",
+      "include_natural_costs": true,
+      "resolution": 5000,
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      }
+    },
+    "inclusive": {
+      "axis": "evidence",
+      "description": "Reviewed baseline plus explicitly deferred disputed locality anchors.",
+      "include_natural_costs": true,
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED",
+          "D_1130_ASCALON_SEED",
+          "D_1130_TORTOSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED",
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
+        ]
+      }
+    },
+    "projection-expansive": {
+      "axis": "model",
+      "description": "Reviewed baseline with all phases changed to the allowed expansive projection ordinal.",
+      "include_natural_costs": true,
+      "projection_override": "expansive",
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      }
+    },
+    "projection-normal": {
+      "axis": "model",
+      "description": "Reviewed baseline with all phases changed from contracted to the allowed normal projection ordinal.",
+      "include_natural_costs": true,
+      "projection_override": "normal",
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      }
+    },
+    "reviewed-baseline": {
+      "axis": "baseline",
+      "description": "KEEP and DOWNGRADE decisions accepted for the public baseline.",
+      "include_natural_costs": true,
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      }
+    },
+    "verified-only": {
+      "axis": "evidence",
+      "description": "Only page-verified locality claims accepted in the second review pass.",
+      "include_natural_costs": true,
+      "seed_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      }
+    }
+  }
+}

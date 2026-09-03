@@ -1,0 +1,7 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "properties": {"feature_id": "mountain:synthetic", "feature_type": "mountain_range", "fixture": true}, "geometry": {"type": "Polygon", "coordinates": [[[4.7,0],[5.3,0],[5.3,6],[4.7,6],[4.7,0]]]}},
+    {"type": "Feature", "properties": {"feature_id": "river:synthetic", "feature_type": "river_centerline", "fixture": true}, "geometry": {"type": "LineString", "coordinates": [[5.2,-1],[5.2,7]]}}
+  ]
+}

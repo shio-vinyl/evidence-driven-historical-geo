@@ -1,0 +1,8 @@
+.venv/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+cases/**/build/
+.DS_Store
+.ops/

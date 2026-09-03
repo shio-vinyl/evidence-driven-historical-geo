@@ -1,0 +1,247 @@
+{
+  "baseline": "reviewed-baseline",
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.research_scenarios.v0.2",
+  "scenarios": {
+    "flat-natural": {
+      "axis": "model",
+      "changed_decision_ids": {
+        "1130": [
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ],
+        "1187": [
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ]
+      },
+      "description": "Baseline without assumption-labeled friction features.",
+      "excluded_decision_ids": {
+        "1130": [
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ],
+        "1187": [
+          "D_NATURAL_LEBANON_BARRIER",
+          "D_NATURAL_TAURUS_BARRIER"
+        ]
+      },
+      "included_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      },
+      "name": "flat-natural"
+    },
+    "inclusive": {
+      "axis": "evidence",
+      "changed_decision_ids": {
+        "1130": [
+          "D_1130_ASCALON_SEED",
+          "D_1130_TORTOSA_SEED"
+        ],
+        "1187": [
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
+        ]
+      },
+      "description": "Baseline plus experimental locality decisions.",
+      "included_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED",
+          "D_1130_ASCALON_SEED",
+          "D_1130_TORTOSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED",
+          "D_1187_CAIRO_SEED",
+          "D_1187_JAFFA_SEED"
+        ]
+      },
+      "name": "inclusive"
+    },
+    "projection-expansive": {
+      "axis": "model",
+      "changed_decision_ids": {
+        "1130": [
+          "D_1130_BURID_DAMASCUS_PHASE",
+          "D_1130_COUNTY_OF_EDESSA_PHASE",
+          "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1130_FATIMID_EGYPT_PHASE",
+          "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE"
+        ],
+        "1187": [
+          "D_1187_AYYUBID_SULTANATE_PHASE",
+          "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE"
+        ]
+      },
+      "description": "Baseline with expansive reach class.",
+      "included_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      },
+      "name": "projection-expansive",
+      "parameter_overrides": {
+        "reach_class": "expansive"
+      }
+    },
+    "projection-normal": {
+      "axis": "model",
+      "changed_decision_ids": {
+        "1130": [
+          "D_1130_BURID_DAMASCUS_PHASE",
+          "D_1130_COUNTY_OF_EDESSA_PHASE",
+          "D_1130_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1130_FATIMID_EGYPT_PHASE",
+          "D_1130_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1130_PRINCIPALITY_OF_ANTIOCH_PHASE"
+        ],
+        "1187": [
+          "D_1187_AYYUBID_SULTANATE_PHASE",
+          "D_1187_COUNTY_OF_TRIPOLI_PHASE",
+          "D_1187_KINGDOM_OF_JERUSALEM_PHASE",
+          "D_1187_PRINCIPALITY_OF_ANTIOCH_PHASE"
+        ]
+      },
+      "description": "Baseline with normal reach class.",
+      "included_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      },
+      "name": "projection-normal",
+      "parameter_overrides": {
+        "reach_class": "normal"
+      }
+    },
+    "reviewed-baseline": {
+      "axis": "baseline",
+      "description": "Admitted evidence and declared assumptions.",
+      "included_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED",
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      },
+      "name": "reviewed-baseline"
+    },
+    "verified-only": {
+      "axis": "evidence",
+      "changed_decision_ids": {
+        "1130": [
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": []
+      },
+      "description": "Only direct-page-verified locality decisions.",
+      "excluded_decision_ids": {
+        "1130": [
+          "D_1130_TRIPOLI_SEED",
+          "D_1130_EDESSA_SEED"
+        ],
+        "1187": []
+      },
+      "included_decision_ids": {
+        "1130": [
+          "D_1130_JERUSALEM_SEED",
+          "D_1130_DAMASCUS_SEED",
+          "D_1130_ANTIOCH_SEED"
+        ],
+        "1187": [
+          "D_1187_DAMASCUS_SEED",
+          "D_1187_JERUSALEM_SEED",
+          "D_1187_ACRE_SEED",
+          "D_1187_ASCALON_SEED",
+          "D_1187_GAZA_SEED",
+          "D_1187_SIDON_SEED",
+          "D_1187_BEIRUT_SEED",
+          "D_1187_TYRE_SEED",
+          "D_1187_TRIPOLI_SEED",
+          "D_1187_ANTIOCH_SEED"
+        ]
+      },
+      "name": "verified-only"
+    }
+  }
+}

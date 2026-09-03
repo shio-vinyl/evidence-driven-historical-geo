@@ -1,0 +1,70 @@
+{
+  "checked_on": "2026-09-01",
+  "result": "official_5.1.2_geometry_matches_curated_input",
+  "method": "SHA-256 official archive capture plus normalized geometry comparison before fixture clipping.",
+  "natural_earth_version": "5.1.2",
+  "official_artifacts": [
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/5.1.2/10m_physical/ne_10m_coastline.zip",
+      "sha256": "bfa04cdbcbef07ef90dfca1dabb48062eca29900a113df0f389303e255484017",
+      "bytes": 3069451
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/5.1.2/10m_physical/ne_10m_geography_regions_polys.zip",
+      "sha256": "cb7b9db200284ed1551f20eacc7f3333e9b5f311c19f7cb2670694529f688682",
+      "bytes": 2038519
+    },
+    {
+      "url": "https://naturalearth.s3.amazonaws.com/5.1.2/10m_physical/ne_10m_rivers_lake_centerlines.zip",
+      "sha256": "ded71b01870855ccfe19b51f2ec14c9bb48fae23c0e9f3c11974d426433b5c38",
+      "bytes": 2079507
+    }
+  ],
+  "checks": [
+    {
+      "layer": "coastline",
+      "official_layer": "ne_10m_coastline",
+      "official_feature_count": 4133,
+      "curated_feature_count": 4133,
+      "identity": "exact_geometry_multiset",
+      "official_geometry_set_sha256": "c3a98bd6f9f82836be3516fd05e0794293f6397b1f59c741cde46ae5f73e84f2",
+      "curated_geometry_set_sha256": "c3a98bd6f9f82836be3516fd05e0794293f6397b1f59c741cde46ae5f73e84f2"
+    },
+    {
+      "layer": "physical_region_polys",
+      "official_layer": "ne_10m_geography_regions_polys",
+      "ne_id": 1730071649,
+      "official_geometry_type": "Polygon",
+      "curated_geometry_type": "MultiPolygon",
+      "topologically_equal": true,
+      "symmetric_difference_area": 0.0,
+      "official_normalized_wkb_sha256": "8af1c6cc0178fee55a3e1de82a885df3ffedd302c98efb0602c7914f6c773756",
+      "curated_normalized_wkb_sha256": "cb7dddd057cf496aac730bc706237c61f113f1ad54b93fdd9119a824459a37e5",
+      "identity": "topologically_equal_type_promotion"
+    },
+    {
+      "layer": "physical_region_polys",
+      "official_layer": "ne_10m_geography_regions_polys",
+      "ne_id": 1159103077,
+      "official_geometry_type": "Polygon",
+      "curated_geometry_type": "MultiPolygon",
+      "topologically_equal": true,
+      "symmetric_difference_area": 0.0,
+      "official_normalized_wkb_sha256": "78af4e7e61021f87aae7e03f819268e38c88d5137c334367c5e71342471c36be",
+      "curated_normalized_wkb_sha256": "620ea5d9874b50b3891e7de27bc768595a879604ffdd00e2f9d0b078af9587e2",
+      "identity": "topologically_equal_type_promotion"
+    },
+    {
+      "layer": "rivers_lake_centerlines",
+      "official_layer": "ne_10m_rivers_lake_centerlines",
+      "ne_id": 1159114369,
+      "official_geometry_type": "MultiLineString",
+      "curated_geometry_type": "MultiLineString",
+      "topologically_equal": true,
+      "symmetric_difference_area": 0.0,
+      "official_normalized_wkb_sha256": "2b7025f10563f9137c123a7e98e10602dd11939d1d1f32160b93779752171774",
+      "curated_normalized_wkb_sha256": "2b7025f10563f9137c123a7e98e10602dd11939d1d1f32160b93779752171774",
+      "identity": "exact_normalized_wkb"
+    }
+  ]
+}

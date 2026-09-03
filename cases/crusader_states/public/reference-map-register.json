@@ -1,0 +1,253 @@
+{
+  "case_id": "crusader-states-public-case",
+  "contract_version": "historical_geo.reference_map_register.v0.1",
+  "maps": [
+    {
+      "access_record": {
+        "accessed": "2026-09-01",
+        "result": "Legal publisher preview exposes title and page but not map page 23.",
+        "url": "https://api.pageplace.de/preview/DT0400.9781782049241_A42902087/preview-9781782049241_A42902087.pdf"
+      },
+      "ambiguity": [
+        "No legal access to the map body in the available preview.",
+        "Coverage excludes most of the southern case."
+      ],
+      "author": "Andrew D. Buck",
+      "comparison_use": "rights-blocked register entry; no map-derived assertions or geometry",
+      "date_alignment": "exact year; regional northern coverage only",
+      "digitization_permission": "not established",
+      "edition": "Boydell Press first edition",
+      "entity_classification": [
+        "Principality of Antioch",
+        "County of Edessa",
+        "neighboring polities and lordships"
+      ],
+      "evaluation_independence": "partly independent; same author appears in textual lineage, map unavailable for extraction",
+      "map_page": 23,
+      "map_title": "Map 2. Northern Syria and Cilicia, 1130",
+      "prior_exposure": "The monograph was already a textual source, but this exact map was not used to select seeds or parameters.",
+      "publication": "The Principality of Antioch and its Frontiers in the Twelfth Century",
+      "publication_year": 2017,
+      "redistribution": "citation_only",
+      "reference_id": "BUCK_2017_MAP2_1130",
+      "rights_status": "copyrighted; publisher preview states all rights reserved",
+      "target_slice": 1130,
+      "used_in_model": false
+    },
+    {
+      "access_record": {
+        "accessed": "2026-09-01",
+        "result": "Full image inspected from the Commons public-domain record.",
+        "url": "https://commons.wikimedia.org/wiki/File:Asia_minor_1140.jpg"
+      },
+      "ambiguity": [
+        "A decade later than 1130.",
+        "Small-scale continuous fills generalize control.",
+        "Conquest dates and current control share one plate."
+      ],
+      "author": "William R. Shepherd",
+      "comparison_use": "qualitative city, entity, adjacency, and coast-sequence assertions only",
+      "date_alignment": "c.1140; ten-year proxy, not an exact slice match",
+      "digitization_permission": "legally possible; not performed",
+      "edition": "1926 edition",
+      "entity_classification": [
+        "kingdom",
+        "principality",
+        "county",
+        "caliphate",
+        "broad dominion"
+      ],
+      "evaluation_independence": "external cartographic lineage, non-blind and limited by prior exposure",
+      "map_page": 68,
+      "map_title": "Asia Minor and the States of the Crusaders in Syria, about 1140",
+      "observations": {
+        "adjacencies": [
+          [
+            "County of Edessa",
+            "Principality of Antioch"
+          ],
+          [
+            "Principality of Antioch",
+            "County of Tripoli"
+          ],
+          [
+            "County of Tripoli",
+            "Kingdom of Jerusalem"
+          ],
+          [
+            "Kingdom of Jerusalem",
+            "Fatimid Egypt"
+          ]
+        ],
+        "city_control": {
+          "Antioch": "Principality of Antioch",
+          "Ascalon": "Fatimid Egypt",
+          "Damascus": "Damascus polity",
+          "Edessa": "County of Edessa",
+          "Jerusalem": "Kingdom of Jerusalem",
+          "Tortosa": "County of Tripoli",
+          "Tripoli": "County of Tripoli"
+        },
+        "coastal_sequence": [
+          "Tortosa",
+          "Tripoli",
+          "Beirut",
+          "Sidon",
+          "Tyre",
+          "Acre",
+          "Caesarea",
+          "Jaffa",
+          "Ascalon",
+          "Gaza"
+        ],
+        "entities": [
+          "County of Edessa",
+          "Principality of Antioch",
+          "County of Tripoli",
+          "Kingdom of Jerusalem",
+          "Fatimid Egypt",
+          "Damascus polity"
+        ]
+      },
+      "prior_exposure": "Recorded in a read-only pre-public audit as a visual reference; no evidence, geometry, or parameter was derived from it.",
+      "publication": "Historical Atlas",
+      "publication_year": 1926,
+      "redistribution": "allowed, but scan intentionally omitted",
+      "reference_id": "SHEPHERD_1926_C1140",
+      "rights_status": "public domain / Public Domain Mark 1.0 on Commons",
+      "target_slice": 1130,
+      "used_in_model": false
+    },
+    {
+      "access_record": {
+        "accessed": "2026-09-01",
+        "result": "Full image inspected from the Commons public-domain record.",
+        "url": "https://commons.wikimedia.org/wiki/File:Europe_and_the_Mediterranean_Lands_about_1190.jpg"
+      },
+      "ambiguity": [
+        "Regional scale is too coarse for most city-level claims.",
+        "About 1190 is later than the target and may include Third Crusade changes."
+      ],
+      "author": "William R. Shepherd",
+      "comparison_use": "entity-presence comparison only",
+      "date_alignment": "c.1190; post-slice proxy affected by later campaigning",
+      "digitization_permission": "legally possible; not performed",
+      "edition": "1911 edition",
+      "entity_classification": [
+        "empire",
+        "principality",
+        "county",
+        "kingdom remnant"
+      ],
+      "evaluation_independence": "same author as the 1140 comparator; external to the solver, non-blind",
+      "map_page": "70-71",
+      "map_title": "Europe and the Mediterranean Lands about 1190",
+      "observations": {
+        "adjacencies": [],
+        "city_control": {},
+        "coastal_sequence": [],
+        "entities": [
+          "Ayyubid Sultanate",
+          "Principality of Antioch",
+          "County of Tripoli",
+          "Kingdom of Jerusalem"
+        ]
+      },
+      "prior_exposure": "Recorded in a read-only pre-public audit; no evidence, geometry, or parameter was derived from it.",
+      "publication": "Historical Atlas",
+      "publication_year": 1911,
+      "redistribution": "allowed, but scan intentionally omitted",
+      "reference_id": "SHEPHERD_1911_C1190",
+      "rights_status": "public domain in the United States per Commons record",
+      "target_slice": "end_of_year_1187",
+      "used_in_model": false
+    },
+    {
+      "access_record": {
+        "accessed": "2026-09-01",
+        "result": "Full image inspected from the Commons public-domain record.",
+        "url": "https://commons.wikimedia.org/wiki/File:Saladins_conquests_in_Syria_1187-1190_(Johnston).jpg"
+      },
+      "ambiguity": [
+        "Campaign categories mix event sequence with territorial fill.",
+        "Fortress exceptions and the 1192 boundary cannot be read as the end-1187 perimeter.",
+        "Coastal fills are generalized."
+      ],
+      "author": "W. & A. K. Johnston; published by Reginald Lane Poole",
+      "comparison_use": "qualitative city-control, entity-retention, and coastal-sequence assertions only",
+      "date_alignment": "campaign sequence separates 1187 from 1188 and later events, but is not a single-state snapshot",
+      "digitization_permission": "legally possible; not performed",
+      "edition": "Clarendon Press atlas",
+      "entity_classification": [
+        "possessions before 1187",
+        "conquests of 1187",
+        "conquests of 1188",
+        "fortresses taken later",
+        "Christian boundary in 1192"
+      ],
+      "evaluation_independence": "independent of Shepherd cartography; external to the solver, non-blind",
+      "map_page": "extracted regional panel; original plate locator recorded by WorldCat title 189734",
+      "map_title": "Syria Showing Saladin's Conquests 1187-1190",
+      "observations": {
+        "adjacencies": [],
+        "city_control": {
+          "Acre": "Ayyubid Sultanate",
+          "Antioch": "Principality of Antioch",
+          "Ascalon": "Ayyubid Sultanate",
+          "Beirut": "Ayyubid Sultanate",
+          "Gaza": "Ayyubid Sultanate",
+          "Jaffa": "Ayyubid Sultanate",
+          "Jerusalem": "Ayyubid Sultanate",
+          "Sidon": "Ayyubid Sultanate",
+          "Tripoli": "County of Tripoli",
+          "Tyre": "Kingdom of Jerusalem"
+        },
+        "coastal_sequence": [
+          "Antioch",
+          "Tortosa",
+          "Tripoli",
+          "Beirut",
+          "Sidon",
+          "Tyre",
+          "Acre",
+          "Caesarea",
+          "Jaffa",
+          "Ascalon",
+          "Gaza"
+        ],
+        "entities": [
+          "Ayyubid Sultanate",
+          "Principality of Antioch",
+          "County of Tripoli",
+          "Kingdom of Jerusalem"
+        ]
+      },
+      "prior_exposure": "Recorded in a read-only pre-public audit; no evidence, geometry, or parameter was derived from it.",
+      "publication": "Historical Atlas of Modern Europe from the Decline of the Roman Empire",
+      "publication_year": 1902,
+      "redistribution": "allowed, but scan intentionally omitted",
+      "reference_id": "JOHNSTON_POOLE_1187_1190",
+      "rights_status": "public domain / Public Domain Mark 1.0 on Commons",
+      "target_slice": "end_of_year_1187",
+      "used_in_model": false
+    }
+  ],
+  "ontology_harmonization": {
+    "coast": "City sequence is compared as ordered named places, not a continuous coastal polygon.",
+    "coverage": "Comparison is restricted to the case bbox and named cities/entities.",
+    "date": "1130 and end-of-year 1187 are kept distinct from c.1140 and c.1190 comparators.",
+    "entities": {
+      "Damascus polity": "Burid Damascus",
+      "Empire of Saladin": "Ayyubid Sultanate",
+      "Kingdom of Jerusalem remnant": "Kingdom of Jerusalem"
+    },
+    "frontier": "Atlas fills are treated as generalized claims, not exact lines."
+  },
+  "policy": {
+    "boundary_metrics": "Only allowed when a map explicitly draws a comparable boundary. No reference boundary was digitized in this pass.",
+    "ground_truth": false,
+    "parameter_tuning_from_references": false,
+    "redistribution": "The repository contains no atlas scan or traced boundary. Public figures use project-authored categorical summaries."
+  },
+  "review_date": "2026-09-01"
+}

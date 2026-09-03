@@ -1,0 +1,114 @@
+{
+  "bbox": [
+    30.0,
+    28.5,
+    42.0,
+    39.0
+  ],
+  "derivation": {
+    "historical_lineage": "Hand-curated paraphrase recovery from the read-only blind-case archive, followed by agent-led page review, explicit claim decisions, scenario selection, and rights-aware external comparison; no source files or atlas scans copied.",
+    "land": "Polygonize clipped Natural Earth coastline with the case bounding box; retain the face containing Damascus; simplify 0.002 degrees with topology preservation.",
+    "natural_features": "Select Natural Earth NE_ID 1730071649, 1159103077, and 1159114369; clip to case bounds; simplify polygon features 0.002 degrees."
+  },
+  "files": [
+    {
+      "bytes": 496,
+      "path": "case.json",
+      "sha256": "833d3b5de6e77898453a0c5834db5b45999204a35b91fcda6656e5c5bbaf505e"
+    },
+    {
+      "bytes": 66869,
+      "path": "lineage.json",
+      "sha256": "c3a25650405532f3df929a8c213890a07cd9bdb9cca043b0da99a7eb5c8f1dbd"
+    },
+    {
+      "bytes": 6568,
+      "path": "scenario-config.json",
+      "sha256": "4f413ec016a4ae7e3b5aa0479ec220d1e07bd04160627bdeac61fe233b40b481"
+    },
+    {
+      "bytes": 3591,
+      "path": "historical-claim-decisions.json",
+      "sha256": "92b971d44078131a9b807ef3e06e63ba112918fba16dbf6dc2b5f65f69f4e786"
+    },
+    {
+      "bytes": 10176,
+      "path": "reference-map-register.json",
+      "sha256": "c2d33b7e36abcf3e306619ae39fed94aee405bef936f456215973267c0932d99"
+    },
+    {
+      "bytes": 112624,
+      "path": "land.geojson",
+      "sha256": "a8b847739eb7457c146f455325453b7b1cb35274edf5ca59002282cb29c8b540"
+    },
+    {
+      "bytes": 19465,
+      "path": "natural-features.geojson",
+      "sha256": "05cb72a0a51e49abe949097f4ee9f844aaf8aec5a98d95f520319bb8bc24387f"
+    },
+    {
+      "bytes": 3090,
+      "path": "natural-earth-source-check.json",
+      "sha256": "0a249f1ecd539a11ad11aecb9954b657d76b0133c189974e78ace0c690010e52"
+    },
+    {
+      "bytes": 2411,
+      "path": "README.md",
+      "sha256": "373b178dd2cd3f5dfcb6ee68cbb578c37110c163a39900953e4fd6f757088f3d"
+    },
+    {
+      "bytes": 2172,
+      "path": "ATTRIBUTION.md",
+      "sha256": "80c4528c707e285e02c8c6f96c511d40dd519ea446c1944dee3df450d6229bcc"
+    }
+  ],
+  "fixture_id": "crusader-states-public-case",
+  "source_inputs": [
+    {
+      "input_sha256": "288b2c9c8b1566d3406321ccea2dfb14c8710a8552b5bf770e7bd4689f25a2e1",
+      "license": "public domain",
+      "source_id": "SRC_NATURAL_EARTH",
+      "upstream_identity_status": "fresh official Natural Earth 5.1.2 archives checked 2026-09-01; selected geometry matches exactly or is topologically equal after type promotion",
+      "upstream_url": "https://www.naturalearthdata.com/",
+      "version": "5.1.2",
+      "official_artifacts": [
+        {
+          "url": "https://naturalearth.s3.amazonaws.com/5.1.2/10m_physical/ne_10m_coastline.zip",
+          "sha256": "bfa04cdbcbef07ef90dfca1dabb48062eca29900a113df0f389303e255484017",
+          "bytes": 3069451
+        },
+        {
+          "url": "https://naturalearth.s3.amazonaws.com/5.1.2/10m_physical/ne_10m_geography_regions_polys.zip",
+          "sha256": "cb7b9db200284ed1551f20eacc7f3333e9b5f311c19f7cb2670694529f688682",
+          "bytes": 2038519
+        },
+        {
+          "url": "https://naturalearth.s3.amazonaws.com/5.1.2/10m_physical/ne_10m_rivers_lake_centerlines.zip",
+          "sha256": "ded71b01870855ccfe19b51f2ec14c9bb48fae23c0e9f3c11974d426433b5c38",
+          "bytes": 2079507
+        }
+      ]
+    },
+    {
+      "coordinate_records": [
+        281184,
+        170654,
+        293400,
+        266826,
+        163345,
+        323779,
+        298333,
+        360630,
+        295721,
+        293253,
+        281133,
+        268064,
+        276781,
+        267008
+      ],
+      "license": "CC BY 4.0",
+      "source_id": "SRC_GEONAMES",
+      "upstream_url": "https://www.geonames.org/export/"
+    }
+  ]
+}

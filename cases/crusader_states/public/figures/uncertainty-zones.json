@@ -1,0 +1,81 @@
+{
+  "analysis_grid_resolution_m": 10000,
+  "classification_rule": {
+    "evidence_sensitive_zone": "Model scenarios are unanimous; evidence scenarios are not.",
+    "model_sensitive_zone": "Evidence scenarios are unanimous; model scenarios are not.",
+    "stable_core": "Evidence and model scenario groups are each unanimous on the same non-zero entity.",
+    "unresolved_zone": "Both groups vary, they disagree despite internal unanimity, or assignment appears in only one group."
+  },
+  "evidence_scenarios": [
+    "verified-only",
+    "reviewed-baseline",
+    "inclusive"
+  ],
+  "interpretation": "Agreement across the declared scenario set. It is not a probability, confidence interval, or historical truth surface.",
+  "model_scenarios": [
+    "reviewed-baseline",
+    "flat-natural",
+    "projection-normal",
+    "projection-expansive",
+    "grid-5km",
+    "grid-20km"
+  ],
+  "slices": {
+    "1130": {
+      "evidence_sensitive_zone": {
+        "area_km2": 13100.0,
+        "cells": 131,
+        "percent_of_assessed": 1.31
+      },
+      "mean_evidence_agreement": 0.9841,
+      "mean_model_agreement": 0.7128,
+      "model_sensitive_zone": {
+        "area_km2": 818900.0,
+        "cells": 8189,
+        "percent_of_assessed": 81.59
+      },
+      "outside_modeled": {
+        "area_km2": 5400.0,
+        "land_cells": 54
+      },
+      "stable_core": {
+        "area_km2": 137000.0,
+        "cells": 1370,
+        "percent_of_assessed": 13.65
+      },
+      "unresolved_zone": {
+        "area_km2": 34700.0,
+        "cells": 347,
+        "percent_of_assessed": 3.46
+      }
+    },
+    "1187": {
+      "evidence_sensitive_zone": {
+        "area_km2": 23700.0,
+        "cells": 237,
+        "percent_of_assessed": 2.36
+      },
+      "mean_evidence_agreement": 0.9614,
+      "mean_model_agreement": 0.7191,
+      "model_sensitive_zone": {
+        "area_km2": 757000.0,
+        "cells": 7570,
+        "percent_of_assessed": 75.44
+      },
+      "outside_modeled": {
+        "area_km2": 5700.0,
+        "land_cells": 57
+      },
+      "stable_core": {
+        "area_km2": 130200.0,
+        "cells": 1302,
+        "percent_of_assessed": 12.98
+      },
+      "unresolved_zone": {
+        "area_km2": 92500.0,
+        "cells": 925,
+        "percent_of_assessed": 9.22
+      }
+    }
+  }
+}

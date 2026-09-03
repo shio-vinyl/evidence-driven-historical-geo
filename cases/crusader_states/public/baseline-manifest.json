@@ -1,0 +1,47 @@
+{
+  "manifest_version": "historical_geo.baseline.v0.1",
+  "case_id": "crusader-states-public-case",
+  "baseline_scenario": "reviewed-baseline",
+  "slices": {
+    "1130": {
+      "entities": [
+        "Burid Damascus",
+        "County of Edessa",
+        "County of Tripoli",
+        "Kingdom of Jerusalem",
+        "Principality of Antioch"
+      ]
+    },
+    "1187": {
+      "entities": [
+        "Ayyubid Sultanate",
+        "County of Tripoli",
+        "Kingdom of Jerusalem",
+        "Principality of Antioch"
+      ]
+    }
+  },
+  "uncertainty_percent_of_assessed": {
+    "1130": {
+      "stable_core": 13.65,
+      "model_sensitive_zone": 81.59,
+      "evidence_sensitive_zone": 1.31,
+      "unresolved_zone": 3.46
+    },
+    "1187": {
+      "stable_core": 12.98,
+      "model_sensitive_zone": 75.44,
+      "evidence_sensitive_zone": 2.36,
+      "unresolved_zone": 9.22
+    }
+  },
+  "uncertainty_metrics_path": "figures/uncertainty-zones.json",
+  "input_sha256": {
+    "case.json": "833d3b5de6e77898453a0c5834db5b45999204a35b91fcda6656e5c5bbaf505e",
+    "lineage.json": "c3a25650405532f3df929a8c213890a07cd9bdb9cca043b0da99a7eb5c8f1dbd",
+    "scenario-config.json": "4f413ec016a4ae7e3b5aa0479ec220d1e07bd04160627bdeac61fe233b40b481",
+    "historical-claim-decisions.json": "92b971d44078131a9b807ef3e06e63ba112918fba16dbf6dc2b5f65f69f4e786",
+    "land.geojson": "a8b847739eb7457c146f455325453b7b1cb35274edf5ca59002282cb29c8b540",
+    "natural-features.geojson": "05cb72a0a51e49abe949097f4ee9f844aaf8aec5a98d95f520319bb8bc24387f"
+  }
+}

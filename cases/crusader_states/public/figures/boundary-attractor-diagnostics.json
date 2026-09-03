@@ -1,0 +1,24 @@
+{
+  "interpretation": "The real feature is context, not evidence of a historical boundary. Rejection preserves the baseline surfaces.",
+  "real_jordan_candidate": {
+    "accepted": false,
+    "direction_similarity": 0.020934999535600605,
+    "distance_degrees": 0.009173837004174318,
+    "entities": [
+      "Burid Damascus",
+      "Kingdom of Jerusalem"
+    ],
+    "geometry_mutated": false,
+    "max_area_change": 0.0,
+    "max_distance_degrees": 0.1,
+    "minimum_direction_similarity": 0.8,
+    "reason": "direction_mismatch"
+  },
+  "synthetic": {
+    "accepted": true,
+    "direction_similarity": 1.0,
+    "distance": 0.20000000000000018,
+    "max_area_change": 0.0400000000000001,
+    "reason": "accepted"
+  }
+}
