@@ -1,0 +1,134 @@
+{
+  "analysis_crs": "EPSG:32636",
+  "bbox": [
+    34.0,
+    30.7,
+    35.5,
+    32.5
+  ],
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.spatial_input_contract.v0.2",
+  "forbidden_inputs": [
+    "historical territorial maps, thumbnails, map pages or their derivatives",
+    "coordinates, labels, boundaries or evaluation units derived from held-out content",
+    "unnamed transferred places converted into invented points",
+    "unlicensed archaeological imagery or atlas extracts",
+    "absolute machine paths"
+  ],
+  "geometry_role_rule": "A coordinate or geometry establishes location only. A named-locality control point requires a separate supported local-administration claim; conquest, tribute, suzerainty, military presence, destruction and transfer remain distinct.",
+  "inputs_present": false,
+  "locked_candidate_localities": [
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Joppa",
+      "locality_id": "joppa"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Ekron",
+      "locality_id": "ekron"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Lachish",
+      "locality_id": "lachish"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Jerusalem",
+      "locality_id": "jerusalem"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Ashdod",
+      "locality_id": "ashdod"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Gaza",
+      "locality_id": "gaza"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Ashkelon",
+      "locality_id": "ashkelon"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Bīt-Daganna / Beth-Dagon",
+      "locality_id": "bit-daganna"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Banayabarqa / Bene-Baraq",
+      "locality_id": "banayabarqa"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Azuru",
+      "locality_id": "azuru"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Eltekeh",
+      "locality_id": "eltekeh"
+    },
+    {
+      "coordinate_status": "pending_reviewed_gazetteer_or_site_identification",
+      "label": "Timnah",
+      "locality_id": "timnah"
+    }
+  ],
+  "output_gate": "No polygon, territorial surface or boundary-hypotheses geometry may be produced until the reconstruction gate passes in a reviewed append-only round.",
+  "required_layers": [
+    {
+      "allowed_sources": [
+        "redistributable modern coastline or land data"
+      ],
+      "historical_role": "support domain only",
+      "layer": "land_mask",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "Pleiades, GeoNames or reviewed archaeological site records with compatible licences"
+      ],
+      "historical_role": "coordinates only until a local-control claim is admitted",
+      "layer": "localities",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "IAA or permission-cleared excavation/site records"
+      ],
+      "historical_role": "event and chronology context only by default",
+      "layer": "archaeological_sites",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "redistributable DEM"
+      ],
+      "historical_role": "modern physical surface; cost meaning requires a declared assumption",
+      "layer": "terrain",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "redistributable modern data plus text-supported historical route relations"
+      ],
+      "historical_role": "location only until a supported traversal claim exists",
+      "layer": "hydrography_and_routes",
+      "status": "not_acquired"
+    }
+  ],
+  "research_stage": "evidence_collection",
+  "storage_crs": "EPSG:4326",
+  "time_contract": {
+    "astronomical_equivalent_year": -700,
+    "calendar": "historical_bce_year_label",
+    "era": "BCE",
+    "temporal_resolution": "campaign_horizon",
+    "year_bce": 701
+  }
+}

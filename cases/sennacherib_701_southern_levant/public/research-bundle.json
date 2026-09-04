@@ -1,0 +1,830 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "claims": [
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_ASHKELON_NAMED_NETWORK",
+      "entity": "Ashkelon",
+      "rationale": "The limited claim follows the royal text’s possessive relation and does not extend it to a polygon or treat the subsequent conquest as Assyrian administration.",
+      "semantic_role": "local_dynastic_relation",
+      "slice": "701-bce-campaign-horizon",
+      "spatial_scope": {
+        "feature_ids": [
+          "ashkelon",
+          "bit-daganna",
+          "joppa",
+          "banayabarqa",
+          "azuru"
+        ],
+        "kind": "named_locality_set"
+      },
+      "statement": "The Assyrian royal account relates Ṣidqâ of Ashkelon to Bīt-Daganna, Joppa, Banayabarqa and Azuru immediately before their reported conquest.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_ASHKELON_SIDQA_CITIES"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "campaign_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_EKRON_CONTESTED_DYNASTIC_RULE",
+      "entity": "Ekron",
+      "rationale": "The claim records Padî as Ekron’s king and his removal by local actors while preserving the contested condition.",
+      "semantic_role": "contested_local_dynastic_rule",
+      "slice": "701-bce-campaign-horizon",
+      "spatial_scope": {
+        "feature_ids": [
+          "ekron",
+          "jerusalem"
+        ],
+        "kind": "named_places"
+      },
+      "statement": "Ekron’s local political order was contested when local elites detained Padî and transferred him to Hezekiah.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_EKRON_PADI_HANDOVER"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "campaign_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_EKRON_ASSYRIAN_DISPOSITION",
+      "entity": "Ekron",
+      "rationale": "Punitive intervention, royal restoration, overlordship and tribute remain separate from direct Assyrian municipal administration.",
+      "semantic_role": "imperial_disposition_with_local_dynastic_restoration",
+      "slice": "701-bce-disposition-horizon",
+      "spatial_scope": {
+        "feature_ids": [
+          "ekron",
+          "eltekeh",
+          "timnah",
+          "jerusalem"
+        ],
+        "kind": "named_places"
+      },
+      "statement": "The royal account reports Assyrian military intervention at Ekron followed by restoration of Padî under tribute.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_EKRON_PADI_RESTORED",
+        "OBS_ELTEKEH_TIMNAH_EKRON_ACTIONS"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "campaign_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_JUDAH_JERUSALEM_POLITICAL_PATH",
+      "entity": "Judah",
+      "rationale": "Hezekiah remains the named Judahite ruler at Jerusalem in the royal account; confinement and tribute do not prove Assyrian local administration.",
+      "semantic_role": "local_ruler_seat_under_imperial_pressure",
+      "slice": "701-bce-campaign-horizon",
+      "spatial_scope": {
+        "feature_id": "jerusalem",
+        "kind": "named_place"
+      },
+      "statement": "Jerusalem is a named Judahite political center associated with Hezekiah during the campaign and disposition horizon.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_JUDAH_CONQUEST_TRANSFER"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "campaign_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_LACHISH_DESTRUCTION_EVENT",
+      "entity": "Judah-context locality",
+      "rationale": "The excavation supports a destruction event at Lachish, not a local-administration assignment or territorial extent.",
+      "semantic_role": "destruction_event_location",
+      "slice": "701-bce-campaign-horizon",
+      "spatial_scope": {
+        "feature_id": "lachish",
+        "kind": "named_place"
+      },
+      "statement": "Lachish has archaeological evidence assigned to Sennacherib’s 701 BCE destruction.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_LACHISH_DESTRUCTION_701"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "campaign_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_LACHISH_JERUSALEM_TEXTUAL_RELATION",
+      "entity": "Judah",
+      "rationale": "The passage supplies a named path but its compositional layers and relationship to Assyrian accounts require source criticism before independent control evidence is claimed.",
+      "semantic_role": "textual_route_and_political_relation",
+      "slice": "narrated-701-bce-horizon",
+      "spatial_scope": {
+        "feature_ids": [
+          "lachish",
+          "jerusalem"
+        ],
+        "kind": "named_place_pair"
+      },
+      "statement": "The Hebrew textual tradition relates Lachish and Jerusalem to Hezekiah’s response to Sennacherib.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_2KINGS_LACHISH_JERUSALEM"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "narrative_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_UNNAMED_TOWN_TRANSFER",
+      "entity": "Judah/Ashdod/Ekron/Gaza",
+      "rationale": "The recipients are named but the transferred towns are not, so the disposition cannot create locality anchors.",
+      "semantic_role": "territorial_transfer_without_named_objects",
+      "slice": "701-bce-disposition-horizon",
+      "spatial_scope": {
+        "kind": "unnamed_transfer_objects",
+        "named_recipient_seats": [
+          "ashdod",
+          "ekron",
+          "gaza"
+        ]
+      },
+      "statement": "The royal account reports transfers of unnamed Judahite towns to rulers of Ashdod, Ekron and Gaza.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_JUDAH_CONQUEST_TRANSFER"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "campaign_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_ASHDOD_GAZA_TEXT_PATHS",
+      "entity": "Ashdod and Gaza",
+      "rationale": "Mitinti and Ṣilli-Bēl provide entity-level and seat-level text paths; each lacks two named transferred localities.",
+      "semantic_role": "named_ruler_and_recipient_relation",
+      "slice": "701-bce-disposition-horizon",
+      "spatial_scope": {
+        "feature_ids": [
+          "ashdod",
+          "gaza"
+        ],
+        "kind": "named_recipient_seats"
+      },
+      "statement": "Ashdod under Mitinti and Gaza under Ṣilli-Bēl are named recipients in the reported post-campaign disposition.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_JUDAH_CONQUEST_TRANSFER"
+      ],
+      "temporal_scope": {
+        "era": "BCE",
+        "resolution": "campaign_horizon",
+        "year_bce": 701
+      }
+    },
+    {
+      "challenging_observation_ids": [
+        "OBS_SOUTHWEST_JUDAH_DATING_COUNTEREVIDENCE"
+      ],
+      "claim_id": "CLM_DESTRUCTION_CHRONOLOGY_LIMIT",
+      "entity": "Regional archaeology",
+      "rationale": "Lachish has specific evidence, while regional late-eighth-century destructions cannot be assigned wholesale to 701.",
+      "semantic_role": "chronology_conflict",
+      "slice": "late-eighth-century-bce",
+      "spatial_scope": {
+        "kind": "regional_exclusion"
+      },
+      "statement": "A late-eighth-century destruction layer in the corridor is sufficient by itself to assign a locality to the 701 campaign.",
+      "status": "disputed",
+      "supporting_observation_ids": [
+        "OBS_LACHISH_DESTRUCTION_701"
+      ],
+      "temporal_scope": {
+        "kind": "conflicted_campaign_attribution"
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_EKRON_LATER_CONTEXT_LIMIT",
+      "entity": "Ekron",
+      "rationale": "The later temple and vassal context supports site identity and later dynasty context, not direct 701 local control.",
+      "semantic_role": "later_context_only",
+      "slice": "seventh-century-bce-context",
+      "spatial_scope": {
+        "feature_id": "ekron",
+        "kind": "named_place"
+      },
+      "statement": "The later Ekron excavation and dedicatory-inscription context cannot independently establish Ekron’s 701 administration.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_EKRON_LATER_LOCAL_DYNASTY"
+      ],
+      "temporal_scope": {
+        "kind": "post_horizon_context"
+      }
+    }
+  ],
+  "contract_version": "historical_geo.research_bundle.v0.2",
+  "evidence_gaps": [
+    {
+      "cause": "missing_evidence",
+      "gap_id": "GAP_JUDAH_SECOND_LOCAL_CONTROL",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "Can Judah obtain an independent horizon-applicable named-locality local-control relation beyond Jerusalem?",
+      "related_claim_ids": [
+        "CLM_JUDAH_JERUSALEM_POLITICAL_PATH",
+        "CLM_LACHISH_JERUSALEM_TEXTUAL_RELATION"
+      ],
+      "related_decision_ids": [
+        "D_JUDAH_JERUSALEM_DISPLAY",
+        "D_LACHISH_EVENT_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    },
+    {
+      "cause": "missing_evidence",
+      "gap_id": "GAP_ASHKELON_INDEPENDENT_LINEAGE",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "Can a lineage independent of the Assyrian royal account corroborate two or more Ṣidqâ/Ashkelon locality relations?",
+      "related_claim_ids": [
+        "CLM_ASHKELON_NAMED_NETWORK"
+      ],
+      "related_decision_ids": [
+        "D_ASHKELON_NETWORK_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    },
+    {
+      "cause": "mixed",
+      "gap_id": "GAP_EKRON_LOCAL_ADMINISTRATION",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "Which Ekron relations describe local administration, contested rule, restoration, tribute, suzerainty or military intervention?",
+      "related_claim_ids": [
+        "CLM_EKRON_CONTESTED_DYNASTIC_RULE",
+        "CLM_EKRON_ASSYRIAN_DISPOSITION",
+        "CLM_EKRON_LATER_CONTEXT_LIMIT"
+      ],
+      "related_decision_ids": [
+        "D_EKRON_CRISIS_DISPLAY",
+        "D_IMPERIAL_EQUIVALENCE_EXCLUDED"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    },
+    {
+      "cause": "spatial_ambiguity",
+      "gap_id": "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "Can any transferred Judahite locality received by Mitinti of Ashdod be named and independently located?",
+      "related_claim_ids": [
+        "CLM_UNNAMED_TOWN_TRANSFER",
+        "CLM_ASHDOD_GAZA_TEXT_PATHS"
+      ],
+      "related_decision_ids": [
+        "D_UNNAMED_TRANSFER_EXCLUDED"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    },
+    {
+      "cause": "spatial_ambiguity",
+      "gap_id": "GAP_GAZA_TRANSFERRED_LOCALITIES",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "Can any transferred Judahite locality received by Ṣilli-Bēl of Gaza be named and independently located?",
+      "related_claim_ids": [
+        "CLM_UNNAMED_TOWN_TRANSFER",
+        "CLM_ASHDOD_GAZA_TEXT_PATHS"
+      ],
+      "related_decision_ids": [
+        "D_UNNAMED_TRANSFER_EXCLUDED"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    },
+    {
+      "cause": "spatial_ambiguity",
+      "gap_id": "GAP_LOCALITY_IDENTIFICATIONS",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "Which reviewed gazetteer or archaeological identifiers and coordinates can be fixed for all twelve named candidates, especially Azuru, Bīt-Daganna, Banayabarqa, Eltekeh and Timnah?",
+      "related_claim_ids": [
+        "CLM_ASHKELON_NAMED_NETWORK",
+        "CLM_EKRON_ASSYRIAN_DISPOSITION"
+      ],
+      "related_decision_ids": [
+        "D_ASHKELON_NETWORK_DISPLAY",
+        "D_EKRON_CRISIS_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    },
+    {
+      "cause": "conflicting_evidence",
+      "gap_id": "GAP_DESTRUCTION_CHRONOLOGY",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "Which site-specific destruction horizons can be assigned to 701 without regional circular attribution?",
+      "related_claim_ids": [
+        "CLM_LACHISH_DESTRUCTION_EVENT",
+        "CLM_DESTRUCTION_CHRONOLOGY_LIMIT"
+      ],
+      "related_decision_ids": [
+        "D_LACHISH_EVENT_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    },
+    {
+      "cause": "temporal_ambiguity",
+      "gap_id": "GAP_HEBREW_BIBLE_LINEAGE",
+      "preferred_source_types": [
+        "critical text edition",
+        "archaeological report",
+        "licensed gazetteer"
+      ],
+      "question": "What textual layers, composition history and dependence relationships govern use of 2 Kings 18–19, Isaiah 36–37 and Chronicles?",
+      "related_claim_ids": [
+        "CLM_LACHISH_JERUSALEM_TEXTUAL_RELATION"
+      ],
+      "related_decision_ids": [
+        "D_HEBREW_TEXT_INDEPENDENCE_EXCLUDED"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups add no admissible evidence or the preregistered round budget is exhausted.",
+      "success_criteria": "Admit only stable-locator evidence that resolves the named relation at the registered horizon and preserves source lineage and ontology layer."
+    }
+  ],
+  "model_decisions": [
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_ASHKELON_NETWORK_DISPLAY",
+      "parameters": {
+        "allocation_authorized": false,
+        "feature_ids": [
+          "ashkelon",
+          "bit-daganna",
+          "joppa",
+          "banayabarqa",
+          "azuru"
+        ],
+        "ontology_layer": "local_dynastic_relation"
+      },
+      "rationale": "Retain the named city relation for audit; one royal lineage is insufficient for allocation.",
+      "review_status": "admitted",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_ORACC_Q003496"
+      ],
+      "supporting_claim_ids": [
+        "CLM_ASHKELON_NAMED_NETWORK"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_EKRON_CRISIS_DISPLAY",
+      "parameters": {
+        "allocation_authorized": false,
+        "feature_ids": [
+          "ekron",
+          "jerusalem",
+          "eltekeh",
+          "timnah"
+        ],
+        "ontology_layers": [
+          "contested_local_authority",
+          "military_presence",
+          "local_dynastic_restoration",
+          "imperial_suzerainty",
+          "tribute_obligation"
+        ]
+      },
+      "rationale": "Display the sequence as contested local authority, intervention, restoration, tribute and suzerainty; do not collapse it into one control state.",
+      "review_status": "admitted",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_ORACC_Q003496",
+        "SRC_ORACC_Q003945"
+      ],
+      "supporting_claim_ids": [
+        "CLM_EKRON_CONTESTED_DYNASTIC_RULE",
+        "CLM_EKRON_ASSYRIAN_DISPOSITION"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_JUDAH_JERUSALEM_DISPLAY",
+      "parameters": {
+        "allocation_authorized": false,
+        "feature_ids": [
+          "jerusalem"
+        ],
+        "ontology_layer": "local_ruler_seat"
+      },
+      "rationale": "Jerusalem is a supported political locality, but reconstruction requires an independent second named-locality local-control path.",
+      "review_status": "admitted",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_ORACC_Q003945"
+      ],
+      "supporting_claim_ids": [
+        "CLM_JUDAH_JERUSALEM_POLITICAL_PATH"
+      ]
+    },
+    {
+      "challenging_claim_ids": [
+        "CLM_DESTRUCTION_CHRONOLOGY_LIMIT"
+      ],
+      "decision_id": "D_LACHISH_EVENT_DISPLAY",
+      "parameters": {
+        "allocation_authorized": false,
+        "feature_ids": [
+          "lachish"
+        ],
+        "ontology_layer": "destruction_event"
+      },
+      "rationale": "Keep Lachish as an event and chronology constraint only.",
+      "review_status": "admitted",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_IAA_LACHISH_2023",
+        "SRC_BLAKELY_HARDIN_2002"
+      ],
+      "supporting_claim_ids": [
+        "CLM_LACHISH_DESTRUCTION_EVENT"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_UNNAMED_TRANSFER_EXCLUDED",
+      "parameters": {
+        "allocation_authorized": false,
+        "excluded_inference": "invented transferred-locality anchors",
+        "feature_ids": [
+          "ashdod",
+          "ekron",
+          "gaza"
+        ]
+      },
+      "rationale": "Named recipients cannot supply coordinates for unnamed transferred towns.",
+      "review_status": "excluded",
+      "role": "exclusion",
+      "source_ids": [
+        "SRC_ORACC_Q003945"
+      ],
+      "supporting_claim_ids": [
+        "CLM_UNNAMED_TOWN_TRANSFER",
+        "CLM_ASHDOD_GAZA_TEXT_PATHS"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_HEBREW_TEXT_INDEPENDENCE_EXCLUDED",
+      "parameters": {
+        "allocation_authorized": false,
+        "excluded_inference": "uncritical independent confirmation",
+        "feature_ids": [
+          "lachish",
+          "jerusalem"
+        ]
+      },
+      "rationale": "Do not count the passage as independent confirmation until textual layer, composition and relationship to Assyrian traditions are reviewed.",
+      "review_status": "excluded",
+      "role": "exclusion",
+      "source_ids": [
+        "SRC_STEP_2KINGS18"
+      ],
+      "supporting_claim_ids": [
+        "CLM_LACHISH_JERUSALEM_TEXTUAL_RELATION"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_IMPERIAL_EQUIVALENCE_EXCLUDED",
+      "parameters": {
+        "allocation_authorized": false,
+        "excluded_inference": "imperial relation equals local administration"
+      },
+      "rationale": "Conquest, tribute, suzerainty and military presence never authorize direct Assyrian local-administration points.",
+      "review_status": "excluded",
+      "role": "exclusion",
+      "source_ids": [
+        "SRC_ORACC_Q003496",
+        "SRC_ORACC_Q003945"
+      ],
+      "supporting_claim_ids": [
+        "CLM_EKRON_ASSYRIAN_DISPOSITION",
+        "CLM_UNNAMED_TOWN_TRANSFER"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "data": {
+        "entity_id": "ashkelon",
+        "locality_ids": [
+          "bit-daganna",
+          "joppa",
+          "banayabarqa",
+          "azuru"
+        ],
+        "ontology_layers": [
+          "local_dynastic_relation",
+          "assyrian_conquest"
+        ]
+      },
+      "locator": "Q003496 ii 68–72",
+      "observation_id": "OBS_ASHKELON_SIDQA_CITIES",
+      "observation_type": "local dynastic relation plus Assyrian conquest report",
+      "paraphrase": "The royal account names Bīt-Daganna, Joppa, Banayabarqa and Azuru as cities of Ṣidqâ and reports their conquest and plunder during the campaign.",
+      "slice": "701-bce-campaign-horizon",
+      "source_id": "SRC_ORACC_Q003496",
+      "verification_status": "checked against indexed line-level ORACC text returned by the feasibility search"
+    },
+    {
+      "data": {
+        "locality_ids": [
+          "ekron",
+          "jerusalem"
+        ],
+        "ontology_layers": [
+          "local_dynastic_rule",
+          "contested_local_authority",
+          "assyrian_suzerainty"
+        ],
+        "persons": [
+          "Padî",
+          "Hezekiah"
+        ]
+      },
+      "locator": "Q003496 ii 73–82",
+      "observation_id": "OBS_EKRON_PADI_HANDOVER",
+      "observation_type": "local political crisis and interstate custody",
+      "paraphrase": "The account says Ekron’s governors, nobles and people bound Padî, their treaty-bound king, and handed him to Hezekiah of Judah.",
+      "slice": "701-bce-campaign-horizon",
+      "source_id": "SRC_ORACC_Q003496",
+      "verification_status": "checked against indexed line-level ORACC text returned by the feasibility search"
+    },
+    {
+      "data": {
+        "locality_ids": [
+          "eltekeh",
+          "timnah",
+          "ekron"
+        ],
+        "ontology_layers": [
+          "military_presence",
+          "battle",
+          "conquest",
+          "punitive_action"
+        ]
+      },
+      "locator": "Q003496 ii 82–iii 11",
+      "observation_id": "OBS_ELTEKEH_TIMNAH_EKRON_ACTIONS",
+      "observation_type": "battle, conquest and punitive action",
+      "paraphrase": "The account places a battle at Eltekeh, reports the conquest and plunder of Eltekeh and Timnah, and then reports punitive action at Ekron.",
+      "slice": "701-bce-campaign-horizon",
+      "source_id": "SRC_ORACC_Q003496",
+      "verification_status": "checked against indexed line-level ORACC text returned by the feasibility search"
+    },
+    {
+      "data": {
+        "locality_ids": [
+          "jerusalem",
+          "ekron"
+        ],
+        "ontology_layers": [
+          "local_dynastic_restoration",
+          "imperial_suzerainty",
+          "tribute_obligation"
+        ],
+        "persons": [
+          "Padî"
+        ]
+      },
+      "locator": "Q003945 rev. 6–12",
+      "observation_id": "OBS_EKRON_PADI_RESTORED",
+      "observation_type": "royal restoration, suzerainty and tribute",
+      "paraphrase": "The parallel royal report states that Padî was brought out from Jerusalem, restored to the throne of Ekron and subjected to royal tribute.",
+      "slice": "701-bce-disposition-horizon",
+      "source_id": "SRC_ORACC_Q003945",
+      "verification_status": "checked against indexed ORACC text; treated as the same royal-inscription lineage as Q003496"
+    },
+    {
+      "data": {
+        "locality_ids": [
+          "jerusalem",
+          "ashdod",
+          "ekron",
+          "gaza"
+        ],
+        "ontology_layers": [
+          "conquest",
+          "military_presence",
+          "transfer_of_unnamed_places",
+          "tribute_obligation",
+          "imperial_suzerainty"
+        ],
+        "persons": [
+          "Hezekiah",
+          "Mitinti",
+          "Padî",
+          "Ṣilli-Bēl"
+        ]
+      },
+      "locator": "Q003945 rev. 13–19",
+      "observation_id": "OBS_JUDAH_CONQUEST_TRANSFER",
+      "observation_type": "conquest, siege-like confinement, territorial transfer and tribute",
+      "paraphrase": "The royal report claims the capture of forty-six fortified Judahite cities, confinement of Hezekiah at Jerusalem, transfer of plundered unnamed towns to Mitinti of Ashdod, Padî of Ekron and Ṣilli-Bēl of Gaza, and tribute from Hezekiah.",
+      "slice": "701-bce-campaign-and-disposition-horizon",
+      "source_id": "SRC_ORACC_Q003945",
+      "verification_status": "checked against indexed line-level ORACC text returned by the feasibility search"
+    },
+    {
+      "data": {
+        "locality_ids": [
+          "lachish"
+        ],
+        "ontology_layers": [
+          "destruction_event"
+        ]
+      },
+      "locator": "Atiqot 111 (2023), abstract, lines 18–28 on the public record",
+      "observation_id": "OBS_LACHISH_DESTRUCTION_701",
+      "observation_type": "archaeological destruction horizon",
+      "paraphrase": "The excavation abstract reports arrowheads, slingstones and collapsed burned mud bricks as evidence of Sennacherib’s 701 BCE destruction in the Lachish Level III gate complex.",
+      "slice": "701-bce-campaign-horizon",
+      "source_id": "SRC_IAA_LACHISH_2023",
+      "verification_status": "checked against the IAA publication page abstract"
+    },
+    {
+      "data": {
+        "ontology_layers": [
+          "chronology_exclusion"
+        ]
+      },
+      "locator": "BASOR 326 (2002), pp. 11–64, abstract",
+      "observation_id": "OBS_SOUTHWEST_JUDAH_DATING_COUNTEREVIDENCE",
+      "observation_type": "chronology counterevidence",
+      "paraphrase": "The abstract argues that some late-eighth-century destruction levels in southwestern Judah may predate 701 and warns against absorbing them all into Sennacherib’s campaign.",
+      "slice": "late-eighth-century-bce",
+      "source_id": "SRC_BLAKELY_HARDIN_2002",
+      "verification_status": "checked against the publisher abstract"
+    },
+    {
+      "data": {
+        "locality_ids": [
+          "ekron"
+        ],
+        "ontology_layers": [
+          "site_identification",
+          "later_local_dynasty",
+          "later_imperial_suzerainty"
+        ]
+      },
+      "locator": "Harvard Museum publication record, abstract paragraphs 1–2",
+      "observation_id": "OBS_EKRON_LATER_LOCAL_DYNASTY",
+      "observation_type": "later local inscription and vassal context",
+      "paraphrase": "The excavation-report metadata identifies Tel Miqne-Ekron and a local royal dedicatory inscription in a later Iron IIC temple context; it describes later Ekron as a Neo-Assyrian vassal before its 604 BCE destruction.",
+      "slice": "seventh-century-bce-context",
+      "source_id": "SRC_HMANE_EKRON_2022",
+      "verification_status": "checked against publication metadata and abstract; not treated as direct 701 evidence"
+    },
+    {
+      "data": {
+        "locality_ids": [
+          "lachish",
+          "jerusalem"
+        ],
+        "ontology_layers": [
+          "narrated_conquest",
+          "tribute_obligation",
+          "military_movement"
+        ]
+      },
+      "locator": "2 Kings 18:13–17",
+      "observation_id": "OBS_2KINGS_LACHISH_JERUSALEM",
+      "observation_type": "textual-tradition campaign narrative",
+      "paraphrase": "The received Hebrew narrative and modern translation path associate Sennacherib’s capture of fortified Judahite cities, Hezekiah’s tribute, Lachish and a force sent toward Jerusalem.",
+      "slice": "narrated-701-bce-horizon",
+      "source_id": "SRC_STEP_2KINGS18",
+      "verification_status": "indexed passage checked through the search result; textual layering and literary relationship remain unresolved"
+    }
+  ],
+  "sources": [
+    {
+      "citation": "https://oracc.museum.upenn.edu/rinap/rinap3/Q003496",
+      "locator": "Q003496 ii 68–iii 11, line-addressable edition",
+      "redistribution": "allowed",
+      "rights_status": "ORACC annotated edition states CC BY-SA 3.0; citation and short paraphrase only here",
+      "source_id": "SRC_ORACC_Q003496",
+      "source_type": "archive",
+      "title": "RINAP 3/1, Sennacherib 015 (Q003496)",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://oracc.museum.upenn.edu/rinap/rinap3/Q003945",
+      "locator": "Q003945 rev. 6–19, line-addressable edition",
+      "redistribution": "allowed",
+      "rights_status": "ORACC annotated edition states CC BY-SA 3.0; citation and short paraphrase only here",
+      "source_id": "SRC_ORACC_Q003945",
+      "source_type": "archive",
+      "title": "RINAP 3, Sennacherib fragment (Q003945)",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://doi.org/10.70967/2948-040X.1073",
+      "locator": "Atiqot 111 (2023), abstract and recommended citation",
+      "redistribution": "citation_only",
+      "rights_status": "IAA journal page publicly accessible; no reuse licence relied upon; citation only",
+      "source_id": "SRC_IAA_LACHISH_2023",
+      "source_type": "article",
+      "title": "The Iron Age Inner City Gate and Gate Shrine at Tel Lakhish (Lachish)",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://doi.org/10.2307/1357687",
+      "locator": "BASOR 326 (2002), pp. 11–64, abstract",
+      "redistribution": "citation_only",
+      "rights_status": "Copyright 2002 ASOR; abstract publicly accessible; citation only",
+      "source_id": "SRC_BLAKELY_HARDIN_2002",
+      "source_type": "article",
+      "title": "Southwestern Judah in the Late Eighth Century B.C.E.",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://hmane.harvard.edu/publications/tel-miqne-ekron-excavations-1994%E2%80%931996-field-iv-upper-and-field-v-elite-zone",
+      "locator": "Harvard Museum publication record, publication information and abstract",
+      "redistribution": "citation_only",
+      "rights_status": "Copyrighted 2022 excavation report; public metadata and abstract; citation only",
+      "source_id": "SRC_HMANE_EKRON_2022",
+      "source_type": "book",
+      "title": "Tel Miqne-Ekron Excavations 1994–1996, Field IV Upper and Field V, Part 1",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://www.stepbible.org/?q=version%3DNET2full%40reference%3D2Ki.18",
+      "locator": "2 Kings 18:13–17",
+      "redistribution": "citation_only",
+      "rights_status": "Publicly accessible text portal; translation copyright applies; citation and paraphrase only",
+      "source_id": "SRC_STEP_2KINGS18",
+      "source_type": "archive",
+      "title": "2 Kings 18, Masoretic-text translation path via STEP Bible",
+      "use_role": "research"
+    }
+  ]
+}

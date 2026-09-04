@@ -1,0 +1,207 @@
+{
+  "allowed_evidence": [
+    "line-addressable cuneiform editions and translations with edition and witness identifiers",
+    "archaeological excavation reports and scientific dating with stratigraphic context",
+    "local inscriptions with find context and explicit chronological limits",
+    "critically described Hebrew Bible textual witnesses and modern translations with composition and dependency cautions",
+    "licensed gazetteers and reviewed site-identification records",
+    "terrain, hydrography and routes that do not depict historical territories",
+    "catalog, holdings, copyright and lawful-access metadata for sealed held-out atlases"
+  ],
+  "candidate_entities": [
+    {
+      "entity_id": "judah",
+      "label": "Kingdom of Judah under Hezekiah",
+      "status_rule": "Local control requires a named-locality relation distinct from Assyrian conquest, siege, tribute, deportation or general royal title."
+    },
+    {
+      "entity_id": "ekron",
+      "label": "Ekron under Padî and the 701 political crisis",
+      "status_rule": "Padî’s kingship, his detention, Assyrian restoration and tribute are recorded as separate relations; none alone proves continuous local administration outside named Ekron."
+    },
+    {
+      "entity_id": "ashdod",
+      "label": "Ashdod under Mitinti",
+      "status_rule": "Mitinti’s title and receipt of unnamed towns establish a political path but do not locate the transferred towns or their subsequent administration."
+    },
+    {
+      "entity_id": "gaza",
+      "label": "Gaza under Ṣilli-Bēl",
+      "status_rule": "Ṣilli-Bēl’s title and receipt of unnamed towns establish a political path but do not locate the transferred towns or their subsequent administration."
+    },
+    {
+      "entity_id": "ashkelon",
+      "label": "Ashkelon under Ṣidqâ",
+      "status_rule": "Cities explicitly called Ṣidqâ’s may support a local dynastic relation; Assyrian capture terminates or contests that relation without automatically creating Assyrian local administration."
+    }
+  ],
+  "case_id": "sennacherib-701-southern-levant",
+  "contested_features": [
+    {
+      "activation_rule": "No campaign route, siege, conquest list or military presence may enter allocation without a separate supported local-administration claim.",
+      "candidate_roles": [
+        "display_context",
+        "disputed_clue",
+        "exclusion"
+      ],
+      "default_model_role": "display_context",
+      "feature_id": "assyrian-campaign-footprint",
+      "political_boundary_equivalence": false
+    },
+    {
+      "activation_rule": "The destruction horizon may constrain chronology and event location; it cannot define Judah’s extent or Assyrian local administration.",
+      "candidate_roles": [
+        "display_context",
+        "disputed_clue",
+        "exclusion"
+      ],
+      "default_model_role": "display_context",
+      "feature_id": "lachish-destruction-horizon",
+      "political_boundary_equivalence": false
+    }
+  ],
+  "contract_version": "historical_geo.preregistration.v0.2",
+  "deviation_policy": "Any post-freeze change requires a versioned amendment committed before affected analysis and reported beside the preregistered result. After held-out content is opened, changes to research inputs, model choices, candidate priority, units or denominator are post hoc and cannot replace the preregistered result.",
+  "expected_failure_modes": [
+    "the 701 BCE horizon is presented as a day-level snapshot",
+    "Assyrian royal rhetoric is treated as neutral reporting",
+    "parallel royal inscriptions or translations are counted as independent lineages",
+    "conquest, siege, tribute, suzerainty, military presence and local administration are collapsed",
+    "unnamed transferred Judahite towns are assigned invented locations",
+    "Lachish destruction is converted directly into political control",
+    "late-eighth-century destruction layers are all assigned to 701",
+    "Hebrew Bible composition and literary relationships are ignored",
+    "ancient names are matched to modern sites without identification uncertainty",
+    "a sparse point set makes model defaults dominate",
+    "a binary allocation erases contested or unresolved localities",
+    "the held-out atlas expresses fewer than eight locked units",
+    "thumbnail, label or snippet leakage contaminates a comparator",
+    "automated checks are mistaken for proof of a person’s complete browsing history"
+  ],
+  "feasibility_decision": "GO",
+  "freeze_requirements": {
+    "frozen_paths": [
+      "case.json",
+      "preregistration.json",
+      "feasibility-audit.json",
+      "research-bundle.json",
+      "research-scenarios.json",
+      "source-access-rights.json",
+      "spatial-input-contract.json",
+      "held-out-map-register.json",
+      "evidence-gap-register.json"
+    ],
+    "manifest_path": "preregistration-freeze.json",
+    "requires_git_commit_before_content_access": true,
+    "requires_second_pre_evaluation_commit": true
+  },
+  "held_out_evaluation": {
+    "candidate_priority_locked": true,
+    "denominator_rule": "Score every locked unit as aligned, not_aligned, not_expressed or not_comparable. Report aligned/(aligned+not_aligned) with all four counts; no unit may be removed after opening.",
+    "evaluation_units": [
+      "entity_presence:judah",
+      "entity_presence:ekron",
+      "entity_presence:ashdod",
+      "entity_presence:gaza",
+      "entity_presence:ashkelon",
+      "locality_assignment:jerusalem",
+      "locality_assignment:lachish",
+      "locality_assignment:ekron",
+      "locality_assignment:ashdod",
+      "locality_assignment:gaza",
+      "locality_assignment:ashkelon",
+      "locality_assignment:joppa",
+      "locality_assignment:bit-daganna",
+      "locality_assignment:banayabarqa",
+      "locality_assignment:azuru",
+      "locality_assignment:eltekeh",
+      "locality_assignment:timnah",
+      "relation:ekron-padi-restoration",
+      "relation:judah-town-transfer-to-philistine-rulers",
+      "relation:assyrian-suzerainty-versus-local-administration"
+    ],
+    "interpretation_rule": "Fewer than eight expressed comparable units makes the comparator inconclusive. Agreement is agreement with one publication under the frozen rubric, never historical accuracy.",
+    "isolation_rule": "The registered atlas remains metadata-only and outside sources, observations, claims, model decisions, scenarios and spatial inputs. Any search-result thumbnail, map-label or legend exposure contaminates and excludes that candidate.",
+    "minimum_expressed_units": 8,
+    "opening_gate": "A second reconstructed_pre_evaluation Git commit must freeze the evidence state, scenario settings, code version, calibration, outputs, fixed place coordinates, evaluation rubric and hashes before first atlas-body access.",
+    "register_path": "held-out-map-register.json"
+  },
+  "lineage_rules": {
+    "claim": "A claim lists supporting and challenging observations, BCE horizon applicability, named spatial referent, ontology layer and status. Archaeological destruction supports an event horizon only to its actual resolution.",
+    "model_decision": "Only a supported named-locality local-control claim may authorize a control point. Imperial relations, military events, transfers without named objects and unresolved identifications remain display context or exclusions.",
+    "observation": "One observation records one locatable statement or measurement. Conquest, siege, tribute, suzerainty, military presence, dynastic title, transfer and local administration are separate observation types.",
+    "source": "Every source records a stable locator, access scope, rights status, access date and source-lineage identifier. Editions or witnesses that repeat the Assyrian royal account remain one lineage unless demonstrated otherwise."
+  },
+  "prior_information_disclosure": [
+    "Before this freeze, the feasibility audit used only the twelve logged searches and ten logged text or catalog access attempts in feasibility-audit.json.",
+    "No historical territorial map body, plate, PDF map page, thumbnail intentionally selected for viewing, screenshot, OCR, vector or boundary derivative was opened, downloaded or parsed.",
+    "A search result for the Oxford Bible Atlas exposed a front-cover thumbnail, and unrelated search results exposed Bible-atlas map-label summaries. Those publications are excluded and recorded as contaminated.",
+    "ORACC witnesses Q003496 and Q003945 and any parallel translations are treated as one Assyrian royal-inscription lineage unless later source criticism demonstrates an independent tradition.",
+    "The Hebrew Bible path is prior information only at this stage; any later use must record textual layer, composition issues and possible literary or historical dependence."
+  ],
+  "prohibited_evidence": [
+    "historical territorial map bodies, thumbnails, plates, screenshots, OCR, vectors or derivatives before the evaluation gate",
+    "search-result labels, legends or map summaries used as research evidence",
+    "Assyrian conquest, siege, tribute, suzerainty or military presence promoted directly to local administration",
+    "multiple Assyrian inscription copies or modern translations counted automatically as independent source lineages",
+    "Hebrew Bible passages treated as uncritical independent confirmation",
+    "destruction layers assigned to 701 solely because they are late eighth century",
+    "unnamed transferred towns converted into invented locality anchors",
+    "model defaults or calibration values presented as source evidence"
+  ],
+  "reconstruction_ready": false,
+  "research_question": "During the 701 BCE horizon of Sennacherib’s third campaign and its directly reported political dispositions, which named localities in the Joppa–Ekron–Lachish–Jerusalem corridor can inscriptional, archaeological and non-territorial-map evidence support as local-control points, transfer objects, contested places or unresolved localities of Judah, Ekron, Ashdod, Gaza and Ashkelon, while keeping Assyrian conquest, tribute, suzerainty, military presence and local administration distinct?",
+  "research_stage": "evidence_collection",
+  "search_budget": {
+    "content_record_limit": 20,
+    "held_out_candidate_limit": 3,
+    "held_out_metadata_query_limit": 4,
+    "per_gap_follow_up_limit": 2,
+    "query_limit": 24,
+    "source_admission_limit": 12,
+    "starts_after_preregistration_commit": true
+  },
+  "spatial_scope": {
+    "bbox": [
+      34.0,
+      30.7,
+      35.5,
+      32.5
+    ],
+    "crs": "EPSG:4326",
+    "exclusion_rule": "Exclude empire-wide extrapolation, unnamed captured or transferred towns as invented points, and any coordinate, boundary or label derived from an existing historical territorial map.",
+    "inclusion_rule": "Include the twelve locked named localities and only additional places with explicit 701 campaign/disposition relevance inside the box; modern coordinates require an identified gazetteer or archaeological-site record.",
+    "name": "Southern Levantine Joppa–Ekron–Lachish–Jerusalem corridor and adjacent Philistine centers"
+  },
+  "stop_conditions": [
+    "Stop with NO_RECONSTRUCTION if the post-freeze budget is exhausted without the reconstruction gate.",
+    "Stop a gap after its success criterion is met or two targeted follow-ups add no admissible evidence.",
+    "Stop and record a protocol deviation if held-out map content is exposed before the second pre-evaluation freeze.",
+    "Do not alter evidence, parameters, candidate order, evaluation units or denominator in response to held-out results."
+  ],
+  "success_criteria": {
+    "evaluation_gate": "A lineage-bearing reconstruction and every locked evaluation input are frozen in a second Git commit before the primary comparator is opened; all outcomes, including an inconclusive comparator, are reported without tuning.",
+    "phase_one": "A GO feasibility audit, strict frozen preregistration, metadata-only held-out register, non-reconstruction case skeleton, BCE chronology contract and passing isolation tests; no polygon is produced.",
+    "reconstruction_gate": "At least two modeled entities each have two independent, legally accessible and horizon-applicable named-locality local-control relations; at least ten locatable spatial candidates derive from four independent source lineages; at least two counterevidence or exclusion relations are retained; every admitted source has a stable locator and rights record."
+  },
+  "temporal_scope": {
+    "astronomical_year_numbering": {
+      "conversion_rule": "astronomical_year = 1 - year_bce",
+      "equivalent_year": -700,
+      "usage_rule": "Astronomical year −700 may be used only for computation. Public research records retain era=BCE and year_bce=701 and never serialize a negative ISO date.",
+      "year_zero_rule": "astronomical year 0 = 1 BCE"
+    },
+    "bridge_rule": "Evidence is horizon-applicable only when it explicitly belongs to the third campaign or a directly reported disposition. Earlier and later texts or strata are context unless a reviewed continuity or synchronization argument is recorded.",
+    "calendar": "historical_bce_year_label",
+    "chronology_uncertainty": "The campaign is conventionally assigned to 701 BCE, but individual operations, textual compositions, archaeological destructions and immediate dispositions are not uniformly month- or day-resolved; disputed synchronisms remain explicit.",
+    "era": "BCE",
+    "horizon_definition": "The unit is the conventionally dated 701 BCE third-campaign sequence and the political dispositions directly reported as consequences of that campaign. It is neither a day-level snapshot nor a claim that every event was simultaneous.",
+    "prohibited_representations": [
+      "negative ISO 8601 year",
+      "day-precise snapshot inferred from year-level evidence",
+      "silent equivalence between textual composition date and narrated event date"
+    ],
+    "temporal_resolution": "campaign_horizon",
+    "year_bce": 701
+  }
+}

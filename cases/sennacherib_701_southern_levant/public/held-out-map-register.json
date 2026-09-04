@@ -1,0 +1,39 @@
+{
+  "candidate_order": [
+    "MAP_CARTA_BIBLE_ATLAS_2011"
+  ],
+  "candidates": [
+    {
+      "body_viewed": false,
+      "candidate_scope": "A comprehensive Bible atlas is a plausible comparator for the Neo-Assyrian 701 campaign and can potentially express at least eight locked entity, locality and disposition units; exact plate compatibility remains sealed and may prove inconclusive.",
+      "catalog_record_locator": "ISBN-indexed library-catalog search; bibliographic metadata only; exact holdings to be verified after freeze without opening content",
+      "catalog_url": "https://search.worldcat.org/search?q=bn%3A9789652208149",
+      "content_access_status": "not_viewed",
+      "creators": [
+        "Yohanan Aharoni",
+        "Michael Avi-Yonah",
+        "Anson F. Rainey",
+        "Ze’ev Safrai"
+      ],
+      "downloaded": false,
+      "identifier": {
+        "scheme": "ISBN-13",
+        "value": "978-965-220-814-9"
+      },
+      "metadata_only": true,
+      "ocr_performed": false,
+      "publication_year": 2011,
+      "publisher": "Carta Jerusalem",
+      "reference_id": "MAP_CARTA_BIBLE_ATLAS_2011",
+      "rights_status": "Copyrighted atlas; library catalog and lawful holdings metadata only. Body access and derivative rights require a separate check after the evaluation gate.",
+      "screen_captured": false,
+      "selection_role": "primary",
+      "thumbnail_viewed": false,
+      "title": "The Carta Bible Atlas"
+    }
+  ],
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.held_out_map_register.v0.1",
+  "isolation_state": "metadata_only_unviewed",
+  "primary_candidate_id": "MAP_CARTA_BIBLE_ATLAS_2011"
+}

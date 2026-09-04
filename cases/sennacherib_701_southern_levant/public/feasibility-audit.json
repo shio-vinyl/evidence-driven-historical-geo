@@ -1,0 +1,343 @@
+{
+  "blocking_limits": [
+    "No entity yet has two independent, horizon-applicable named-locality local-administration relations.",
+    "Ashdod and Gaza receive unnamed towns, so their transferred localities cannot be fixed.",
+    "Azuru and several ancient/modern identifications need reviewed gazetteer or site records.",
+    "The Assyrian royal corpus is partisan and its parallel witnesses are one lineage.",
+    "The Hebrew textual path requires composition, textual-layer and dependency review before it can count independently.",
+    "The held-out primary candidate’s exact 701 coverage and expression count remain sealed and may be inconclusive.",
+    "Automated repository checks cannot prove a person’s complete browsing history."
+  ],
+  "budget_consumed": {
+    "content_catalog_checks": 10,
+    "held_out_candidates_registered": 1,
+    "held_out_metadata_queries": 3,
+    "preliminary_sources_admitted": 6,
+    "queries": 12
+  },
+  "budget_limits": {
+    "content_catalog_checks": 10,
+    "held_out_candidates": 3,
+    "held_out_metadata_queries": 4,
+    "preliminary_sources": 8,
+    "queries": 12
+  },
+  "candidate_entities": [
+    "judah",
+    "ekron",
+    "ashdod",
+    "gaza",
+    "ashkelon"
+  ],
+  "candidate_spatial_constraints": [
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "ashkelon",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 ii 68–72",
+      "name": "Joppa",
+      "relation": "local dynastic relation; then reported Assyrian conquest"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "ashkelon",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 ii 68–72",
+      "name": "Bīt-Daganna / Beth-Dagon",
+      "relation": "local dynastic relation; then reported Assyrian conquest"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "ashkelon",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 ii 68–72",
+      "name": "Banayabarqa / Bene-Baraq",
+      "relation": "local dynastic relation; then reported Assyrian conquest"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "ashkelon",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 ii 68–72",
+      "name": "Azuru",
+      "relation": "local dynastic relation; then reported Assyrian conquest; identification unresolved"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "ashkelon",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 ii 68–72 context",
+      "name": "Ashkelon",
+      "relation": "royal seat of Ṣidqâ; political disposition path"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "ekron",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 ii 73–iii 11; Q003945 rev. 6–12",
+      "name": "Ekron",
+      "relation": "contested local rule, punitive intervention, restoration, tribute and suzerainty"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "unresolved",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 ii 82–iii 7",
+      "name": "Eltekeh",
+      "relation": "battle and conquest; no automatic Ekron administration"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "unresolved",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003496 iii 6–7",
+      "name": "Timnah",
+      "relation": "conquest and plunder; no automatic local-control assignment"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "judah",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003945 rev. 6–19",
+      "name": "Jerusalem",
+      "relation": "Hezekiah’s political center, Padî custody, confinement and tribute"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "judah-context",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Atiqot 111 abstract; 2 Kings 18:13–17",
+      "name": "Lachish",
+      "relation": "archaeological destruction and Hebrew textual campaign path; administration unresolved"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "ashdod",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003945 rev. 13–19",
+      "name": "Ashdod",
+      "relation": "seat of Mitinti and named recipient of unnamed Judahite towns"
+    },
+    {
+      "allocation_status": "prohibited before reconstruction gate",
+      "candidate_entity": "gaza",
+      "coordinate_status": "pending reviewed gazetteer or archaeological-site identification",
+      "locator": "Q003945 rev. 13–19",
+      "name": "Gaza",
+      "relation": "seat of Ṣilli-Bēl and named recipient of unnamed Judahite towns"
+    }
+  ],
+  "case_id": "sennacherib-701-southern-levant",
+  "contamination_log": [
+    {
+      "candidate": "Oxford Bible Atlas, 4th edition (2009)",
+      "disposition": "excluded; never register or open as held-out comparator",
+      "exposure": "WorldCat/search output displayed a front-cover thumbnail and descriptive atlas summary."
+    },
+    {
+      "candidate": "The Bible Atlas, Access Foundation (2001)",
+      "disposition": "excluded; no link or PDF opened, downloaded, screenshotted, OCRed or parsed",
+      "exposure": "Unrequested search results exposed place-label and campaign-sequence summaries and PDF links."
+    }
+  ],
+  "content_catalog_check_log": [
+    {
+      "check_id": "C01",
+      "map_body_accessed": false,
+      "result": "fetch_failed_502",
+      "scope": "text page",
+      "target": "ORACC Q003496 page"
+    },
+    {
+      "check_id": "C02",
+      "map_body_accessed": false,
+      "result": "safe-open rejected before fetch",
+      "scope": "text page",
+      "target": "ORACC canonical Q003496 URL"
+    },
+    {
+      "check_id": "C03",
+      "map_body_accessed": false,
+      "result": "fetch_timeout; indexed line text remained available",
+      "scope": "text page",
+      "target": "ORACC Q003520 page"
+    },
+    {
+      "check_id": "C04",
+      "map_body_accessed": false,
+      "result": "checked",
+      "scope": "abstract and citation metadata",
+      "target": "IAA Atiqot 111 Lachish article record"
+    },
+    {
+      "check_id": "C05",
+      "map_body_accessed": false,
+      "result": "checked",
+      "scope": "abstract, pages, DOI and rights metadata",
+      "target": "BASOR 326 Blakely and Hardin article record"
+    },
+    {
+      "check_id": "C06",
+      "map_body_accessed": false,
+      "result": "checked",
+      "scope": "publication metadata and abstract",
+      "target": "Harvard Museum Tel Miqne-Ekron publication record"
+    },
+    {
+      "check_id": "C07",
+      "map_body_accessed": false,
+      "result": "page fetch cache miss; indexed passage remained available",
+      "scope": "text path",
+      "target": "STEP 2 Kings 18 page"
+    },
+    {
+      "check_id": "C08",
+      "map_body_accessed": false,
+      "result": "checked; front-cover thumbnail exposed, candidate excluded",
+      "scope": "bibliographic metadata",
+      "target": "WorldCat Oxford Bible Atlas record"
+    },
+    {
+      "check_id": "C09",
+      "map_body_accessed": false,
+      "result": "fetch_failed_502; indexed line text remained available",
+      "scope": "text page",
+      "target": "ORACC Q003495 page"
+    },
+    {
+      "check_id": "C10",
+      "map_body_accessed": false,
+      "result": "safe-open rejected before fetch",
+      "scope": "bibliographic metadata",
+      "target": "Open Library ISBN 9652204877 endpoint"
+    }
+  ],
+  "contract_version": "historical_geo.feasibility_audit.v0.2",
+  "decision": "GO",
+  "decision_scope": "Proceed to strict preregistration and post-freeze non-map evidence collection. Reconstruction, spatial inputs and polygon generation remain blocked.",
+  "frozen_question": "During the 701 BCE horizon of Sennacherib’s third campaign and its directly reported political dispositions, which named localities in the Joppa–Ekron–Lachish–Jerusalem corridor can non-territorial-map evidence support as local-control points, transfer objects, contested places or unresolved localities of Judah, Ekron, Ashdod, Gaza and Ashkelon while keeping conquest, tribute, suzerainty, military presence and local administration distinct?",
+  "go_rationale": [
+    "The question, campaign horizon and corridor are bounded without false precision.",
+    "Five candidate political entities have explicit textual paths.",
+    "Twelve named spatial candidates and more than four potential source lineages make a disciplined post-freeze evidence round feasible.",
+    "Conflicts and exclusions are already visible, so the protocol can fail honestly without manufacturing a polygon.",
+    "A metadata-only comparator and twenty fixed evaluation units make a later held-out test structurally possible."
+  ],
+  "go_thresholds": [
+    {
+      "basis": "The era/year contract records year_bce=701, campaign_horizon resolution and chronology uncertainty.",
+      "criterion": "A 701 BCE campaign/disposition horizon can be defined without claiming a day-level snapshot.",
+      "passed": true
+    },
+    {
+      "basis": "Judah/Hezekiah, Ekron/Padî, Ashdod/Mitinti, Gaza/Ṣilli-Bēl and Ashkelon/Ṣidqâ are named.",
+      "criterion": "At least four political entities have textual paths.",
+      "passed": true
+    },
+    {
+      "basis": "Ashkelon has four named cities of Ṣidqâ plus its royal seat; Judah has Jerusalem and a Lachish path, with the latter still source-critical and not yet admitted as local control.",
+      "criterion": "At least two entities each have two potential named-locality relations.",
+      "passed": true
+    },
+    {
+      "basis": "Twelve named candidates are locked; exact reviewed coordinates remain a post-freeze gap.",
+      "criterion": "At least ten locatable spatial candidates exist.",
+      "passed": true
+    },
+    {
+      "basis": "Assyrian royal inscriptions, Lachish excavation, southwest-Judah archaeological critique, the local Ekron excavation/inscription tradition and the Deuteronomistic textual tradition are distinct candidate lineages; independence of claims still requires review.",
+      "criterion": "At least four potentially independent source lineages exist.",
+      "passed": true
+    },
+    {
+      "basis": "Regional destruction dates may predate 701; unnamed transfers cannot be geolocated; imperial relations cannot be equated with local administration; Bible-text independence remains unresolved.",
+      "criterion": "At least two counterevidence, conflict or exclusion paths exist.",
+      "passed": true
+    },
+    {
+      "basis": "ORACC Q identifiers and lines, DOI-addressed IAA/BASOR records, a Harvard publication record and verse locators are recorded with rights scopes.",
+      "criterion": "Principal material has legal access and stable locators.",
+      "passed": true
+    },
+    {
+      "basis": "The registered comprehensive Carta atlas is plausibly capable of expressing eight or more of twenty fixed units; exact expression remains sealed and can yield an inconclusive result.",
+      "criterion": "A metadata-only held-out comparator could express at least eight locked units.",
+      "passed": true
+    }
+  ],
+  "held_out_finding": "One atlas is registered from bibliographic metadata only. The Oxford Bible Atlas was excluded after a search result exposed a front-cover thumbnail. Unrelated results for The Bible Atlas exposed map-label and route summaries; that work was excluded without opening any linked PDF.",
+  "map_body_audit": {
+    "audit_note": "No map body or derivative was selected for inspection. Search-result thumbnail/label leakage is disclosed and the affected publications are excluded.",
+    "historical_territorial_boundary_geometry_read": false,
+    "historical_territorial_map_body_viewed": false,
+    "historical_territorial_map_downloaded": false,
+    "historical_territorial_map_ocr_or_parse_performed": false,
+    "historical_territorial_map_screenshot_taken": false
+  },
+  "ontology_finding": "The audit records local dynastic rule, contested local authority, territorial transfer, imperial suzerainty, tribute obligation, military presence, siege/conquest, destruction event and local administration as separate layers. Only the last can directly authorize a local-control point.",
+  "query_log": [
+    {
+      "class": "research",
+      "query": "site:oracc.museum.upenn.edu rinap Sennacherib 701 third campaign Judah Ekron Eltekeh lines",
+      "query_id": "Q01"
+    },
+    {
+      "class": "research",
+      "query": "site:oracc.museum.upenn.edu \"Joppa\" \"Bene-Baraq\" \"Azuru\" Sennacherib",
+      "query_id": "Q02"
+    },
+    {
+      "class": "research",
+      "query": "site:iaa-conservation.org.il Lachish 701 BCE Sennacherib excavation OR site:hadashot-esi.org.il Lachish Ekron 701 BCE",
+      "query_id": "Q03"
+    },
+    {
+      "class": "held_out_metadata",
+      "query": "site:worldcat.org atlas ancient near east Neo-Assyrian empire 701 BCE Sennacherib ISBN",
+      "query_id": "Q04"
+    },
+    {
+      "class": "research",
+      "query": "site:oracc.museum.upenn.edu/rinap/rinap3/Q003496 \"Mitinti\" \"Ṣilli-Bēl\" \"Hezekiah\"",
+      "query_id": "Q05"
+    },
+    {
+      "class": "research",
+      "query": "site:oracc.museum.upenn.edu/rinap/rinap3/Q003496 \"forty-six\" Jerusalem Lachish",
+      "query_id": "Q06"
+    },
+    {
+      "class": "research",
+      "query": "Lachish 701 BCE excavation destruction level Sennacherib official archaeological site report DOI",
+      "query_id": "Q07"
+    },
+    {
+      "class": "research",
+      "query": "Ekron destruction 701 BCE Sennacherib excavation report DOI royal dedicatory inscription",
+      "query_id": "Q08"
+    },
+    {
+      "class": "research",
+      "query": "Pleiades places Jerusalem Lachish Ekron Ashdod Gaza Ashkelon Joppa Beth Dagon Bene Beraq Eltekeh Timnah coordinates",
+      "query_id": "Q09"
+    },
+    {
+      "class": "research",
+      "query": "site:stepbible.org 2 Kings 18 Sennacherib Hezekiah Lachish Jerusalem 701 text",
+      "query_id": "Q10"
+    },
+    {
+      "class": "held_out_metadata",
+      "query": "site:worldcat.org \"Carta Bible Atlas\" Aharoni Avi-Yonah Rainey Safrai ISBN",
+      "query_id": "Q11"
+    },
+    {
+      "class": "held_out_metadata",
+      "query": "site:search.worldcat.org \"Oxford Bible Atlas\" Adrian Curtis ISBN catalog",
+      "query_id": "Q12"
+    }
+  ],
+  "source_access_finding": "Six preliminary research sources are admitted with citation, locator, rights and lineage metadata. Indexed ORACC text provides stable Q identifiers and lines despite page-fetch failures; full-text follow-up remains an evidence-round task.",
+  "source_lineage_finding": "ORACC Q003496 and Q003945 are parallel witnesses within one Assyrian royal-inscription tradition. Different copies and modern translations do not increase the independent-lineage count automatically. Archaeological, local inscriptional and biblical textual paths require their own dependency review.",
+  "temporal_finding": "The scope is the conventionally dated 701 BCE campaign and directly reported disposition horizon. It is year/horizon-resolved, not day-resolved. Astronomical year −700 is a computational conversion only and is never stored as a negative ISO date."
+}

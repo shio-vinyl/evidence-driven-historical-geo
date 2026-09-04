@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import re
 from typing import Any, Mapping
 
 from historical_geo.research_contracts import (
@@ -82,7 +83,56 @@ def _safe_file(case_dir: Path, relative: str) -> Path | None:
 def validate_preregistration(document: Mapping[str, Any]) -> ValidationResult:
     result = ValidationResult()
     result.errors.extend(validate_schema(document, PREREGISTRATION_SCHEMA))
+    if result.errors:
+        return result
+    temporal = document.get("temporal_scope", {})
+    if temporal.get("temporal_resolution") == "campaign_horizon":
+        if document.get("contract_version") != "historical_geo.preregistration.v0.2":
+            _issue(
+                result,
+                "bce_contract_version_mismatch",
+                "contract_version",
+                "campaign-horizon BCE dates require preregistration v0.2",
+            )
+        year_bce = temporal.get("year_bce")
+        equivalent = temporal.get("astronomical_year_numbering", {}).get("equivalent_year")
+        if isinstance(year_bce, int) and equivalent != astronomical_year_from_bce(year_bce):
+            _issue(
+                result,
+                "astronomical_year_mismatch",
+                "temporal_scope.astronomical_year_numbering.equivalent_year",
+                f"expected {astronomical_year_from_bce(year_bce)} for {year_bce} BCE",
+            )
+        negative_iso = re.compile(r"^-\d{4,}-\d{2}-\d{2}$")
+        for path, value in _walk_strings(temporal):
+            if negative_iso.fullmatch(value):
+                _issue(
+                    result,
+                    "negative_iso_bce_date",
+                    f"temporal_scope{path}",
+                    "BCE dates must use era/year_bce fields, not negative ISO years",
+                )
     return result
+
+
+def astronomical_year_from_bce(year_bce: int) -> int:
+    """Convert a positive BCE year label to astronomical year numbering."""
+    if isinstance(year_bce, bool) or not isinstance(year_bce, int) or year_bce < 1:
+        raise ValueError("year_bce must be a positive integer")
+    return 1 - year_bce
+
+
+def _walk_strings(value: Any, path: str = "") -> list[tuple[str, str]]:
+    found: list[tuple[str, str]] = []
+    if isinstance(value, str):
+        found.append((path, value))
+    elif isinstance(value, Mapping):
+        for key, item in value.items():
+            found.extend(_walk_strings(item, f".{key}"))
+    elif isinstance(value, list):
+        for index, item in enumerate(value):
+            found.extend(_walk_strings(item, f"[{index}]"))
+    return found
 
 
 def validate_held_out_register(document: Mapping[str, Any]) -> ValidationResult:
@@ -645,4 +695,5 @@ __all__ = [
     "validate_preregistration",
     "validate_prospective_case",
     "effective_prospective_state",
+    "astronomical_year_from_bce",
 ]

@@ -1,0 +1,40 @@
+{
+  "baseline": "sealed-no-allocation",
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.prospective_scenarios.v0.1",
+  "planned_scenarios": [
+    {
+      "activation_condition": "Activate one newly supported named-locality local-control decision at a time after the reconstruction gate.",
+      "axis": "evidence",
+      "name": "local-control-admissions"
+    },
+    {
+      "activation_condition": "Compare declared treatments of suzerainty and military presence without converting them to local administration.",
+      "axis": "model",
+      "name": "imperial-relation-layering"
+    },
+    {
+      "activation_condition": "Isolate each site-specific 701 chronology admission or exclusion.",
+      "axis": "evidence",
+      "name": "chronology-exclusions"
+    }
+  ],
+  "research_stage": "evidence_collection",
+  "scenarios": {
+    "sealed-no-allocation": {
+      "axis": "baseline",
+      "changed_decision_ids": [],
+      "description": "Preregistration baseline: every feasibility relation remains outside allocation.",
+      "excluded_decision_ids": [
+        "D_ASHKELON_NETWORK_DISPLAY",
+        "D_EKRON_CRISIS_DISPLAY",
+        "D_JUDAH_JERUSALEM_DISPLAY",
+        "D_LACHISH_EVENT_DISPLAY",
+        "D_UNNAMED_TRANSFER_EXCLUDED",
+        "D_HEBREW_TEXT_INDEPENDENCE_EXCLUDED",
+        "D_IMPERIAL_EQUIVALENCE_EXCLUDED"
+      ],
+      "included_decision_ids": []
+    }
+  }
+}

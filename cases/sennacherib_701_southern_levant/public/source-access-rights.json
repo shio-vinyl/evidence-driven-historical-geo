@@ -1,0 +1,81 @@
+{
+  "access_date": "2026-09-04",
+  "audit_scope": "Only line-indexed text, article abstracts, publication metadata and catalog metadata were checked. No historical territorial map body, plate, PDF map page, selected thumbnail, screenshot, OCR, vector or derivative was accessed.",
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.source_access.v0.2",
+  "lineage_rule": "Q003496, Q003945 and parallel editions or translations remain one Assyrian royal-inscription lineage; they are not independent confirmations.",
+  "records": [
+    {
+      "access_date": "2026-09-04",
+      "content_access": "search_indexed_line_text",
+      "evidence_class": "line_addressable_cuneiform_edition",
+      "lineage_id": "ASSYRIAN_ROYAL_THIRD_CAMPAIGN_TRADITION",
+      "locator": "Q003496 ii 68–iii 11",
+      "map_body_accessed": false,
+      "redistribution": "allowed",
+      "rights_status": "ORACC annotated edition states CC BY-SA 3.0",
+      "source_id": "SRC_ORACC_Q003496",
+      "url": "https://oracc.museum.upenn.edu/rinap/rinap3/Q003496"
+    },
+    {
+      "access_date": "2026-09-04",
+      "content_access": "search_indexed_line_text",
+      "evidence_class": "line_addressable_cuneiform_edition",
+      "lineage_id": "ASSYRIAN_ROYAL_THIRD_CAMPAIGN_TRADITION",
+      "locator": "Q003945 rev. 6–19",
+      "map_body_accessed": false,
+      "redistribution": "allowed",
+      "rights_status": "ORACC annotated edition states CC BY-SA 3.0",
+      "source_id": "SRC_ORACC_Q003945",
+      "url": "https://oracc.museum.upenn.edu/rinap/rinap3/Q003945"
+    },
+    {
+      "access_date": "2026-09-04",
+      "content_access": "abstract_only",
+      "evidence_class": "archaeological_excavation_report",
+      "lineage_id": "LACHISH_GATE_EXCAVATION",
+      "locator": "Atiqot 111 abstract; DOI 10.70967/2948-040X.1073",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Public record accessible; no reuse licence relied upon; citation only",
+      "source_id": "SRC_IAA_LACHISH_2023",
+      "url": "https://publications.iaa.org.il/atiqot/vol111/iss1/15/"
+    },
+    {
+      "access_date": "2026-09-04",
+      "content_access": "abstract_only",
+      "evidence_class": "critical_archaeological_synthesis",
+      "lineage_id": "SOUTHWEST_JUDAH_MULTI_EXCAVATION_SYNTHESIS",
+      "locator": "BASOR 326, pp. 11–64, abstract",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Copyright 2002 ASOR; citation only",
+      "source_id": "SRC_BLAKELY_HARDIN_2002",
+      "url": "https://www.journals.uchicago.edu/doi/10.2307/1357687"
+    },
+    {
+      "access_date": "2026-09-04",
+      "content_access": "record_text",
+      "evidence_class": "archaeological_report_metadata",
+      "lineage_id": "TEL_MIQNE_EKRON_EXCAVATION_AND_LOCAL_INSCRIPTION",
+      "locator": "Publication record and abstract",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Copyrighted report; public metadata; citation only",
+      "source_id": "SRC_HMANE_EKRON_2022",
+      "url": "https://hmane.harvard.edu/publications/tel-miqne-ekron-excavations-1994%E2%80%931996-field-iv-upper-and-field-v-elite-zone"
+    },
+    {
+      "access_date": "2026-09-04",
+      "content_access": "search_indexed_passage",
+      "evidence_class": "hebrew_bible_textual_path",
+      "lineage_id": "DEUTERONOMISTIC_KINGS_TEXTUAL_TRADITION",
+      "locator": "2 Kings 18:13–17",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Translation copyright applies; citation and paraphrase only",
+      "source_id": "SRC_STEP_2KINGS18",
+      "url": "https://www.stepbible.org/?q=version%3DNET2full%40reference%3D2Ki.18"
+    }
+  ]
+}

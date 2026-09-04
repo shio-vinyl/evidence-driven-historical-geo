@@ -1,0 +1,39 @@
+{
+  "authoritative_source": "research-bundle.json#/evidence_gaps",
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.evidence_gap_register.v0.1",
+  "entries": [
+    {
+      "gap_id": "GAP_JUDAH_SECOND_LOCAL_CONTROL",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_ASHKELON_INDEPENDENT_LINEAGE",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_EKRON_LOCAL_ADMINISTRATION",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_GAZA_TRANSFERRED_LOCALITIES",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_LOCALITY_IDENTIFICATIONS",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_DESTRUCTION_CHRONOLOGY",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_HEBREW_BIBLE_LINEAGE",
+      "status": "open"
+    }
+  ]
+}

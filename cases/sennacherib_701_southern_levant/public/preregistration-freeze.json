@@ -1,0 +1,44 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "commit_binding": "The Git commit containing these frozen artifacts is the preregistration commit. Its hash is recorded in lifecycle.json after this commit exists; the manifest cannot self-hash the future commit.",
+  "contract_version": "historical_geo.preregistration_freeze.v0.1",
+  "frozen_artifacts": [
+    {
+      "path": "case.json",
+      "sha256": "044d73cf31e4303e84a5ca852b47892a9986b92dd9559a2629ae928dfb70d45b"
+    },
+    {
+      "path": "preregistration.json",
+      "sha256": "0b95310d37a054343fe370766e9d27f3a0b6051555f836df17571c396db697b9"
+    },
+    {
+      "path": "feasibility-audit.json",
+      "sha256": "1ce5f1c5dd43a10ff41a5a117a54f93c9ee5fd8ff49281f13c065537d65f64e2"
+    },
+    {
+      "path": "research-bundle.json",
+      "sha256": "36507facf7515ba083399d6507f36d63e31db81cfb3f6dde2cfef6a54f632801"
+    },
+    {
+      "path": "research-scenarios.json",
+      "sha256": "ebf054710da6e2d8ceb31e66ea5855a0a8446e3be193eeb83bf4867b32fa9a99"
+    },
+    {
+      "path": "source-access-rights.json",
+      "sha256": "fe34734254bfbd1946f34c064c342be42628a2706df6dff9c39507b7f542449c"
+    },
+    {
+      "path": "spatial-input-contract.json",
+      "sha256": "e916a87bfcc83571e81ae9fa579cd55746ede13458533e1a33df3c72c2c5a38f"
+    },
+    {
+      "path": "held-out-map-register.json",
+      "sha256": "654b61cb21257fb1d6cc889cc0c9634425c3697e2057ad867eb86f7cbfba2e0a"
+    },
+    {
+      "path": "evidence-gap-register.json",
+      "sha256": "27416663162a2b34af56c2447afbfa924a2daa59b835eab22123874b0a3405c9"
+    }
+  ],
+  "hash_algorithm": "sha256"
+}

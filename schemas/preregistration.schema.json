@@ -28,7 +28,12 @@
     "freeze_requirements"
   ],
   "properties": {
-    "contract_version": {"const": "historical_geo.preregistration.v0.1"},
+    "contract_version": {
+      "enum": [
+        "historical_geo.preregistration.v0.1",
+        "historical_geo.preregistration.v0.2"
+      ]
+    },
     "case_id": {"$ref": "#/$defs/text"},
     "research_stage": {"enum": ["preregistered", "evidence_collection", "reconstructed_pre_evaluation", "evaluation_opened"]},
     "reconstruction_ready": {"type": "boolean"},
@@ -54,14 +59,57 @@
     "text": {"type": "string", "minLength": 1},
     "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"},
     "temporal": {
+      "oneOf": [
+        {"$ref": "#/$defs/ceInterval"},
+        {"$ref": "#/$defs/bceCampaignHorizon"}
+      ]
+    },
+    "ceInterval": {
       "type": "object", "additionalProperties": false,
       "required": ["temporal_resolution", "target_interval_start", "target_interval_end", "cutoff_event", "bridge_rule"],
       "properties": {
         "temporal_resolution": {"const": "interval"},
-        "target_interval_start": {"const": "0780-01-01"},
-        "target_interval_end": {"const": "0796-07-29"},
+        "target_interval_start": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "target_interval_end": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
         "cutoff_event": {"$ref": "#/$defs/text"},
         "bridge_rule": {"$ref": "#/$defs/text"}
+      }
+    },
+    "bceCampaignHorizon": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "calendar",
+        "era",
+        "year_bce",
+        "temporal_resolution",
+        "horizon_definition",
+        "chronology_uncertainty",
+        "bridge_rule",
+        "astronomical_year_numbering",
+        "prohibited_representations"
+      ],
+      "properties": {
+        "calendar": {"const": "historical_bce_year_label"},
+        "era": {"const": "BCE"},
+        "year_bce": {"type": "integer", "minimum": 1},
+        "temporal_resolution": {"const": "campaign_horizon"},
+        "horizon_definition": {"$ref": "#/$defs/text"},
+        "chronology_uncertainty": {"$ref": "#/$defs/text"},
+        "bridge_rule": {"$ref": "#/$defs/text"},
+        "astronomical_year_numbering": {
+          "type": "object", "additionalProperties": false,
+          "required": ["equivalent_year", "conversion_rule", "year_zero_rule", "usage_rule"],
+          "properties": {
+            "equivalent_year": {"type": "integer", "maximum": 0},
+            "conversion_rule": {"const": "astronomical_year = 1 - year_bce"},
+            "year_zero_rule": {"const": "astronomical year 0 = 1 BCE"},
+            "usage_rule": {"$ref": "#/$defs/text"}
+          }
+        },
+        "prohibited_representations": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"$ref": "#/$defs/text"}
+        }
       }
     },
     "spatial": {
