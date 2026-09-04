@@ -70,11 +70,11 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 ## Prospective 案例：Mercia–Welsh 边疆
 
-第二案例覆盖 Rhuddlan—upper Severn 有界走廊内 **780-01-01 至 796-07-29** 的 terminal Offan interval。冻结后的非地图证据轮次已经完成，登记终态为 **`completed_no_reconstruction`**。没有任何实体取得两条相互独立且适用于目标区间的具名地点控制关系，因此案例在不生成 polygon 的条件下终止。
+已经完成的第二案例覆盖 Rhuddlan—upper Severn 有界走廊内 **780-01-01 至 796-07-29** 的 terminal Offan interval。它是一项严格预注册的负结果，登记终态为 **`completed_no_reconstruction`**。没有任何实体取得两条相互独立且适用于目标区间的具名地点政治控制关系，因此停止规则终止了案例，没有生成 reconstruction 或 polygon。
 
 [Prospective 案例](cases/mercia_welsh_frontier/public/README.zh-CN.md)保留不可变预注册基线与 append-only 审核轮次，其中包含 23 次查询、17 次内容或馆藏记录检查、7 项采纳来源、原子 observation、claim、排除 decision、最终 gap 状态、预算账本和逐项 gate 裁决。Offa's Dyke 与 Wat's Dyke 继续排除出 allocation；工程位置及宽泛或有争议的年代都不能证明政治边界。
 
-登记的比较地图继续封存：没有查看或保存任何主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何。失败的重建 gate 使案例在评估前终止。自动验证会强制核验冻结哈希、轮次哈希链、预算与阶段迁移、held-out 标识符隔离以及无提前重建产物；它不能证明个人完整浏览历史。
+工作流成功执行了证据隔离、预注册检索预算和停止规则。登记的比较地图永久封存：没有查看或保存任何主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何，本案例也不会为评估打开这些材料。该负结果证明协议在证据不足时得到完整执行；它不表示项目失败，也不构成历史准确率测量。自动验证会强制核验冻结哈希、轮次哈希链、预算与阶段迁移、held-out 标识符隔离以及无提前重建产物；它不能证明个人完整浏览历史。
 
 ## 研究轮次与搜索策略实验
 

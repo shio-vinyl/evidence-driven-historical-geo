@@ -2,13 +2,13 @@
 
 # Mercia–Welsh Frontier Prospective Case
 
-**Stage: completed_no_reconstruction · reconstruction gate failed · held-out material sealed**
+**Completed strict preregistered negative result · completed_no_reconstruction · held-out material permanently sealed**
 
 This strictly prospective case covers the Rhuddlan–Dee/Llangollen–Chirk–Oswestry/Llanymynech–upper Severn corridor during **780-01-01 through 796-07-29**. The interval closes with Offa's death; year-only evidence is not treated as day-precise.
 
 ## Final decision
 
-The registered result is **`completed_no_reconstruction`**. Post-freeze non-map research found no modeled entity with the required two independent, legally accessible, interval-applicable named-locality control relations. Powys cannot be bridged from the ninth-century Pillar of Eliseg evidence, Gwynedd cannot be connected to the 796 Rhuddlan notice from the separate 798 royal notice, and Mercian title, occupation, battle and engineering evidence cannot establish continuous local control.
+The registered result is **`completed_no_reconstruction`**. This is the completed negative result of the frozen preregistration, not a provisional decision. Post-freeze non-map research found no modeled entity with the required two independent, legally accessible, interval-applicable named-locality political-control relations. Powys cannot be bridged from the ninth-century Pillar of Eliseg evidence, Gwynedd cannot be connected to the 796 Rhuddlan notice from the separate 798 royal notice, and Mercian title, occupation, battle and engineering evidence cannot establish continuous local control.
 
 No polygon, territorial surface or reconstruction was generated. Offa's Dyke and Wat's Dyke remain outside allocation: broad or conflicting dates do not establish a target-interval role, and engineering location cannot stand for a political boundary.
 
@@ -33,7 +33,9 @@ The gate retains twelve distinct spatial candidates, at least three independent 
 
 ## Prospective seal
 
-The held-out register remains bibliographic metadata only. No registered map body, thumbnail, PDF page, screenshot, OCR, vector or boundary geometry was inspected or stored. Because the reconstruction gate failed, no second pre-evaluation freeze exists and evaluation will not open for this case outcome.
+The held-out register permanently remains bibliographic metadata only. No registered map body, thumbnail, PDF page, screenshot, OCR, vector or boundary geometry was inspected or stored. Because the reconstruction gate failed, no second pre-evaluation freeze exists and evaluation will never open the held-out atlas for this case outcome.
+
+The workflow succeeded by enforcing evidence isolation, the preregistered budget, and the stop rule when the locality-level political-control evidence for 780–796 remained insufficient. The absence of a reconstruction is the protocol-prescribed negative result; it is not a project failure and supports no conclusion about historical accuracy.
 
 Automated validation audits repository state and recorded declarations; it cannot prove a person's complete browsing history.
 

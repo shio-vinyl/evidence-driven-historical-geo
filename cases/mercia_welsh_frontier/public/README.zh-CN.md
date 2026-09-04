@@ -2,13 +2,13 @@
 
 # Mercia–Welsh 边疆 prospective 案例
 
-**阶段：completed_no_reconstruction · 重建门槛未通过 · held-out 材料继续封存**
+**已完成的严格预注册负结果 · completed_no_reconstruction · held-out 材料永久封存**
 
 该严格 prospective 案例覆盖 Rhuddlan—Dee/Llangollen—Chirk—Oswestry/Llanymynech—upper Severn 走廊的 **780-01-01 至 796-07-29**。区间以 Offa 去世为终点；只有年份的材料不会被解释为精确到日。
 
 ## 最终裁决
 
-登记结果为 **`completed_no_reconstruction`**。冻结后的非地图检索没有为任何 modeled entity 找到两条相互独立、合法可访问、适用于目标区间的具名地点控制关系。九世纪的 Pillar of Eliseg 材料无法证明 Powys 在目标区间的连续性；798 年王号记录无法把 Gwynedd 接到 796 年 Rhuddlan 事件；Mercia 的王号、居住活动、战役与工程位置也无法证明连续的本地控制。
+登记结果为 **`completed_no_reconstruction`**。这是冻结预注册得出的已完成负结果，不是临时裁决。冻结后的非地图检索没有为任何 modeled entity 找到两条相互独立、合法可访问、适用于目标区间的具名地点政治控制关系。九世纪的 Pillar of Eliseg 材料无法证明 Powys 在目标区间的连续性；798 年王号记录无法把 Gwynedd 接到 796 年 Rhuddlan 事件；Mercia 的王号、居住活动、战役与工程位置也无法证明连续的本地控制。
 
 案例没有生成 polygon、territorial surface 或 reconstruction。Offa's Dyke 与 Wat's Dyke 继续排除出 allocation：宽泛或冲突的年代不能确定目标区间角色，工程位置也不能代替政治边界证据。
 
@@ -33,7 +33,9 @@ Gate 保留 12 个 distinct spatial candidates、至少三条独立来源谱系�
 
 ## Prospective 封存
 
-Held-out 登记表继续只保存书目元数据。没有查看或保存任何登记地图的主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何。重建 gate 已失败，因此本案例没有第二次 pre-evaluation freeze，评估也不会打开。
+Held-out 登记表永久只保存书目元数据。没有查看或保存任何登记地图的主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何。重建 gate 已失败，因此本案例没有第二次 pre-evaluation freeze，评估也永远不会为该终局打开 held-out atlas。
+
+工作流在 780—796 年地点级政治控制证据仍不足时，成功执行了证据隔离、预注册预算与停止规则。没有生成 reconstruction 是协议规定的负结果；它不表示项目失败，也不支持任何历史准确率结论。
 
 自动验证只能审计仓库状态与记录声明，不能证明个人完整浏览历史。
 

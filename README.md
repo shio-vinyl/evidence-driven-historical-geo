@@ -70,11 +70,11 @@ The Crusader case is a retrospective testbed: external maps never enter reconstr
 
 ## Prospective case: Mercia–Welsh frontier
 
-The second case covers the **780-01-01 through 796-07-29** terminal Offan interval in a bounded Rhuddlan–upper Severn corridor. Its post-freeze non-map evidence round is complete, and the registered outcome is **`completed_no_reconstruction`**. No entity reached two independent, interval-applicable named-locality control relations, so the case terminated without a polygon.
+The completed second case covers the **780-01-01 through 796-07-29** terminal Offan interval in a bounded Rhuddlan–upper Severn corridor. It is a strictly preregistered negative result with the terminal outcome **`completed_no_reconstruction`**. No entity reached two independent, interval-applicable named-locality political-control relations, so the stop rule terminated the case without a reconstruction or polygon.
 
 [The prospective case](cases/mercia_welsh_frontier/public/README.md) preserves the immutable preregistration baseline and an append-only reviewed round containing 23 queries, 17 content or catalog checks, 7 admitted sources, atomic observations, claims, exclusions, final gap states, budget accounting, and a criterion-by-criterion gate decision. Offa's Dyke and Wat's Dyke remain outside allocation; engineering locations and broad or disputed dates do not establish a political boundary.
 
-The registered comparison maps remain sealed: no body, thumbnail, PDF page, screenshot, OCR, vector, or boundary geometry has been inspected or stored. The failed reconstruction gate ends the case before evaluation. Automated validation enforces freeze hashes, the round hash chain, budget and transition rules, held-out identifier isolation, and the absence of premature reconstruction artifacts; it cannot prove a person's complete browsing history.
+The workflow successfully enforced evidence isolation, the preregistered search budget, and the stopping rule. The registered comparison maps are permanently sealed: no body, thumbnail, PDF page, screenshot, OCR, vector, or boundary geometry has been inspected or stored, and this case will not open them for evaluation. The negative result demonstrates protocol execution under insufficient evidence; it is neither a project failure nor a measurement of historical accuracy. Automated validation enforces freeze hashes, the round hash chain, budget and transition rules, held-out identifier isolation, and the absence of premature reconstruction artifacts; it cannot prove a person's complete browsing history.
 
 ## Research rounds and policy experiment
 

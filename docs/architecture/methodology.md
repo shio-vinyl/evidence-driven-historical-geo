@@ -30,7 +30,7 @@ A true statement at one level does not automatically authorize the next level. A
 
 ## Prospective held-out cases
 
-A prospective case has a lifecycle separate from reconstruction: `preregistered → evidence_collection → reconstructed_pre_evaluation → evaluation_opened`. Before the last transition, held-out historical maps remain in a metadata-only register and cannot appear in sources, observations, claims, model decisions, scenarios, or spatial inputs. A Git commit freezes the preregistration; a second commit must freeze evidence, model settings, outputs, fixed comparison units, and hashes before the first map body is opened.
+A prospective case has a lifecycle separate from reconstruction: `preregistered → evidence_collection`, followed either by `reconstructed_pre_evaluation → evaluation_opened` or by the terminal `completed_no_reconstruction` state. Before evaluation, held-out historical maps remain in a metadata-only register and cannot appear in sources, observations, claims, model decisions, scenarios, or spatial inputs. A Git commit freezes the preregistration; a second commit must freeze evidence, model settings, outputs, fixed comparison units, and hashes before the first map body is opened. A terminal negative result never opens the held-out material.
 
 Repository validation rejects held-out identifiers in research artifacts, map-body files and premature boundary outputs in a sealed case, and mismatches against the frozen-artifact hash manifest. This establishes artifact isolation and a checkable declaration. It cannot establish a complete human browsing history, so any accidental snippet or preview exposure must be disclosed and the affected candidate excluded or marked contaminated.
 
@@ -39,6 +39,8 @@ Repository validation rejects held-out identifiers in research artifacts, map-bo
 A prospective freeze remains byte-for-byte immutable after preregistration. Later research lives in `research/rounds/<round-id>/` as source, observation, claim, decision, gap and budget deltas. `lifecycle.json` binds the frozen manifest and preregistration commit to reviewed round manifests; the current state is materialized from the baseline plus those deltas rather than by rewriting the baseline bundle.
 
 Validation recomputes every round-file hash, checks the previous-state chain and exact file set, rejects duplicate epistemic IDs, verifies cross-record references and source-access fields, accounts for queries, record checks, admissions and per-gap follow-ups, enforces legal stage transitions, and scans all round artifacts for held-out identifiers. A failed reconstruction gate enters the terminal `completed_no_reconstruction` state and forbids later rounds or polygon output. The hash chain is tamper-evident inside the repository and gains durable immutability from Git history.
+
+The completed Mercia–Welsh case is the strict preregistered negative-result path in operation. Its 780–796 locality-level political-control evidence did not satisfy the reconstruction gate, so budget control and the stop rule ended the case without geometry while the held-out atlas remained permanently sealed. This outcome demonstrates successful execution of the protocol under insufficient evidence; it is not a project failure and is not a historical-accuracy result.
 
 ## End-to-end workflow
 
