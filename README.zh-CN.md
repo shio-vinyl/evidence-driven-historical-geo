@@ -76,6 +76,14 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 工作流成功执行了证据隔离、预注册检索预算和停止规则。登记的比较地图永久封存：没有查看或保存任何主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何，本案例也不会为评估打开这些材料。该负结果证明协议在证据不足时得到完整执行；它不表示项目失败，也不构成历史准确率测量。自动验证会强制核验冻结哈希、轮次哈希链、预算与阶段迁移、held-out 标识符隔离以及无提前重建产物；它不能证明个人完整浏览历史。
 
+## Prospective 案例：辛那赫里布 701 年
+
+第三个案例研究辛那赫里布通常定年的**公元前 701 年远征—处置时段**：Joppa—Ekron—Lachish—Jerusalem 走廊中哪些具名地点可以获得支持。有限可行性审计给出**严格预注册与证据收集 GO**，重建仍被禁止。冻结基线记录 Judah、Ekron、Ashdod、Gaza、Ashkelon，12 个具名地点候选，6 个初步来源，明确的来源谱系，以及地方统治、转移、征服、贡赋、宗主权、军事存在、毁灭与地方行政的分层本体。
+
+[预注册案例](cases/sennacherib_701_southern_levant/public/README.zh-CN.md)不包含地点坐标图层、polygon 或重建输出。ORACC 平行见证仍按一条带立场的王室谱系处理；《希伯来圣经》路径仍需来源批判；未具名的转移城镇不能变成虚构锚点。一个 atlas 仅以元数据登记，两个受到搜索结果污染的 atlas 候选在未打开主体的情况下被排除。
+
+该案例同时引入明确 era 的 BCE 时间契约：`calendar=historical_bce_year_label`、`era=BCE`、`year_bce=701`、`temporal_resolution=campaign_horizon`。天文纪年 `-700` 只是显式计算转换，绝不写成负 ISO 日期。
+
 ## 研究轮次与搜索策略实验
 
 `research/rounds/00-initial/` 保存冻结的检索前 bundle、情景快照、诊断与议程；`research/rounds/01-evidence-update/` 保存其来源核查、状态变化和重新计算的切片诊断。经过审查的每一轮都会记录 source、observation、claim、decision 的增量，以及支撑下一步行动的诊断和搜索目标；临时求解结果仍位于已忽略的 `build/` 目录。规范化哈希把前后快照与轮次增量绑定在一起。
@@ -102,6 +110,7 @@ python3 -m venv .venv
 
 .venv/bin/historical-geo validate cases/crusader_states/public
 .venv/bin/historical-geo validate cases/mercia_welsh_frontier/public
+.venv/bin/historical-geo validate cases/sennacherib_701_southern_levant/public
 .venv/bin/historical-geo compile-request cases/crusader_states/public \
   --slice 1130 --scenario reviewed-baseline
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
@@ -125,6 +134,7 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - 后端边界测试证明，冻结的第 00 轮 v0.2 快照复现了已审查的 v0.1 XTENT 基线；第 01 轮则明确记录并哈希其有意引入的输入与表面变化。
 - 公开谱系验证为零错误。
 - Prospective Mercia–Welsh 案例以 `completed_no_reconstruction` 终止；metadata-only 封存、九项冻结哈希、审核轮次哈希链、预算、生命周期、无地图主体与无 polygon 检查全部通过。
+- Prospective 辛那赫里布 701 案例冻结在 `evidence_collection`；BCE 转换、可行性预算、九项哈希、metadata-only 封存、held-out 泄漏防护、无地图主体与无 polygon 检查全部通过。
 - 两个切片的必要情景均可重建。
 - 每个运行都保留该情景预期实体，几何有效且无重叠。
 - 6 张图全部通过非空 QA。

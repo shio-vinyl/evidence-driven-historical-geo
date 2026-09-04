@@ -76,6 +76,14 @@ The completed second case covers the **780-01-01 through 796-07-29** terminal Of
 
 The workflow successfully enforced evidence isolation, the preregistered search budget, and the stopping rule. The registered comparison maps are permanently sealed: no body, thumbnail, PDF page, screenshot, OCR, vector, or boundary geometry has been inspected or stored, and this case will not open them for evaluation. The negative result demonstrates protocol execution under insufficient evidence; it is neither a project failure nor a measurement of historical accuracy. Automated validation enforces freeze hashes, the round hash chain, budget and transition rules, held-out identifier isolation, and the absence of premature reconstruction artifacts; it cannot prove a person's complete browsing history.
 
+## Prospective case: Sennacherib 701
+
+The third case asks which named localities in the Joppa–Ekron–Lachish–Jerusalem corridor can be supported during Sennacherib's conventionally dated **701 BCE campaign/disposition horizon**. Its limited feasibility audit returned **GO for strict preregistration and evidence collection**, while reconstruction remains blocked. The frozen baseline records Judah, Ekron, Ashdod, Gaza and Ashkelon; twelve named locality candidates; six preliminary sources; explicit source lineages; and separate layers for local rule, transfer, conquest, tribute, suzerainty, military presence, destruction and local administration.
+
+[The preregistered case](cases/sennacherib_701_southern_levant/public/README.md) contains no locality-coordinate layer, polygon or reconstruction output. ORACC parallel witnesses remain one partisan royal lineage, the Hebrew Bible path remains source-critical, and unnamed transferred towns cannot become invented anchors. One atlas is registered by metadata only; two search-tainted atlas candidates are excluded without opening their bodies.
+
+This case also introduces the era-aware BCE time contract: `calendar=historical_bce_year_label`, `era=BCE`, `year_bce=701`, and `temporal_resolution=campaign_horizon`. Astronomical year `-700` is an explicit computational conversion, never a negative ISO date.
+
 ## Research rounds and policy experiment
 
 `research/rounds/00-initial/` preserves frozen pre-search bundle/scenario snapshots together with the diagnosis and agenda; `research/rounds/01-evidence-update/` preserves its source checks, state changes, and recomputed slice diagnoses. A reviewed round records the source/observation/claim/decision delta together with the diagnosis and search targets that justified the next action; transient solver runs remain under ignored `build/` directories. Canonical hashes bind the before/after snapshots to the round delta.
@@ -102,6 +110,7 @@ python3 -m venv .venv
 
 .venv/bin/historical-geo validate cases/crusader_states/public
 .venv/bin/historical-geo validate cases/mercia_welsh_frontier/public
+.venv/bin/historical-geo validate cases/sennacherib_701_southern_levant/public
 .venv/bin/historical-geo compile-request cases/crusader_states/public \
   --slice 1130 --scenario reviewed-baseline
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
@@ -125,6 +134,7 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - Backend-boundary tests show that the frozen round-00 v0.2 snapshots reproduce the reviewed v0.1 XTENT baseline; round 01 then records and hashes its intentional input and surface changes.
 - Public lineage validation reports zero errors.
 - The prospective Mercia–Welsh case terminates as `completed_no_reconstruction`; its metadata-only seal, nine frozen hashes, reviewed round hash chain, budget, lifecycle, no-map-body, and no-polygon checks pass.
+- The prospective Sennacherib 701 case is frozen at `evidence_collection`; its BCE conversion, feasibility budget, nine hashes, metadata-only seal, held-out leakage guard, no-map-body, and no-polygon checks pass.
 - Required scenarios for both slices rebuild successfully.
 - Every run retains its expected scenario entities; geometry is valid and non-overlapping.
 - Six figures pass nonblank QA.

@@ -34,6 +34,12 @@ Prospective 案例具有独立于重建的生命周期：`preregistered → evid
 
 仓库验证会拒绝研究材料中的 held-out 标识、封存案例内的地图主体文件与提前生成的边界输出，以及不符合冻结材料清单的哈希。这能建立材料隔离和可核查声明，不能证明完整的人类浏览历史。因此任何意外 snippet 或 preview 暴露都必须披露，并排除或标记受影响候选。
 
+## 明确 era 的 BCE 时间契约
+
+BCE prospective 案例不使用负 ISO 日期。记录必须保存 calendar 标签、`era=BCE`、正整数 `year_bce`、证据时间分辨率、时段定义、年代不确定性和显式的天文纪年转换。公元前 `n` 年按 `astronomical_year = 1 - n` 转换；因此公元前 701 年对应天文纪年 `-700`，公元前 1 年对应天文纪年 `0`。
+
+`campaign_horizon` 是证据分辨率，不是日历瞬间。它可以把通常归属于同一次远征的行动及其直接处置放入同一研究时段，同时保留行动顺序、同步关系和文本成书的不确定性。Validator 会核验转换结果并拒绝负 ISO 形式的替代写法。即使空间或数值后端需要天文纪年，公开研究记录仍保留历史 era/year 表达。
+
 ## Append-only prospective 证据轮次
 
 Prospective 预注册完成后，冻结内容必须保持逐字节不变。后续研究以 source、observation、claim、decision、gap 和预算增量写入 `research/rounds/<round-id>/`。`lifecycle.json`把冻结清单与预注册 commit 绑定到已审核的轮次清单；当前状态由基线加这些增量计算，不通过重写基线 bundle 取得。

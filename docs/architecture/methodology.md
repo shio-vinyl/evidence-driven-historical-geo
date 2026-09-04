@@ -34,6 +34,12 @@ A prospective case has a lifecycle separate from reconstruction: `preregistered 
 
 Repository validation rejects held-out identifiers in research artifacts, map-body files and premature boundary outputs in a sealed case, and mismatches against the frozen-artifact hash manifest. This establishes artifact isolation and a checkable declaration. It cannot establish a complete human browsing history, so any accidental snippet or preview exposure must be disclosed and the affected candidate excluded or marked contaminated.
 
+## Era-aware BCE time contract
+
+BCE prospective cases do not use negative ISO dates. They store a calendar label, `era=BCE`, a positive `year_bce`, the evidence resolution, a horizon definition, chronology uncertainty, and an explicit astronomical-year conversion. For a BCE year `n`, the conversion is `astronomical_year = 1 - n`; therefore 701 BCE corresponds to astronomical year `-700`, and 1 BCE corresponds to astronomical year `0`.
+
+`campaign_horizon` is an evidentiary resolution, not a calendar instant. It can group operations and directly reported dispositions conventionally assigned to one campaign while preserving uncertainty about sequence, synchronism and composition. The validator checks the conversion and rejects negative ISO-shaped substitutes. Public research records retain the historical era/year representation even when a spatial or numerical backend needs astronomical numbering.
+
 ## Append-only prospective evidence rounds
 
 A prospective freeze remains byte-for-byte immutable after preregistration. Later research lives in `research/rounds/<round-id>/` as source, observation, claim, decision, gap and budget deltas. `lifecycle.json` binds the frozen manifest and preregistration commit to reviewed round manifests; the current state is materialized from the baseline plus those deltas rather than by rewriting the baseline bundle.

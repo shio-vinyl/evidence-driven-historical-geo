@@ -63,6 +63,7 @@ def test_release_workflow_runs_supported_python_test_matrix() -> None:
     assert "python -m pip wheel --no-deps" in workflow
     assert 'historical-geo validate "$GITHUB_WORKSPACE/cases/crusader_states/public"' in workflow
     assert 'historical-geo validate "$GITHUB_WORKSPACE/cases/mercia_welsh_frontier/public"' in workflow
+    assert 'historical-geo validate "$GITHUB_WORKSPACE/cases/sennacherib_701_southern_levant/public"' in workflow
 
 
 def test_agent_guide_has_no_ops_maintenance_system() -> None:

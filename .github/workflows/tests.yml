@@ -45,3 +45,4 @@ jobs:
           cd "${{ runner.temp }}"
           historical-geo validate "$GITHUB_WORKSPACE/cases/crusader_states/public"
           historical-geo validate "$GITHUB_WORKSPACE/cases/mercia_welsh_frontier/public"
+          historical-geo validate "$GITHUB_WORKSPACE/cases/sennacherib_701_southern_levant/public"

@@ -452,7 +452,13 @@ def validate_prospective_case(case_dir: Path, case: Mapping[str, Any]) -> Valida
             continue
         if access.get("evidence_class") == "historical_territorial_map" or source.get("source_type") == "map":
             _issue(result, "territorial_map_in_research_bundle", f"research-bundle.sources[{index}]", str(source_id))
-        if access.get("content_access") not in {"full_text", "record_text", "abstract_only"}:
+        if access.get("content_access") not in {
+            "full_text",
+            "record_text",
+            "abstract_only",
+            "search_indexed_line_text",
+            "search_indexed_passage",
+        }:
             _issue(result, "invalid_research_access_scope", f"source-access.records[{source_id}]", "research sources need a declared textual access scope")
 
     decision_ids = {item.get("decision_id") for item in bundle.get("model_decisions", [])}
