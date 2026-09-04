@@ -1,0 +1,113 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_round_decisions.v0.1",
+  "decisions": [
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_MERCIA_NO_CONTROL_POINT",
+      "parameters": {
+        "allocation_input": false,
+        "entity": "Mercia"
+      },
+      "rationale": "No eligible named-locality relation was found.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_R1_HE_CHESTER"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_MERCIA_CORRIDOR_CONTROL"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_POWYS_EXCLUDE_ROSTER",
+      "parameters": {
+        "allocation_input": false,
+        "entity": "Powys"
+      },
+      "rationale": "The ninth-century Pillar lineage cannot establish target-interval local control.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_R1_INTERNET_ARCH_ELISEG",
+        "SRC_R1_BANGOR_ELISEG"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_POWYS_CONTINUITY"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_GWYNEDD_EXCLUDE_ROSTER",
+      "parameters": {
+        "allocation_input": false,
+        "entity": "Gwynedd"
+      },
+      "rationale": "The 796 event cannot be assigned to Gwynedd and the 798 notice remains outside the window.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_R1_COFLEIN_RHUDDLAN"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_GWYNEDD_CONTINUITY"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_RHUDDLAN_DISPLAY_ONLY",
+      "parameters": {
+        "allocation_input": false,
+        "coordinates_admitted": false,
+        "feature_id": "rhuddlan"
+      },
+      "rationale": "The place-name event remains display-only; no battlefield coordinate or territorial consequence is admitted.",
+      "review_status": "excluded",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_R1_COFLEIN_RHUDDLAN"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_RHUDDLAN_PARTIES"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_OFFAS_DYKE_DISPLAY_ONLY",
+      "parameters": {
+        "allocation_input": false,
+        "feature_id": "offas-dyke"
+      },
+      "rationale": "Section date and role criteria were not jointly met.",
+      "review_status": "excluded",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_R1_ODA_RECORDING_DYKES"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_OFFAS_DYKE_ROLE"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_WATS_DYKE_EXCLUDED",
+      "parameters": {
+        "allocation_input": false,
+        "feature_id": "wats-dyke"
+      },
+      "rationale": "Conflicting chronology and unresolved function exclude the feature from interval modeling.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_R1_ODC_ERDDIG",
+        "SRC_R1_NHLE_GOBOWEN",
+        "SRC_R1_ODA_RECORDING_DYKES"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_WATS_DYKE_ROLE"
+      ]
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

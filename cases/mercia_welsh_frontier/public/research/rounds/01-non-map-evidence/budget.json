@@ -1,0 +1,30 @@
+{
+  "accounting_rule": "Queries count exact search strings; content/record checks count every open attempt, including failures and retries; follow-ups count distinct directed rounds after initial discovery.",
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "consumed": {
+    "content_record_checks": 17,
+    "per_gap_follow_ups": {
+      "GAP_DYKE_DATE_AND_ROLE": 2,
+      "GAP_GWYNEDD_CONTINUITY": 2,
+      "GAP_LOCAL_MERCIA_CONTROL": 2,
+      "GAP_POWYS_CONTINUITY": 2,
+      "GAP_RHUDDLAN_PARTIES": 2,
+      "GAP_WATS_DYKE_RELATION": 2
+    },
+    "queries": 23,
+    "sources_admitted": 7
+  },
+  "contract_version": "historical_geo.prospective_round_budget.v0.1",
+  "limits": {
+    "content_record_checks": 20,
+    "per_gap_follow_ups": 2,
+    "queries": 24,
+    "sources_admitted": 12
+  },
+  "remaining": {
+    "content_record_checks": 3,
+    "queries": 1,
+    "sources_admitted": 5
+  },
+  "round_id": "01-non-map-evidence"
+}

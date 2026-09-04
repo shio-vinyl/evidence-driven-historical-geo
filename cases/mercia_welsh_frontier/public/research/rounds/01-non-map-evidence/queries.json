@@ -1,0 +1,218 @@
+{
+  "access_date": "2026-09-04",
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_round_queries.v0.1",
+  "queries": [
+    {
+      "follow_up_round": null,
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "query": "site:esawyer.lib.cam.ac.uk Offa Chester charter Mercia 780 796",
+      "query_id": "Q001",
+      "result_summary": "No corridor charter hit was returned."
+    },
+    {
+      "follow_up_round": null,
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "query": "Offa Mercia Oswestry eighth century archaeology control scholarly",
+      "query_id": "Q002",
+      "result_summary": "No interval-specific locality-control source was returned."
+    },
+    {
+      "follow_up_round": null,
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "query": "Powys 8th century Llangollen Pillar of Eliseg continuity scholarly",
+      "query_id": "Q003",
+      "result_summary": "Located Project Eliseg and Pillar scholarship; all identified polity statements are retrospective or ninth-century."
+    },
+    {
+      "follow_up_round": null,
+      "gap_ids": [
+        "GAP_GWYNEDD_CONTINUITY",
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "query": "Battle of Rhuddlan 796 parties Caradog Gwynedd scholarly",
+      "query_id": "Q004",
+      "result_summary": "Located weak modern assertions and a warning that the annal does not name parties."
+    },
+    {
+      "follow_up_round": null,
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE"
+      ],
+      "query": "Offa's Dyke Chirk radiocarbon dating excavation official record",
+      "query_id": "Q005",
+      "result_summary": "Located official-record and recent-publication metadata; exact article body was not opened."
+    },
+    {
+      "follow_up_round": null,
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "query": "Wat's Dyke Gobowen radiocarbon date excavation scholarly",
+      "query_id": "Q006",
+      "result_summary": "Located Gobowen/Erddig dating summaries and the Malim-Hayes publication record."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "query": "site:historicengland.org.uk Wat's Dyke date research record",
+      "query_id": "Q007",
+      "result_summary": "Located NHLE 1020559, a legacy designation text with explicit dating uncertainty."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE"
+      ],
+      "query": "site:cadw.gov.wales Offa's Dyke archaeology dating role",
+      "query_id": "Q008",
+      "result_summary": "Returned a Cadw PDF result; no PDF page was opened."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "query": "site:esawyer.lib.cam.ac.uk/charter Offa Mercia Chester 780 OR 781 OR 792",
+      "query_id": "Q009",
+      "result_summary": "Returned unrelated Offan charters outside the corridor."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_GWYNEDD_CONTINUITY",
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "query": "Annales Cambriae 796 Rhuddlan 798 Caradog Gwynedd critical edition",
+      "query_id": "Q010",
+      "result_summary": "Confirmed that the 796 and 798 notices are separate and do not join Caradog to the battle."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "query": "Pillar of Eliseg inscription Powys 757 808 scholarly html",
+      "query_id": "Q011",
+      "result_summary": "Located a peer-reviewed article abstract and full HTML project article."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "query": "Chester Mercia eighth century archaeology Offa scholarly",
+      "query_id": "Q012",
+      "result_summary": "No interval-specific Offan control record was located."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_GWYNEDD_CONTINUITY",
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "query": "\"battle of Rhuddlan\" 796 \"Caradog\" scholarly",
+      "query_id": "Q013",
+      "result_summary": "Results repeated a conjectural association and did not supply a primary linkage."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "query": "\"Rhuddlan\" \"796\" \"Mercians\" history Wales",
+      "query_id": "Q014",
+      "result_summary": "Located Coflein NPRN 404808, which explicitly labels the party and frontier reading conjectural."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_GWYNEDD_CONTINUITY"
+      ],
+      "query": "\"Caradog\" \"798\" \"Gwynedd\" Annales Cambriae scholarly",
+      "query_id": "Q015",
+      "result_summary": "Returned the 798 royal notice but no 780–796 named-place control relation."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "query": "Rhuddlan early medieval archaeology 8th century scholarly",
+      "query_id": "Q016",
+      "result_summary": "Located an ADS report record; the accessible abstract does not resolve the 796 parties or site."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "query": "Chester 8th century Mercia archaeology settlement evidence",
+      "query_id": "Q017",
+      "result_summary": "Located general Chester archaeology with no 780–796 authority relation."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "query": "Oswestry 8th century Mercia archaeology evidence",
+      "query_id": "Q018",
+      "result_summary": "Returned earthwork and much later name traditions, not interval control."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "query": "Wroxeter eighth century Mercian control archaeology",
+      "query_id": "Q019",
+      "result_summary": "Returned broad or temporally unsuitable material, not an interval locality relation."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "query": "Rhuddlan 796 archaeological evidence battle site RCAHMW",
+      "query_id": "Q020",
+      "result_summary": "Repeated the RCAHMW finding that no particular battle spot is justified."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "query": "Powys 780 796 Llangollen named locality evidence",
+      "query_id": "Q021",
+      "result_summary": "Returned later Pillar and modern-character material; no interval locality relation."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "query": "Wat's Dyke Erddig scientific dates 2024 HTML",
+      "query_id": "Q022",
+      "result_summary": "Located HTML summaries; precise construction and duration remain unresolved."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE"
+      ],
+      "query": "Offa's Dyke Chirk Castle scientific dates 2024 role HTML",
+      "query_id": "Q023",
+      "result_summary": "Located HTML synthesis and article metadata; neither establishes a political-boundary role."
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

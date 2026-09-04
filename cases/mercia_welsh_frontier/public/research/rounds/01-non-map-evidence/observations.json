@@ -1,0 +1,142 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_round_observations.v0.1",
+  "observations": [
+    {
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "locator": "section 2, paragraph 23",
+      "observation_id": "OBS_R1_ELISEG_LOCATION",
+      "observation_type": "modern_location",
+      "paraphrase": "The Pillar is recorded near Llangollen at grid reference SJ 2027 4452 on a route through Bwlch yr Oernant; this locates the monument only.",
+      "source_id": "SRC_R1_INTERNET_ARCH_ELISEG",
+      "temporal_scope": "modern_record"
+    },
+    {
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "locator": "section 2, paragraphs 25–26 and 47",
+      "observation_id": "OBS_R1_ELISEG_NINTH_CENTURY",
+      "observation_type": "chronology_and_negative_excavation",
+      "paraphrase": "The cross is dated to the ninth century and attributed to Cyngen of Powys; the excavation found no feature contemporary with the ninth-century cross.",
+      "source_id": "SRC_R1_INTERNET_ARCH_ELISEG",
+      "temporal_scope": "ninth_century"
+    },
+    {
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "locator": "paragraph 52",
+      "observation_id": "OBS_R1_WATS_GOBOWEN_DATE",
+      "observation_type": "scientific_dating_summary",
+      "paraphrase": "The Gobowen excavation is summarized as suggesting an early-ninth-century date for Wat’s Dyke.",
+      "source_id": "SRC_R1_ODC_ERDDIG",
+      "temporal_scope": "early_ninth_century"
+    },
+    {
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "locator": "paragraphs 53–54",
+      "observation_id": "OBS_R1_WATS_ERDDIG_UNCERTAINTY",
+      "observation_type": "chronology_uncertainty",
+      "paraphrase": "Erddig results confirm an early-medieval monument, while its precise construction date, duration and phasing remain unresolved.",
+      "source_id": "SRC_R1_ODC_ERDDIG",
+      "temporal_scope": "early_medieval"
+    },
+    {
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "locator": "NHLE 1020559, Location and Details",
+      "observation_id": "OBS_R1_WATS_GOBOWEN_LOCATION",
+      "observation_type": "modern_location",
+      "paraphrase": "A 140 m surviving Wat’s Dyke section is recorded at National Grid Reference SJ 30167 33080 southwest of Gobowen Station.",
+      "source_id": "SRC_R1_NHLE_GOBOWEN",
+      "temporal_scope": "modern_record"
+    },
+    {
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "locator": "NHLE 1020559, Reasons for Designation",
+      "observation_id": "OBS_R1_WATS_LEGACY_CONFLICT",
+      "observation_type": "legacy_interpretation",
+      "paraphrase": "The legacy designation says construction is not accurately determined, then proposes a pre-Offan date and defensive/boundary function.",
+      "source_id": "SRC_R1_NHLE_GOBOWEN",
+      "temporal_scope": "undetermined"
+    },
+    {
+      "gap_ids": [
+        "GAP_RHUDDLAN_PARTIES",
+        "GAP_GWYNEDD_CONTINUITY"
+      ],
+      "locator": "NPRN 404808, Description paragraphs 38–45",
+      "observation_id": "OBS_R1_RHUDDLAN_ANNAL_LIMIT",
+      "observation_type": "source_criticism",
+      "paraphrase": "The Annales notice is limited to bellum Rudglann; the identification of Saxon/Welsh parties and a defended frontier is described as conjecture.",
+      "source_id": "SRC_R1_COFLEIN_RHUDDLAN",
+      "temporal_scope": 796
+    },
+    {
+      "gap_ids": [
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "locator": "NPRN 404808, Description paragraphs 40–46",
+      "observation_id": "OBS_R1_RHUDDLAN_LOCATION_EXCLUSION",
+      "observation_type": "location_exclusion",
+      "paraphrase": "The record states that no historical or archaeological justification fixes the battle to a particular spot and that later marked locations have unknown support.",
+      "source_id": "SRC_R1_COFLEIN_RHUDDLAN",
+      "temporal_scope": "modern_assessment"
+    },
+    {
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "locator": "abstract; DOI 10.1017/S0003581509000018",
+      "observation_id": "OBS_R1_ELISEG_ABSTRACT_LIMIT",
+      "observation_type": "retrospective_inscription",
+      "paraphrase": "The ninth-century commission names Powys and retrospectively celebrates Eliseg, but the abstract supplies no 780–796 named-locality control relation.",
+      "source_id": "SRC_R1_BANGOR_ELISEG",
+      "temporal_scope": "ninth_century_retrospective"
+    },
+    {
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "locator": "Post Roman section, paragraphs 141–146",
+      "observation_id": "OBS_R1_CHESTER_OCCUPATION_LIMIT",
+      "observation_type": "archaeological_context",
+      "paraphrase": "Immediate post-Roman occupation and a possible 689 church association are reported at Chester, with no interval-specific Mercian authority relation.",
+      "source_id": "SRC_R1_HE_CHESTER",
+      "temporal_scope": "post_roman_to_689"
+    },
+    {
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE",
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "locator": "Panel 13(a), paragraphs 63–76",
+      "observation_id": "OBS_R1_DYKES_BROAD_DATE",
+      "observation_type": "chronology_synthesis",
+      "paraphrase": "Available suites only provisionally place both dykes in a broad late-eighth- to early-ninth-century range and do not establish construction as a single phase.",
+      "source_id": "SRC_R1_ODA_RECORDING_DYKES",
+      "temporal_scope": "late_eighth_to_early_ninth_century"
+    },
+    {
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE",
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "locator": "Panel 13(a), paragraphs 74–80",
+      "observation_id": "OBS_R1_DYKES_ROLE_UNTESTED",
+      "observation_type": "role_uncertainty",
+      "paraphrase": "The synthesis calls for further excavation to test phasing and possible gateways, leaving movement-control function unestablished.",
+      "source_id": "SRC_R1_ODA_RECORDING_DYKES",
+      "temporal_scope": "modern_assessment"
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

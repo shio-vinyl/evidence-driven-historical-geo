@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/historical_geo/prospective-lifecycle.schema.json",
+  "title": "Prospective case append-only lifecycle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "case_id", "baseline", "rounds", "effective_state"],
+  "properties": {
+    "contract_version": {"const": "historical_geo.prospective_lifecycle.v0.1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage", "reconstruction_ready", "freeze_commit", "freeze_manifest_path", "freeze_manifest_sha256", "state_sha256"],
+      "properties": {
+        "stage": {"enum": ["preregistered", "evidence_collection"]},
+        "reconstruction_ready": {"type": "boolean"},
+        "freeze_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "freeze_manifest_path": {"type": "string", "minLength": 1},
+        "freeze_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "state_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["round_id", "path", "manifest_path", "manifest_sha256", "previous_state_sha256"],
+        "properties": {
+          "round_id": {"type": "string", "pattern": "^[0-9]{2}-[a-z0-9-]+$"},
+          "path": {"type": "string", "minLength": 1},
+          "manifest_path": {"type": "string", "minLength": 1},
+          "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "previous_state_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "effective_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage", "reconstruction_ready", "terminal_outcome", "reviewed_round_ids", "gap_statuses", "budget_consumed", "held_out_isolation"],
+      "properties": {
+        "stage": {"enum": ["preregistered", "evidence_collection", "reconstructed_pre_evaluation", "evaluation_opened", "completed_no_reconstruction"]},
+        "reconstruction_ready": {"type": "boolean"},
+        "terminal_outcome": {"type": ["string", "null"], "enum": [null, "completed_no_reconstruction"]},
+        "reviewed_round_ids": {"type": "array", "items": {"type": "string"}},
+        "gap_statuses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["gap_id", "status"],
+            "properties": {
+              "gap_id": {"type": "string"},
+              "status": {"enum": ["open", "closed_supported", "closed_unresolved", "closed_excluded"]}
+            }
+          }
+        },
+        "budget_consumed": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["queries", "content_record_checks", "sources_admitted", "per_gap_follow_ups"],
+          "properties": {
+            "queries": {"type": "integer", "minimum": 0},
+            "content_record_checks": {"type": "integer", "minimum": 0},
+            "sources_admitted": {"type": "integer", "minimum": 0},
+            "per_gap_follow_ups": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}}
+          }
+        },
+        "held_out_isolation": {"enum": ["metadata_only_unviewed", "evaluation_opened"]}
+      }
+    }
+  }
+}

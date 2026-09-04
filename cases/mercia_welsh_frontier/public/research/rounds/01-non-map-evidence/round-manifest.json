@@ -1,0 +1,44 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_round_manifest.v0.1",
+  "files": [
+    {
+      "path": "budget.json",
+      "sha256": "426fd60bdef6c4a87a6ce477bba29f57adb373409da7b7023f407576c489cbc3"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "a513aa6a1b74fab279496b5bc1ca09a6f4eb753001a198de1e43f29562578431"
+    },
+    {
+      "path": "decisions.json",
+      "sha256": "67c86d44ead1be478b4196349adae9de6013a6ee91c94b2002f391342f175466"
+    },
+    {
+      "path": "gaps.json",
+      "sha256": "ce42f41a261c00803028746d201c54da2c98bb176d7dd30d40c5259cfb6d4df5"
+    },
+    {
+      "path": "gate.json",
+      "sha256": "94c7a73feef3d0a2a028caf9fcb9a82cac364c55e90f7ba90823e603a03c2db6"
+    },
+    {
+      "path": "observations.json",
+      "sha256": "0899434cf41aaa9711ab0f7cd87f3ece380e4b3ac5c673a56ab9a2ee829b1954"
+    },
+    {
+      "path": "queries.json",
+      "sha256": "c5600d8bcbb8aa8e9523336f9a3cc8c0f65c8b5bd76ff5c62aec1ff4a1aef9e5"
+    },
+    {
+      "path": "round.json",
+      "sha256": "8abb08f368b2a4748bc17d45ddb66b65cb5ae0be90542e61a9146ad95286ab4f"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "a3418d2d894eec4d75bed8ff8ea3ef2ee7ec2d2c066cbb46a5144d8c305cc6c3"
+    }
+  ],
+  "previous_state_sha256": "253d66526879462019df36496fe98826543a3546426c240a9137c0cc67ef6fe1",
+  "round_id": "01-non-map-evidence"
+}

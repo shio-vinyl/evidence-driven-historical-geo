@@ -34,6 +34,12 @@ A prospective case has a lifecycle separate from reconstruction: `preregistered 
 
 Repository validation rejects held-out identifiers in research artifacts, map-body files and premature boundary outputs in a sealed case, and mismatches against the frozen-artifact hash manifest. This establishes artifact isolation and a checkable declaration. It cannot establish a complete human browsing history, so any accidental snippet or preview exposure must be disclosed and the affected candidate excluded or marked contaminated.
 
+## Append-only prospective evidence rounds
+
+A prospective freeze remains byte-for-byte immutable after preregistration. Later research lives in `research/rounds/<round-id>/` as source, observation, claim, decision, gap and budget deltas. `lifecycle.json` binds the frozen manifest and preregistration commit to reviewed round manifests; the current state is materialized from the baseline plus those deltas rather than by rewriting the baseline bundle.
+
+Validation recomputes every round-file hash, checks the previous-state chain and exact file set, rejects duplicate epistemic IDs, verifies cross-record references and source-access fields, accounts for queries, record checks, admissions and per-gap follow-ups, enforces legal stage transitions, and scans all round artifacts for held-out identifiers. A failed reconstruction gate enters the terminal `completed_no_reconstruction` state and forbids later rounds or polygon output. The hash chain is tamper-evident inside the repository and gains durable immutability from Git history.
+
 ## End-to-end workflow
 
 ```text

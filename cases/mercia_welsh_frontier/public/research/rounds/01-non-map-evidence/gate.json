@@ -1,0 +1,75 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "checks": [
+    {
+      "criterion": "at_least_two_modeled_entities",
+      "observed": 0,
+      "passed": false,
+      "rationale": "Mercia has no two eligible corridor localities; Powys and Gwynedd are excluded from the modeled roster.",
+      "required": 2
+    },
+    {
+      "criterion": "two_independent_interval_locality_relations_per_entity",
+      "observed": {
+        "Gwynedd": 0,
+        "Mercia": 0,
+        "Powys": 0
+      },
+      "passed": false,
+      "rationale": "Titles, events, retrospective inscription, occupation and engineering locations were not promoted to continuous control.",
+      "required": 2
+    },
+    {
+      "candidates": [
+        "Rhuddlan",
+        "Ffordd Llanfynydd, Treuddyn",
+        "Coedpoeth",
+        "Cadwgan Hall–River Clywedog",
+        "Chirk Castle/Home Farm",
+        "Plas Offa, Chirk",
+        "Trefonen (Fron)",
+        "Llanymynech Hill",
+        "Newcastle-on-Clun",
+        "Rushock Hill",
+        "Old Oswestry",
+        "Pillar of Eliseg / Bwlch yr Oernant"
+      ],
+      "criterion": "eight_distinct_spatial_candidates",
+      "observed": 12,
+      "passed": true,
+      "rationale": "The frozen feasibility audit already locates twelve event, earthwork, terrain, chronology or exclusion candidates; this does not make them control points.",
+      "required": 8
+    },
+    {
+      "criterion": "three_independent_source_lineages",
+      "observed": 6,
+      "passed": true,
+      "rationale": "The effective record includes annal, charter, excavation, monument-register, Pillar-inscription and dyke-investigation lineages; derivative retellings were not double-counted.",
+      "required": 3
+    },
+    {
+      "criterion": "counterevidence_or_exclusion",
+      "observed": 6,
+      "passed": true,
+      "rationale": "The round retains exclusions for entity control, Rhuddlan coordinates/parties and both dykes.",
+      "required": 1
+    },
+    {
+      "criterion": "stable_locator_and_clear_rights_for_all_admitted_records",
+      "observed": 7,
+      "passed": true,
+      "rationale": "Every admitted post-freeze source has a stable URL/locator, content scope and rights statement.",
+      "required": 7
+    }
+  ],
+  "contract_version": "historical_geo.prospective_round_gate.v0.1",
+  "decision": "completed_no_reconstruction",
+  "failure_reasons": [
+    "No entity has two independent, interval-applicable named-locality control relations.",
+    "A second modeled entity cannot be admitted without silently back-projecting ninth-century or post-window evidence."
+  ],
+  "held_out_state": "metadata_only_unviewed",
+  "overall_passed": false,
+  "polygon_generated": false,
+  "round_id": "01-non-map-evidence"
+}

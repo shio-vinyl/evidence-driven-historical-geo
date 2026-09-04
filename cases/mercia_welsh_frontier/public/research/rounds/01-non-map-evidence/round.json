@@ -1,0 +1,22 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_round_round.v0.1",
+  "first_content_access": {
+    "access_date": "2026-09-04",
+    "content_record_check_id": "C001",
+    "held_out_content_accessed": false,
+    "historical_territorial_map_body_accessed": false,
+    "preregistration_commit": "94f8ee75662bf909f34796040d917a347e228662"
+  },
+  "previous_state_sha256": "253d66526879462019df36496fe98826543a3546426c240a9137c0cc67ef6fe1",
+  "review_date": "2026-09-04",
+  "review_status": "reviewed",
+  "round_id": "01-non-map-evidence",
+  "scope": "Post-freeze non-map evidence collection for all six registered gaps. No held-out atlas content, territorial map, map thumbnail, PDF map page, screenshot, OCR, vector or boundary geometry was accessed.",
+  "transition": {
+    "from": "evidence_collection",
+    "reconstruction_ready": false,
+    "terminal_outcome": "completed_no_reconstruction",
+    "to": "completed_no_reconstruction"
+  }
+}

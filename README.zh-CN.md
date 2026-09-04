@@ -70,11 +70,11 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 ## Prospective 案例：Mercia–Welsh 边疆
 
-第二案例覆盖 Rhuddlan—upper Severn 有界走廊内 **780-01-01 至 796-07-29** 的 terminal Offan interval。可行性审计对预注册与证据收集作出有条件 **GO**，同时继续禁止重建。Mercia 在区间内有直接材料；Powys 与 Gwynedd 仍是具名候选，其本地控制证据尚未达到冻结的准入门槛。
+第二案例覆盖 Rhuddlan—upper Severn 有界走廊内 **780-01-01 至 796-07-29** 的 terminal Offan interval。冻结后的非地图证据轮次已经完成，登记终态为 **`completed_no_reconstruction`**。没有任何实体取得两条相互独立且适用于目标区间的具名地点控制关系，因此案例在不生成 polygon 的条件下终止。
 
-[预注册案例](cases/mercia_welsh_frontier/public/README.zh-CN.md)保存机器可读协议、已披露的初始 research bundle、证据缺口、情景清单、来源访问与权利记录、空间输入契约、held-out 元数据登记表与哈希冻结。目录内没有 polygon。Offa’s Dyke 被排除出 allocation，不等同于政治边界。
+[Prospective 案例](cases/mercia_welsh_frontier/public/README.zh-CN.md)保留不可变预注册基线与 append-only 审核轮次，其中包含 23 次查询、17 次内容或馆藏记录检查、7 项采纳来源、原子 observation、claim、排除 decision、最终 gap 状态、预算账本和逐项 gate 裁决。Offa's Dyke 与 Wat's Dyke 继续排除出 allocation；工程位置及宽泛或有争议的年代都不能证明政治边界。
 
-登记的比较地图继续封存：没有查看或保存任何主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何。任何重建完成后、首次打开地图主体前，还必须进行第二次 pre-evaluation Git 冻结。自动验证只能强制仓库隔离，不能证明个人完整浏览历史。
+登记的比较地图继续封存：没有查看或保存任何主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何。失败的重建 gate 使案例在评估前终止。自动验证会强制核验冻结哈希、轮次哈希链、预算与阶段迁移、held-out 标识符隔离以及无提前重建产物；它不能证明个人完整浏览历史。
 
 ## 研究轮次与搜索策略实验
 
@@ -124,7 +124,7 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - v0.2 bundle、诊断与搜索目标文档通过结构和引用校验。
 - 后端边界测试证明，冻结的第 00 轮 v0.2 快照复现了已审查的 v0.1 XTENT 基线；第 01 轮则明确记录并哈希其有意引入的输入与表面变化。
 - 公开谱系验证为零错误。
-- Prospective Mercia–Welsh 案例通过 metadata-only held-out 封存、冻结哈希、无地图主体与无提前 polygon 检查。
+- Prospective Mercia–Welsh 案例以 `completed_no_reconstruction` 终止；metadata-only 封存、九项冻结哈希、审核轮次哈希链、预算、生命周期、无地图主体与无 polygon 检查全部通过。
 - 两个切片的必要情景均可重建。
 - 每个运行都保留该情景预期实体，几何有效且无重叠。
 - 6 张图全部通过非空 QA。

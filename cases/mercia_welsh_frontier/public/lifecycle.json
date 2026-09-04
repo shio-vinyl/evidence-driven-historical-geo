@@ -1,0 +1,69 @@
+{
+  "baseline": {
+    "freeze_commit": "94f8ee75662bf909f34796040d917a347e228662",
+    "freeze_manifest_path": "preregistration-freeze.json",
+    "freeze_manifest_sha256": "29153739b7e1fff046054e6b74314b918a5744e39cb0c56eb4102c99c8400fc9",
+    "reconstruction_ready": false,
+    "stage": "evidence_collection",
+    "state_sha256": "253d66526879462019df36496fe98826543a3546426c240a9137c0cc67ef6fe1"
+  },
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_lifecycle.v0.1",
+  "effective_state": {
+    "budget_consumed": {
+      "content_record_checks": 17,
+      "per_gap_follow_ups": {
+        "GAP_DYKE_DATE_AND_ROLE": 2,
+        "GAP_GWYNEDD_CONTINUITY": 2,
+        "GAP_LOCAL_MERCIA_CONTROL": 2,
+        "GAP_POWYS_CONTINUITY": 2,
+        "GAP_RHUDDLAN_PARTIES": 2,
+        "GAP_WATS_DYKE_RELATION": 2
+      },
+      "queries": 23,
+      "sources_admitted": 7
+    },
+    "gap_statuses": [
+      {
+        "gap_id": "GAP_DYKE_DATE_AND_ROLE",
+        "status": "closed_excluded"
+      },
+      {
+        "gap_id": "GAP_GWYNEDD_CONTINUITY",
+        "status": "closed_excluded"
+      },
+      {
+        "gap_id": "GAP_LOCAL_MERCIA_CONTROL",
+        "status": "closed_unresolved"
+      },
+      {
+        "gap_id": "GAP_POWYS_CONTINUITY",
+        "status": "closed_unresolved"
+      },
+      {
+        "gap_id": "GAP_RHUDDLAN_PARTIES",
+        "status": "closed_unresolved"
+      },
+      {
+        "gap_id": "GAP_WATS_DYKE_RELATION",
+        "status": "closed_excluded"
+      }
+    ],
+    "held_out_isolation": "metadata_only_unviewed",
+    "reconstruction_ready": false,
+    "reviewed_round_ids": [
+      "01-non-map-evidence"
+    ],
+    "stage": "completed_no_reconstruction",
+    "terminal_outcome": "completed_no_reconstruction"
+  },
+  "rounds": [
+    {
+      "manifest_path": "research/rounds/01-non-map-evidence/round-manifest.json",
+      "manifest_sha256": "7e16e89018ca42ac616c7464d0bc25df12d0ea8ec0c56de070d8cdc89867d896",
+      "path": "research/rounds/01-non-map-evidence",
+      "previous_state_sha256": "253d66526879462019df36496fe98826543a3546426c240a9137c0cc67ef6fe1",
+      "round_id": "01-non-map-evidence"
+    }
+  ]
+}

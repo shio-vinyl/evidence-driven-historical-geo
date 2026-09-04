@@ -2,35 +2,50 @@
 
 # Mercia–Welsh Frontier Prospective Case
 
-**Stage: evidence collection · conditional GO · reconstruction blocked**
+**Stage: completed_no_reconstruction · reconstruction gate failed · held-out material sealed**
 
-This is the project's second case and its first strictly prospective held-out test. It covers the northern and central corridor from Rhuddlan through the Dee/Llangollen and Chirk–Oswestry/Llanymynech zones to the upper Severn during **780-01-01 through 796-07-29**. The interval closes with Offa's death; year-only evidence is not treated as day-precise.
+This strictly prospective case covers the Rhuddlan–Dee/Llangollen–Chirk–Oswestry/Llanymynech–upper Severn corridor during **780-01-01 through 796-07-29**. The interval closes with Offa's death; year-only evidence is not treated as day-precise.
 
-## Current decision
+## Final decision
 
-The feasibility audit supports a conditional **GO** for preregistration and evidence collection. Mercia is directly documented inside the interval. Powys and Gwynedd are viable named research candidates, but their local interval control remains unresolved. The case therefore fails its present reconstruction gate and contains no territorial polygon.
+The registered result is **`completed_no_reconstruction`**. Post-freeze non-map research found no modeled entity with the required two independent, legally accessible, interval-applicable named-locality control relations. Powys cannot be bridged from the ninth-century Pillar of Eliseg evidence, Gwynedd cannot be connected to the 796 Rhuddlan notice from the separate 798 royal notice, and Mercian title, occupation, battle and engineering evidence cannot establish continuous local control.
 
-Twelve named event, route, earthwork, terrain, chronology, or exclusion candidates are locatable. Their existence does not make them control points. In particular, Offa's Dyke is not equated with a political border: it is excluded from allocation and may enter only a separately justified future sensitivity scenario.
+No polygon, territorial surface or reconstruction was generated. Offa's Dyke and Wat's Dyke remain outside allocation: broad or conflicting dates do not establish a target-interval role, and engineering location cannot stand for a political boundary.
+
+## Reviewed evidence round
+
+`research/rounds/01-non-map-evidence/` records 23 exact queries, 17 content or catalog checks, and 7 admitted sources. Each source check records its query, access date, URL, stable locator, content scope, rights, atomic observation, disposition, reason, lineage and related gap. Failed access attempts and rejected derivative records remain in the ledger.
+
+The six gaps terminate as follows:
+
+- `GAP_LOCAL_MERCIA_CONTROL`: **closed_unresolved**; no qualifying corridor locality relation was found.
+- `GAP_POWYS_CONTINUITY`: **closed_unresolved**; the locatable evidence is ninth-century and retrospective.
+- `GAP_GWYNEDD_CONTINUITY`: **closed_excluded**; the 798 notice cannot be merged with the 796 event.
+- `GAP_RHUDDLAN_PARTIES`: **closed_unresolved**; parties, outcome, territorial consequence and exact battle site remain unsupported.
+- `GAP_DYKE_DATE_AND_ROLE`: **closed_excluded**; no section meets both the dating and independently supported role requirements.
+- `GAP_WATS_DYKE_RELATION`: **closed_excluded**; chronology conflicts or extends beyond the interval and function remains unresolved.
+
+The gate retains twelve distinct spatial candidates, at least three independent source lineages, and explicit counterevidence/exclusions. It fails the two controlling criteria: at least two modeled entities, and two independent interval locality relations for each entity.
+
+## Append-only lifecycle
+
+`lifecycle.json` binds the immutable preregistration baseline at commit `94f8ee75662bf909f34796040d917a347e228662` to the reviewed round manifest. The effective case state is derived from that baseline plus reviewed deltas. Validation checks the round hash chain, the exact round file set, source/observation/claim/decision references, budget arithmetic, allowed stage transitions, effective gap state, held-out identifier isolation and the original nine freeze hashes.
 
 ## Prospective seal
 
-The held-out register contains bibliographic metadata only. No registered map body, thumbnail, PDF page, screenshot, OCR, vector, or boundary geometry has been inspected or stored. The primary comparator is fixed before evaluation. A second `reconstructed_pre_evaluation` Git commit must freeze evidence, scenarios, code, calibration, outputs, fixed coordinates, rubric, and hashes before any map body may be opened.
+The held-out register remains bibliographic metadata only. No registered map body, thumbnail, PDF page, screenshot, OCR, vector or boundary geometry was inspected or stored. Because the reconstruction gate failed, no second pre-evaluation freeze exists and evaluation will not open for this case outcome.
 
-Automated validation checks the metadata-only flags, blocks held-out IDs from research artifacts, rejects map-body files and premature reconstruction outputs, and verifies the preregistration artifact hashes. These checks audit repository state and recorded declarations; they cannot prove a person's complete browsing history.
+Automated validation audits repository state and recorded declarations; it cannot prove a person's complete browsing history.
 
 ## Files
 
 - [Human-readable preregistration](PREREGISTRATION.md) and [Simplified Chinese version](PREREGISTRATION.zh-CN.md)
 - [Feasibility audit](feasibility-audit.md) and [Simplified Chinese version](feasibility-audit.zh-CN.md)
-- `preregistration.json`: frozen machine-readable protocol
-- `feasibility-audit.json`: machine-readable GO decision and constraints
-- `research-bundle.json`: disclosed pre-freeze sources, observations, claims, decisions, and gaps
-- `evidence-gap-register.json`: compact index whose authoritative records remain in the bundle
+- `preregistration.json` and `preregistration-freeze.json`: immutable protocol and nine-artifact SHA-256 manifest
+- `research-bundle.json`: immutable disclosed pre-freeze epistemic baseline
+- `lifecycle.json`: append-only round chain and effective terminal state
+- `research/rounds/01-non-map-evidence/`: query, source, observation, claim, decision, gap, budget and gate deltas
 - `held-out-map-register.json`: sealed bibliographic metadata only
-- `source-access-rights.json`: access, locator, and rights records
-- `research-scenarios.json`: no-allocation baseline and future activation conditions
-- `spatial-input-contract.json`: permissible spatial inputs and the no-polygon gate
-- `preregistration-freeze.json`: SHA-256 manifest for frozen artifacts
 
 Validate without reconstructing:
 

@@ -26,6 +26,7 @@ def test_release_has_no_ops_tree_and_ignores_generated_caches() -> None:
     assert "*.py[cod]" in ignore
     assert "*.egg-info/" in ignore
     assert "dist/" in ignore
+    assert "build/" in ignore
     assert "*.whl" in ignore
 
 

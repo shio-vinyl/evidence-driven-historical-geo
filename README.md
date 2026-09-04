@@ -70,11 +70,11 @@ The Crusader case is a retrospective testbed: external maps never enter reconstr
 
 ## Prospective case: Mercia–Welsh frontier
 
-The second case covers the **780-01-01 through 796-07-29** terminal Offan interval in a bounded Rhuddlan–upper Severn corridor. Its feasibility audit gives a conditional **GO for preregistration and evidence collection**, while reconstruction remains blocked. Mercia is documented inside the interval; Powys and Gwynedd remain candidate named polities whose local control evidence has not reached the frozen admission threshold.
+The second case covers the **780-01-01 through 796-07-29** terminal Offan interval in a bounded Rhuddlan–upper Severn corridor. Its post-freeze non-map evidence round is complete, and the registered outcome is **`completed_no_reconstruction`**. No entity reached two independent, interval-applicable named-locality control relations, so the case terminated without a polygon.
 
-[The preregistered case](cases/mercia_welsh_frontier/public/README.md) contains the machine-readable protocol, disclosed initial research bundle, evidence gaps, scenario manifest, source-access and rights records, spatial-input contract, held-out metadata register, and hash freeze. It contains no polygon. Offa's Dyke is excluded from allocation and is not equated with a political border.
+[The prospective case](cases/mercia_welsh_frontier/public/README.md) preserves the immutable preregistration baseline and an append-only reviewed round containing 23 queries, 17 content or catalog checks, 7 admitted sources, atomic observations, claims, exclusions, final gap states, budget accounting, and a criterion-by-criterion gate decision. Offa's Dyke and Wat's Dyke remain outside allocation; engineering locations and broad or disputed dates do not establish a political boundary.
 
-The registered comparison maps remain sealed: no body, thumbnail, PDF page, screenshot, OCR, vector, or boundary geometry has been inspected or stored. A second pre-evaluation Git freeze is required after any reconstruction and before the first map-body access. Automated validation enforces repository isolation; it cannot prove a person's complete browsing history.
+The registered comparison maps remain sealed: no body, thumbnail, PDF page, screenshot, OCR, vector, or boundary geometry has been inspected or stored. The failed reconstruction gate ends the case before evaluation. Automated validation enforces freeze hashes, the round hash chain, budget and transition rules, held-out identifier isolation, and the absence of premature reconstruction artifacts; it cannot prove a person's complete browsing history.
 
 ## Research rounds and policy experiment
 
@@ -124,7 +124,7 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - The v0.2 bundle, diagnosis, and search-target documents pass structural and referential validation.
 - Backend-boundary tests show that the frozen round-00 v0.2 snapshots reproduce the reviewed v0.1 XTENT baseline; round 01 then records and hashes its intentional input and surface changes.
 - Public lineage validation reports zero errors.
-- The prospective Mercia–Welsh case passes its metadata-only held-out seal, freeze hashes, no-map-body, and no-premature-polygon checks.
+- The prospective Mercia–Welsh case terminates as `completed_no_reconstruction`; its metadata-only seal, nine frozen hashes, reviewed round hash chain, budget, lifecycle, no-map-body, and no-polygon checks pass.
 - Required scenarios for both slices rebuild successfully.
 - Every run retains its expected scenario entities; geometry is valid and non-overlapping.
 - Six figures pass nonblank QA.

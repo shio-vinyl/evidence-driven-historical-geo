@@ -1,0 +1,101 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "claims": [
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_MERCIA_CORRIDOR_CONTROL",
+      "entity": "Mercia",
+      "rationale": "Occupation and a possible 689 church at Chester do not identify Offan authority, and the searches returned no second locality.",
+      "semantic_role": "locality_control",
+      "spatial_scope": "corridor_named_localities",
+      "statement": "No checked post-freeze source establishes Mercian control of a named corridor locality during 780–796.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_R1_CHESTER_OCCUPATION_LIMIT"
+      ],
+      "temporal_scope": "780-796"
+    },
+    {
+      "challenging_observation_ids": [
+        "OBS_R1_ELISEG_NINTH_CENTURY",
+        "OBS_R1_ELISEG_ABSTRACT_LIMIT"
+      ],
+      "claim_id": "CLM_R1_POWYS_CONTINUITY",
+      "entity": "Powys",
+      "rationale": "The locatable monument and polity statement are ninth-century and retrospective; a bridge into the target interval is unproven.",
+      "semantic_role": "continuity",
+      "spatial_scope": "Llangollen corridor",
+      "statement": "The Pillar evidence does not establish Powys control of Llangollen or another named corridor locality during 780–796.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_R1_ELISEG_LOCATION"
+      ],
+      "temporal_scope": "780-796"
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_GWYNEDD_CONTINUITY",
+      "entity": "Gwynedd",
+      "rationale": "The checked record preserves the annal’s silence; later party assignments are conjectural.",
+      "semantic_role": "event_party_or_locality_control",
+      "spatial_scope": "Rhuddlan",
+      "statement": "The 796 Rhuddlan notice cannot be assigned to Gwynedd or joined to the separate 798 Caradog notice.",
+      "status": "unsupported",
+      "supporting_observation_ids": [
+        "OBS_R1_RHUDDLAN_ANNAL_LIMIT"
+      ],
+      "temporal_scope": "780-796"
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_RHUDDLAN_PARTIES",
+      "entity": "Unassigned participants",
+      "rationale": "The event is retained as a named-place notice while party, control and coordinate inference are excluded.",
+      "semantic_role": "explicit_exclusion",
+      "spatial_scope": "Rhuddlan place-name only",
+      "statement": "The parties, outcome, territorial consequence and exact location of the 796 Rhuddlan event remain unresolved.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_R1_RHUDDLAN_ANNAL_LIMIT",
+        "OBS_R1_RHUDDLAN_LOCATION_EXCLUSION"
+      ],
+      "temporal_scope": 796
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_OFFAS_DYKE_ROLE",
+      "entity": "Offa’s Dyke",
+      "rationale": "A broad provisional chronology cannot date every section, and engineering location or possible gateways do not prove political allocation.",
+      "semantic_role": "engineered_feature_role",
+      "spatial_scope": "section_specific",
+      "statement": "No checked section has both secure target-interval dating and an independently supported political or traversal role.",
+      "status": "unsupported",
+      "supporting_observation_ids": [
+        "OBS_R1_DYKES_BROAD_DATE",
+        "OBS_R1_DYKES_ROLE_UNTESTED"
+      ],
+      "temporal_scope": "780-796"
+    },
+    {
+      "challenging_observation_ids": [
+        "OBS_R1_WATS_GOBOWEN_DATE",
+        "OBS_R1_WATS_ERDDIG_UNCERTAINTY",
+        "OBS_R1_WATS_LEGACY_CONFLICT",
+        "OBS_R1_DYKES_BROAD_DATE"
+      ],
+      "claim_id": "CLM_R1_WATS_DYKE_ROLE",
+      "entity": "Wat’s Dyke",
+      "rationale": "Scientific summaries point beyond or across the terminal interval, the legacy record conflicts, and function remains unproven.",
+      "semantic_role": "engineered_feature_role",
+      "spatial_scope": "Gobowen and Erddig sections",
+      "statement": "Wat’s Dyke cannot be assigned a target-interval role independently of Offa’s Dyke.",
+      "status": "unsupported",
+      "supporting_observation_ids": [
+        "OBS_R1_WATS_GOBOWEN_LOCATION"
+      ],
+      "temporal_scope": "780-796"
+    }
+  ],
+  "contract_version": "historical_geo.prospective_round_claims.v0.1",
+  "round_id": "01-non-map-evidence"
+}

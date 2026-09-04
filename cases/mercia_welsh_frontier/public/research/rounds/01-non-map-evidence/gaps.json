@@ -1,0 +1,93 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_round_gaps.v0.1",
+  "gap_updates": [
+    {
+      "decision_ids": [
+        "D_R1_MERCIA_NO_CONTROL_POINT"
+      ],
+      "gap_id": "GAP_LOCAL_MERCIA_CONTROL",
+      "query_ids": [
+        "Q001",
+        "Q002",
+        "Q009",
+        "Q012",
+        "Q017",
+        "Q018",
+        "Q019"
+      ],
+      "rationale": "No interval-applicable corridor control relation was found; Chester archaeology does not supply political authority and no second named locality qualified.",
+      "status": "closed_unresolved"
+    },
+    {
+      "decision_ids": [
+        "D_R1_POWYS_EXCLUDE_ROSTER"
+      ],
+      "gap_id": "GAP_POWYS_CONTINUITY",
+      "query_ids": [
+        "Q003",
+        "Q011",
+        "Q021"
+      ],
+      "rationale": "The only locatable Powys evidence remains a ninth-century retrospective inscription lineage, insufficient to bridge 780–796.",
+      "status": "closed_unresolved"
+    },
+    {
+      "decision_ids": [
+        "D_R1_GWYNEDD_EXCLUDE_ROSTER"
+      ],
+      "gap_id": "GAP_GWYNEDD_CONTINUITY",
+      "query_ids": [
+        "Q004",
+        "Q010",
+        "Q013",
+        "Q015"
+      ],
+      "rationale": "No named-place Gwynedd relation exists inside the interval; the 798 Caradog notice cannot be merged with the 796 Rhuddlan event.",
+      "status": "closed_excluded"
+    },
+    {
+      "decision_ids": [
+        "D_R1_RHUDDLAN_DISPLAY_ONLY"
+      ],
+      "gap_id": "GAP_RHUDDLAN_PARTIES",
+      "query_ids": [
+        "Q004",
+        "Q010",
+        "Q013",
+        "Q014",
+        "Q016",
+        "Q020"
+      ],
+      "rationale": "The annal does not name parties or outcome, later assignments are conjectural, and no defensible exact battle coordinate exists.",
+      "status": "closed_unresolved"
+    },
+    {
+      "decision_ids": [
+        "D_R1_OFFAS_DYKE_DISPLAY_ONLY"
+      ],
+      "gap_id": "GAP_DYKE_DATE_AND_ROLE",
+      "query_ids": [
+        "Q005",
+        "Q008",
+        "Q023"
+      ],
+      "rationale": "Broad and conflicting dates do not jointly identify a target-interval section and independent political/traversal role; display-only remains binding.",
+      "status": "closed_excluded"
+    },
+    {
+      "decision_ids": [
+        "D_R1_WATS_DYKE_EXCLUDED"
+      ],
+      "gap_id": "GAP_WATS_DYKE_RELATION",
+      "query_ids": [
+        "Q006",
+        "Q007",
+        "Q022"
+      ],
+      "rationale": "Gobowen points to the early ninth century, Erddig remains imprecise, the legacy record conflicts, and no independent target-interval role is supported.",
+      "status": "closed_excluded"
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

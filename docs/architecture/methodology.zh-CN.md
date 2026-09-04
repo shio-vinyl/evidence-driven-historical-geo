@@ -34,6 +34,12 @@ Prospective 案例具有独立于重建的生命周期：`preregistered → evid
 
 仓库验证会拒绝研究材料中的 held-out 标识、封存案例内的地图主体文件与提前生成的边界输出，以及不符合冻结材料清单的哈希。这能建立材料隔离和可核查声明，不能证明完整的人类浏览历史。因此任何意外 snippet 或 preview 暴露都必须披露，并排除或标记受影响候选。
 
+## Append-only prospective 证据轮次
+
+Prospective 预注册完成后，冻结内容必须保持逐字节不变。后续研究以 source、observation、claim、decision、gap 和预算增量写入 `research/rounds/<round-id>/`。`lifecycle.json`把冻结清单与预注册 commit 绑定到已审核的轮次清单；当前状态由基线加这些增量计算，不通过重写基线 bundle 取得。
+
+Validator 会重算每个轮次文件哈希，检查前序状态链与精确文件集合，拒绝重复的认知对象 ID，核验跨记录引用与来源访问字段，统计查询、记录检查、采纳数量和每 gap follow-up，强制合法阶段迁移，并扫描全部轮次材料中的 held-out 标识符。重建 gate 失败后进入终态 `completed_no_reconstruction`，后续轮次与 polygon 输出都被禁止。哈希链在仓库内提供篡改可见性，Git 历史提供持久不可变性。
+
 ## 端到端工作流
 
 ```text

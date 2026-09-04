@@ -1,0 +1,449 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "content_checks": [
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C001",
+      "map_body_accessed": false,
+      "scope": "full HTML text inspected",
+      "source_id": "SRC_R1_INTERNET_ARCH_ELISEG",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C002",
+      "map_body_accessed": false,
+      "scope": "publisher open returned an internal error",
+      "source_id": "SRC_R1_SCIENCEDIRECT_HISTORIOGRAPHY",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C003",
+      "map_body_accessed": false,
+      "scope": "full HTML text inspected",
+      "source_id": "SRC_R1_EXETER_ELISEG",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C004",
+      "map_body_accessed": false,
+      "scope": "indexed record open returned an internal error",
+      "source_id": "SRC_R1_HENEB_CHIRK",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C005",
+      "map_body_accessed": false,
+      "scope": "full HTML text inspected",
+      "source_id": "SRC_R1_ODC_ERDDIG",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C006",
+      "map_body_accessed": false,
+      "scope": "official list-entry text inspected; map skipped",
+      "source_id": "SRC_R1_NHLE_GOBOWEN",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C007",
+      "map_body_accessed": false,
+      "scope": "record text inspected; map and images skipped",
+      "source_id": "SRC_R1_COFLEIN_RHUDDLAN",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C008",
+      "map_body_accessed": false,
+      "scope": "catalog record and abstract inspected; PDF skipped",
+      "source_id": "SRC_R1_ADS_RHUDDLAN",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C009",
+      "map_body_accessed": false,
+      "scope": "publisher metadata and abstract inspected",
+      "source_id": "SRC_R1_BANGOR_ELISEG",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C010",
+      "map_body_accessed": false,
+      "scope": "direct URL returned 502",
+      "source_id": "SRC_R1_HENEB_CHIRK",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C011",
+      "map_body_accessed": false,
+      "scope": "announcement HTML inspected",
+      "source_id": "SRC_R1_ODJ6_ANNOUNCEMENT",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C012",
+      "map_body_accessed": false,
+      "scope": "official issue URL returned cache miss",
+      "source_id": "SRC_R1_ODJ6_OFFICIAL_RECORD",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C013",
+      "map_body_accessed": false,
+      "scope": "research page HTML inspected; image and map links skipped",
+      "source_id": "SRC_R1_HE_CHESTER",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C014",
+      "map_body_accessed": false,
+      "scope": "direct URL returned 403",
+      "source_id": "SRC_R1_ADS_CHESTER",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C015",
+      "map_body_accessed": false,
+      "scope": "publisher retry returned 403",
+      "source_id": "SRC_R1_SCIENCEDIRECT_HISTORIOGRAPHY",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C016",
+      "map_body_accessed": false,
+      "scope": "supplementary HTML text inspected; map links skipped",
+      "source_id": "SRC_R1_ODA_RECORDING_DYKES",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C017",
+      "map_body_accessed": false,
+      "scope": "official article landing request timed out",
+      "source_id": "SRC_R1_ODJ6_OFFICIAL_RECORD",
+      "status": "failed"
+    }
+  ],
+  "contract_version": "historical_geo.prospective_round_sources.v0.1",
+  "records": [
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The article dates the cross and its Powys ruler to the ninth century, while reporting no ninth-century feature found by the excavation and no 780–796 local control observation.",
+      "content_access_scope": "full_text_html; text only; figures and linked media not opened",
+      "disposition": "admitted",
+      "disposition_reason": "Stable section and paragraph locators provide legally accessible chronology counterevidence without a territorial map.",
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "lineage_id": "LINEAGE_PILLAR_LHUYD_TRANSCRIPTION",
+      "locator": "Internet Archaeology 39, section 2, paragraphs 22–27 and 47",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q003",
+        "Q011"
+      ],
+      "rights_status": "Open-access journal HTML; citation-only use in this repository",
+      "source_id": "SRC_R1_INTERNET_ARCH_ELISEG",
+      "title": "Vlog to Death: Project Eliseg’s Video-Blogging",
+      "url": "https://intarch.ac.uk/journal/issue39/3/tongetal.html"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The publisher content could not be checked directly, so no observation was admitted.",
+      "content_access_scope": "access_failed; publisher returned an error/403 on both checks",
+      "disposition": "rejected",
+      "disposition_reason": "Direct access failed and search-index text is insufficient for a reviewed source admission.",
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE"
+      ],
+      "lineage_id": "LINEAGE_HISTORIOGRAPHY_APPRAISAL",
+      "locator": "Journal of Medieval History article PII S0304418111000133, abstract record",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q003",
+        "Q012"
+      ],
+      "rights_status": "Copyrighted publisher record; no content copied",
+      "source_id": "SRC_R1_SCIENCEDIRECT_HISTORIOGRAPHY",
+      "title": "Offa’s Dyke: a historiographical appraisal",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304418111000133"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The post calls the Powys recovery around 757 possible and the eighth-century mound reuse unproven, while dating the cross to 808–854/55.",
+      "content_access_scope": "full_text_html; text only; images and linked documents not opened",
+      "disposition": "rejected",
+      "disposition_reason": "Useful caution but derivative of the same Pillar transcription/project lineage already admitted, with the relevant interval statements explicitly speculative.",
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY",
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "lineage_id": "LINEAGE_PILLAR_LHUYD_TRANSCRIPTION",
+      "locator": "paragraphs 27–34, 55–59 and 84–87",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q003",
+        "Q011"
+      ],
+      "rights_status": "Publicly accessible institutional project blog; citation only",
+      "source_id": "SRC_R1_EXETER_ELISEG",
+      "title": "The Pillar of Eliseg’s Topography of Memory",
+      "url": "https://pastplace.exeter.ac.uk/2014/04/the-pillar-of-elisegs-topography-of-memory/"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "Direct record access failed, so the indexed dating summary was not promoted to a new reviewed observation.",
+      "content_access_scope": "access_failed; two direct HTML fetch attempts returned errors",
+      "disposition": "rejected",
+      "disposition_reason": "The record could not be checked directly; the frozen baseline already records the related ADS abstract.",
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE"
+      ],
+      "lineage_id": "LINEAGE_CHIRK_2014_EXCAVATION",
+      "locator": "Heneb HER CPAT127261",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q005",
+        "Q023"
+      ],
+      "rights_status": "Heneb HER record; no content copied or redistributed",
+      "source_id": "SRC_R1_HENEB_CHIRK",
+      "title": "Offa’s Dyke – Chirk (De138), salvage excavation 2014",
+      "url": "https://archwilio.org.uk/her/chi3/report/page.php?watprn=CPAT127261"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The page reports an early-ninth-century result at Gobowen and says Erddig confirms only an early-medieval date, with precise construction date and duration unresolved.",
+      "content_access_scope": "full_text_html; text only; map link and images not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The named excavation locations and explicit uncertainty directly test the Wat’s Dyke interval criterion.",
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "lineage_id": "LINEAGE_WATS_DYKE_GOBOWEN_ERDDIG",
+      "locator": "paragraphs 51–54",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q006",
+        "Q022"
+      ],
+      "rights_status": "Publicly accessible research-network page; citation only",
+      "source_id": "SRC_R1_ODC_ERDDIG",
+      "title": "Wat’s Dyke at Erddig Park",
+      "url": "https://offaswatsdyke.wordpress.com/wats-dyke-at-erddig-park/"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The legacy designation record locates the section at SJ 30167 33080 but says construction has not been accurately determined and offers a traditional pre-Offan interpretation.",
+      "content_access_scope": "record_text; embedded map, images and downloadable map not opened",
+      "disposition": "admitted",
+      "disposition_reason": "Stable official entry and OGL text preserve a dated interpretive conflict and a modern engineering location without treating either as political control.",
+      "gap_ids": [
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "lineage_id": "LINEAGE_NHLE_WORTHINGTON_LEGACY",
+      "locator": "NHLE 1020559, official list entry, Reasons for Designation and Details",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q006",
+        "Q007"
+      ],
+      "rights_status": "Historic England list-entry text is Open Government Licence v3.0; maps and images excluded",
+      "source_id": "SRC_R1_NHLE_GOBOWEN",
+      "title": "Wat’s Dyke: 140m long section, 370m south west of Gobowen Station",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1020559"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The record says the annal gives only bellum Rudglann, treats parties/frontier purpose as conjecture, and reports no historical or archaeological basis for a particular battle spot.",
+      "content_access_scope": "record_text; text only; map, images and related archives not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The official text record supplies stable, explicit counterevidence against party, outcome, control and coordinate promotion.",
+      "gap_ids": [
+        "GAP_RHUDDLAN_PARTIES",
+        "GAP_GWYNEDD_CONTINUITY"
+      ],
+      "lineage_id": "LINEAGE_ANNALES_CAMBRIAE_RHUDDLAN",
+      "locator": "Coflein NPRN 404808, Description paragraphs 38–47",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q004",
+        "Q010",
+        "Q014",
+        "Q020"
+      ],
+      "rights_status": "Coflein text displayed under the Non-commercial Government Licence; citation only",
+      "source_id": "SRC_R1_COFLEIN_RHUDDLAN",
+      "title": "Rhuddlan Marsh, alleged site of battle in 795 AD; Morfa Rhuddlan, Towyn",
+      "url": "https://coflein.gov.uk/en/sites/404808"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The accessible abstract describes multi-period excavation but does not state evidence resolving the 796 battle parties, consequence or location.",
+      "content_access_scope": "catalog_record_and_abstract; report PDF not opened",
+      "disposition": "rejected",
+      "disposition_reason": "The content required for the gap is only in a linked report that was not opened; the abstract cannot support the claim.",
+      "gap_ids": [
+        "GAP_RHUDDLAN_PARTIES"
+      ],
+      "lineage_id": "LINEAGE_RHUDDLAN_EXCAVATIONS_1969_73",
+      "locator": "ADS Collection 281; DOI 10.5284/1000332; abstract and contents, pp. 208–213 listed",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q016"
+      ],
+      "rights_status": "ADS Terms of Use and Access; Council for British Archaeology copyright; citation only",
+      "source_id": "SRC_R1_ADS_RHUDDLAN",
+      "title": "Excavations at Rhuddlan, Clwyd: 1969–73 Mesolithic to Medieval",
+      "url": "https://archaeologydataservice.ac.uk/archives/view/cba_rr/rr95.cfm"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The abstract identifies a ninth-century Powys commission at the Pillar and a retrospective claim about Eliseg, without establishing 780–796 control of Llangollen or another corridor locality.",
+      "content_access_scope": "publisher_metadata_and_abstract",
+      "disposition": "admitted",
+      "disposition_reason": "Peer-reviewed abstract with DOI supplies clear temporal and evidentiary limits; its underlying Pillar testimony remains one lineage.",
+      "gap_ids": [
+        "GAP_POWYS_CONTINUITY"
+      ],
+      "lineage_id": "LINEAGE_PILLAR_LHUYD_TRANSCRIPTION",
+      "locator": "Antiquaries Journal 89 (2009), pp. 143–177, DOI 10.1017/S0003581509000018, abstract",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q003",
+        "Q011",
+        "Q021"
+      ],
+      "rights_status": "Copyright © Bangor University/licensors; abstract publicly accessible; citation only",
+      "source_id": "SRC_R1_BANGOR_ELISEG",
+      "title": "Rethinking the Pillar of Eliseg",
+      "url": "https://research.bangor.ac.uk/en/publications/rethinking-the-pillar-of-eliseg/"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The announcement confirms publication of new Chirk and Erddig scientific dates but does not report the results needed for a section-specific role decision.",
+      "content_access_scope": "bibliographic_html; linked journal issue and article body not accessed from this page",
+      "disposition": "rejected",
+      "disposition_reason": "Bibliographic confirmation alone cannot support chronology or function.",
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE",
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "lineage_id": "LINEAGE_ODJ6_PUBLICATION_METADATA",
+      "locator": "paragraphs 47–69",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q005",
+        "Q006",
+        "Q022",
+        "Q023"
+      ],
+      "rights_status": "Publicly accessible announcement; citation only",
+      "source_id": "SRC_R1_ODJ6_ANNOUNCEMENT",
+      "title": "Offa’s Dyke Journal volume 6",
+      "url": "https://offaswatsdyke.wordpress.com/2025/06/11/offas-dyke-journal-volume-6/"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The official HTML endpoints did not return reviewable content, so no dating result from the article was admitted.",
+      "content_access_scope": "access_failed; official issue and article landing requests timed out",
+      "disposition": "rejected",
+      "disposition_reason": "Direct inspection failed; search-index extraction was not treated as a substitute for stable content access.",
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE",
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "lineage_id": "LINEAGE_CHIRK_ERDDIG_2018_19_EXCAVATIONS",
+      "locator": "DOI 10.23914/odj.v6i0.14323, article landing record",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q005",
+        "Q006",
+        "Q022",
+        "Q023"
+      ],
+      "rights_status": "Article record states CC BY-NC-SA 4.0; no article file opened or copied",
+      "source_id": "SRC_R1_ODJ6_OFFICIAL_RECORD",
+      "title": "Offa’s Dyke Journal volume 6 / Belford, Grant and Malim article record",
+      "url": "https://revistas.jasarqueologia.es/index.php/odjournal/article/view/14323/318"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The page reports immediate post-Roman occupation and a possible association with a church founded in 689, but no 780–796 Mercian authority relation.",
+      "content_access_scope": "full_text_html; text only; images and map links not opened",
+      "disposition": "admitted",
+      "disposition_reason": "A named-place excavation synthesis is legally accessible and demonstrates why occupation or an earlier church cannot be promoted to interval political control.",
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "lineage_id": "LINEAGE_CHESTER_AMPHITHEATRE_EXCAVATION",
+      "locator": "Post Roman section, paragraphs 141–146",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q012",
+        "Q017"
+      ],
+      "rights_status": "Publicly accessible Historic England research page; citation only",
+      "source_id": "SRC_R1_HE_CHESTER",
+      "title": "Excavations at Chester Amphitheatre",
+      "url": "https://historicengland.org.uk/research/support-and-collaboration/research-and-english-heritage-trust/Chester-amphitheatre/"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The catalog page could not be checked directly, so its broad search-result description was not admitted.",
+      "content_access_scope": "access_failed; direct request returned 403",
+      "disposition": "rejected",
+      "disposition_reason": "Direct access failed and the indexed abstract lacks an interval-specific locality relation.",
+      "gap_ids": [
+        "GAP_LOCAL_MERCIA_CONTROL"
+      ],
+      "lineage_id": "LINEAGE_ENGLISH_HERITAGE_CHESTER_SYNTHESIS",
+      "locator": "ADS Library record 1001211, monograph record",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q017"
+      ],
+      "rights_status": "ADS bibliographic record; no content copied",
+      "source_id": "SRC_R1_ADS_CHESTER",
+      "title": "English Heritage Book of Chester",
+      "url": "https://archaeologydataservice.ac.uk/library/browse/issue.xhtml?recordId=1001211&recordType=Monograph"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The synthesis provisionally places both dykes in a late-eighth- to early-ninth-century range, states earlier excavation limitations, and says more sites must be dated to test single-phase construction.",
+      "content_access_scope": "full_text_html; text only; maps, images and shop links not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The text directly records chronological breadth and unresolved phasing, which excludes a section-specific target-interval political role.",
+      "gap_ids": [
+        "GAP_DYKE_DATE_AND_ROLE",
+        "GAP_WATS_DYKE_RELATION"
+      ],
+      "lineage_id": "LINEAGE_DYKE_EXCAVATION_SYNTHESIS",
+      "locator": "Panel 13(a), questions 1–4, paragraphs 57–80",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q022",
+        "Q023"
+      ],
+      "rights_status": "Copyright © Offa’s Dyke Association; publicly accessible; citation only",
+      "source_id": "SRC_R1_ODA_RECORDING_DYKES",
+      "title": "Theme 7: Recording the Dykes (Panel 13)",
+      "url": "https://offasdyke.org.uk/offas-dyke-association/offas-dyke-centre/display-panel-14/"
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

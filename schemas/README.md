@@ -10,9 +10,10 @@ The v0.2 research loop adds:
 The v0.3 prospective-case gate adds:
 
 - `preregistration.schema.json` for a frozen question, scope, evidence rules, search budget, stopping rules, failure modes, success criteria, and pre-evaluation Git gates;
-- `held-out-map-register.schema.json` for bibliographic metadata whose content-access flags must remain sealed before evaluation.
+- `held-out-map-register.schema.json` for bibliographic metadata whose content-access flags must remain sealed before evaluation;
+- `prospective-lifecycle.schema.json` for an immutable baseline binding, reviewed round manifests, cumulative budgets, effective gap states, and terminal outcomes.
 
-`historical_geo.prospective` checks case lifecycle, case-ID consistency, source access records, explicit no-allocation scenarios, held-out identifier isolation, prohibited map-body/reconstruction files, and the SHA-256 freeze manifest. It validates artifact isolation and recorded declarations; it cannot prove a person's complete browsing history.
+`historical_geo.prospective` checks case lifecycle, case-ID consistency, source access records, explicit no-allocation scenarios, held-out identifier isolation, prohibited map-body/reconstruction files, the SHA-256 freeze manifest, append-only round chains, stage transitions, and research budgets. It validates artifact isolation and recorded declarations; it cannot prove a person's complete browsing history.
 
 `historical_geo.research_contracts` adds cross-record reference checks and prevents evaluation-only material from entering research claims or model decisions.
 
