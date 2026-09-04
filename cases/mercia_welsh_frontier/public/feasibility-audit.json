@@ -1,0 +1,105 @@
+{
+  "blocking_limits": [
+    "No Welsh candidate currently meets the reconstruction gate of two independent interval-applicable local control observations.",
+    "Rhuddlan parties, outcome and exact battlefield are unresolved.",
+    "Dyke chronology, continuity and function do not support political-boundary equivalence.",
+    "Automated repository checks cannot prove a human browser history; the audit is a recorded declaration plus artifact isolation."
+  ],
+  "candidate_spatial_constraints": [
+    {
+      "admission_limit": "Battle parties, outcome and geometry unresolved; no control inference.",
+      "kind": "event/place-name candidate",
+      "locator": "Annales Cambriae A a357 [796]; Coflein NPRN 404808",
+      "name": "Rhuddlan"
+    },
+    {
+      "admission_limit": "Display-only engineering locator.",
+      "kind": "recorded dyke endpoint",
+      "locator": "Coflein NPRN 306866, Details",
+      "name": "Ffordd Llanfynydd, Treuddyn"
+    },
+    {
+      "admission_limit": "Modern record position only; source queued for post-freeze check.",
+      "kind": "recorded dyke section",
+      "locator": "Coflein NPRN 275786, SJ2929051010",
+      "name": "Coedpoeth"
+    },
+    {
+      "admission_limit": "Modern record position only; source queued for post-freeze check.",
+      "kind": "engineering/topography relation",
+      "locator": "Coflein NPRN 275760, SJ2980048820",
+      "name": "Cadwgan Hall–River Clywedog"
+    },
+    {
+      "admission_limit": "No political role; dating requires section-specific review.",
+      "kind": "recorded dyke section",
+      "locator": "Coflein NPRN 275792, SJ2684738476",
+      "name": "Chirk Castle/Home Farm"
+    },
+    {
+      "admission_limit": "Reported dates do not securely place construction in Offa’s reign.",
+      "kind": "chronology counterevidence",
+      "locator": "ADS record 1227734 abstract",
+      "name": "Plas Offa, Chirk"
+    },
+    {
+      "admission_limit": "Candidate for post-freeze source admission.",
+      "kind": "recorded dyke section",
+      "locator": "NHLE 1006262, SJ2591627065",
+      "name": "Trefonen (Fron)"
+    },
+    {
+      "admission_limit": "Cannot become early-medieval control without evidence.",
+      "kind": "terrain/older-work context",
+      "locator": "Coflein NPRN 92487, SJ2650022150",
+      "name": "Llanymynech Hill"
+    },
+    {
+      "admission_limit": "Candidate for post-freeze source admission.",
+      "kind": "recorded dyke section",
+      "locator": "NHLE 1020899, SO2582883822",
+      "name": "Newcastle-on-Clun"
+    },
+    {
+      "admission_limit": "Display-only endpoint candidate.",
+      "kind": "recorded dyke endpoint",
+      "locator": "NHLE 1001731, SO2956259529; Coflein NPRN 306866",
+      "name": "Rushock Hill"
+    },
+    {
+      "admission_limit": "Wat’s Dyke remains distinct and role/date unresolved.",
+      "kind": "alternative earthwork relation",
+      "locator": "NHLE 1014899",
+      "name": "Old Oswestry"
+    },
+    {
+      "admission_limit": "Retrospective/post-window; not a 780–796 control point.",
+      "kind": "post-window polity and route context",
+      "locator": "UCL “The Pillar of Eliseg”, Summary",
+      "name": "Pillar of Eliseg / Bwlch yr Oernant"
+    }
+  ],
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.feasibility_audit.v0.1",
+  "decision": "GO",
+  "decision_scope": "Proceed to strict preregistration and evidence collection only. Reconstruction and polygon generation remain blocked.",
+  "go_rationale": [
+    "The interval and corridor are explicit.",
+    "At least two political sides and three candidate named polities have documentary pathways, with uncertainty preserved.",
+    "Twelve named candidate constraints or exclusions are locatable.",
+    "Legal textual access and stable identifiers exist for primary, archaeological and gazetteer follow-up.",
+    "A metadata-only held-out design is feasible and automatically testable inside the repository."
+  ],
+  "held_out_finding": "Two candidates are registered from bibliographic or publisher metadata only in fixed priority order. No map body was inspected. A Shepherd candidate was excluded after a search engine exposed a textual label summary.",
+  "map_body_audit": {
+    "audit_note": "Only bibliographic/catalog/rights metadata for held-out candidates and non-territorial-map text or archaeological records were accessed. Search-index snippets are disclosed; the tainted Shepherd candidate is excluded.",
+    "historical_territorial_boundary_geometry_read": false,
+    "historical_territorial_map_body_viewed": false,
+    "historical_territorial_map_downloaded": false,
+    "historical_territorial_map_ocr_or_parse_performed": false,
+    "historical_territorial_map_screenshot_taken": false
+  },
+  "political_subject_finding": "Mercia is directly documented within the interval. Powys and Gwynedd are named candidates supported mainly by retrospective or immediately post-window material and remain unresolved for local control; “Britons” cannot be compiled as one Welsh state.",
+  "source_access_finding": "Ten non-map textual, charter, monument or scholarly records have stable locators and declared access/rights scopes. Public redistribution is limited to OGL/basic data; citation-only records will not be copied as source bodies.",
+  "temporal_finding": "The target is precisely bounded as an interval, 780-01-01 through Offa’s death on 796-07-29. Most events are only year-resolved, so no day-precise political snapshot may be claimed."
+}

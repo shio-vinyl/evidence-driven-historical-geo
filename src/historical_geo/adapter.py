@@ -35,12 +35,43 @@ def _safe_relative(base: Path, value: str) -> Path:
 def load_case(case_dir: Path) -> dict[str, Any]:
     case_dir = case_dir.resolve()
     case = load_json(case_dir / "case.json")
-    required = {"case_id", "fixture_kind", "lineage_path", "grid"}
+    required = {"case_id", "fixture_kind"}
     missing = sorted(required - set(case))
     if missing:
         raise ValueError(f"case.json missing fields: {missing}")
+    if case["fixture_kind"] == "prospective_case":
+        prospective_required = {
+            "research_stage",
+            "reconstruction_ready",
+            "preregistration_path",
+            "held_out_map_register_path",
+            "source_access_path",
+            "spatial_input_contract_path",
+            "research_bundle_path",
+            "research_scenarios_path",
+            "evidence_gap_register_path",
+            "freeze_manifest_path",
+        }
+        missing = sorted(prospective_required - set(case))
+        if missing:
+            raise ValueError(f"prospective case.json missing fields: {missing}")
+        if case["research_stage"] not in {
+            "preregistered",
+            "evidence_collection",
+            "reconstructed_pre_evaluation",
+            "evaluation_opened",
+        }:
+            raise ValueError("unsupported prospective research_stage")
+        if not isinstance(case["reconstruction_ready"], bool):
+            raise ValueError("reconstruction_ready must be a boolean")
+        for key in prospective_required - {"research_stage", "reconstruction_ready"}:
+            _safe_relative(case_dir, case[key])
+        return case
     if case["fixture_kind"] not in {"synthetic_smoke", "public_case"}:
-        raise ValueError("fixture_kind must be synthetic_smoke or public_case")
+        raise ValueError("fixture_kind must be synthetic_smoke, public_case, or prospective_case")
+    missing = sorted({"lineage_path", "grid"} - set(case))
+    if missing:
+        raise ValueError(f"case.json missing fields: {missing}")
     grid = case["grid"]
     for key in ("land_path", "natural_features_path"):
         _safe_relative(case_dir, grid[key])

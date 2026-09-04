@@ -1,0 +1,164 @@
+{
+  "allowed_evidence": [
+    "page-addressable primary or near-contemporary text",
+    "charter catalog and charter text with authenticity notes",
+    "archaeological excavation and scientific dating records",
+    "national monument and historic-environment text records",
+    "gazetteer point coordinates with stated licence",
+    "terrain, hydrography and route data that do not depict historical territories",
+    "place-name scholarship with stable locators"
+  ],
+  "candidate_entities": [
+    {
+      "entity_id": "mercia",
+      "label": "Mercian kingship under Offa",
+      "status_rule": "Eligible only where interval-applicable evidence identifies Mercian authority; Offa’s general title does not assign every locality."
+    },
+    {
+      "entity_id": "powys",
+      "label": "Powys",
+      "status_rule": "Retrospective or post-window evidence may establish a candidate polity but cannot become a 780–796 locality control without an explicit continuity claim."
+    },
+    {
+      "entity_id": "gwynedd",
+      "label": "Gwynedd",
+      "status_rule": "The 798 royal notice is bracketing context only unless independent evidence supports continuity into the target interval."
+    }
+  ],
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contested_features": [
+    {
+      "activation_rule": "No allocation role is permitted until a supported, interval-applicable claim establishes that role for a specified section. A later traversal or corridor role must be isolated as a sensitivity scenario; a hard political split is not permitted.",
+      "candidate_roles": [
+        "display_context",
+        "traversal_constraint",
+        "corridor",
+        "disputed_clue",
+        "exclusion"
+      ],
+      "default_model_role": "display_context",
+      "feature_id": "offas-dyke",
+      "political_boundary_equivalence": false
+    }
+  ],
+  "contract_version": "historical_geo.preregistration.v0.1",
+  "deviation_policy": "Any post-freeze change requires a versioned amendment committed before affected analysis and reported beside the primary result. After any held-out body is opened, changes to research inputs, model choices, candidate priority, evaluation units or denominator are post hoc and cannot replace the preregistered result.",
+  "expected_failure_modes": [
+    "the interval is mistakenly presented as a day-precise political state",
+    "Welsh polity names or continuity remain insufficient for local control",
+    "raid, battle, tribute or royal title is promoted to continuous control",
+    "dyke sections of different dates or functions are collapsed",
+    "modern or later place names are mismatched to early medieval referents",
+    "a binary allocation erases a frontier or unknown zone",
+    "sparse locality evidence makes projection, grid or calibration dominate",
+    "held-out map chronology, scale or ontology does not match the preregistered question",
+    "held-out author and modeling evidence share an unrecognized source lineage",
+    "lawful access to a source or comparator becomes unavailable",
+    "the held-out map expresses fewer than six locked units",
+    "thumbnail, snippet or OCR leakage contaminates the seal",
+    "automated checks are mistaken for proof of a human browsing history"
+  ],
+  "feasibility_decision": "GO",
+  "freeze_requirements": {
+    "frozen_paths": [
+      "case.json",
+      "preregistration.json",
+      "feasibility-audit.json",
+      "research-bundle.json",
+      "research-scenarios.json",
+      "source-access-rights.json",
+      "spatial-input-contract.json",
+      "held-out-map-register.json",
+      "evidence-gap-register.json"
+    ],
+    "manifest_path": "preregistration-freeze.json",
+    "requires_git_commit_before_content_access": true,
+    "requires_second_pre_evaluation_commit": true
+  },
+  "held_out_evaluation": {
+    "candidate_priority_locked": true,
+    "denominator_rule": "Evaluate every locked unit as aligned, not_aligned, not_expressed or not_comparable. Report aligned/(aligned+not_aligned) together with all four counts; never remove an unfavorable locked unit after opening.",
+    "evaluation_units": [
+      "entity_presence:mercia",
+      "entity_presence:powys",
+      "entity_presence:gwynedd",
+      "locality_assignment:rhuddlan",
+      "locality_assignment:chester",
+      "locality_assignment:mold",
+      "locality_assignment:llangollen",
+      "locality_assignment:chirk",
+      "locality_assignment:oswestry",
+      "locality_assignment:llanymynech",
+      "adjacency:mercia-powys",
+      "adjacency:mercia-gwynedd",
+      "dyke_relation:offas-dyke-to-depicted-frontier"
+    ],
+    "interpretation_rule": "Fewer than six expressed comparable units yields inconclusive comparator. Any agreement rate is map agreement under the frozen rubric, never historical accuracy or ground truth.",
+    "isolation_rule": "Candidate maps remain metadata-only and outside sources, observations, claims, model decisions, scenarios and spatial inputs. Candidate order cannot change after any map body is opened.",
+    "minimum_expressed_units": 6,
+    "opening_gate": "A second reconstructed_pre_evaluation Git commit must freeze the evidence bundle, scenarios, code version, calibration, reconstruction outputs, fixed place coordinates, evaluation rubric and hashes before first body access.",
+    "register_path": "held-out-map-register.json"
+  },
+  "lineage_rules": {
+    "claim": "A claim lists supporting and challenging observations, temporal and spatial scope, semantic role and status. Point control never implies an area, and a cross-year bridge must be disputed, unresolved or explicitly argued.",
+    "model_decision": "Only supported claims may authorize admitted inputs. Every scenario explicitly lists included and excluded decision IDs. Natural or engineered geometry supplies location only; its historical role requires a separate claim, and model defaults remain assumptions.",
+    "observation": "One observation records one locatable statement or measurement. Event location, participants, outcome, engineering location and gazetteer coordinates are separate observations; uncertainty is retained.",
+    "source": "Every research source must use an allowed evidence class and record a stable locator, access scope, rights status and access date. Historical territorial maps exist only in the separate held-out register."
+  },
+  "prior_information_disclosure": [
+    "Before this freeze, the feasibility team read the non-map textual and archaeological records listed in source-access-rights.json and summarized them in feasibility-audit.json.",
+    "No existing historical territorial map body, thumbnail, PDF page, image, vector, OCR or screenshot was opened, downloaded or parsed.",
+    "Search results exposed textual bibliographic descriptions for candidate atlases. A Shepherd atlas result also exposed a map-label summary; that candidate is excluded as metadata-snippet-tainted and is not registered.",
+    "The feasibility evidence is prior information and remains visible in the initial bundle; it must not be reported later as post-freeze discovery."
+  ],
+  "prohibited_evidence": [
+    "historical territorial map bodies, thumbnails, screenshots, OCR or derivatives before the evaluation gate",
+    "territorial polygons or boundary vectors traced or inferred from a held-out map",
+    "unsourced web-map labels or search snippets used as evidence",
+    "post-window material silently back-projected into 780–796",
+    "raid, battle, tribute, title or dyke location promoted directly to continuous territorial control",
+    "model defaults or calibration values presented as historical evidence"
+  ],
+  "reconstruction_ready": false,
+  "research_question": "Within the Rhuddlan–Dee/Llangollen–Chirk–Oswestry/Llanymynech–upper Severn corridor during 780-01-01 through 796-07-29, which named localities can non-territorial-map evidence support as Mercian-controlled, controlled by a named Welsh polity, contested, or unresolved, and how sensitive would any later boundary hypothesis be to preregistered treatments of Offa’s Dyke?",
+  "research_stage": "evidence_collection",
+  "search_budget": {
+    "content_record_limit": 20,
+    "held_out_candidate_limit": 3,
+    "held_out_metadata_query_limit": 6,
+    "per_gap_follow_up_limit": 2,
+    "query_limit": 24,
+    "source_admission_limit": 12,
+    "starts_after_preregistration_commit": true
+  },
+  "spatial_scope": {
+    "bbox": [
+      -3.65,
+      52.05,
+      -2.65,
+      53.4
+    ],
+    "crs": "EPSG:4326",
+    "exclusion_rule": "Exclude southern dyke reaches beyond the upper Severn, Britain-wide territorial inference, and any geometry or assertion copied or inferred from an existing historical territorial map.",
+    "inclusion_rule": "Include named places, routes, terrain and recorded earthwork sections inside the bounding box, plus textual relations that explicitly bear on those referents during the target interval.",
+    "name": "Northern and central Mercia–Welsh frontier corridor from Rhuddlan to the upper Severn"
+  },
+  "stop_conditions": [
+    "Stop and record NO_RECONSTRUCTION when the post-freeze budget is exhausted without the reconstruction gate.",
+    "Stop searching a gap once its success criterion is met or two targeted follow-ups fail to add admissible evidence.",
+    "Stop immediately and record a protocol deviation if held-out content is exposed before the second pre-evaluation freeze.",
+    "Do not add evidence, alter parameters or change the evaluation denominator in response to held-out results."
+  ],
+  "success_criteria": {
+    "evaluation_gate": "A valid lineage-bearing reconstruction and all locked evaluation inputs are frozen in a second Git commit; the primary candidate is opened first and all outcomes, including an inconclusive comparator, are reported without tuning.",
+    "phase_one": "A conditional GO audit, a metadata-only held-out register, a frozen preregistration, a non-reconstruction case skeleton and passing isolation tests. No polygon is required or permitted.",
+    "reconstruction_gate": "At least two modeled entities each have two independent, legally accessible, interval-applicable named-locality relations; at least eight distinct spatial candidates derive from three independent source lineages; at least one counterevidence or exclusion relation is retained; every admitted record has a stable locator and clear rights. Otherwise the registered result is NO_RECONSTRUCTION."
+  },
+  "temporal_scope": {
+    "bridge_rule": "Year-only evidence may apply to the interval but never to a precise day. Evidence outside the interval is contextual only and may enter an interval claim solely through an explicit, reviewable continuity or bracketing argument; otherwise it remains unresolved.",
+    "cutoff_event": "Offa’s death on 796-07-29 closes the terminal Offan evidence window.",
+    "target_interval_end": "0796-07-29",
+    "target_interval_start": "0780-01-01",
+    "temporal_resolution": "interval"
+  }
+}

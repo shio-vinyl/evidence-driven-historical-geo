@@ -1,0 +1,108 @@
+{
+  "access_date": "2026-09-04",
+  "audit_scope": "Only text, archaeological records, bibliographic metadata and rights pages were inspected. No historical territorial map body was accessed.",
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.source_access.v0.1",
+  "records": [
+    {
+      "content_access": "full_text",
+      "evidence_class": "primary_narrative_text",
+      "locator": "Project Gutenberg eBook 63384 HTML, chapter 14, print pp. 8–9",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Public-domain source edition in the United States; Project Gutenberg terms apply",
+      "source_id": "SRC_ASSER_COOK_1906",
+      "url": "https://www.gutenberg.org/cache/epub/63384/pg63384-images.html"
+    },
+    {
+      "content_access": "full_text",
+      "evidence_class": "primary_annal_text",
+      "locator": "Harleian MS 3859 A-text transcription, fol. 192a col. 1, a338, a344, a357 and a359; Phillimore 1888, approximately p. 163",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "1888 edition is public domain; Wikisource transcription is openly accessible",
+      "source_id": "SRC_ANNALES_A_PHILLIMORE",
+      "url": "https://la.wikisource.org/wiki/Annales_Cambriae_A"
+    },
+    {
+      "content_access": "record_text",
+      "evidence_class": "charter_catalog_text",
+      "locator": "Electronic Sawyer S 120, dated 780-12-26, Tamworth",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Publicly accessible catalog/text page; no bulk-reuse licence relied upon",
+      "source_id": "SRC_ESAWYER_S120",
+      "url": "https://esawyer.lib.cam.ac.uk/charter/120.html"
+    },
+    {
+      "content_access": "record_text",
+      "evidence_class": "archaeological_site_record",
+      "locator": "Coflein NPRN 306866, Details",
+      "map_body_accessed": false,
+      "redistribution": "allowed",
+      "rights_status": "RCAHMW basic site data available under OGL; images and archive material excluded",
+      "source_id": "SRC_COFLEIN_DYKE_MAIN",
+      "url": "https://coflein.gov.uk/en/site/306866/"
+    },
+    {
+      "content_access": "record_text",
+      "evidence_class": "archaeological_site_record",
+      "locator": "Coflein NPRN 275792, Details",
+      "map_body_accessed": false,
+      "redistribution": "allowed",
+      "rights_status": "RCAHMW basic site data available under OGL; linked report and images not downloaded",
+      "source_id": "SRC_COFLEIN_CHIRK",
+      "url": "https://coflein.gov.uk/en/sites/275792"
+    },
+    {
+      "content_access": "record_text",
+      "evidence_class": "archaeological_site_record",
+      "locator": "Coflein NPRN 275756, Details",
+      "map_body_accessed": false,
+      "redistribution": "allowed",
+      "rights_status": "RCAHMW basic site data available under OGL; images excluded",
+      "source_id": "SRC_COFLEIN_BRYMBO",
+      "url": "https://coflein.gov.uk/en/sites/275756"
+    },
+    {
+      "content_access": "record_text",
+      "evidence_class": "archaeological_site_record",
+      "locator": "NHLE List Entry 1014899, official list entry",
+      "map_body_accessed": false,
+      "redistribution": "allowed",
+      "rights_status": "Historic England list-entry text is OGL v3.0; embedded and downloadable maps excluded",
+      "source_id": "SRC_NHLE_WATS_DYKE_OSWESTRY",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1014899"
+    },
+    {
+      "content_access": "record_text",
+      "evidence_class": "retrospective_monument_record",
+      "locator": "UCL page “The Pillar of Eliseg”, Summary paragraphs",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Publicly accessible institutional page; citation only",
+      "source_id": "SRC_UCL_ELISEG",
+      "url": "https://www.ucl.ac.uk/social-historical-sciences/archaeology/research/research-directory/power-and-difference/landscapes-governance-0/assembly-sites-wales/pillar-eliseg"
+    },
+    {
+      "content_access": "abstract_only",
+      "evidence_class": "archaeological_report_metadata",
+      "locator": "ADS Library record 1227734, abstract and relations",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Bibliographic metadata and abstract accessible; no report file available from ADS record",
+      "source_id": "SRC_ADS_GRANT_CHIRK_2014",
+      "url": "https://archaeologydataservice.ac.uk/library/browse/issue.xhtml?recordId=1227734"
+    },
+    {
+      "content_access": "abstract_only",
+      "evidence_class": "scholarly_article_abstract",
+      "locator": "The Antiquaries Journal 80(1), pp. 195–206, DOI 10.1017/S0003581500050216, abstract",
+      "map_body_accessed": false,
+      "redistribution": "citation_only",
+      "rights_status": "Copyrighted article; abstract and bibliographic metadata accessible; citation only",
+      "source_id": "SRC_HILL_2000_PATTERN",
+      "url": "https://www.cambridge.org/core/journals/antiquaries-journal/article/abs/offas-dyke-pattern-and-purpose/C194FFAEF9F763F59EE903E8F0217399"
+    }
+  ]
+}

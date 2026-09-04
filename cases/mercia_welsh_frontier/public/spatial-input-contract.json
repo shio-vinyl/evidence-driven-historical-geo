@@ -1,0 +1,64 @@
+{
+  "analysis_crs": "EPSG:27700",
+  "bbox": [
+    -3.65,
+    52.05,
+    -2.65,
+    53.4
+  ],
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.spatial_input_contract.v0.1",
+  "forbidden_inputs": [
+    "historical territorial maps or their thumbnails",
+    "boundary vectors, rasters, control labels or coordinates derived from held-out maps",
+    "unlicensed monument imagery or map extracts",
+    "absolute machine paths"
+  ],
+  "geometry_role_rule": "A feature geometry proves location only. Allocation, friction, attraction, exclusion or alignment requires a separate supported claim and scenario decision.",
+  "inputs_present": false,
+  "output_gate": "No boundary-hypotheses geometry may be produced until preregistration reconstruction_gate is met and reconstruction_ready becomes true in a reviewed commit.",
+  "required_layers": [
+    {
+      "allowed_sources": [
+        "redistributable modern coastline or administrative-free land data"
+      ],
+      "historical_role": "support domain only",
+      "layer": "land_mask",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "OS Terrain 50 under OGL or another documented redistributable DEM"
+      ],
+      "historical_role": "modern physical surface; cost meaning requires declared model assumption",
+      "layer": "terrain",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "GeoNames CC BY 4.0 plus reviewed historical place identification"
+      ],
+      "historical_role": "coordinates only until a control claim is admitted",
+      "layer": "localities",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "OGL monument records or permission-cleared archaeological data"
+      ],
+      "historical_role": "display context by default; no political-boundary equivalence",
+      "layer": "earthwork_sections",
+      "status": "not_acquired"
+    },
+    {
+      "allowed_sources": [
+        "redistributable modern data plus text-supported historical route relations"
+      ],
+      "historical_role": "location only until a traversal or corridor claim is admitted",
+      "layer": "hydrography_and_routes",
+      "status": "not_acquired"
+    }
+  ],
+  "research_stage": "evidence_collection",
+  "storage_crs": "EPSG:4326"
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "evidence_gap_register_path": "evidence-gap-register.json",
+  "fixture_kind": "prospective_case",
+  "freeze_manifest_path": "preregistration-freeze.json",
+  "held_out_map_register_path": "held-out-map-register.json",
+  "preregistration_path": "preregistration.json",
+  "reconstruction_ready": false,
+  "research_bundle_path": "research-bundle.json",
+  "research_scenarios_path": "research-scenarios.json",
+  "research_stage": "evidence_collection",
+  "source_access_path": "source-access-rights.json",
+  "spatial_input_contract_path": "spatial-input-contract.json"
+}

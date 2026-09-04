@@ -2,7 +2,7 @@
 
 # 证据驱动的历史地理重建
 
-**可审计空间研究 Agent 原型 · Python 3.9+ · 后端中立研究契约 · 两个可复现历史切片**
+**可审计空间研究 Agent 原型 · Python 3.9+ · 后端中立研究契约 · 回顾性与 prospective 案例**
 
 这个项目检验研究型 Agent 能否在不读取现成历史疆域地图的条件下，从分散、异质且相互冲突的证据中构造可接受的历史地理假说。系统显式保存 Agent 的认知状态，把合格决策编译为后端中立的空间请求，诊断假说在哪些区域敏感，再把真正影响空间结果的证据缺口转成下一轮搜索议程。
 
@@ -66,7 +66,15 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 两份记录都显示有界 projection 选择主导当前面状结果：Round 01 在 1130 年测得 5,823 个模型敏感格网与 1 个证据敏感格网，1187 年分别为 5,269 和 0。v0.2 诊断把证据变化追溯到开放缺口。Round 00 生成首批具体搜索任务；Round 01 保存已关闭缺口并重新计算剩余议程。
 
-十字军案例属于回顾性 testbed：外部地图从未进入重建输入或参数调优，但开发期间已经被检查。严格预注册的 held-out evaluation 需要留给未来的新案例。
+十字军案例属于回顾性 testbed：外部地图从未进入重建输入或参数调优，但开发期间已经被检查。
+
+## Prospective 案例：Mercia–Welsh 边疆
+
+第二案例覆盖 Rhuddlan—upper Severn 有界走廊内 **780-01-01 至 796-07-29** 的 terminal Offan interval。可行性审计对预注册与证据收集作出有条件 **GO**，同时继续禁止重建。Mercia 在区间内有直接材料；Powys 与 Gwynedd 仍是具名候选，其本地控制证据尚未达到冻结的准入门槛。
+
+[预注册案例](cases/mercia_welsh_frontier/public/README.zh-CN.md)保存机器可读协议、已披露的初始 research bundle、证据缺口、情景清单、来源访问与权利记录、空间输入契约、held-out 元数据登记表与哈希冻结。目录内没有 polygon。Offa’s Dyke 被排除出 allocation，不等同于政治边界。
+
+登记的比较地图继续封存：没有查看或保存任何主体、缩略图、PDF 页面、截图、OCR、矢量或边界几何。任何重建完成后、首次打开地图主体前，还必须进行第二次 pre-evaluation Git 冻结。自动验证只能强制仓库隔离，不能证明个人完整浏览历史。
 
 ## 研究轮次与搜索策略实验
 
@@ -93,6 +101,7 @@ python3 -m venv .venv
 .venv/bin/pip install -e '.[test]'
 
 .venv/bin/historical-geo validate cases/crusader_states/public
+.venv/bin/historical-geo validate cases/mercia_welsh_frontier/public
 .venv/bin/historical-geo compile-request cases/crusader_states/public \
   --slice 1130 --scenario reviewed-baseline
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
@@ -115,6 +124,7 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - v0.2 bundle、诊断与搜索目标文档通过结构和引用校验。
 - 后端边界测试证明，冻结的第 00 轮 v0.2 快照复现了已审查的 v0.1 XTENT 基线；第 01 轮则明确记录并哈希其有意引入的输入与表面变化。
 - 公开谱系验证为零错误。
+- Prospective Mercia–Welsh 案例通过 metadata-only held-out 封存、冻结哈希、无地图主体与无提前 polygon 检查。
 - 两个切片的必要情景均可重建。
 - 每个运行都保留该情景预期实体，几何有效且无重叠。
 - 6 张图全部通过非空 QA。

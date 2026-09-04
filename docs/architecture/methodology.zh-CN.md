@@ -28,6 +28,12 @@ Agent 的操作顺序可以概括为：**证据检索 → 结构化主张 → �
 
 某一层成立，不会自动授权下一层。战场位置可以有充分史料支持，同时仍被拒绝作为领土种子；现代河流中心线可以非常准确，同时缺乏充当历史边界的证据。
 
+## Prospective held-out 案例
+
+Prospective 案例具有独立于重建的生命周期：`preregistered → evidence_collection → reconstructed_pre_evaluation → evaluation_opened`。进入最后阶段前，held-out 历史地图只存在于 metadata-only 登记表，不能进入 source、observation、claim、model decision、scenario 或空间输入。第一个 Git commit 冻结预注册；首次打开地图主体前，第二个 commit 必须冻结证据、模型设置、输出、固定比较单元与哈希。
+
+仓库验证会拒绝研究材料中的 held-out 标识、封存案例内的地图主体文件与提前生成的边界输出，以及不符合冻结材料清单的哈希。这能建立材料隔离和可核查声明，不能证明完整的人类浏览历史。因此任何意外 snippet 或 preview 暴露都必须披露，并排除或标记受影响候选。
+
 ## 端到端工作流
 
 ```text

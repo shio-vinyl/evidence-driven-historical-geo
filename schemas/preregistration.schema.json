@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/preregistration.schema.json",
+  "title": "Prospective historical geography preregistration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "case_id",
+    "research_stage",
+    "reconstruction_ready",
+    "feasibility_decision",
+    "research_question",
+    "temporal_scope",
+    "spatial_scope",
+    "candidate_entities",
+    "allowed_evidence",
+    "prohibited_evidence",
+    "lineage_rules",
+    "contested_features",
+    "held_out_evaluation",
+    "search_budget",
+    "stop_conditions",
+    "expected_failure_modes",
+    "success_criteria",
+    "prior_information_disclosure",
+    "deviation_policy",
+    "freeze_requirements"
+  ],
+  "properties": {
+    "contract_version": {"const": "historical_geo.preregistration.v0.1"},
+    "case_id": {"$ref": "#/$defs/text"},
+    "research_stage": {"enum": ["preregistered", "evidence_collection", "reconstructed_pre_evaluation", "evaluation_opened"]},
+    "reconstruction_ready": {"type": "boolean"},
+    "feasibility_decision": {"enum": ["GO", "NO-GO"]},
+    "research_question": {"$ref": "#/$defs/text"},
+    "temporal_scope": {"$ref": "#/$defs/temporal"},
+    "spatial_scope": {"$ref": "#/$defs/spatial"},
+    "candidate_entities": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/entity"}},
+    "allowed_evidence": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+    "prohibited_evidence": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+    "lineage_rules": {"$ref": "#/$defs/lineage"},
+    "contested_features": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/contested"}},
+    "held_out_evaluation": {"$ref": "#/$defs/heldout"},
+    "search_budget": {"$ref": "#/$defs/budget"},
+    "stop_conditions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/text"}},
+    "expected_failure_modes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+    "success_criteria": {"$ref": "#/$defs/success"},
+    "prior_information_disclosure": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/text"}},
+    "deviation_policy": {"$ref": "#/$defs/text"},
+    "freeze_requirements": {"$ref": "#/$defs/freeze"}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"},
+    "temporal": {
+      "type": "object", "additionalProperties": false,
+      "required": ["temporal_resolution", "target_interval_start", "target_interval_end", "cutoff_event", "bridge_rule"],
+      "properties": {
+        "temporal_resolution": {"const": "interval"},
+        "target_interval_start": {"const": "0780-01-01"},
+        "target_interval_end": {"const": "0796-07-29"},
+        "cutoff_event": {"$ref": "#/$defs/text"},
+        "bridge_rule": {"$ref": "#/$defs/text"}
+      }
+    },
+    "spatial": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "crs", "bbox", "inclusion_rule", "exclusion_rule"],
+      "properties": {
+        "name": {"$ref": "#/$defs/text"},
+        "crs": {"const": "EPSG:4326"},
+        "bbox": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+        "inclusion_rule": {"$ref": "#/$defs/text"},
+        "exclusion_rule": {"$ref": "#/$defs/text"}
+      }
+    },
+    "entity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["entity_id", "label", "status_rule"],
+      "properties": {
+        "entity_id": {"$ref": "#/$defs/id"},
+        "label": {"$ref": "#/$defs/text"},
+        "status_rule": {"$ref": "#/$defs/text"}
+      }
+    },
+    "lineage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source", "observation", "claim", "model_decision"],
+      "properties": {
+        "source": {"$ref": "#/$defs/text"},
+        "observation": {"$ref": "#/$defs/text"},
+        "claim": {"$ref": "#/$defs/text"},
+        "model_decision": {"$ref": "#/$defs/text"}
+      }
+    },
+    "contested": {
+      "type": "object", "additionalProperties": false,
+      "required": ["feature_id", "political_boundary_equivalence", "default_model_role", "candidate_roles", "activation_rule"],
+      "properties": {
+        "feature_id": {"$ref": "#/$defs/id"},
+        "political_boundary_equivalence": {"const": false},
+        "default_model_role": {"const": "display_context"},
+        "candidate_roles": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["display_context", "traversal_constraint", "corridor", "disputed_clue", "exclusion"]}},
+        "activation_rule": {"$ref": "#/$defs/text"}
+      }
+    },
+    "heldout": {
+      "type": "object", "additionalProperties": false,
+      "required": ["register_path", "isolation_rule", "opening_gate", "candidate_priority_locked", "evaluation_units", "denominator_rule", "minimum_expressed_units", "interpretation_rule"],
+      "properties": {
+        "register_path": {"const": "held-out-map-register.json"},
+        "isolation_rule": {"$ref": "#/$defs/text"},
+        "opening_gate": {"$ref": "#/$defs/text"},
+        "candidate_priority_locked": {"const": true},
+        "evaluation_units": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+        "denominator_rule": {"$ref": "#/$defs/text"},
+        "minimum_expressed_units": {"type": "integer", "minimum": 1},
+        "interpretation_rule": {"$ref": "#/$defs/text"}
+      }
+    },
+    "budget": {
+      "type": "object", "additionalProperties": false,
+      "required": ["starts_after_preregistration_commit", "query_limit", "content_record_limit", "source_admission_limit", "per_gap_follow_up_limit", "held_out_metadata_query_limit", "held_out_candidate_limit"],
+      "properties": {
+        "starts_after_preregistration_commit": {"const": true},
+        "query_limit": {"type": "integer", "minimum": 1},
+        "content_record_limit": {"type": "integer", "minimum": 1},
+        "source_admission_limit": {"type": "integer", "minimum": 1},
+        "per_gap_follow_up_limit": {"type": "integer", "minimum": 1},
+        "held_out_metadata_query_limit": {"type": "integer", "minimum": 1},
+        "held_out_candidate_limit": {"type": "integer", "minimum": 1}
+      }
+    },
+    "success": {
+      "type": "object", "additionalProperties": false,
+      "required": ["phase_one", "reconstruction_gate", "evaluation_gate"],
+      "properties": {
+        "phase_one": {"$ref": "#/$defs/text"},
+        "reconstruction_gate": {"$ref": "#/$defs/text"},
+        "evaluation_gate": {"$ref": "#/$defs/text"}
+      }
+    },
+    "freeze": {
+      "type": "object", "additionalProperties": false,
+      "required": ["requires_git_commit_before_content_access", "requires_second_pre_evaluation_commit", "manifest_path", "frozen_paths"],
+      "properties": {
+        "requires_git_commit_before_content_access": {"const": true},
+        "requires_second_pre_evaluation_commit": {"const": true},
+        "manifest_path": {"const": "preregistration-freeze.json"},
+        "frozen_paths": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}}
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 # Evidence-Driven Historical Geography
 
-**Auditable spatial research agent prototype · Python 3.9+ · backend-neutral research contracts · two reproducible historical slices**
+**Auditable spatial research agent prototype · Python 3.9+ · backend-neutral research contracts · retrospective and prospective cases**
 
 This project tests whether a research agent can build an acceptable historical-geography hypothesis from scattered, heterogeneous, and conflicting evidence without reading an existing territorial map. The system keeps the agent's epistemic state explicit, compiles eligible decisions into a backend-neutral spatial request, diagnoses where the resulting hypothesis is sensitive, and turns consequential evidence gaps into the next search agenda.
 
@@ -66,7 +66,15 @@ The frozen Round-00 grouped analysis covers eight evidence, natural-cost, projec
 
 Both records show that bounded projection choices dominate the areal result: Round 01 measures 5,823 model-sensitive cells versus one evidence-sensitive cell in 1130, and 5,269 versus zero in 1187. The v0.2 diagnosis links evidence changes back to open gaps. Round 00 ranks the first concrete searches; Round 01 records which gaps were closed and recomputes the residual agenda.
 
-The Crusader case is a retrospective testbed: external maps never enter reconstruction inputs or parameter tuning, although they were already inspected during development. A future case is required for a strict pre-registered held-out evaluation.
+The Crusader case is a retrospective testbed: external maps never enter reconstruction inputs or parameter tuning, although they were already inspected during development.
+
+## Prospective case: Mercia–Welsh frontier
+
+The second case covers the **780-01-01 through 796-07-29** terminal Offan interval in a bounded Rhuddlan–upper Severn corridor. Its feasibility audit gives a conditional **GO for preregistration and evidence collection**, while reconstruction remains blocked. Mercia is documented inside the interval; Powys and Gwynedd remain candidate named polities whose local control evidence has not reached the frozen admission threshold.
+
+[The preregistered case](cases/mercia_welsh_frontier/public/README.md) contains the machine-readable protocol, disclosed initial research bundle, evidence gaps, scenario manifest, source-access and rights records, spatial-input contract, held-out metadata register, and hash freeze. It contains no polygon. Offa's Dyke is excluded from allocation and is not equated with a political border.
+
+The registered comparison maps remain sealed: no body, thumbnail, PDF page, screenshot, OCR, vector, or boundary geometry has been inspected or stored. A second pre-evaluation Git freeze is required after any reconstruction and before the first map-body access. Automated validation enforces repository isolation; it cannot prove a person's complete browsing history.
 
 ## Research rounds and policy experiment
 
@@ -93,6 +101,7 @@ python3 -m venv .venv
 .venv/bin/pip install -e '.[test]'
 
 .venv/bin/historical-geo validate cases/crusader_states/public
+.venv/bin/historical-geo validate cases/mercia_welsh_frontier/public
 .venv/bin/historical-geo compile-request cases/crusader_states/public \
   --slice 1130 --scenario reviewed-baseline
 MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo run \
@@ -115,6 +124,7 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - The v0.2 bundle, diagnosis, and search-target documents pass structural and referential validation.
 - Backend-boundary tests show that the frozen round-00 v0.2 snapshots reproduce the reviewed v0.1 XTENT baseline; round 01 then records and hashes its intentional input and surface changes.
 - Public lineage validation reports zero errors.
+- The prospective Mercia–Welsh case passes its metadata-only held-out seal, freeze hashes, no-map-body, and no-premature-polygon checks.
 - Required scenarios for both slices rebuild successfully.
 - Every run retains its expected scenario entities; geometry is valid and non-overlapping.
 - Six figures pass nonblank QA.

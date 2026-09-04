@@ -1,0 +1,44 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "commit_binding": "The Git commit containing this manifest is the preregistration commit. Its hash is recorded externally in the phase report and must be copied into the future first-content-access record; it cannot be self-hashed here.",
+  "contract_version": "historical_geo.preregistration_freeze.v0.1",
+  "frozen_artifacts": [
+    {
+      "path": "case.json",
+      "sha256": "ae1a359c19611427bfaad2f1a4a879e0859234c3fff8717ae0d35146d1c4ad22"
+    },
+    {
+      "path": "preregistration.json",
+      "sha256": "4e4adba8008d8a6f42737a6e559004295fd875c7b4ba9db43f0d03a501ca7727"
+    },
+    {
+      "path": "feasibility-audit.json",
+      "sha256": "5e92cf4ddd2ac377ba8629ac2211a8de94064f5777f300870c33f4e31678fc57"
+    },
+    {
+      "path": "research-bundle.json",
+      "sha256": "9c50bd09eacc7e570ed70b0875f21f368ca9b88e398690f780139a6eacecd478"
+    },
+    {
+      "path": "research-scenarios.json",
+      "sha256": "94fa738581198c73493340bb4194d6634df0e23cb1caf8ec08c3100300216548"
+    },
+    {
+      "path": "source-access-rights.json",
+      "sha256": "d0966911716f521ddb69c647e60b959559f5d00f948c72887c50a43d7b9927a8"
+    },
+    {
+      "path": "spatial-input-contract.json",
+      "sha256": "181885414cfa012a354efe71a27945a6272effa9e3277608fc3b9d2b754d95af"
+    },
+    {
+      "path": "held-out-map-register.json",
+      "sha256": "c8266570ca6f02157a6622540dfd42b8343e5994a4eea4edecded09a15ba87a1"
+    },
+    {
+      "path": "evidence-gap-register.json",
+      "sha256": "c5623c480dd0793ecacd736acc63973b9b2801672c52a93319f16a2270d12375"
+    }
+  ],
+  "hash_algorithm": "sha256"
+}

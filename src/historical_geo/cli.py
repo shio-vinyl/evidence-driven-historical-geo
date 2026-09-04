@@ -16,6 +16,7 @@ from typing import Any
 from historical_geo.adapter import _schema_dir, load_case, write_solver_input
 from historical_geo.contracts import load_json, validate_lineage_bundle
 from historical_geo.pipeline import audit_surface, reconstruct, run_directory
+from historical_geo.prospective import validate_prospective_case
 from historical_geo.render import render_surface
 from historical_geo.research_case import compile_case_request, reconstruct_research_case, run_research_loop
 from historical_geo.research_contracts import (
@@ -47,7 +48,10 @@ def validate_case(case_dir: Path) -> dict[str, Any]:
     """Validate the public v0.2 epistemic state used by default commands."""
     case_dir = case_dir.resolve()
     # Also parse the case shell here so relative fixture paths fail before a run.
-    load_case(case_dir)
+    case = load_case(case_dir)
+    if case["fixture_kind"] == "prospective_case":
+        result = validate_prospective_case(case_dir, case)
+        return {"ok": result.ok, "errors": [x.__dict__ for x in result.errors]}
     bundle_path = case_dir / "research-bundle.json"
     if not bundle_path.is_file():
         return {

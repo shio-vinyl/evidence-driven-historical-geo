@@ -44,3 +44,4 @@ jobs:
           python -m pip install --force-reinstall --no-deps "${{ runner.temp }}"/wheel/*.whl
           cd "${{ runner.temp }}"
           historical-geo validate "$GITHUB_WORKSPACE/cases/crusader_states/public"
+          historical-geo validate "$GITHUB_WORKSPACE/cases/mercia_welsh_frontier/public"

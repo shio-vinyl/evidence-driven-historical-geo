@@ -28,6 +28,12 @@ The method distinguishes five statements that conventional mapping workflows oft
 
 A true statement at one level does not automatically authorize the next level. A battlefield can be historically well attested and still be rejected as a territorial seed. A modern river centerline can be spatially accurate and still lack evidence for a historical boundary role.
 
+## Prospective held-out cases
+
+A prospective case has a lifecycle separate from reconstruction: `preregistered → evidence_collection → reconstructed_pre_evaluation → evaluation_opened`. Before the last transition, held-out historical maps remain in a metadata-only register and cannot appear in sources, observations, claims, model decisions, scenarios, or spatial inputs. A Git commit freezes the preregistration; a second commit must freeze evidence, model settings, outputs, fixed comparison units, and hashes before the first map body is opened.
+
+Repository validation rejects held-out identifiers in research artifacts, map-body files and premature boundary outputs in a sealed case, and mismatches against the frozen-artifact hash manifest. This establishes artifact isolation and a checkable declaration. It cannot establish a complete human browsing history, so any accidental snippet or preview exposure must be disclosed and the affected candidate excluded or marked contaminated.
+
 ## End-to-end workflow
 
 ```text

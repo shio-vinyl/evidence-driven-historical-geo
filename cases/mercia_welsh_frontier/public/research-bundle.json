@@ -1,0 +1,618 @@
+{
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "claims": [
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_MERCIA_EXISTS_IN_WINDOW",
+      "entity": "Mercia",
+      "rationale": "Independent charter and annal records identify Offa as Mercian king within or at the terminal bound; they do not assign local territory.",
+      "semantic_role": "entity_presence",
+      "slice": "780-796",
+      "spatial_scope": {
+        "kind": "case_context"
+      },
+      "statement": "The Mercian kingship under Offa existed during the registered interval.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_S120_OFFA_MERCIA",
+        "OBS_ANNALES_796_RHUDDLAN"
+      ],
+      "temporal_scope": {
+        "end": "796-07-29",
+        "kind": "closed_interval",
+        "start": 780
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_RHUDDLAN_796_EVENT",
+      "entity": "Unassigned participants",
+      "rationale": "The annal names the battle place but gives neither parties nor result.",
+      "semantic_role": "event_location",
+      "slice": 796,
+      "spatial_scope": {
+        "feature_id": "rhuddlan",
+        "kind": "named_place"
+      },
+      "statement": "A battle associated with the place-name Rhuddlan is recorded in 796.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_ANNALES_796_RHUDDLAN"
+      ],
+      "temporal_scope": {
+        "kind": "year",
+        "value": 796
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_GWYNEDD_NEAR_WINDOW",
+      "entity": "Gwynedd",
+      "rationale": "The royal notice is two years outside the interval and does not prove 780–796 local control.",
+      "semantic_role": "entity_presence",
+      "slice": "780-796",
+      "spatial_scope": {
+        "kind": "case_context"
+      },
+      "statement": "Gwynedd is a candidate named polity near the terminal interval.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_ANNALES_798_GWYNEDD"
+      ],
+      "temporal_scope": {
+        "kind": "bracketed_by_later_notice",
+        "notice_year": 798
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_POWYS_NEAR_WINDOW",
+      "entity": "Powys",
+      "rationale": "The monument and synthesis are early ninth-century and retrospective, so continuity into 780–796 remains to be demonstrated.",
+      "semantic_role": "entity_presence",
+      "slice": "780-796",
+      "spatial_scope": {
+        "kind": "corridor_context"
+      },
+      "statement": "Powys is a candidate named polity in the corridor near the terminal interval.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_ELISEG_POWYS_ROUTE"
+      ],
+      "temporal_scope": {
+        "kind": "retrospective_or_post_window"
+      }
+    },
+    {
+      "challenging_observation_ids": [
+        "OBS_CHIRK_DATING_CONFLICT",
+        "OBS_PATTERN_GAPS"
+      ],
+      "claim_id": "CLM_DYKE_OFFAN_POLITICAL_ROLE",
+      "entity": "Offa’s Dyke",
+      "rationale": "Retrospective attribution coexists with segment, chronology and continuity problems; neither establishes political-boundary equivalence.",
+      "semantic_role": "contested_linear_feature_role",
+      "slice": "780-796",
+      "spatial_scope": {
+        "kind": "section_specific_required"
+      },
+      "statement": "Recorded Offa’s Dyke remains had an interval-applicable political or traversal role.",
+      "status": "disputed",
+      "supporting_observation_ids": [
+        "OBS_ASSER_DYKE_ATTRIBUTION"
+      ],
+      "temporal_scope": {
+        "kind": "disputed"
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_RECORDED_DYKE_SEGMENTS",
+      "entity": "Offa’s Dyke archaeology",
+      "rationale": "The records support modern locations of surviving or inferred engineering sections only.",
+      "semantic_role": "modern_archaeological_location",
+      "slice": "modern_record",
+      "spatial_scope": {
+        "kind": "named_segments"
+      },
+      "statement": "Named earthwork sections are recorded at Treuddyn, Brymbo and Chirk.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_DYKE_MAIN_EXTENT_UNCERTAINTY",
+        "OBS_CHIRK_SECTION",
+        "OBS_BRYMBO_SECTION"
+      ],
+      "temporal_scope": {
+        "kind": "modern_record"
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_WATS_DYKE_ALTERNATIVE",
+      "entity": "Wat’s Dyke",
+      "rationale": "The records identify a distinct parallel work while leaving its relation and date unresolved.",
+      "semantic_role": "alternative_linear_feature",
+      "slice": "modern_record",
+      "spatial_scope": {
+        "feature_id": "old-oswestry-wats-dyke",
+        "kind": "named_segment"
+      },
+      "statement": "Wat’s Dyke is a distinct recorded earthwork that cannot be merged with Offa’s Dyke by default.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_DYKE_MAIN_EXTENT_UNCERTAINTY",
+        "OBS_WATS_DYKE_OSWESTRY"
+      ],
+      "temporal_scope": {
+        "kind": "modern_record"
+      }
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_ELISEG_ROUTE_CONTEXT",
+      "entity": "Landscape context",
+      "rationale": "The cited synthesis identifies the route, but its political meaning in 780–796 is not established.",
+      "semantic_role": "route_context",
+      "slice": "early_ninth_century",
+      "spatial_scope": {
+        "feature_id": "bwlch-yr-oernant",
+        "kind": "route"
+      },
+      "statement": "A Dee–Vale of Clwyd route via Bwlch yr Oernant is relevant landscape context.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_ELISEG_POWYS_ROUTE"
+      ],
+      "temporal_scope": {
+        "kind": "post_window_context"
+      }
+    }
+  ],
+  "contract_version": "historical_geo.research_bundle.v0.2",
+  "evidence_gaps": [
+    {
+      "cause": "missing_evidence",
+      "gap_id": "GAP_LOCAL_MERCIA_CONTROL",
+      "preferred_source_types": [
+        "charters with boundary clauses",
+        "excavation reports",
+        "place-name studies"
+      ],
+      "question": "Which corridor localities have interval-applicable evidence of Mercian control?",
+      "related_claim_ids": [
+        "CLM_MERCIA_EXISTS_IN_WINDOW"
+      ],
+      "related_decision_ids": [
+        "D_RHUDDLAN_EVENT_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups or when the criterion is met.",
+      "success_criteria": "Two independent, locatable research sources support at least two named localities without inferring area from Offa’s title."
+    },
+    {
+      "cause": "temporal_ambiguity",
+      "gap_id": "GAP_POWYS_CONTINUITY",
+      "preferred_source_types": [
+        "primary text",
+        "inscription scholarship",
+        "archaeological synthesis"
+      ],
+      "question": "Can Powys be tied to named corridor localities during 780–796 rather than only retrospectively?",
+      "related_claim_ids": [
+        "CLM_POWYS_NEAR_WINDOW"
+      ],
+      "related_decision_ids": [
+        "D_ELISEG_ROUTE_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups or record Powys as unresolved.",
+      "success_criteria": "Two independent interval-applicable locality observations support Powys and address the later Pillar evidence."
+    },
+    {
+      "cause": "temporal_ambiguity",
+      "gap_id": "GAP_GWYNEDD_CONTINUITY",
+      "preferred_source_types": [
+        "annals",
+        "genealogical scholarship",
+        "archaeological synthesis"
+      ],
+      "question": "Does evidence connect Gwynedd to named places in the corridor before the 798 notice?",
+      "related_claim_ids": [
+        "CLM_GWYNEDD_NEAR_WINDOW"
+      ],
+      "related_decision_ids": [
+        "D_RHUDDLAN_EVENT_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups or retain Gwynedd as bracketing context only.",
+      "success_criteria": "Two independent interval-applicable locality observations support Gwynedd or a documented exclusion from the modeled roster."
+    },
+    {
+      "cause": "missing_evidence",
+      "gap_id": "GAP_RHUDDLAN_PARTIES",
+      "preferred_source_types": [
+        "critical annal edition",
+        "peer-reviewed regional history"
+      ],
+      "question": "Who fought at Rhuddlan in 796, where was the relevant locality, and what territorial consequence is actually supported?",
+      "related_claim_ids": [
+        "CLM_RHUDDLAN_796_EVENT"
+      ],
+      "related_decision_ids": [
+        "D_RHUDDLAN_EVENT_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups or keep the event display-only.",
+      "success_criteria": "A page-addressable scholarly source resolves at least parties and place identification while separating conjecture from the annal."
+    },
+    {
+      "cause": "conflicting_evidence",
+      "gap_id": "GAP_DYKE_DATE_AND_ROLE",
+      "preferred_source_types": [
+        "excavation report",
+        "scientific dating paper",
+        "peer-reviewed landscape archaeology"
+      ],
+      "question": "Which specified dyke sections can be dated to the interval, and what role beyond location is supported?",
+      "related_claim_ids": [
+        "CLM_DYKE_OFFAN_POLITICAL_ROLE",
+        "CLM_RECORDED_DYKE_SEGMENTS"
+      ],
+      "related_decision_ids": [
+        "D_OFFAS_DYKE_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups per selected section or keep all sections out of allocation.",
+      "success_criteria": "Section-specific dating and an independent historical-role claim support one preregistered candidate role; otherwise display-only remains binding."
+    },
+    {
+      "cause": "temporal_ambiguity",
+      "gap_id": "GAP_WATS_DYKE_RELATION",
+      "preferred_source_types": [
+        "scientific dating report",
+        "monument synthesis"
+      ],
+      "question": "Can Wat’s Dyke be dated and assigned a role independently of Offa’s Dyke within the target interval?",
+      "related_claim_ids": [
+        "CLM_WATS_DYKE_ALTERNATIVE"
+      ],
+      "related_decision_ids": [
+        "D_WATS_DYKE_DISPLAY"
+      ],
+      "status": "open",
+      "stop_condition": "Stop after two targeted follow-ups and preserve uncertainty.",
+      "success_criteria": "A section-specific date and role are supported or the feature is explicitly excluded from interval modeling."
+    }
+  ],
+  "model_decisions": [
+    {
+      "challenging_claim_ids": [
+        "CLM_DYKE_OFFAN_POLITICAL_ROLE"
+      ],
+      "decision_id": "D_OFFAS_DYKE_DISPLAY",
+      "parameters": {
+        "allocation_input": false,
+        "feature_id": "offas-dyke"
+      },
+      "rationale": "No dyke geometry is admitted in phase one. If later acquired legally, section geometry defaults to display context and requires a new supported role claim before any allocation use.",
+      "review_status": "excluded",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_COFLEIN_DYKE_MAIN",
+        "SRC_COFLEIN_CHIRK",
+        "SRC_COFLEIN_BRYMBO",
+        "SRC_ASSER_COOK_1906",
+        "SRC_ADS_GRANT_CHIRK_2014",
+        "SRC_HILL_2000_PATTERN"
+      ],
+      "supporting_claim_ids": [
+        "CLM_RECORDED_DYKE_SEGMENTS"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_RHUDDLAN_EVENT_DISPLAY",
+      "parameters": {
+        "allocation_input": false,
+        "feature_id": "rhuddlan"
+      },
+      "rationale": "The event is not a control point because participants, outcome and territorial consequence are unstated.",
+      "review_status": "excluded",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_ANNALES_A_PHILLIMORE"
+      ],
+      "supporting_claim_ids": [
+        "CLM_RHUDDLAN_796_EVENT"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_WATS_DYKE_DISPLAY",
+      "parameters": {
+        "allocation_input": false,
+        "feature_id": "wats-dyke"
+      },
+      "rationale": "The separate engineering work remains context until date and historical role are supported.",
+      "review_status": "excluded",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_COFLEIN_DYKE_MAIN",
+        "SRC_NHLE_WATS_DYKE_OSWESTRY"
+      ],
+      "supporting_claim_ids": [
+        "CLM_WATS_DYKE_ALTERNATIVE"
+      ]
+    },
+    {
+      "challenging_claim_ids": [
+        "CLM_POWYS_NEAR_WINDOW"
+      ],
+      "decision_id": "D_ELISEG_ROUTE_DISPLAY",
+      "parameters": {
+        "allocation_input": false,
+        "feature_id": "bwlch-yr-oernant"
+      },
+      "rationale": "The route is post-window context and cannot yet alter traversal costs or entity allocation.",
+      "review_status": "excluded",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_UCL_ELISEG"
+      ],
+      "supporting_claim_ids": [
+        "CLM_ELISEG_ROUTE_CONTEXT"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "data": {
+        "feature_id": "offas-dyke"
+      },
+      "locator": "chapter 14, print pp. 8–9",
+      "observation_id": "OBS_ASSER_DYKE_ATTRIBUTION",
+      "observation_type": "retrospective attribution",
+      "paraphrase": "A late-ninth-century account attributes to Offa a great dyke described as lying between Wales and Mercia and extending sea to sea.",
+      "slice": "780-796",
+      "source_id": "SRC_ASSER_COOK_1906",
+      "verification_status": "checked against the cited HTML text"
+    },
+    {
+      "locator": "fol. 192a col. 1, a344 [784]",
+      "observation_id": "OBS_ANNALES_784_OFFA",
+      "observation_type": "event",
+      "paraphrase": "The annal records a devastation of Britons with Offa in summer; it supplies no locality or continuous control extent.",
+      "slice": 784,
+      "source_id": "SRC_ANNALES_A_PHILLIMORE",
+      "verification_status": "checked against the transcribed Latin entry"
+    },
+    {
+      "data": {
+        "feature_id": "rhuddlan"
+      },
+      "locator": "fol. 192a col. 1, a357 [796]",
+      "observation_id": "OBS_ANNALES_796_RHUDDLAN",
+      "observation_type": "event and titles",
+      "paraphrase": "The annal records the deaths of Offa, king of the Mercians, and Maredudd, king of Dyfed, together with a battle of Rhuddlan; it does not state the battle parties or outcome.",
+      "slice": 796,
+      "source_id": "SRC_ANNALES_A_PHILLIMORE",
+      "verification_status": "checked against the transcribed Latin entry"
+    },
+    {
+      "locator": "fol. 192a col. 1, a359 [798]",
+      "observation_id": "OBS_ANNALES_798_GWYNEDD",
+      "observation_type": "post-window polity notice",
+      "paraphrase": "The annal identifies Caradog as king of Gwynedd and says he was killed by Saxons; this is outside the registered interval.",
+      "slice": 798,
+      "source_id": "SRC_ANNALES_A_PHILLIMORE",
+      "verification_status": "checked against the transcribed Latin entry"
+    },
+    {
+      "locator": "S 120, 780-12-26, Tamworth",
+      "observation_id": "OBS_S120_OFFA_MERCIA",
+      "observation_type": "charter title and act place",
+      "paraphrase": "The charter record identifies Offa as king of Mercia in 780 and locates the act at Tamworth; the place lies outside the case corridor.",
+      "slice": 780,
+      "source_id": "SRC_ESAWYER_S120",
+      "verification_status": "checked against the catalog record"
+    },
+    {
+      "data": {
+        "feature_ids": [
+          "rushock-hill",
+          "ffordd-llanfynydd",
+          "offas-dyke",
+          "wats-dyke"
+        ]
+      },
+      "locator": "NPRN 306866, Details",
+      "observation_id": "OBS_DYKE_MAIN_EXTENT_UNCERTAINTY",
+      "observation_type": "archaeological synthesis",
+      "paraphrase": "The record treats Rushock Hill to Ffordd Llanfynydd at Treuddyn as the securely recorded continuous central work and states that the relationship with Wat’s Dyke is unclear.",
+      "slice": "modern_record",
+      "source_id": "SRC_COFLEIN_DYKE_MAIN",
+      "verification_status": "checked against the text record; map and images not opened"
+    },
+    {
+      "data": {
+        "feature_id": "chirk-home-farm",
+        "grid_reference": "SJ2684738476"
+      },
+      "locator": "NPRN 275792, Details",
+      "observation_id": "OBS_CHIRK_SECTION",
+      "observation_type": "recorded engineering segment",
+      "paraphrase": "The record describes a 430 m earthwork stretch running north-north-east from Chirk Castle Home Farm and links adjacent recorded sections.",
+      "slice": "modern_record",
+      "source_id": "SRC_COFLEIN_CHIRK",
+      "verification_status": "checked against the text record; map, image and PDF not opened"
+    },
+    {
+      "data": {
+        "feature_id": "brymbo",
+        "grid_reference": "SJ2916052460"
+      },
+      "locator": "NPRN 275756, Details",
+      "observation_id": "OBS_BRYMBO_SECTION",
+      "observation_type": "recorded engineering segment",
+      "paraphrase": "The record describes an approximately 230 m discontinuous earthwork stretch at Brymbo.",
+      "slice": "modern_record",
+      "source_id": "SRC_COFLEIN_BRYMBO",
+      "verification_status": "checked against the text record; map and image not opened"
+    },
+    {
+      "data": {
+        "feature_id": "old-oswestry-wats-dyke"
+      },
+      "locator": "NHLE 1014899, official list entry",
+      "observation_id": "OBS_WATS_DYKE_OSWESTRY",
+      "observation_type": "recorded engineering segment",
+      "paraphrase": "The official record describes Wat’s Dyke earthworks extending north and south from Old Oswestry and treats that work as distinct from Offa’s Dyke.",
+      "slice": "modern_record",
+      "source_id": "SRC_NHLE_WATS_DYKE_OSWESTRY",
+      "verification_status": "checked against the list-entry text; embedded and downloadable maps not opened"
+    },
+    {
+      "data": {
+        "feature_ids": [
+          "pillar-of-eliseg",
+          "dee-valley",
+          "bwlch-yr-oernant",
+          "vale-of-clwyd"
+        ]
+      },
+      "locator": "Summary paragraphs 1–3",
+      "observation_id": "OBS_ELISEG_POWYS_ROUTE",
+      "observation_type": "post-window polity and route context",
+      "paraphrase": "The institutional synthesis interprets the early-ninth-century Pillar of Eliseg as connected to rulers of Powys and identifies a route between the Dee valley and Vale of Clwyd via Bwlch yr Oernant.",
+      "slice": "early_ninth_century",
+      "source_id": "SRC_UCL_ELISEG",
+      "verification_status": "checked against the cited institutional page"
+    },
+    {
+      "data": {
+        "feature_id": "chirk-plas-offa"
+      },
+      "locator": "ADS record 1227734, abstract",
+      "observation_id": "OBS_CHIRK_DATING_CONFLICT",
+      "observation_type": "scientific dating summary",
+      "paraphrase": "Four samples reported in the abstract span calibrated ranges before, across and after the Offan period, including a basal-deposit range of AD 887–1019; the record does not securely date construction to Offa’s reign.",
+      "slice": "modern_analysis",
+      "source_id": "SRC_ADS_GRANT_CHIRK_2014",
+      "verification_status": "checked against the ADS abstract; report body not available there"
+    },
+    {
+      "data": {
+        "feature_id": "offas-dyke"
+      },
+      "locator": "article abstract; pp. 195–206",
+      "observation_id": "OBS_PATTERN_GAPS",
+      "observation_type": "scholarly interpretation",
+      "paraphrase": "The article abstract states that its interpretation follows known earthwork and rejects the need to invent missing stretches.",
+      "slice": "modern_analysis",
+      "source_id": "SRC_HILL_2000_PATTERN",
+      "verification_status": "checked against publisher abstract only"
+    }
+  ],
+  "sources": [
+    {
+      "citation": "https://www.gutenberg.org/cache/epub/63384/pg63384-images.html",
+      "locator": "Project Gutenberg eBook 63384 HTML, chapter 14, print pp. 8–9",
+      "redistribution": "citation_only",
+      "rights_status": "Public-domain source edition in the United States; Project Gutenberg terms apply",
+      "source_id": "SRC_ASSER_COOK_1906",
+      "source_type": "book",
+      "title": "Asser’s Life of King Alfred, trans. Albert S. Cook",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://la.wikisource.org/wiki/Annales_Cambriae_A",
+      "locator": "Harleian MS 3859 A-text transcription, fol. 192a col. 1, a338, a344, a357 and a359; Phillimore 1888, approximately p. 163",
+      "redistribution": "citation_only",
+      "rights_status": "1888 edition is public domain; Wikisource transcription is openly accessible",
+      "source_id": "SRC_ANNALES_A_PHILLIMORE",
+      "source_type": "archive",
+      "title": "Annales Cambriae A-text after Egerton Phillimore’s 1888 edition",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://esawyer.lib.cam.ac.uk/charter/120.html",
+      "locator": "Electronic Sawyer S 120, dated 780-12-26, Tamworth",
+      "redistribution": "citation_only",
+      "rights_status": "Publicly accessible catalog/text page; no bulk-reuse licence relied upon",
+      "source_id": "SRC_ESAWYER_S120",
+      "source_type": "archive",
+      "title": "Electronic Sawyer S 120",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://coflein.gov.uk/en/site/306866/",
+      "locator": "Coflein NPRN 306866, Details",
+      "redistribution": "allowed",
+      "rights_status": "RCAHMW basic site data available under OGL; images and archive material excluded",
+      "source_id": "SRC_COFLEIN_DYKE_MAIN",
+      "source_type": "other",
+      "title": "Offa’s Dyke; Clawdd Offa (Main Entry), NPRN 306866",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://coflein.gov.uk/en/sites/275792",
+      "locator": "Coflein NPRN 275792, Details",
+      "redistribution": "allowed",
+      "rights_status": "RCAHMW basic site data available under OGL; linked report and images not downloaded",
+      "source_id": "SRC_COFLEIN_CHIRK",
+      "source_type": "other",
+      "title": "Offa’s Dyke, Chirk Castle Home Farm section, NPRN 275792",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://coflein.gov.uk/en/sites/275756",
+      "locator": "Coflein NPRN 275756, Details",
+      "redistribution": "allowed",
+      "rights_status": "RCAHMW basic site data available under OGL; images excluded",
+      "source_id": "SRC_COFLEIN_BRYMBO",
+      "source_type": "other",
+      "title": "Offa’s Dyke, Brymbo section, NPRN 275756",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://historicengland.org.uk/listing/the-list/list-entry/1014899",
+      "locator": "NHLE List Entry 1014899, official list entry",
+      "redistribution": "allowed",
+      "rights_status": "Historic England list-entry text is OGL v3.0; embedded and downloadable maps excluded",
+      "source_id": "SRC_NHLE_WATS_DYKE_OSWESTRY",
+      "source_type": "other",
+      "title": "Old Oswestry hillfort and Wat’s Dyke, NHLE 1014899",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://www.ucl.ac.uk/social-historical-sciences/archaeology/research/research-directory/power-and-difference/landscapes-governance-0/assembly-sites-wales/pillar-eliseg",
+      "locator": "UCL page “The Pillar of Eliseg”, Summary paragraphs",
+      "redistribution": "citation_only",
+      "rights_status": "Publicly accessible institutional page; citation only",
+      "source_id": "SRC_UCL_ELISEG",
+      "source_type": "other",
+      "title": "The Pillar of Eliseg",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://archaeologydataservice.ac.uk/library/browse/issue.xhtml?recordId=1227734",
+      "locator": "ADS Library record 1227734, abstract and relations",
+      "redistribution": "citation_only",
+      "rights_status": "Bibliographic metadata and abstract accessible; no report file available from ADS record",
+      "source_id": "SRC_ADS_GRANT_CHIRK_2014",
+      "source_type": "other",
+      "title": "Offa’s Dyke De138, Chirk: Survey, Excavation and Recording",
+      "use_role": "research"
+    },
+    {
+      "citation": "https://www.cambridge.org/core/journals/antiquaries-journal/article/abs/offas-dyke-pattern-and-purpose/C194FFAEF9F763F59EE903E8F0217399",
+      "locator": "The Antiquaries Journal 80(1), pp. 195–206, DOI 10.1017/S0003581500050216, abstract",
+      "redistribution": "citation_only",
+      "rights_status": "Copyrighted article; abstract and bibliographic metadata accessible; citation only",
+      "source_id": "SRC_HILL_2000_PATTERN",
+      "source_type": "article",
+      "title": "Offa’s Dyke: Pattern and Purpose",
+      "use_role": "research"
+    }
+  ]
+}

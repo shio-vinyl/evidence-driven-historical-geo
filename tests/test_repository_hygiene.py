@@ -41,7 +41,7 @@ def test_release_version_is_stable_and_consistent() -> None:
     project = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
     match = re.search(r'^version = "([^"]+)"$', project, re.MULTILINE)
     assert match is not None
-    assert match.group(1) == historical_geo.__version__ == "0.2.0"
+    assert match.group(1) == historical_geo.__version__ == "0.3.0"
 
 
 def test_packaged_schemas_match_public_contract_files() -> None:
@@ -61,6 +61,7 @@ def test_release_workflow_runs_supported_python_test_matrix() -> None:
     assert "python -m pytest -p no:cacheprovider" in workflow
     assert "python -m pip wheel --no-deps" in workflow
     assert 'historical-geo validate "$GITHUB_WORKSPACE/cases/crusader_states/public"' in workflow
+    assert 'historical-geo validate "$GITHUB_WORKSPACE/cases/mercia_welsh_frontier/public"' in workflow
 
 
 def test_agent_guide_has_no_ops_maintenance_system() -> None:

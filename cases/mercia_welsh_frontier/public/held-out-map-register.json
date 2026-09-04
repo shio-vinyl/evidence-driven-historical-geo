@@ -1,0 +1,62 @@
+{
+  "candidate_order": [
+    "MAP_HILL_1981_ATLAS",
+    "MAP_DANIELL_MEDIEVAL_BRITAIN"
+  ],
+  "candidates": [
+    {
+      "body_viewed": false,
+      "candidate_scope": "Catalog abstract identifies mapped Anglo-Saxon material including Mercia and Offa’s Dyke; no plate or map content has been inspected.",
+      "catalog_record_locator": "ADS Library record 1003469; bibliographic record only; xii + 180 pages",
+      "catalog_url": "https://archaeologydataservice.ac.uk/library/browse/issue.xhtml?recordId=1003469",
+      "content_access_status": "not_viewed",
+      "creators": [
+        "David H. Hill"
+      ],
+      "downloaded": false,
+      "identifier": {
+        "scheme": "ISBN",
+        "value": "0-631-11181-6"
+      },
+      "metadata_only": true,
+      "ocr_performed": false,
+      "publication_year": 1981,
+      "publisher": "Basil Blackwell",
+      "reference_id": "MAP_HILL_1981_ATLAS",
+      "rights_status": "Copyrighted monograph; catalog metadata accessible; body access and derivative rights must be checked only after the evaluation gate.",
+      "screen_captured": false,
+      "selection_role": "primary",
+      "thumbnail_viewed": false,
+      "title": "An Atlas of Anglo-Saxon England"
+    },
+    {
+      "body_viewed": false,
+      "candidate_scope": "Fallback comparator near the target period; temporal and scale compatibility must be assessed without changing the locked units after opening.",
+      "catalog_record_locator": "Publisher bibliographic page and table-of-contents metadata; entry “800 AD”, p. 12",
+      "catalog_url": "https://www.routledge.com/Atlas-of-Medieval-Britain/Daniell/p/book/9780415602235",
+      "content_access_status": "not_viewed",
+      "creators": [
+        "Christopher Daniell"
+      ],
+      "downloaded": false,
+      "identifier": {
+        "scheme": "ISBN",
+        "value": "978-0-415-60223-5"
+      },
+      "metadata_only": true,
+      "ocr_performed": false,
+      "publication_year": 2013,
+      "publisher": "Routledge",
+      "reference_id": "MAP_DANIELL_MEDIEVAL_BRITAIN",
+      "rights_status": "Copyrighted publication; publisher metadata accessible; body and derivative rights not yet assessed.",
+      "screen_captured": false,
+      "selection_role": "fallback",
+      "thumbnail_viewed": false,
+      "title": "Atlas of Medieval Britain"
+    }
+  ],
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.held_out_map_register.v0.1",
+  "isolation_state": "metadata_only_unviewed",
+  "primary_candidate_id": "MAP_HILL_1981_ATLAS"
+}

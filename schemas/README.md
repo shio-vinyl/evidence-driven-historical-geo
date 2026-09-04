@@ -7,6 +7,13 @@ The v0.2 research loop adds:
 - `uncertainty-diagnosis.schema.json` for evidence/model scenario attribution;
 - `search-targets.schema.json` for spatially justified next-search agendas.
 
+The v0.3 prospective-case gate adds:
+
+- `preregistration.schema.json` for a frozen question, scope, evidence rules, search budget, stopping rules, failure modes, success criteria, and pre-evaluation Git gates;
+- `held-out-map-register.schema.json` for bibliographic metadata whose content-access flags must remain sealed before evaluation.
+
+`historical_geo.prospective` checks case lifecycle, case-ID consistency, source access records, explicit no-allocation scenarios, held-out identifier isolation, prohibited map-body/reconstruction files, and the SHA-256 freeze manifest. It validates artifact isolation and recorded declarations; it cannot prove a person's complete browsing history.
+
 `historical_geo.research_contracts` adds cross-record reference checks and prevents evaluation-only material from entering research claims or model decisions.
 
 The frozen v0.1 compatibility contract remains intentionally small:

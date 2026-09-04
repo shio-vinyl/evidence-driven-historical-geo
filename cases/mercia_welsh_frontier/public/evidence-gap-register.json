@@ -1,0 +1,31 @@
+{
+  "authoritative_source": "research-bundle.json#/evidence_gaps",
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.evidence_gap_register.v0.1",
+  "entries": [
+    {
+      "gap_id": "GAP_LOCAL_MERCIA_CONTROL",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_POWYS_CONTINUITY",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_GWYNEDD_CONTINUITY",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_RHUDDLAN_PARTIES",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_DYKE_DATE_AND_ROLE",
+      "status": "open"
+    },
+    {
+      "gap_id": "GAP_WATS_DYKE_RELATION",
+      "status": "open"
+    }
+  ]
+}

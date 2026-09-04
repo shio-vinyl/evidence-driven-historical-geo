@@ -60,6 +60,8 @@ def compile_case_request(
     """Compile one case without exposing XTENT-specific roles to the research layer."""
     case_dir = case_dir.resolve()
     case = load_case(case_dir)
+    if case.get("reconstruction_ready") is False:
+        raise ValueError("prospective case is not reconstruction-ready")
     bundle = load_json(case_dir / RESEARCH_BUNDLE_FILE)
     validation = validate_research_bundle(bundle)
     validation.require_ok()

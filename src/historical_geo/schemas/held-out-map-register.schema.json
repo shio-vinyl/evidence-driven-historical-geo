@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/historical-geo/held-out-map-register.schema.json",
+  "title": "Metadata-only held-out historical map register",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "case_id",
+    "isolation_state",
+    "primary_candidate_id",
+    "candidate_order",
+    "candidates"
+  ],
+  "properties": {
+    "contract_version": {"const": "historical_geo.held_out_map_register.v0.1"},
+    "case_id": {"$ref": "#/$defs/text"},
+    "isolation_state": {"enum": ["metadata_only_unviewed", "evaluation_opened"]},
+    "primary_candidate_id": {"$ref": "#/$defs/id"},
+    "candidate_order": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/id"}
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/candidate"}
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"},
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reference_id",
+        "title",
+        "creators",
+        "publication_year",
+        "publisher",
+        "identifier",
+        "catalog_url",
+        "catalog_record_locator",
+        "candidate_scope",
+        "rights_status",
+        "selection_role",
+        "metadata_only",
+        "content_access_status",
+        "body_viewed",
+        "thumbnail_viewed",
+        "downloaded",
+        "ocr_performed",
+        "screen_captured"
+      ],
+      "properties": {
+        "reference_id": {"$ref": "#/$defs/id"},
+        "title": {"$ref": "#/$defs/text"},
+        "creators": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/text"}},
+        "publication_year": {"type": "integer", "minimum": 1000, "maximum": 2100},
+        "publisher": {"$ref": "#/$defs/text"},
+        "identifier": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["scheme", "value"],
+          "properties": {
+            "scheme": {"$ref": "#/$defs/text"},
+            "value": {"$ref": "#/$defs/text"}
+          }
+        },
+        "catalog_url": {"type": "string", "format": "uri"},
+        "catalog_record_locator": {"$ref": "#/$defs/text"},
+        "candidate_scope": {"$ref": "#/$defs/text"},
+        "rights_status": {"$ref": "#/$defs/text"},
+        "selection_role": {"enum": ["primary", "fallback"]},
+        "metadata_only": {"const": true},
+        "content_access_status": {"enum": ["not_viewed", "viewed"]},
+        "body_viewed": {"type": "boolean"},
+        "thumbnail_viewed": {"type": "boolean"},
+        "downloaded": {"type": "boolean"},
+        "ocr_performed": {"type": "boolean"},
+        "screen_captured": {"type": "boolean"}
+      }
+    }
+  }
+}

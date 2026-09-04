@@ -1,0 +1,37 @@
+{
+  "baseline": "sealed-no-allocation",
+  "case_id": "mercia-welsh-frontier-terminal-offan",
+  "contract_version": "historical_geo.prospective_scenarios.v0.1",
+  "planned_scenarios": [
+    {
+      "activation_condition": "Create only after a supported section-specific role claim and backend support; compare against display-only without changing evidence.",
+      "axis": "model",
+      "name": "dyke-traversal-sensitivity"
+    },
+    {
+      "activation_condition": "Retain no dyke input; this remains the default allocation treatment.",
+      "axis": "model",
+      "name": "dyke-excluded"
+    },
+    {
+      "activation_condition": "Isolate each newly supported polity/locality decision relative to the frozen evidence baseline.",
+      "axis": "evidence",
+      "name": "entity-roster-sensitivity"
+    }
+  ],
+  "research_stage": "evidence_collection",
+  "scenarios": {
+    "sealed-no-allocation": {
+      "axis": "baseline",
+      "changed_decision_ids": [],
+      "description": "Phase-one baseline: no locality, dyke, route or other feature enters allocation.",
+      "excluded_decision_ids": [
+        "D_ELISEG_ROUTE_DISPLAY",
+        "D_OFFAS_DYKE_DISPLAY",
+        "D_RHUDDLAN_EVENT_DISPLAY",
+        "D_WATS_DYKE_DISPLAY"
+      ],
+      "included_decision_ids": []
+    }
+  }
+}
