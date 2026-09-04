@@ -1,0 +1,512 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "content_checks": [
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C001",
+      "map_body_accessed": false,
+      "scope": "direct object record open returned an internal error",
+      "source_id": "SRC_R1_BM_LACHISH_RELIEF",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C002",
+      "map_body_accessed": false,
+      "scope": "publisher abstract HTML inspected; PDF and figures skipped",
+      "source_id": "SRC_R1_NAAMAN_EKRON_2003",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C003",
+      "map_body_accessed": false,
+      "scope": "direct DOI open returned an internal error",
+      "source_id": "SRC_R1_BEN_SHLOMO_EKRON_2025",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-04",
+      "check_id": "C004",
+      "map_body_accessed": false,
+      "scope": "publisher chapter metadata and summary inspected",
+      "source_id": "SRC_R1_KAHN_POLITICAL_EVENTS",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C005",
+      "map_body_accessed": false,
+      "scope": "publisher HTML metadata and displayed notes inspected; restricted body skipped",
+      "source_id": "SRC_R1_FEWELL_1986",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C006",
+      "map_body_accessed": false,
+      "scope": "open HTML abstract inspected; PDF and images skipped",
+      "source_id": "SRC_R1_ANDERSON_VENTER_2009",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C007",
+      "map_body_accessed": false,
+      "scope": "publisher chapter landing and summary inspected",
+      "source_id": "SRC_R1_KAHN_PRIORITY",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C008",
+      "map_body_accessed": false,
+      "scope": "institutional repository metadata and abstract inspected; manuscript and figure skipped",
+      "source_id": "SRC_R1_DODSON_2020",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C009",
+      "map_body_accessed": false,
+      "scope": "publisher summary reopened at line-addressed section",
+      "source_id": "SRC_R1_KAHN_PRIORITY",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C010",
+      "map_body_accessed": false,
+      "scope": "repository abstract reopened at line-addressed section",
+      "source_id": "SRC_R1_DODSON_2020",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C011",
+      "map_body_accessed": false,
+      "scope": "bibliographic article page inspected; usable article text absent",
+      "source_id": "SRC_R1_GOLDBERG_1999",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C012",
+      "map_body_accessed": false,
+      "scope": "museum article HTML opened; images and map link skipped",
+      "source_id": "SRC_R1_MET_2014",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C013",
+      "map_body_accessed": false,
+      "scope": "museum article text reopened at relevant paragraphs; images skipped",
+      "source_id": "SRC_R1_MET_2014",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C014",
+      "map_body_accessed": false,
+      "scope": "publisher abstract HTML reopened for locator and rights verification",
+      "source_id": "SRC_R1_NAAMAN_EKRON_2003",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C015",
+      "map_body_accessed": false,
+      "scope": "direct DOI retry returned 429",
+      "source_id": "SRC_R1_BEN_SHLOMO_EKRON_2025",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C016",
+      "map_body_accessed": false,
+      "scope": "direct object record retry returned 403; image not opened",
+      "source_id": "SRC_R1_BM_LACHISH_RELIEF",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C017",
+      "map_body_accessed": false,
+      "scope": "direct article request returned 403; PDF and figures not opened",
+      "source_id": "SRC_R1_PNAS_2022",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C018",
+      "map_body_accessed": false,
+      "scope": "second direct object record retry returned 403; image not opened",
+      "source_id": "SRC_R1_BM_LACHISH_RELIEF",
+      "status": "failed"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C019",
+      "map_body_accessed": false,
+      "scope": "publisher abstract HTML inspected; PDF, figures and maps skipped",
+      "source_id": "SRC_R1_BLAKELY_HARDIN_RECHECK",
+      "status": "success"
+    },
+    {
+      "access_date": "2026-09-05",
+      "check_id": "C020",
+      "map_body_accessed": false,
+      "scope": "publication metadata and abstract HTML inspected; image and publisher version skipped",
+      "source_id": "SRC_R1_HMANE_EKRON_RECHECK",
+      "status": "success"
+    }
+  ],
+  "contract_version": "historical_geo.prospective_round_sources.v0.1",
+  "records": [
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The indexed catalog identifies a Lachish siege relief panel and cuneiform captions in Sennacherib’s palace program.",
+      "content_access_scope": "search-indexed catalog metadata only; three direct HTML requests failed; image not opened",
+      "disposition": "rejected",
+      "disposition_reason": "Direct record access failed, and the relief is another Assyrian court witness rather than an independent local-control lineage.",
+      "gap_ids": [
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL",
+        "GAP_DESTRUCTION_CHRONOLOGY"
+      ],
+      "lineage_id": "ASSYRIAN_ROYAL_THIRD_CAMPAIGN_TRADITION",
+      "locator": "museum number 124911; Southwest Palace Room XXXVI, panel 12",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q001"
+      ],
+      "rights_status": "British Museum copyrighted catalog record; citation only; no image reused",
+      "source_id": "SRC_R1_BM_LACHISH_RELIEF",
+      "title": "British Museum object W_1856-0909-14_7 (BM 124911)",
+      "url": "https://www.britishmuseum.org/collection/object/W_1856-0909-14_7"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The abstract separates the Padi dynasty, Assyrian administrative context, the date of Stratum IC and later prosperity, and says available sources do not show preferred vassal status or deliberate imperial economic development.",
+      "content_access_scope": "publisher metadata and abstract HTML; PDF, figures and maps not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The stable abstract directly constrains local-rule and imperial-administration inferences while preserving a separate scholarly lineage.",
+      "gap_ids": [
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "lineage_id": "EKRON_HISTORICAL_ARCHAEOLOGICAL_SYNTHESIS",
+      "locator": "BASOR 332 (2003), abstract, HTML lines 33–41; DOI 10.2307/1357809",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q007",
+        "Q008",
+        "Q012"
+      ],
+      "rights_status": "Copyright 2003 ASOR; public abstract; citation and short paraphrase only",
+      "source_id": "SRC_R1_NAAMAN_EKRON_2003",
+      "title": "Ekron under the Assyrian and Egyptian Empires",
+      "url": "https://www.journals.uchicago.edu/doi/10.2307/1357809"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "Indexed text describes Ekron’s expansion and rebuilding across Iron IIC, a 701–604 BCE span, rather than an event-resolved second 701 locality relation.",
+      "content_access_scope": "search-indexed abstract text only; direct DOI requests returned errors; figures and PDF not opened",
+      "disposition": "rejected",
+      "disposition_reason": "The direct page could not be checked and the broad later horizon cannot establish the preregistered 701 local-administration relation.",
+      "gap_ids": [
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "lineage_id": "EKRON_LATE_IRON_AGE_SYNTHESIS",
+      "locator": "Religions 16 (2025), article 1384, DOI metadata and indexed abstract text",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q007",
+        "Q008"
+      ],
+      "rights_status": "Publisher record indicates an MDPI article; no licence relied upon because direct page access failed; citation only",
+      "source_id": "SRC_R1_BEN_SHLOMO_EKRON_2025",
+      "title": "Industry and Cult in Philistia",
+      "url": "https://doi.org/10.3390/rel16111384"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The source analysis treats the tribute report and the siege narratives as distinct strands and leaves Hezekiah ruling Judah after the 701 disposition.",
+      "content_access_scope": "publisher metadata and chapter summary HTML; full chapter, figures and PDF not opened",
+      "disposition": "admitted",
+      "disposition_reason": "It provides a stable modern source-critical path for the horizon and rules against reading tribute or survival as simple territorial continuity.",
+      "gap_ids": [
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL",
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "lineage_id": "KAHN_ISAIAH_SOURCE_ANALYSIS",
+      "locator": "chapter 5, pp. 112–124, publisher summary; DOI 10.1017/9781108856416.007",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q015",
+        "Q016"
+      ],
+      "rights_status": "Copyright Cambridge University Press; public summary; citation and short paraphrase only",
+      "source_id": "SRC_R1_KAHN_POLITICAL_EVENTS",
+      "title": "The Political Events in the Eighth Century BCE and the Results of the 701 BCE Campaign",
+      "url": "https://www.cambridge.org/core/books/abs/sennacheribs-campaign-against-judah/political-events-in-the-eighth-century-bce-and-the-results-of-the-701-bce-campaign/64A4C7658FAA310E7767FF1BCBEA3318"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The displayed notes describe Isaiah 36–37 and 2 Kings 18–19 as closely related text types, distinguish multiple literary layers, and state that source incoherence prevents conclusive synthesis.",
+      "content_access_scope": "publisher HTML notes and metadata; restricted article body and PDF not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The accessible line-addressed notes directly establish literary dependence risk and stratification for the biblical evidence path.",
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE",
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL"
+      ],
+      "lineage_id": "FEWELL_KINGS_LITERARY_ANALYSIS",
+      "locator": "JSOT 11(34), pp. 79–90; HTML notes 1–5, lines 37–57; DOI 10.1177/030908928601103404",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q015",
+        "Q016"
+      ],
+      "rights_status": "Copyright Sage; public metadata and displayed notes; citation and short paraphrase only",
+      "source_id": "SRC_R1_FEWELL_1986",
+      "title": "Sennacherib’s Defeat: Words At War in 2 Kings 18.13–19.37",
+      "url": "https://journals.sagepub.com/doi/10.1177/030908928601103404"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The authors argue that Isaiah 36–39 is a literary unity prior to Kings and locate its writing early in Manasseh’s reign, demonstrating that composition date and narrated 701 events differ.",
+      "content_access_scope": "open journal HTML abstract; PDF, images and linked media not opened",
+      "disposition": "admitted",
+      "disposition_reason": "This explicit, stable compositional claim challenges any direct treatment of the biblical narrative as an independent contemporary record.",
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "lineage_id": "ANDERSON_VENTER_ISAIAH_ANALYSIS",
+      "locator": "HTS 65(1), abstract, HTML lines 47–78",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q016"
+      ],
+      "rights_status": "Publicly accessible SciELO article page; citation and short paraphrase only",
+      "source_id": "SRC_R1_ANDERSON_VENTER_2009",
+      "title": "Isaiah 36–39: rethinking the issues of priority and historical reliability",
+      "url": "https://scielo.org.za/scielo.php?pid=S0259-94222009000100009&script=sci_arttext"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The chapter divides the parallel narrative into sources A, BI, BII and BIII and attributes variations to transmission and editorial integration.",
+      "content_access_scope": "publisher metadata and chapter summary HTML; full chapter, figures and PDF not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The stable summary supplies the frozen source-layer and dependency qualification without claiming an independent event lineage.",
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "lineage_id": "KAHN_ISAIAH_SOURCE_ANALYSIS",
+      "locator": "chapter 10, pp. 203–220, summary lines 141–145; DOI 10.1017/9781108856416.012",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q015",
+        "Q016"
+      ],
+      "rights_status": "Copyright Cambridge University Press; public summary; citation and short paraphrase only",
+      "source_id": "SRC_R1_KAHN_PRIORITY",
+      "title": "The Question of the Priority of Isaiah 36–37 vs. 2 Kings 18:13–19:37",
+      "url": "https://www.cambridge.org/core/books/abs/sennacheribs-campaign-against-judah/question-of-the-priority-of-isaiah-3637-vs-2-kings-18131937/D5186DBE13F05CB2BE7D924BBB73606A"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The abstract reports that no Egyptian or Nubian material can yet be associated with the 701 campaign and rejects the only proposed textual exception as at least a decade earlier.",
+      "content_access_scope": "institutional repository metadata and abstract HTML; manuscript PDF, figure and linked media not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The record supplies explicit negative evidence against an additional campaign-event lineage and has a stable DOI and repository path.",
+      "gap_ids": [
+        "GAP_DESTRUCTION_CHRONOLOGY",
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "lineage_id": "NILE_VALLEY_701_NEGATIVE_EVIDENCE",
+      "locator": "University of Bristol record, abstract lines 30–33; DOI 10.31826/9781463241575",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q015",
+        "Q016"
+      ],
+      "rights_status": "Copyright 2026 University of Bristol page; accepted manuscript offered separately but not opened; citation only",
+      "source_id": "SRC_R1_DODSON_2020",
+      "title": "The Rescue of Jerusalem: a view from the Nile Valley",
+      "url": "https://research-information.bris.ac.uk/en/publications/the-rescue-of-jerusalem-a-view-from-the-nile-valley/"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The landing record identifies a published two-campaign chronology argument but exposes no reviewable passage supporting its claims.",
+      "content_access_scope": "bibliographic landing HTML only; usable article text was not returned",
+      "disposition": "rejected",
+      "disposition_reason": "The accessible record lacks enough article text for an atomic evidentiary observation.",
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE",
+        "GAP_DESTRUCTION_CHRONOLOGY"
+      ],
+      "lineage_id": "GOLDBERG_TWO_CAMPAIGN_ARGUMENT",
+      "locator": "Biblica 80 (1999), pp. 360–390, page 362 landing page",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q015"
+      ],
+      "rights_status": "Copyrighted journal material; bibliographic citation only",
+      "source_id": "SRC_R1_GOLDBERG_1999",
+      "title": "Two Assyrian Campaigns against Hezekiah and Later Eighth Century Biblical Chronology",
+      "url": "https://www.bsw.org/biblica/vol-80-1999/two-assyrian-campaigns-against-hezehiah-and-later-eight-century-biblical-chronology/328/article-p362.html"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The museum synthesis repeats the royal narrative of Ashkelon’s defeat, Ekron’s punishment, Padi’s restoration, Judahite conquests, Jerusalem’s confinement and Hezekiah’s tribute.",
+      "content_access_scope": "full article HTML text; artifact images and museum-map link not opened",
+      "disposition": "admitted",
+      "disposition_reason": "The source is accessible and useful for checking relation-layer separation, while its royal-account statements remain assigned to the same Assyrian narrative lineage.",
+      "gap_ids": [
+        "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
+        "GAP_GAZA_TRANSFERRED_LOCALITIES",
+        "GAP_EKRON_LOCAL_ADMINISTRATION",
+        "GAP_ASHKELON_INDEPENDENT_LINEAGE"
+      ],
+      "lineage_id": "ASSYRIAN_ROYAL_THIRD_CAMPAIGN_TRADITION",
+      "locator": "Metropolitan Museum of Art article, paragraphs corresponding to HTML lines 55–79",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q009",
+        "Q010",
+        "Q011",
+        "Q012"
+      ],
+      "rights_status": "Copyright Metropolitan Museum of Art; citation and short paraphrase only; no images reused",
+      "source_id": "SRC_R1_MET_2014",
+      "title": "Sennacherib and Jerusalem",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2014/assyria-to-iberia/blog/posts/sennacherib-and-jerusalem"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "No atomic observation was admitted because direct content access failed.",
+      "content_access_scope": "direct HTML request returned 403; no article body, figures, supplement or PDF opened",
+      "disposition": "rejected",
+      "disposition_reason": "A search result and DOI alone are insufficient for a reviewed site-specific chronology observation.",
+      "gap_ids": [
+        "GAP_DESTRUCTION_CHRONOLOGY"
+      ],
+      "lineage_id": "ARCHAEOMAGNETIC_DESTRUCTION_STUDY",
+      "locator": "PNAS article DOI 10.1073/pnas.2209117119",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q003"
+      ],
+      "rights_status": "PNAS publisher record; no content copied",
+      "source_id": "SRC_R1_PNAS_2022",
+      "title": "Reconstructing biblical military campaigns using geomagnetic field data",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2209117119"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The abstract warns that some late-eighth-century destructions have been drawn into the 701 horizon and may instead belong to preceding decades.",
+      "content_access_scope": "publisher abstract HTML; PDF, figures and maps not opened",
+      "disposition": "rejected",
+      "disposition_reason": "The same source and observation are already frozen in the baseline; append-only rules forbid presenting a recheck as a new source lineage.",
+      "gap_ids": [
+        "GAP_DESTRUCTION_CHRONOLOGY",
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL"
+      ],
+      "lineage_id": "SOUTHWEST_JUDAH_MULTI_EXCAVATION_SYNTHESIS",
+      "locator": "BASOR 326 (2002), abstract lines 45–49; DOI 10.2307/1357687",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q002",
+        "Q003"
+      ],
+      "rights_status": "Copyright 2002 ASOR; citation only",
+      "source_id": "SRC_R1_BLAKELY_HARDIN_RECHECK",
+      "title": "Southwestern Judah in the Late Eighth Century B.C.E. — post-freeze access recheck",
+      "url": "https://www.journals.uchicago.edu/doi/10.2307/1357687"
+    },
+    {
+      "access_date": "2026-09-05",
+      "atomic_observation": "The record describes a seventh-century temple, local inscription and later Neo-Assyrian-vassal zenith, not a second named locality administered by Ekron in 701.",
+      "content_access_scope": "publication metadata and abstract HTML; image and publisher version not opened",
+      "disposition": "rejected",
+      "disposition_reason": "The source is already frozen in the baseline and remains later context rather than new horizon-applicable evidence.",
+      "gap_ids": [
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "lineage_id": "TEL_MIQNE_EKRON_EXCAVATION_AND_LOCAL_INSCRIPTION",
+      "locator": "Harvard Museum publication record, abstract lines 44–60",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q008"
+      ],
+      "rights_status": "Copyrighted 2022 excavation report; public metadata; citation only",
+      "source_id": "SRC_R1_HMANE_EKRON_RECHECK",
+      "title": "Tel Miqne-Ekron Excavations 1994–1996 — post-freeze access recheck",
+      "url": "https://hmane.harvard.edu/publications/tel-miqne-ekron-excavations-1994%E2%80%931996-field-iv-upper-and-field-v-elite-zone"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The indexed summary repeats Bīt-Daganna, Joppa, Banayabarqa and Azuru as an Ashkelonian enclave derived from the Assyrian text.",
+      "content_access_scope": "search-index snippet; PDF, pages, figures and maps not opened",
+      "disposition": "rejected",
+      "disposition_reason": "It is derivative of the royal account, does not create an independent lineage, and the PDF route was excluded because it might contain prohibited map content.",
+      "gap_ids": [
+        "GAP_ASHKELON_INDEPENDENT_LINEAGE"
+      ],
+      "lineage_id": "ASSYRIAN_ROYAL_THIRD_CAMPAIGN_TRADITION",
+      "locator": "search-index snippet only; linked PDF not opened",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q005",
+        "Q006"
+      ],
+      "rights_status": "Copyrighted PDF; no content downloaded or copied",
+      "source_id": "SRC_R1_ASHKELON_DERIVATIVE",
+      "title": "Search-indexed modern discussion of the Ashkelon enclave",
+      "url": "https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/Levant/TellQudadi-Fantalkin2015.pdf"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The indexed text identifies Mitinti in Sennacherib’s inscription but does not name transferred Judahite towns.",
+      "content_access_scope": "search-index snippet; PDF, pages, figures and maps not opened",
+      "disposition": "rejected",
+      "disposition_reason": "The result is derivative of the royal inscription for the relevant relation and the PDF was not opened.",
+      "gap_ids": [
+        "GAP_ASHDOD_TRANSFERRED_LOCALITIES"
+      ],
+      "lineage_id": "ASSYRIAN_ROYAL_THIRD_CAMPAIGN_TRADITION",
+      "locator": "search-index snippet only; linked PDF not opened",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q009",
+        "Q012"
+      ],
+      "rights_status": "Copyrighted offprint; no content downloaded or copied",
+      "source_id": "SRC_R1_ASHDOD_DERIVATIVE",
+      "title": "Ashdod in the Assyrian Period search result",
+      "url": "https://lisa.biu.ac.il/sites/lisa/files/shared/Ashdod%20in%20the%20Assyrian%20Period%20Aster%20JNES%20Offprint.pdf"
+    },
+    {
+      "access_date": "2026-09-04",
+      "atomic_observation": "The searches did not return a reviewable, complete coordinate record set for the twelve frozen locality candidates.",
+      "content_access_scope": "search-result text only; no map, thumbnail, preview or linked media opened",
+      "disposition": "rejected",
+      "disposition_reason": "Absent or incomplete search hits cannot authorize coordinates, and unrelated map-label results were excluded on sight.",
+      "gap_ids": [
+        "GAP_LOCALITY_IDENTIFICATIONS"
+      ],
+      "lineage_id": "GAZETTEER_SEARCH_NEGATIVE",
+      "locator": "site search results for the frozen locality names",
+      "map_body_accessed": false,
+      "query_ids": [
+        "Q013",
+        "Q014"
+      ],
+      "rights_status": "Pleiades site search path; no data incorporated",
+      "source_id": "SRC_R1_GAZETTEER_SEARCH_FAILURE",
+      "title": "Pleiades gazetteer search path",
+      "url": "https://pleiades.stoa.org/"
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

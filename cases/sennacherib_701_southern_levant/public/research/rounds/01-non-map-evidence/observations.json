@@ -1,0 +1,121 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.prospective_round_observations.v0.1",
+  "observations": [
+    {
+      "gap_ids": [
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "locator": "BASOR 332 abstract, HTML lines 38–41",
+      "observation_id": "OBS_R1_EKRON_VASSAL_LIMIT",
+      "observation_type": "imperial_vassal_context",
+      "paraphrase": "Ekron’s dynasty, Assyrian documentary context and prosperity are distinguishable; the available evidence does not show preferred vassal status or deliberate imperial economic administration.",
+      "source_id": "SRC_R1_NAAMAN_EKRON_2003",
+      "temporal_scope": "late_eighth_to_seventh_century_bce"
+    },
+    {
+      "gap_ids": [
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "locator": "BASOR 332 abstract, HTML lines 38–40",
+      "observation_id": "OBS_R1_EKRON_STRATUM_DATE_LIMIT",
+      "observation_type": "archaeological_chronology",
+      "paraphrase": "Stratum IC is assigned broadly to the second half of the eighth century, so it does not resolve a second named Ekron-administered locality within the 701 horizon.",
+      "source_id": "SRC_R1_NAAMAN_EKRON_2003",
+      "temporal_scope": "second_half_eighth_century_bce"
+    },
+    {
+      "gap_ids": [
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL",
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "locator": "chapter 5, pp. 112–124, publisher summary",
+      "observation_id": "OBS_R1_HEZEKIAH_POST_DISPOSITION",
+      "observation_type": "source_critical_political_sequence",
+      "paraphrase": "The source analysis distinguishes the tribute and siege traditions and retains Hezekiah as king after the campaign; it supplies no independent second named Judahite control point.",
+      "source_id": "SRC_R1_KAHN_POLITICAL_EVENTS",
+      "temporal_scope": "701_bce_campaign_and_disposition_horizon"
+    },
+    {
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "locator": "HTML notes 1–2, lines 37–47",
+      "observation_id": "OBS_R1_KINGS_ISAIAH_DEPENDENCE",
+      "observation_type": "textual_dependency",
+      "paraphrase": "Isaiah 36–37 and 2 Kings 18–19 are closely related text types, and disagreements of genre and intention prevent treating them as simple independent historical confirmations.",
+      "source_id": "SRC_R1_FEWELL_1986",
+      "temporal_scope": "later_compositional_history"
+    },
+    {
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "locator": "HTML note 5, lines 53–57",
+      "observation_id": "OBS_R1_KINGS_LAYERS",
+      "observation_type": "textual_stratification",
+      "paraphrase": "The discussed analysis separates an annalistic report, Deuteronomistic historical tradition, righteous-king legend and prophetic oracle.",
+      "source_id": "SRC_R1_FEWELL_1986",
+      "temporal_scope": "later_compositional_history"
+    },
+    {
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "locator": "HTS 65(1) abstract, HTML lines 76–78",
+      "observation_id": "OBS_R1_ISAIAH_MANASSEH_COMPOSITION",
+      "observation_type": "composition_chronology",
+      "paraphrase": "One published model treats Isaiah 36–39 as a coherent unity written early in Manasseh’s reign, later than the narrated 701 events.",
+      "source_id": "SRC_R1_ANDERSON_VENTER_2009",
+      "temporal_scope": "early_reign_of_manasseh"
+    },
+    {
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "locator": "chapter 10 summary, HTML lines 141–145",
+      "observation_id": "OBS_R1_KAHN_SOURCE_PARTITION",
+      "observation_type": "textual_transmission",
+      "paraphrase": "The parallel narratives are partitioned into sources A, BI, BII and BIII, with variations attributed to transmission and editorial integration.",
+      "source_id": "SRC_R1_KAHN_PRIORITY",
+      "temporal_scope": "later_compositional_history"
+    },
+    {
+      "gap_ids": [
+        "GAP_DESTRUCTION_CHRONOLOGY",
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "locator": "repository abstract, HTML lines 30–33",
+      "observation_id": "OBS_R1_NILE_VALLEY_NEGATIVE",
+      "observation_type": "negative_evidence",
+      "paraphrase": "No Egyptian or Nubian material is securely associated with the 701 campaign, and the proposed Kawa-text exception is judged at least a decade earlier.",
+      "source_id": "SRC_R1_DODSON_2020",
+      "temporal_scope": "701_bce_campaign_horizon"
+    },
+    {
+      "gap_ids": [
+        "GAP_ASHKELON_INDEPENDENT_LINEAGE",
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "locator": "museum article, HTML lines 55–65",
+      "observation_id": "OBS_R1_MET_RELATION_LAYERS",
+      "observation_type": "derivative_campaign_synthesis",
+      "paraphrase": "The synthesis reports Ashkelon’s defeat, Ekron’s punishment, Padi’s restoration and Judahite conquests, but these relations derive from the Assyrian royal and biblical narratives and remain conquest, restoration and suzerainty rather than direct local administration.",
+      "source_id": "SRC_R1_MET_2014",
+      "temporal_scope": "701_bce_campaign_horizon"
+    },
+    {
+      "gap_ids": [
+        "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
+        "GAP_GAZA_TRANSFERRED_LOCALITIES"
+      ],
+      "locator": "museum article, HTML lines 57–78",
+      "observation_id": "OBS_R1_MET_TRANSFER_SILENCE",
+      "observation_type": "derivative_transfer_account",
+      "paraphrase": "The accessible synthesis does not name any Judahite town transferred to Mitinti, Padi or Ṣilli-Bēl.",
+      "source_id": "SRC_R1_MET_2014",
+      "temporal_scope": "701_bce_campaign_and_disposition_horizon"
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

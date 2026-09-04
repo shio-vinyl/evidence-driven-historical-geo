@@ -11,59 +11,69 @@
   "contract_version": "historical_geo.prospective_lifecycle.v0.1",
   "effective_state": {
     "budget_consumed": {
-      "content_record_checks": 0,
+      "content_record_checks": 20,
       "per_gap_follow_ups": {
-        "GAP_ASHDOD_TRANSFERRED_LOCALITIES": 0,
-        "GAP_ASHKELON_INDEPENDENT_LINEAGE": 0,
-        "GAP_DESTRUCTION_CHRONOLOGY": 0,
-        "GAP_EKRON_LOCAL_ADMINISTRATION": 0,
-        "GAP_GAZA_TRANSFERRED_LOCALITIES": 0,
-        "GAP_HEBREW_BIBLE_LINEAGE": 0,
-        "GAP_JUDAH_SECOND_LOCAL_CONTROL": 0,
-        "GAP_LOCALITY_IDENTIFICATIONS": 0
+        "GAP_ASHDOD_TRANSFERRED_LOCALITIES": 2,
+        "GAP_ASHKELON_INDEPENDENT_LINEAGE": 2,
+        "GAP_DESTRUCTION_CHRONOLOGY": 2,
+        "GAP_EKRON_LOCAL_ADMINISTRATION": 2,
+        "GAP_GAZA_TRANSFERRED_LOCALITIES": 2,
+        "GAP_HEBREW_BIBLE_LINEAGE": 2,
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL": 2,
+        "GAP_LOCALITY_IDENTIFICATIONS": 2
       },
-      "queries": 0,
-      "sources_admitted": 0
+      "queries": 16,
+      "sources_admitted": 7
     },
     "gap_statuses": [
       {
         "gap_id": "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
-        "status": "open"
+        "status": "closed_excluded"
       },
       {
         "gap_id": "GAP_ASHKELON_INDEPENDENT_LINEAGE",
-        "status": "open"
+        "status": "closed_unresolved"
       },
       {
         "gap_id": "GAP_DESTRUCTION_CHRONOLOGY",
-        "status": "open"
+        "status": "closed_supported"
       },
       {
         "gap_id": "GAP_EKRON_LOCAL_ADMINISTRATION",
-        "status": "open"
+        "status": "closed_unresolved"
       },
       {
         "gap_id": "GAP_GAZA_TRANSFERRED_LOCALITIES",
-        "status": "open"
+        "status": "closed_excluded"
       },
       {
         "gap_id": "GAP_HEBREW_BIBLE_LINEAGE",
-        "status": "open"
+        "status": "closed_supported"
       },
       {
         "gap_id": "GAP_JUDAH_SECOND_LOCAL_CONTROL",
-        "status": "open"
+        "status": "closed_unresolved"
       },
       {
         "gap_id": "GAP_LOCALITY_IDENTIFICATIONS",
-        "status": "open"
+        "status": "closed_unresolved"
       }
     ],
     "held_out_isolation": "metadata_only_unviewed",
     "reconstruction_ready": false,
-    "reviewed_round_ids": [],
-    "stage": "evidence_collection",
-    "terminal_outcome": null
+    "reviewed_round_ids": [
+      "01-non-map-evidence"
+    ],
+    "stage": "completed_no_reconstruction",
+    "terminal_outcome": "completed_no_reconstruction"
   },
-  "rounds": []
+  "rounds": [
+    {
+      "manifest_path": "research/rounds/01-non-map-evidence/round-manifest.json",
+      "manifest_sha256": "39dcca2266994cc9e4427e3a39e1f1c279d9b5ba880a680937ed5b4449f8aaec",
+      "path": "research/rounds/01-non-map-evidence",
+      "previous_state_sha256": "dd03325039c25226e7cbbd0f62aafe541ba615812909759f23d3bad5d7f28aa4",
+      "round_id": "01-non-map-evidence"
+    }
+  ]
 }

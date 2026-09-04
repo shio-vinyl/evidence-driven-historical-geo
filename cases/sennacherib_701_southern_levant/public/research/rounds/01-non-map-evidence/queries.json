@@ -1,0 +1,155 @@
+{
+  "access_date": "2026-09-04",
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.prospective_round_queries.v0.1",
+  "queries": [
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL"
+      ],
+      "query": "site:britishmuseum.org collection Sennacherib Lachish relief inscription object",
+      "query_id": "Q001",
+      "result_summary": "Located a stable museum object record for the Lachish relief program; the object belongs to the Assyrian court tradition and does not independently prove Judahite administration."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_JUDAH_SECOND_LOCAL_CONTROL"
+      ],
+      "query": "site:publications.iaa.org.il Lachish Level III 701 BCE continuity Hezekiah",
+      "query_id": "Q002",
+      "result_summary": "Returned the already-frozen Lachish excavation record; it confirms a destruction event, not a second Judahite local-control relation."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_DESTRUCTION_CHRONOLOGY"
+      ],
+      "query": "site:pnas.org 701 BCE Lachish archaeomagnetic Sennacherib destruction",
+      "query_id": "Q003",
+      "result_summary": "Located a PNAS article record, but direct content access failed; no new observation was admitted."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_DESTRUCTION_CHRONOLOGY"
+      ],
+      "query": "site:oracc.museum.upenn.edu rinap Sennacherib Lachish relief epigraph 701",
+      "query_id": "Q004",
+      "result_summary": "Returned RINAP publication material stating that Lachish is named in the relief epigraph rather than the written third-campaign report; the PDF was not opened."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_ASHKELON_INDEPENDENT_LINEAGE"
+      ],
+      "query": "site:ashkelonexcavations.org Iron Age 701 BCE Sidqa Ashkelon excavation",
+      "query_id": "Q005",
+      "result_summary": "No accessible excavation record independently joining Ṣidqâ to two named localities was located."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_ASHKELON_INDEPENDENT_LINEAGE"
+      ],
+      "query": "Ashkelon 701 BCE Sennacherib Sidqa archaeology excavation DOI",
+      "query_id": "Q006",
+      "result_summary": "Results repeated the royal transfer/conquest narrative or pointed to publications not inspected because their PDF route could include prohibited map content."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "query": "Ekron 701 BCE Padi archaeology local administration excavation DOI",
+      "query_id": "Q007",
+      "result_summary": "Located Naʾaman’s BASOR abstract separating Ekron’s vassal status, local dynasty, prosperity and imperial policy."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "query": "site:hmane.harvard.edu Tel Miqne Ekron Iron IIB 701 BCE Padi",
+      "query_id": "Q008",
+      "result_summary": "Returned the already-frozen excavation-report metadata plus a later synthesis; neither supplies a second named 701 locality administered by Ekron."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_ASHDOD_TRANSFERRED_LOCALITIES"
+      ],
+      "query": "Mitinti Ashdod 701 BCE transferred towns Sennacherib source",
+      "query_id": "Q009",
+      "result_summary": "Results traced Mitinti and the transferred towns back to the Assyrian royal report and did not name a transferred locality."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_GAZA_TRANSFERRED_LOCALITIES"
+      ],
+      "query": "Silli-bel Gaza 701 BCE transferred towns archaeological source",
+      "query_id": "Q010",
+      "result_summary": "Results traced Ṣilli-Bēl and the transferred towns back to the Assyrian royal report and did not name a transferred locality."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
+        "GAP_GAZA_TRANSFERRED_LOCALITIES"
+      ],
+      "query": "\"cities\" Mitinti Padi Silli-bel Hezekiah 701 named",
+      "query_id": "Q011",
+      "result_summary": "No source named any of the Judahite towns transferred to the three rulers."
+    },
+    {
+      "follow_up_round": null,
+      "gap_ids": [
+        "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
+        "GAP_GAZA_TRANSFERRED_LOCALITIES",
+        "GAP_EKRON_LOCAL_ADMINISTRATION"
+      ],
+      "query": "Assyrian provincial administration Philistine vassal city states 701 BCE Ashdod Gaza DOI",
+      "query_id": "Q012",
+      "result_summary": "Located secondary discussion of vassal polities, but no evidence converting imperial suzerainty into direct Assyrian municipal administration or naming transferred towns."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_LOCALITY_IDENTIFICATIONS"
+      ],
+      "query": "Pleiades Joppa Ekron Lachish Jerusalem Ashdod Gaza Ashkelon coordinates",
+      "query_id": "Q013",
+      "result_summary": "No complete stable gazetteer record set for the frozen localities was returned."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_LOCALITY_IDENTIFICATIONS"
+      ],
+      "query": "Bīt-Daganna Banayabarqa Azuru Eltekeh Timnah identification gazetteer",
+      "query_id": "Q014",
+      "result_summary": "No reliable coordinate set for all difficult identifications was located; unrelated search results exposed map-label text and were excluded without opening linked content."
+    },
+    {
+      "follow_up_round": 1,
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "query": "2 Kings 18 13 16 17 source criticism two accounts Sennacherib DOI",
+      "query_id": "Q015",
+      "result_summary": "Located source-critical scholarship separating annalistic, Deuteronomistic, legendary and prophetic layers and warning against synthetic historical reconstruction."
+    },
+    {
+      "follow_up_round": 2,
+      "gap_ids": [
+        "GAP_HEBREW_BIBLE_LINEAGE"
+      ],
+      "query": "Isaiah 36 37 2 Kings 18 literary dependence Sennacherib scholarly open access",
+      "query_id": "Q016",
+      "result_summary": "Located mutually non-identical source-critical accounts of priority and composition, sufficient to keep Isaiah–Kings from being counted as independent uncritical confirmation."
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

@@ -78,9 +78,9 @@ The workflow successfully enforced evidence isolation, the preregistered search 
 
 ## Prospective case: Sennacherib 701
 
-The third case asks which named localities in the Joppa–Ekron–Lachish–Jerusalem corridor can be supported during Sennacherib's conventionally dated **701 BCE campaign/disposition horizon**. Its limited feasibility audit returned **GO for strict preregistration and evidence collection**, while reconstruction remains blocked. The frozen baseline records Judah, Ekron, Ashdod, Gaza and Ashkelon; twelve named locality candidates; six preliminary sources; explicit source lineages; and separate layers for local rule, transfer, conquest, tribute, suzerainty, military presence, destruction and local administration.
+The third case asks which named localities in the Joppa–Ekron–Lachish–Jerusalem corridor can be supported during Sennacherib's conventionally dated **701 BCE campaign/disposition horizon**. Its limited feasibility audit returned **GO for strict preregistration and evidence collection**. The frozen reconstruction gate then returned **NO-GO**, and the case terminated as **`completed_no_reconstruction`**. The baseline records Judah, Ekron, Ashdod, Gaza and Ashkelon; twelve named locality candidates; six preliminary sources; explicit source lineages; and separate layers for local rule, transfer, conquest, tribute, suzerainty, military presence, destruction and local administration.
 
-[The preregistered case](cases/sennacherib_701_southern_levant/public/README.md) contains no locality-coordinate layer, polygon or reconstruction output. ORACC parallel witnesses remain one partisan royal lineage, the Hebrew Bible path remains source-critical, and unnamed transferred towns cannot become invented anchors. One atlas is registered by metadata only; two search-tainted atlas candidates are excluded without opening their bodies.
+[The completed prospective case](cases/sennacherib_701_southern_levant/public/README.md) preserves 16 exact queries, 20 content/record checks, 7 admitted sources, both directed follow-up rounds for all eight gaps, and the failed criterion-by-criterion gate. No two entities each reached two independent named-locality local-control relations. It therefore contains no locality-coordinate layer, modeled entity roster, scenario run, sensitivity output, polygon or territorial surface. The registered comparator remains permanently sealed.
 
 This case also introduces the era-aware BCE time contract: `calendar=historical_bce_year_label`, `era=BCE`, `year_bce=701`, and `temporal_resolution=campaign_horizon`. Astronomical year `-700` is an explicit computational conversion, never a negative ISO date.
 
@@ -134,7 +134,7 @@ MPLCONFIGDIR=.cache/matplotlib .venv/bin/historical-geo figures \
 - Backend-boundary tests show that the frozen round-00 v0.2 snapshots reproduce the reviewed v0.1 XTENT baseline; round 01 then records and hashes its intentional input and surface changes.
 - Public lineage validation reports zero errors.
 - The prospective Mercia–Welsh case terminates as `completed_no_reconstruction`; its metadata-only seal, nine frozen hashes, reviewed round hash chain, budget, lifecycle, no-map-body, and no-polygon checks pass.
-- The prospective Sennacherib 701 case is frozen at `evidence_collection`; its BCE conversion, feasibility budget, nine hashes, metadata-only seal, held-out leakage guard, no-map-body, and no-polygon checks pass.
+- The prospective Sennacherib 701 case terminates as `completed_no_reconstruction`; its BCE conversion, feasibility freeze, append-only research round, budget, round hashes, metadata-only seal, held-out leakage guard, no-map-body, and no-polygon checks pass.
 - Required scenarios for both slices rebuild successfully.
 - Every run retains its expected scenario entities; geometry is valid and non-overlapping.
 - Six figures pass nonblank QA.

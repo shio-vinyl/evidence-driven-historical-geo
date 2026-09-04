@@ -1,0 +1,22 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.prospective_round_round.v0.1",
+  "first_content_access": {
+    "access_date": "2026-09-04",
+    "content_record_check_id": "C001",
+    "held_out_content_accessed": false,
+    "historical_territorial_map_body_accessed": false,
+    "preregistration_commit": "bf513e88c18fba2dd8636b4d89b06950a497706d"
+  },
+  "previous_state_sha256": "dd03325039c25226e7cbbd0f62aafe541ba615812909759f23d3bad5d7f28aa4",
+  "review_date": "2026-09-05",
+  "review_status": "reviewed",
+  "round_id": "01-non-map-evidence",
+  "scope": "Post-freeze non-map evidence collection for all eight registered gaps. No held-out content, historical territorial map, map thumbnail, preview, PDF map page, screenshot, OCR, vector, boundary geometry or derived content was accessed.",
+  "transition": {
+    "from": "evidence_collection",
+    "reconstruction_ready": false,
+    "terminal_outcome": "completed_no_reconstruction",
+    "to": "completed_no_reconstruction"
+  }
+}

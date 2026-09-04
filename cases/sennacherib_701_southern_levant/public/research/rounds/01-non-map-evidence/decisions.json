@@ -1,0 +1,161 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.prospective_round_decisions.v0.1",
+  "decisions": [
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_JUDAH_NO_ALLOCATION",
+      "parameters": {
+        "allocation_input": false,
+        "eligible_named_local_control_points": 1,
+        "entity": "Judah"
+      },
+      "rationale": "Judah does not meet the frozen two-locality threshold; Lachish destruction and Jerusalem siege/tribute cannot create a second point.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_R1_KAHN_POLITICAL_EVENTS",
+        "SRC_IAA_LACHISH_2023",
+        "SRC_BLAKELY_HARDIN_2002"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_JUDAH_SECOND_CONTROL_UNRESOLVED"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_ASHKELON_NO_ALLOCATION",
+      "parameters": {
+        "allocation_input": false,
+        "entity": "Ashkelon",
+        "independent_qualifying_lineages": 1
+      },
+      "rationale": "Several named places occur, but only one partisan royal lineage supports their dynastic relation.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_ORACC_Q003496",
+        "SRC_R1_MET_2014"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_ASHKELON_LINEAGE_UNRESOLVED"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_EKRON_NO_ALLOCATION",
+      "parameters": {
+        "allocation_input": false,
+        "eligible_named_local_control_points": 1,
+        "entity": "Ekron"
+      },
+      "rationale": "Ekron’s seat and Padi’s status do not supply two named local-administration relations.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_R1_NAAMAN_EKRON_2003",
+        "SRC_ORACC_Q003945"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_EKRON_ADMIN_UNRESOLVED"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_ASHDOD_UNNAMED_TRANSFER_EXCLUDED",
+      "parameters": {
+        "allocation_input": false,
+        "entity": "Ashdod",
+        "invented_transfer_coordinates": false
+      },
+      "rationale": "The royal disposition names the recipient but not any transferred town.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_ORACC_Q003945",
+        "SRC_R1_MET_2014"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_ASHDOD_TRANSFER_EXCLUDED"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_GAZA_UNNAMED_TRANSFER_EXCLUDED",
+      "parameters": {
+        "allocation_input": false,
+        "entity": "Gaza",
+        "invented_transfer_coordinates": false
+      },
+      "rationale": "The royal disposition names the recipient but not any transferred town.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_ORACC_Q003945",
+        "SRC_R1_MET_2014"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_GAZA_TRANSFER_EXCLUDED"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_COORDINATES_NOT_ACQUIRED",
+      "parameters": {
+        "coordinate_layer_acquired": false,
+        "spatial_input_admitted": false
+      },
+      "rationale": "The frozen locality roster remains evaluative context; unresolved identifications and absent reviewed gazetteer records bar coordinate acquisition.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_ORACC_Q003496",
+        "SRC_ORACC_Q003945"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_LOCALITY_COORDINATES_UNRESOLVED"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_LACHISH_EVENT_ONLY",
+      "parameters": {
+        "allocation_input": false,
+        "feature_id": "lachish",
+        "ontology_layer": "destruction_event"
+      },
+      "rationale": "The site-specific destruction horizon is retained without territorial or administrative inference.",
+      "review_status": "admitted",
+      "role": "display_context",
+      "source_ids": [
+        "SRC_IAA_LACHISH_2023",
+        "SRC_BLAKELY_HARDIN_2002",
+        "SRC_R1_DODSON_2020"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_DESTRUCTION_CHRONOLOGY_CONSTRAINED"
+      ]
+    },
+    {
+      "challenging_claim_ids": [],
+      "decision_id": "D_R1_BIBLICAL_CONFIRMATION_EXCLUDED",
+      "parameters": {
+        "allocation_input": false,
+        "independent_lineage_count": 1,
+        "uncritical_confirmation": false
+      },
+      "rationale": "Kings and Isaiah are retained as a layered textual tradition, not independent coordinate or control evidence.",
+      "review_status": "excluded",
+      "role": "explicit_exclusion",
+      "source_ids": [
+        "SRC_R1_FEWELL_1986",
+        "SRC_R1_ANDERSON_VENTER_2009",
+        "SRC_R1_KAHN_PRIORITY"
+      ],
+      "supporting_claim_ids": [
+        "CLM_R1_BIBLICAL_LINEAGE_CONSTRAINED"
+      ]
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

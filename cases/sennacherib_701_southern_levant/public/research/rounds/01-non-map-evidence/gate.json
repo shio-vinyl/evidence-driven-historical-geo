@@ -1,0 +1,69 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "checks": [
+    {
+      "criterion": "two_modeled_entities_with_two_independent_named_locality_control_relations_each",
+      "observed": 0,
+      "passed": false,
+      "rationale": "Judah and Ekron each have at most one eligible named local-control point; Ashkelon has several names but only one partisan royal lineage; Ashdod and Gaza have no named transfer objects.",
+      "required": 2
+    },
+    {
+      "criterion": "two_independent_horizon_applicable_relations_per_modeled_entity",
+      "observed": {
+        "Ashdod": 0,
+        "Ashkelon": 0,
+        "Ekron": 1,
+        "Gaza": 0,
+        "Judah": 1
+      },
+      "passed": false,
+      "rationale": "Conquest, destruction, tribute, restoration, suzerainty, later prosperity and dynastic titles were not promoted to local administration.",
+      "required": 2
+    },
+    {
+      "criterion": "ten_locatable_spatial_candidates_from_four_independent_lineages",
+      "observed": {
+        "candidates": 12,
+        "lineages": 6
+      },
+      "passed": true,
+      "rationale": "The frozen candidate set remains supported for event, textual, archaeological, identification or exclusion review by royal-inscription, excavation, local-inscription, biblical-textual, source-critical and chronology-synthesis lineages; candidate status does not authorize coordinates or allocation.",
+      "required": {
+        "candidates": 10,
+        "lineages": 4
+      }
+    },
+    {
+      "criterion": "counterevidence_or_exclusion_relations",
+      "observed": 8,
+      "passed": true,
+      "rationale": "The round retains explicit exclusions for unnamed transfers, unresolved coordinates, biblical dependence, regional destruction attribution and imperial/local-administration equivalence.",
+      "required": 2
+    },
+    {
+      "criterion": "stable_locator_and_rights_for_all_admitted_sources",
+      "observed": 7,
+      "passed": true,
+      "rationale": "All seven admitted post-freeze sources record stable URLs, locators, access scope, rights and lineage; restricted content is paraphrased only.",
+      "required": 7
+    }
+  ],
+  "contract_version": "historical_geo.prospective_round_gate.v0.1",
+  "decision": "completed_no_reconstruction",
+  "failure_reasons": [
+    "No two candidate entities each have two independent, legally accessible and horizon-applicable named-locality local-control relations.",
+    "Reconstruction would require promoting military/destruction/tribute/suzerainty evidence, double-counting a source tradition, or inventing coordinates for unnamed or unresolved places."
+  ],
+  "held_out_state": "metadata_only_unviewed",
+  "modeling_status": {
+    "model_dominated": "not_applicable_no_model",
+    "modeled_entity_roster": [],
+    "scenarios_run": [],
+    "sensitivity_diagnostics_run": [],
+    "spatial_inputs_acquired": false
+  },
+  "overall_passed": false,
+  "polygon_generated": false,
+  "round_id": "01-non-map-evidence"
+}

@@ -1,0 +1,137 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "claims": [
+    {
+      "challenging_observation_ids": [
+        "OBS_SOUTHWEST_JUDAH_DATING_COUNTEREVIDENCE"
+      ],
+      "claim_id": "CLM_R1_JUDAH_SECOND_CONTROL_UNRESOLVED",
+      "entity": "Judah",
+      "rationale": "Destruction, siege, tribute and post-campaign kingship do not independently establish local administration at a second place.",
+      "semantic_role": "locality_control",
+      "spatial_scope": "named corridor localities",
+      "statement": "Jerusalem remains the sole supported Judahite political center at the required ontology layer; Lachish is an event locality, and no independent second local-control relation qualified.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_R1_HEZEKIAH_POST_DISPOSITION",
+        "OBS_LACHISH_DESTRUCTION_701"
+      ],
+      "temporal_scope": "701_bce_campaign_and_disposition_horizon"
+    },
+    {
+      "challenging_observation_ids": [
+        "OBS_R1_MET_RELATION_LAYERS"
+      ],
+      "claim_id": "CLM_R1_ASHKELON_LINEAGE_UNRESOLVED",
+      "entity": "Ashkelon",
+      "rationale": "Museum and modern retellings do not supply an independent evidentiary genealogy.",
+      "semantic_role": "local_dynastic_relation",
+      "spatial_scope": "Ashkelon, Bīt-Daganna, Joppa, Banayabarqa and Azuru",
+      "statement": "The named Ṣidqâ/Ashkelon locality network remains supported only by the Assyrian royal narrative lineage.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_ASHKELON_SIDQA_CITIES"
+      ],
+      "temporal_scope": "701_bce_campaign_horizon"
+    },
+    {
+      "challenging_observation_ids": [
+        "OBS_R1_MET_RELATION_LAYERS"
+      ],
+      "claim_id": "CLM_R1_EKRON_ADMIN_UNRESOLVED",
+      "entity": "Ekron",
+      "rationale": "Local dynasty, vassal status, punitive intervention, restoration, prosperity and direct administration remain distinct.",
+      "semantic_role": "local_administration",
+      "spatial_scope": "Ekron and any administered named locality",
+      "statement": "Ekron supports a local dynastic seat and contested/restored kingship, but no second named locality under horizon-applicable Ekronite administration.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_R1_EKRON_VASSAL_LIMIT",
+        "OBS_R1_EKRON_STRATUM_DATE_LIMIT",
+        "OBS_EKRON_PADI_RESTORED"
+      ],
+      "temporal_scope": "701_bce_campaign_and_disposition_horizon"
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_ASHDOD_TRANSFER_EXCLUDED",
+      "entity": "Ashdod",
+      "rationale": "Two directed searches exhausted the gap without a named transfer object.",
+      "semantic_role": "transfer_of_unnamed_places",
+      "spatial_scope": "unnamed Judahite towns",
+      "statement": "No transferred Judahite locality received by Mitinti of Ashdod can be named or independently located.",
+      "status": "unsupported",
+      "supporting_observation_ids": [
+        "OBS_JUDAH_CONQUEST_TRANSFER",
+        "OBS_R1_MET_TRANSFER_SILENCE"
+      ],
+      "temporal_scope": "701_bce_disposition_horizon"
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_GAZA_TRANSFER_EXCLUDED",
+      "entity": "Gaza",
+      "rationale": "Two directed searches exhausted the gap without a named transfer object.",
+      "semantic_role": "transfer_of_unnamed_places",
+      "spatial_scope": "unnamed Judahite towns",
+      "statement": "No transferred Judahite locality received by Ṣilli-Bēl of Gaza can be named or independently located.",
+      "status": "unsupported",
+      "supporting_observation_ids": [
+        "OBS_JUDAH_CONQUEST_TRANSFER",
+        "OBS_R1_MET_TRANSFER_SILENCE"
+      ],
+      "temporal_scope": "701_bce_disposition_horizon"
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_LOCALITY_COORDINATES_UNRESOLVED",
+      "entity": "All candidate polities",
+      "rationale": "Search failure and unrelated map-label exposure cannot authorize coordinates or resolve identifications.",
+      "semantic_role": "site_identification",
+      "spatial_scope": "twelve frozen named locality candidates",
+      "statement": "A reviewed and complete coordinate set, especially for the disputed ancient identifications, was not established.",
+      "status": "unresolved",
+      "supporting_observation_ids": [
+        "OBS_ASHKELON_SIDQA_CITIES",
+        "OBS_ELTEKEH_TIMNAH_EKRON_ACTIONS"
+      ],
+      "temporal_scope": "modern_identification"
+    },
+    {
+      "challenging_observation_ids": [
+        "OBS_R1_NILE_VALLEY_NEGATIVE"
+      ],
+      "claim_id": "CLM_R1_DESTRUCTION_CHRONOLOGY_CONSTRAINED",
+      "entity": "Judah-context sites",
+      "rationale": "The evidence supports a site-specific chronology rule, not a regional 701 blanket.",
+      "semantic_role": "destruction_chronology",
+      "spatial_scope": "Lachish and southwestern Judah",
+      "statement": "Lachish Level III may remain a 701 event observation, while other late-eighth-century destructions cannot be assigned to 701 by regional analogy.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_LACHISH_DESTRUCTION_701",
+        "OBS_SOUTHWEST_JUDAH_DATING_COUNTEREVIDENCE"
+      ],
+      "temporal_scope": "late_eighth_century_bce"
+    },
+    {
+      "challenging_observation_ids": [],
+      "claim_id": "CLM_R1_BIBLICAL_LINEAGE_CONSTRAINED",
+      "entity": "Hebrew Bible textual tradition",
+      "rationale": "The reviewed scholarship disagrees on priority but agrees that transmission, composition and source layers require explicit criticism.",
+      "semantic_role": "source_lineage",
+      "spatial_scope": "Lachish and Jerusalem narrative relations",
+      "statement": "2 Kings 18–19 and Isaiah 36–37 require layered, dependent textual treatment and cannot count as two independent contemporary confirmations.",
+      "status": "supported",
+      "supporting_observation_ids": [
+        "OBS_R1_KINGS_ISAIAH_DEPENDENCE",
+        "OBS_R1_KINGS_LAYERS",
+        "OBS_R1_ISAIAH_MANASSEH_COMPOSITION",
+        "OBS_R1_KAHN_SOURCE_PARTITION"
+      ],
+      "temporal_scope": "narrated_701_bce_with_later_composition"
+    }
+  ],
+  "contract_version": "historical_geo.prospective_round_claims.v0.1",
+  "round_id": "01-non-map-evidence"
+}

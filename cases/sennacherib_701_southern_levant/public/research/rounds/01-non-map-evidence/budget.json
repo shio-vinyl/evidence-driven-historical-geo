@@ -1,0 +1,32 @@
+{
+  "accounting_rule": "Queries count exact search strings; content/record checks count every direct open attempt, including failures and retries; follow-ups count distinct directed rounds after initial discovery.",
+  "case_id": "sennacherib-701-southern-levant",
+  "consumed": {
+    "content_record_checks": 20,
+    "per_gap_follow_ups": {
+      "GAP_ASHDOD_TRANSFERRED_LOCALITIES": 2,
+      "GAP_ASHKELON_INDEPENDENT_LINEAGE": 2,
+      "GAP_DESTRUCTION_CHRONOLOGY": 2,
+      "GAP_EKRON_LOCAL_ADMINISTRATION": 2,
+      "GAP_GAZA_TRANSFERRED_LOCALITIES": 2,
+      "GAP_HEBREW_BIBLE_LINEAGE": 2,
+      "GAP_JUDAH_SECOND_LOCAL_CONTROL": 2,
+      "GAP_LOCALITY_IDENTIFICATIONS": 2
+    },
+    "queries": 16,
+    "sources_admitted": 7
+  },
+  "contract_version": "historical_geo.prospective_round_budget.v0.1",
+  "limits": {
+    "content_record_checks": 20,
+    "per_gap_follow_ups": 2,
+    "queries": 24,
+    "sources_admitted": 12
+  },
+  "remaining": {
+    "content_record_checks": 0,
+    "queries": 8,
+    "sources_admitted": 5
+  },
+  "round_id": "01-non-map-evidence"
+}

@@ -1,0 +1,106 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.prospective_round_gaps.v0.1",
+  "gap_updates": [
+    {
+      "decision_ids": [
+        "D_R1_JUDAH_NO_ALLOCATION"
+      ],
+      "gap_id": "GAP_JUDAH_SECOND_LOCAL_CONTROL",
+      "query_ids": [
+        "Q001",
+        "Q002"
+      ],
+      "rationale": "The only qualifying Judahite political locality remains Jerusalem; Lachish is event evidence, and the two follow-ups found no independent second local-control relation.",
+      "status": "closed_unresolved"
+    },
+    {
+      "decision_ids": [
+        "D_R1_ASHKELON_NO_ALLOCATION"
+      ],
+      "gap_id": "GAP_ASHKELON_INDEPENDENT_LINEAGE",
+      "query_ids": [
+        "Q005",
+        "Q006"
+      ],
+      "rationale": "The named Ashkelon network remains confined to one Assyrian royal lineage; derivative modern repetitions were not counted independently.",
+      "status": "closed_unresolved"
+    },
+    {
+      "decision_ids": [
+        "D_R1_EKRON_NO_ALLOCATION"
+      ],
+      "gap_id": "GAP_EKRON_LOCAL_ADMINISTRATION",
+      "query_ids": [
+        "Q007",
+        "Q008",
+        "Q012"
+      ],
+      "rationale": "Local dynasty, contested rule, restoration, tribute, vassal status and later prosperity are separable, but no second named 701 Ekronite administrative relation qualified.",
+      "status": "closed_unresolved"
+    },
+    {
+      "decision_ids": [
+        "D_R1_ASHDOD_UNNAMED_TRANSFER_EXCLUDED"
+      ],
+      "gap_id": "GAP_ASHDOD_TRANSFERRED_LOCALITIES",
+      "query_ids": [
+        "Q009",
+        "Q011",
+        "Q012"
+      ],
+      "rationale": "The transferred towns remain unnamed after two directed follow-ups; invented Ashdod anchors are prohibited.",
+      "status": "closed_excluded"
+    },
+    {
+      "decision_ids": [
+        "D_R1_GAZA_UNNAMED_TRANSFER_EXCLUDED"
+      ],
+      "gap_id": "GAP_GAZA_TRANSFERRED_LOCALITIES",
+      "query_ids": [
+        "Q010",
+        "Q011",
+        "Q012"
+      ],
+      "rationale": "The transferred towns remain unnamed after two directed follow-ups; invented Gaza anchors are prohibited.",
+      "status": "closed_excluded"
+    },
+    {
+      "decision_ids": [
+        "D_R1_COORDINATES_NOT_ACQUIRED"
+      ],
+      "gap_id": "GAP_LOCALITY_IDENTIFICATIONS",
+      "query_ids": [
+        "Q013",
+        "Q014"
+      ],
+      "rationale": "The searches did not produce a reviewed complete coordinate set for the disputed identifications; no coordinate layer was acquired.",
+      "status": "closed_unresolved"
+    },
+    {
+      "decision_ids": [
+        "D_R1_LACHISH_EVENT_ONLY"
+      ],
+      "gap_id": "GAP_DESTRUCTION_CHRONOLOGY",
+      "query_ids": [
+        "Q003",
+        "Q004"
+      ],
+      "rationale": "The checked evidence supports retaining Lachish as a site-specific 701 event while excluding regional absorption of other late-eighth-century destructions.",
+      "status": "closed_supported"
+    },
+    {
+      "decision_ids": [
+        "D_R1_BIBLICAL_CONFIRMATION_EXCLUDED"
+      ],
+      "gap_id": "GAP_HEBREW_BIBLE_LINEAGE",
+      "query_ids": [
+        "Q015",
+        "Q016"
+      ],
+      "rationale": "Source-critical review establishes layered and dependent Kings–Isaiah transmission; the tradition remains one qualified, non-contemporary lineage for counting purposes.",
+      "status": "closed_supported"
+    }
+  ],
+  "round_id": "01-non-map-evidence"
+}

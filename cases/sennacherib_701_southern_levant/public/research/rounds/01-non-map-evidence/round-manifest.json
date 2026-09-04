@@ -1,0 +1,44 @@
+{
+  "case_id": "sennacherib-701-southern-levant",
+  "contract_version": "historical_geo.prospective_round_manifest.v0.1",
+  "files": [
+    {
+      "path": "budget.json",
+      "sha256": "3105b75a0235b8217c25a17c2d59b6970386af5ac09115ae0688eb76ca174c1f"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "e1c1fe48674ad31096c637fb1dd278daa6984e40d5d7a5f16c203abad43b34ac"
+    },
+    {
+      "path": "decisions.json",
+      "sha256": "076d673e874dffd1f9d36b65980616109df4cb807e6989d7662a52746940cafe"
+    },
+    {
+      "path": "gaps.json",
+      "sha256": "089815c3f7480a4263da6615911041d48a4c0282b87455917e7ff9d1869cd886"
+    },
+    {
+      "path": "gate.json",
+      "sha256": "a4668efe87e8e264c1ee7ca8477fc3f0d658a9c73c05cc6eae74b7a5ec4884ae"
+    },
+    {
+      "path": "observations.json",
+      "sha256": "1080bfe43097373a9bffeedd6c647b8944ff08463508e9642af5c3bca3776b8c"
+    },
+    {
+      "path": "queries.json",
+      "sha256": "dce6bf43d7dc1b82d5c7f4ddf63fdd907b9d6e895f83a5b209de5828270bf22f"
+    },
+    {
+      "path": "round.json",
+      "sha256": "a1556f0807e3e72bcce60771c60826c6ff660c1e6d4599e3837e36fe2b6133d4"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "6e872fc4ced12c689e6df4828fc292fde697277a9f3c0d779eaa02eaa5d70530"
+    }
+  ],
+  "previous_state_sha256": "dd03325039c25226e7cbbd0f62aafe541ba615812909759f23d3bad5d7f28aa4",
+  "round_id": "01-non-map-evidence"
+}
