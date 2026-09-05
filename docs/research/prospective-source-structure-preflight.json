@@ -1,0 +1,1298 @@
+{
+  "audit_id": "2026-09-05-source-structure-preflight",
+  "audit_date": "2026-09-05",
+  "status": "closed_no_candidate_selected",
+  "preferred_if_both_pass": "amarna-northern-canaan",
+  "limits": {
+    "queries": 8,
+    "content_record_checks": 6,
+    "preliminary_sources": 6,
+    "held_out_metadata_queries": 2,
+    "held_out_candidates": 2
+  },
+  "counting_rules": {
+    "queries": "Every search expression counts once, including metadata searches. Failed and unproductive searches remain in the log. No new search after resuming.",
+    "content_record_checks": "Each explicit open attempt counts once, including 502 failures. Incidental text in search responses is disclosed as indexed-only, not a successful body check.",
+    "legal_text_access": "Distinct preliminary source records with a successful lawful full-text retrieval / all preliminary source records attempted (six per candidate). This measures demonstrated access in this run, not whether the work is legally available elsewhere. No denominators may shrink to remove failures; editions may count as separate access endpoints but never as independent historical lineages.",
+    "held_out_candidates": "Distinct potentially relevant atlas works exposed by the metadata search, including incidentally returned excluded works; conservative accounting includes three for B.",
+    "independence": "Same sender, archive-producing agency, ancient text, translation or dependent retelling cannot multiply political lineages. Gazetteers identify places; archaeology establishes finds, dates and occupation unless it explicitly attests political relations.",
+    "gate": "All gates must pass. Unverified judgments fail closed. Potential relations remain discovery leads; the code cannot verify historical interpretation."
+  },
+  "existing_state": {
+    "baseline_commit": "b075e70",
+    "mercia_welsh": "completed_no_reconstruction",
+    "sennacherib_701": "completed_no_reconstruction",
+    "held_out": "Both existing prospective registers remain permanently sealed; no content opened.",
+    "crusader": "All tracked case artifacts unchanged; no new reconstruction or evaluation run.",
+    "git_tree_objects": {
+      "crusader_states": "cb0164edfdc0f2d2339a9117be625ec8e515f25d",
+      "mercia_welsh_frontier": "cc58a0ff5a1b6096382867b5343ac090739cfb64",
+      "sennacherib_701_southern_levant": "f73f883271afdec782188d9e49b29710d57ec504"
+    }
+  },
+  "protocol_deviations": [
+    {
+      "id": "DEV_QUERY_ACCOUNTING",
+      "description": "The initial execution used eight research searches plus one metadata search per candidate. On an inclusive reading each used 9/8 queries; metadata searches are a sub-budget, not free extra searches. No further queries were made after correction."
+    },
+    {
+      "id": "DEV_ATLAS_SPILLOVER",
+      "description": "B metadata search exposed three distinct atlas works despite the two-candidate cap. All are excluded; none was opened. Incidental results are retained in conservative budget accounting."
+    },
+    {
+      "id": "DEV_PREMATURE_GO",
+      "description": "An uncommitted Amarna skeleton and SHA-256 manifest were created before demonstrated hard-gate compliance. The draft incorrectly promoted prospective uninspected lineages, name lists and snippets to passed criteria. It was removed before any commit; the relative-phase schema extension was also withdrawn. No valid preregistration or fourth case exists."
+    },
+    {
+      "id": "DEV_UNSCREENED_ILLUSTRATED_HTML",
+      "description": "B-C06 opened an illustrated Gutenberg book through a text reader without prior section-level isolation. Returned passages were narrative text; no image or map page was selected. Hidden or omitted content cannot be audited from the returned excerpts, so a comprehensive clean-browsing claim is withheld."
+    }
+  ],
+  "map_access_audit": {
+    "image_search_used": false,
+    "map_images_requested": false,
+    "screenshots_requested": false,
+    "ocr_requested": false,
+    "vectors_requested": false,
+    "map_files_stored": false,
+    "polygons_generated": false,
+    "observed_scope": "Text-mode web search and twelve explicit text/catalog open attempts. No known historical territorial map body, map page, plate, vector or derived boundary was intentionally fetched or inspected. Search output did contain incidental front-cover image markers, recorded below; no pixels were displayed by an image/screenshot tool.",
+    "limit": "Search extraction and unrequested snippets are not controllable evidence of a perfectly blind browsing history. Excluded records and the unscreened illustrated HTML request prevent an unqualified assertion of total non-exposure.",
+    "polygons_generated_scope": "No candidate polygon or new historical reconstruction. The unchanged full regression suite may generate synthetic and copied-case geometry under temporary test directories; these are not candidate inputs or research outputs."
+  },
+  "question_freeze": null,
+  "preregistration_created": false,
+  "candidates": [
+    {
+      "candidate_id": "amarna-northern-canaan",
+      "label": "Amarna northern Canaan",
+      "centers": [
+        {
+          "entity_id": "byblos",
+          "label": "Rib-Hadda / Byblos",
+          "center_verified": true
+        },
+        {
+          "entity_id": "amurru",
+          "label": "Abdi-Ashirta / Amurru political actor; no fixed seat verified",
+          "center_verified": false
+        }
+      ],
+      "query_log": [
+        {
+          "query": "site:oracc.museum.upenn.edu Amarna EA 74 Rib-Hadda Sumur Ullaza Ardata text",
+          "query_id": "A-Q01",
+          "kind": "research"
+        },
+        {
+          "query": "site:cdli.mpiwg-berlin.mpg.de Amarna EA 85 Rib-Hadda Sigata Ambi",
+          "query_id": "A-Q02",
+          "kind": "research"
+        },
+        {
+          "query": "site:ucl.ac.uk Amarna letters Rib-Hadda Abdi-Ashirta Byblos translations",
+          "query_id": "A-Q03",
+          "kind": "research"
+        },
+        {
+          "query": "site:archive.org Knudtzon Amarna tablets Rib-Hadda translation public domain",
+          "query_id": "A-Q04",
+          "kind": "research"
+        },
+        {
+          "query": "site:oracc.museum.upenn.edu/aemw/amarna \"EA 085\" Rib-Addi Sigata Ambi Batruna",
+          "query_id": "A-Q05",
+          "kind": "research"
+        },
+        {
+          "query": "site:oracc.museum.upenn.edu/aemw/amarna \"EA 079\" Rib-Addi Sumur Batruna Beirut",
+          "query_id": "A-Q06",
+          "kind": "research"
+        },
+        {
+          "query": "site:oracc.museum.upenn.edu/aemw/amarna \"Abdi-Ashirta\" \"Irqata\" \"Ardata\"",
+          "query_id": "A-Q07",
+          "kind": "research"
+        },
+        {
+          "query": "site:oracc.museum.upenn.edu/aemw/amarna \"Ammunira\" Beirut Rib-Addi",
+          "query_id": "A-Q08",
+          "kind": "research"
+        },
+        {
+          "query_id": "A-HQ01",
+          "kind": "held_out_metadata",
+          "query": "site:worldcat.org \"Atlas of the Ancient Near East\" Trevor Bryce ISBN"
+        }
+      ],
+      "content_record_check_log": [
+        {
+          "check_id": "A-C01",
+          "source_id": "A1",
+          "target_url": "https://oracc.museum.upenn.edu/aemw/amarna/P270898/html",
+          "result": "fetch_failed_502",
+          "lawful_access_verified": false,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "A-C02",
+          "source_id": "A2",
+          "target_url": "https://oracc.museum.upenn.edu/aemw/amarna/P271081/html",
+          "result": "fetch_failed_502",
+          "lawful_access_verified": false,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "A-C03",
+          "source_id": "A3",
+          "target_url": "https://oracc.museum.upenn.edu/aemw/amarna/P270981/html",
+          "result": "fetch_failed_502",
+          "lawful_access_verified": false,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "A-C04",
+          "source_id": "A4",
+          "target_url": "https://oracc.museum.upenn.edu/aemw/amarna/P270902",
+          "result": "fetch_failed_502",
+          "lawful_access_verified": false,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "A-C05",
+          "source_id": "A5",
+          "target_url": "https://oracc.museum.upenn.edu/aemw/amarna/P271152",
+          "result": "fetch_failed_502",
+          "lawful_access_verified": false,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "A-C06",
+          "source_id": "A6",
+          "target_url": "https://www.ucl.ac.uk/museums-static/digitalegypt/amarna/cuneiform2.html",
+          "result": "full_text",
+          "lawful_access_verified": true,
+          "map_body_selected": false
+        }
+      ],
+      "preliminary_sources": [
+        {
+          "source_id": "A1",
+          "title": "AEMW EA 74, Rib-Hadda at Byblos",
+          "url": "https://oracc.museum.upenn.edu/aemw/amarna/P270898/html",
+          "locator": "EA 74 obverse 1 and 5 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "rib_hadda_sender",
+          "independence_verified": true,
+          "evidence_role": "political_letter",
+          "access_result": "fetch_failed_502",
+          "rights_detail": "AEMW CC BY-SA 3.0 notice observed on EA 136 indexed edition; other edition notices not directly fetched. Original paraphrases and citations only; no edition text redistributed."
+        },
+        {
+          "source_id": "A2",
+          "title": "AEMW EA 79, Rib-Hadda at Byblos",
+          "url": "https://oracc.museum.upenn.edu/aemw/amarna/P271081/html",
+          "locator": "EA 79 obverse 7 onward; indexed seizure/pressure passage",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "rib_hadda_sender",
+          "independence_verified": true,
+          "evidence_role": "political_letter",
+          "access_result": "fetch_failed_502",
+          "rights_detail": "AEMW CC BY-SA 3.0 notice observed on EA 136 indexed edition; other edition notices not directly fetched. Original paraphrases and citations only; no edition text redistributed."
+        },
+        {
+          "source_id": "A3",
+          "title": "AEMW EA 104, Rib-Hadda at Byblos",
+          "url": "https://oracc.museum.upenn.edu/aemw/amarna/P270981/html",
+          "locator": "EA 104 obverse 6 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "rib_hadda_sender",
+          "independence_verified": true,
+          "evidence_role": "political_letter",
+          "access_result": "fetch_failed_502",
+          "rights_detail": "AEMW CC BY-SA 3.0 notice observed on EA 136 indexed edition; other edition notices not directly fetched. Original paraphrases and citations only; no edition text redistributed."
+        },
+        {
+          "source_id": "A4",
+          "title": "AEMW EA 136, Rib-Hadda writing from Beirut",
+          "url": "https://oracc.museum.upenn.edu/aemw/amarna/P270902",
+          "locator": "EA 136 obverse 1–15; indexed edition notes",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "rib_hadda_sender",
+          "independence_verified": true,
+          "evidence_role": "political_letter",
+          "access_result": "fetch_failed_502",
+          "rights_detail": "AEMW CC BY-SA 3.0 notice observed on EA 136 indexed edition; other edition notices not directly fetched. Original paraphrases and citations only; no edition text redistributed."
+        },
+        {
+          "source_id": "A5",
+          "title": "AEMW EA 58, Tehu-Teshshub; Ullaza? provenance",
+          "url": "https://oracc.museum.upenn.edu/aemw/amarna/P271152",
+          "locator": "EA 58 catalog header and obverse 1–4",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "tehu_teshshub_sender",
+          "independence_verified": true,
+          "evidence_role": "letter_provenance_and_other_campaign",
+          "access_result": "fetch_failed_502",
+          "rights_detail": "AEMW CC BY-SA 3.0 notice observed on EA 136 indexed edition; other edition notices not directly fetched. Original paraphrases and citations only; no edition text redistributed."
+        },
+        {
+          "source_id": "A6",
+          "title": "UCL Digital Egypt, Amarna cuneiform tablets background",
+          "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/amarna/cuneiform2.html",
+          "locator": "EA numbering, museum holdings and bibliography",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "ucl_corpus_guide",
+          "independence_verified": false,
+          "evidence_role": "corpus_metadata",
+          "access_result": "full_text",
+          "rights_detail": "Copyright UCL 2002, all rights reserved. Public text read; citation and original paraphrase only."
+        }
+      ],
+      "source_matrix": [
+        {
+          "row_id": "A-R01",
+          "entity": "byblos",
+          "locality": "Byblos",
+          "relation": "Reported intact loyal city; Egyptian loyalty language kept separate from local control.",
+          "source_id": "A1",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "candidate_phase",
+          "locator": "EA 74 obverse 1 and 5 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R02",
+          "entity": "byblos",
+          "locality": "Byblos",
+          "relation": "Reported threatened objectives; no durable surrounding allocation implied.",
+          "source_id": "A2",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "candidate_phase",
+          "locator": "EA 79 obverse 7 onward; indexed seizure/pressure passage",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R03",
+          "entity": "byblos",
+          "locality": "Batruna",
+          "relation": "Reported threatened objectives; no durable surrounding allocation implied.",
+          "source_id": "A2",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "candidate_phase",
+          "locator": "EA 79 obverse 7 onward; indexed seizure/pressure passage",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R04",
+          "entity": "amurru",
+          "locality": "Bīt-Arḫa",
+          "relation": "Seizure attributed to Abdi-Ashirta command by an adverse sender.",
+          "source_id": "A2",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "candidate_phase",
+          "locator": "EA 79 obverse 7 onward; indexed seizure/pressure passage",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R05",
+          "entity": "amurru",
+          "locality": "Ullaza",
+          "relation": "Entry or possession attributed to sons; no automatic backward bridge to their father.",
+          "source_id": "A3",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "sons_phase_unresolved",
+          "locator": "EA 104 obverse 6 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R06",
+          "entity": "amurru",
+          "locality": "Ardata",
+          "relation": "Entry or possession attributed to sons; no automatic backward bridge to their father.",
+          "source_id": "A3",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "sons_phase_unresolved",
+          "locator": "EA 104 obverse 6 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R07",
+          "entity": "amurru",
+          "locality": "Wahliya",
+          "relation": "Entry or possession attributed to sons; no automatic backward bridge to their father.",
+          "source_id": "A3",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "sons_phase_unresolved",
+          "locator": "EA 104 obverse 6 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R08",
+          "entity": "amurru",
+          "locality": "Ambi",
+          "relation": "Entry or possession attributed to sons; no automatic backward bridge to their father.",
+          "source_id": "A3",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "sons_phase_unresolved",
+          "locator": "EA 104 obverse 6 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R09",
+          "entity": "amurru",
+          "locality": "Sigata",
+          "relation": "Entry or possession attributed to sons; no automatic backward bridge to their father.",
+          "source_id": "A3",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "sons_phase_unresolved",
+          "locator": "EA 104 obverse 6 onward",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R10",
+          "entity": "byblos",
+          "locality": "Beirut",
+          "relation": "Letter from Beirut reports proposed peace with a son; later context.",
+          "source_id": "A4",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "sons_phase_unresolved",
+          "locator": "EA 136 obverse 1–15; indexed edition notes",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R11",
+          "entity": "byblos",
+          "locality": "Byblos",
+          "relation": "Letter from Beirut reports proposed peace with a son; later context.",
+          "source_id": "A4",
+          "source_lineage": "rib_hadda_sender",
+          "temporal_applicability": "sons_phase_unresolved",
+          "locator": "EA 136 obverse 1–15; indexed edition notes",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "A-R12",
+          "entity": "amurru",
+          "locality": "Ullaza?",
+          "relation": "Questioned letter provenance only; no verified Byblos/Amurru relation.",
+          "source_id": "A5",
+          "source_lineage": "tehu_teshshub_sender",
+          "temporal_applicability": "unresolved",
+          "locator": "EA 58 catalog header and obverse 1–4",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": false,
+          "content_observed": true
+        }
+      ],
+      "locality_register": [
+        {
+          "locality_id": "L01",
+          "label": "Byblos",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L02",
+          "label": "Ṣumur",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L03",
+          "label": "Ullaza",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L04",
+          "label": "Ardata",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L05",
+          "label": "Irqata",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L06",
+          "label": "Sigata",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L07",
+          "label": "Ambi",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L08",
+          "label": "Batruna",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L09",
+          "label": "Beirut",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L10",
+          "label": "Sidon",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L11",
+          "label": "Tyre",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L12",
+          "label": "Bīt-Arḫa",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L13",
+          "label": "Wahliya",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        }
+      ],
+      "conflicts_or_exclusions": [
+        {
+          "exclusion_id": "A-X1",
+          "row_ids": [
+            "A-R05",
+            "A-R06",
+            "A-R07",
+            "A-R08",
+            "A-R09",
+            "A-R10",
+            "A-R11"
+          ],
+          "reason": "Do not pool sons-era correspondence with the requested father-era phase without critical ordering."
+        },
+        {
+          "exclusion_id": "A-X2",
+          "row_ids": [
+            "A-R12"
+          ],
+          "reason": "Questioned provenance and a different sender do not establish a second political lineage for either target center."
+        }
+      ],
+      "held_out_candidates": [
+        {
+          "reference_id": "A-HO1",
+          "title": "Atlas of the Ancient Near East: From Prehistoric Times to the Roman Imperial Period",
+          "authors": [
+            "Trevor Bryce",
+            "Jessie Birkett-Rees"
+          ],
+          "publisher": "Routledge",
+          "publication_year": 2016,
+          "identifier": "OCLC 898926342",
+          "catalog_url": "https://search.worldcat.org/title/atlas-of-the-ancient-near-east-from-prehistoric-times-to-the-roman-imperial-period/oclc/898926342",
+          "metadata_only": true,
+          "excluded": false,
+          "contamination": false,
+          "ten_unit_expectation_supported": false,
+          "rights": "Copyrighted atlas; no body or derivative licence established. Only WorldCat search-result bibliographic metadata read.",
+          "access": "No catalog link, content, thumbnail or plate opened. Broad coverage does not establish ten units for this short letter-defined phase."
+        }
+      ],
+      "contamination_log": [],
+      "incidental_results": "Other EA texts (including EA 81), UCL PDFs, sign lists and unrelated texts appeared in search results. No additional body or PDF checks; these are not preliminary source admissions and their bibliographies cannot supply missing independent lineages.",
+      "isolation_review": {
+        "status": "pass",
+        "rationale": "Returned Amarna chunks were non-map text and bibliographic metadata. No map body or image requested; incidental search coverage remains a general limitation."
+      },
+      "review_gates": {
+        "stable_temporal_phase": {
+          "status": "unverified",
+          "rationale": "EA numbers are identifiers, not chronology. No ordered late Rib-Hadda–Abdi-Ashirta cluster with independently supported stable relations was established; EA 104/136 concern sons. No absolute years assigned."
+        },
+        "spatial_model_fit": {
+          "status": "unverified",
+          "rationale": "The checked material is predominantly seizure, pressure and defection rhetoric; no center-specific stable local-control structure or independently reviewed terrain relation was established."
+        },
+        "no_dynamic_dependency": {
+          "status": "unverified",
+          "rationale": "Cannot demonstrate that a reconstruction would avoid conflating changing capture/pressure reports or Egyptian support stations into a static influence field."
+        }
+      },
+      "unconfirmed_lineage_leads": "Abdi-Ashirta, other city rulers and the Irqata community were proposed but their relevant letters were not inspected. UCL lists the corpus only. EA 58 is a different sender, without a demonstrated target-center political relation."
+    },
+    {
+      "candidate_id": "florence-siena-contado",
+      "label": "Florence–Siena contado frontier, c.1259–1260",
+      "centers": [
+        {
+          "entity_id": "florence",
+          "label": "Florence comune",
+          "center_verified": true
+        },
+        {
+          "entity_id": "siena",
+          "label": "Siena comune",
+          "center_verified": true
+        }
+      ],
+      "query_log": [
+        {
+          "query": "site:archiviodistato.firenze.it Diplomatico 1259 Montalcino Siena",
+          "query_id": "B-Q01",
+          "kind": "research"
+        },
+        {
+          "query": "site:archiviodistato.siena.it 1259 Montaperti inventario Biccherna",
+          "query_id": "B-Q02",
+          "kind": "research"
+        },
+        {
+          "query": "site:books.google.com Villani Cronica Montaperti 1260 Poggibonsi Montalcino",
+          "query_id": "B-Q03",
+          "kind": "research"
+        },
+        {
+          "query": "site:archive.org Villani Cronica Montaperti 1260 public domain text",
+          "query_id": "B-Q04",
+          "kind": "research"
+        },
+        {
+          "query": "site:siusa.archivi.beniculturali.it Siena Biccherna 1259 inventario",
+          "query_id": "B-Q05",
+          "kind": "research"
+        },
+        {
+          "query": "site:icar.cultura.gov.it Siena Biccherna 1259 archival inventory",
+          "query_id": "B-Q06",
+          "kind": "research"
+        },
+        {
+          "query": "\"1259\" \"Poggibonsi\" \"Siena\" comune archive document",
+          "query_id": "B-Q07",
+          "kind": "research"
+        },
+        {
+          "query": "\"1259\" \"Montalcino\" \"Firenze\" \"Siena\" chronicle",
+          "query_id": "B-Q08",
+          "kind": "research"
+        },
+        {
+          "query_id": "B-HQ01",
+          "kind": "held_out_metadata",
+          "query": "site:worldcat.org atlas medieval Tuscany Florence Siena ISBN"
+        }
+      ],
+      "content_record_check_log": [
+        {
+          "check_id": "B-C01",
+          "source_id": "B1",
+          "target_url": "https://www.archiviodistato.firenze.it/asfi/archivi-digitalizzati/diplomatico/",
+          "result": "catalog_only",
+          "lawful_access_verified": true,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "B-C02",
+          "source_id": "B2",
+          "target_url": "https://archiviodistatosiena.cultura.gov.it/home/patrimonio/fondi-archivistici/elenco-dei-fondi/c",
+          "result": "catalog_only",
+          "lawful_access_verified": true,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "B-C03",
+          "source_id": "B3",
+          "target_url": "https://it.wikisource.org/wiki/Cronica_(Villani)/Libro_VI",
+          "result": "full_text",
+          "lawful_access_verified": true,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "B-C04",
+          "source_id": "B4",
+          "target_url": "https://www.gutenberg.org/files/33022/33022-h/33022-h.htm",
+          "result": "full_text",
+          "lawful_access_verified": true,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "B-C05",
+          "source_id": "B5",
+          "target_url": "https://www.laterza.it/scheda-libro/?isbn=9788858134832",
+          "result": "excerpt_only",
+          "lawful_access_verified": true,
+          "map_body_selected": false
+        },
+        {
+          "check_id": "B-C06",
+          "source_id": "B6",
+          "target_url": "https://www.gutenberg.org/cache/epub/46954/pg46954-images.html",
+          "result": "full_text",
+          "lawful_access_verified": true,
+          "map_body_selected": false
+        }
+      ],
+      "preliminary_sources": [
+        {
+          "source_id": "B1",
+          "title": "Archivio di Stato di Firenze, Diplomatico",
+          "url": "https://www.archiviodistato.firenze.it/asfi/archivi-digitalizzati/diplomatico/",
+          "locator": "Digitized holdings and access-system description",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "asfi_catalog",
+          "independence_verified": false,
+          "evidence_role": "finding_aid",
+          "access_result": "catalog_only",
+          "rights_detail": "Publicly readable institutional catalog; no image or document reuse licence established. Citation and original paraphrase only."
+        },
+        {
+          "source_id": "B2",
+          "title": "Archivio di Stato di Siena, fonds C",
+          "url": "https://archiviodistatosiena.cultura.gov.it/home/patrimonio/fondi-archivistici/elenco-dei-fondi/c",
+          "locator": "Capitoli; Colle; Monteriggioni; Poggibonsi; Concistoro; Consiglio Generale entries",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "siena_catalog",
+          "independence_verified": false,
+          "evidence_role": "finding_aid",
+          "access_result": "catalog_only",
+          "rights_detail": "Publicly readable institutional catalog; no image or document reuse licence established. Citation and original paraphrase only."
+        },
+        {
+          "source_id": "B3",
+          "title": "Giovanni Villani, Cronica, Book VI, Italian text",
+          "url": "https://it.wikisource.org/wiki/Cronica_(Villani)/Libro_VI",
+          "locator": "Book VI chapters XIII and LXXVI–LXXVII; 1258–1260 sequence",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "villani_chronicle",
+          "independence_verified": true,
+          "evidence_role": "historical_chronicle",
+          "access_result": "full_text",
+          "rights_detail": "Ancient author and historical edition; public Wikisource text. No scans or transcription reused; citation and original paraphrase only."
+        },
+        {
+          "source_id": "B4",
+          "title": "Villani's Chronicle, English selections",
+          "url": "https://www.gutenberg.org/files/33022/33022-h/33022-h.htm",
+          "locator": "Book VI §§54–65",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "villani_chronicle",
+          "independence_verified": true,
+          "evidence_role": "translation_same_chronicle",
+          "access_result": "full_text",
+          "rights_detail": "Public Gutenberg historical translation; US public-domain path, worldwide reuse rights not established. Citation and original paraphrase only."
+        },
+        {
+          "source_id": "B5",
+          "title": "Duccio Balestracci, La battaglia di Montaperti, publisher extract",
+          "url": "https://www.laterza.it/scheda-libro/?isbn=9788858134832",
+          "locator": "Extract on 1232–1235; notes 55–57 and Villani/Anonimo disagreement",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "later_synthesis_dependency_unreviewed",
+          "independence_verified": false,
+          "evidence_role": "publisher_excerpt",
+          "access_result": "excerpt_only",
+          "rights_detail": "Copyrighted Laterza publisher excerpt; citation and original paraphrase only."
+        },
+        {
+          "source_id": "B6",
+          "title": "Edmund G. Gardner, The Story of Siena and San Gimignano",
+          "url": "https://www.gutenberg.org/cache/epub/46954/pg46954-images.html",
+          "locator": "Chapter I, 1258–1260 discussion, notes 4–5 vicinity",
+          "rights": "citation_and_original_paraphrase_only",
+          "lineage_id": "gardner_dependency_unreviewed",
+          "independence_verified": false,
+          "evidence_role": "later_historical_synthesis",
+          "access_result": "full_text",
+          "rights_detail": "Public Gutenberg historical book; US public-domain path, worldwide reuse rights not established. No images or original text redistributed."
+        }
+      ],
+      "source_matrix": [
+        {
+          "row_id": "B-R01",
+          "entity": "florence",
+          "locality": "Florence",
+          "relation": "Commune and commended/protected place in the pre-battle account; alliance/protection is not contado jurisdiction.",
+          "source_id": "B3",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Book VI chapters XIII and LXXVI–LXXVII; 1258–1260 sequence",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R02",
+          "entity": "florence",
+          "locality": "Montalcino",
+          "relation": "Commune and commended/protected place in the pre-battle account; alliance/protection is not contado jurisdiction.",
+          "source_id": "B3",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Book VI chapters XIII and LXXVI–LXXVII; 1258–1260 sequence",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R03",
+          "entity": "siena",
+          "locality": "Siena",
+          "relation": "Sienese center and military objective; targeting Montalcino does not show Sienese local control.",
+          "source_id": "B3",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Book VI chapters XIII and LXXVI–LXXVII; 1258–1260 sequence",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R04",
+          "entity": "siena",
+          "locality": "Montalcino",
+          "relation": "Sienese center and military objective; targeting Montalcino does not show Sienese local control.",
+          "source_id": "B3",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Book VI chapters XIII and LXXVI–LXXVII; 1258–1260 sequence",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R05",
+          "entity": "florence",
+          "locality": "Poggibonsi",
+          "relation": "Earlier seizure or disposition account; no demonstrated continuity into late 1259.",
+          "source_id": "B4",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "earlier_1254",
+          "locator": "Book VI §§54–65",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R06",
+          "entity": "florence",
+          "locality": "Volterra",
+          "relation": "Earlier seizure or disposition account; no demonstrated continuity into late 1259.",
+          "source_id": "B4",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "earlier_1254",
+          "locator": "Book VI §§54–65",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R07",
+          "entity": "florence",
+          "locality": "Montalcino",
+          "relation": "Earlier seizure or disposition account; no demonstrated continuity into late 1259.",
+          "source_id": "B4",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "earlier_1254",
+          "locator": "Book VI §§54–65",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R08",
+          "entity": "siena",
+          "locality": "Monteriggioni",
+          "relation": "Earlier siege of Sienese fortress; 1259 jurisdiction requires a bridge.",
+          "source_id": "B4",
+          "source_lineage": "villani_chronicle",
+          "temporal_applicability": "earlier_1254",
+          "locator": "Book VI §§54–65",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R09",
+          "entity": "siena",
+          "locality": "Grosseto",
+          "relation": "Revolt and intervention described in campaign sequence; dependent synthesis, not verified independent testimony.",
+          "source_id": "B6",
+          "source_lineage": "gardner_dependency_unreviewed",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Chapter I, 1258–1260 discussion, notes 4–5 vicinity",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R10",
+          "entity": "siena",
+          "locality": "Montemassi",
+          "relation": "Revolt and intervention described in campaign sequence; dependent synthesis, not verified independent testimony.",
+          "source_id": "B6",
+          "source_lineage": "gardner_dependency_unreviewed",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Chapter I, 1258–1260 discussion, notes 4–5 vicinity",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R11",
+          "entity": "florence",
+          "locality": "Montepulciano",
+          "relation": "Reported supply destinations; administrative relationship unresolved.",
+          "source_id": "B6",
+          "source_lineage": "gardner_dependency_unreviewed",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Chapter I, 1258–1260 discussion, notes 4–5 vicinity",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R12",
+          "entity": "florence",
+          "locality": "Montalcino",
+          "relation": "Reported supply destinations; administrative relationship unresolved.",
+          "source_id": "B6",
+          "source_lineage": "gardner_dependency_unreviewed",
+          "temporal_applicability": "candidate_phase",
+          "locator": "Chapter I, 1258–1260 discussion, notes 4–5 vicinity",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R13",
+          "entity": "florence",
+          "locality": "Colle di Val d’Elsa",
+          "relation": "Alliance references in the extract concern 1232–1235; not directly late 1259.",
+          "source_id": "B5",
+          "source_lineage": "later_synthesis_dependency_unreviewed",
+          "temporal_applicability": "earlier_1232_1235",
+          "locator": "Extract on 1232–1235; notes 55–57 and Villani/Anonimo disagreement",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R14",
+          "entity": "florence",
+          "locality": "San Gimignano",
+          "relation": "Alliance references in the extract concern 1232–1235; not directly late 1259.",
+          "source_id": "B5",
+          "source_lineage": "later_synthesis_dependency_unreviewed",
+          "temporal_applicability": "earlier_1232_1235",
+          "locator": "Extract on 1232–1235; notes 55–57 and Villani/Anonimo disagreement",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R15",
+          "entity": "florence",
+          "locality": "San Miniato",
+          "relation": "Alliance references in the extract concern 1232–1235; not directly late 1259.",
+          "source_id": "B5",
+          "source_lineage": "later_synthesis_dependency_unreviewed",
+          "temporal_applicability": "earlier_1232_1235",
+          "locator": "Extract on 1232–1235; notes 55–57 and Villani/Anonimo disagreement",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": true,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R16",
+          "entity": "siena",
+          "locality": "Poggibonsi",
+          "relation": "Municipal holdings described here start after the target horizon; a catalog is not a political document.",
+          "source_id": "B2",
+          "source_lineage": "siena_catalog",
+          "temporal_applicability": "later_fonds_start",
+          "locator": "Capitoli; Colle; Monteriggioni; Poggibonsi; Concistoro; Consiglio Generale entries",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": false,
+          "content_observed": true
+        },
+        {
+          "row_id": "B-R17",
+          "entity": "siena",
+          "locality": "Monteriggioni",
+          "relation": "Municipal holdings described here start after the target horizon; a catalog is not a political document.",
+          "source_id": "B2",
+          "source_lineage": "siena_catalog",
+          "temporal_applicability": "later_fonds_start",
+          "locator": "Capitoli; Colle; Monteriggioni; Poggibonsi; Concistoro; Consiglio Generale entries",
+          "rights": "citation_and_original_paraphrase_only",
+          "political_relation": false,
+          "content_observed": true
+        }
+      ],
+      "locality_register": [
+        {
+          "locality_id": "L01",
+          "label": "Florence",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L02",
+          "label": "Siena",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L03",
+          "label": "Montalcino",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L04",
+          "label": "Montepulciano",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L05",
+          "label": "Poggibonsi",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L06",
+          "label": "Colle di Val d’Elsa",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L07",
+          "label": "San Gimignano",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L08",
+          "label": "Volterra",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L09",
+          "label": "Monteriggioni",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L10",
+          "label": "Grosseto",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L11",
+          "label": "Montemassi",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        },
+        {
+          "locality_id": "L12",
+          "label": "San Miniato",
+          "identification_verified": false,
+          "source_id": null,
+          "locator": null,
+          "status": "named candidate only; no gazetteer/site identification inspected"
+        }
+      ],
+      "conflicts_or_exclusions": [
+        {
+          "exclusion_id": "B-X1",
+          "row_ids": [
+            "B-R05",
+            "B-R06",
+            "B-R07",
+            "B-R08",
+            "B-R13",
+            "B-R14",
+            "B-R15"
+          ],
+          "reason": "Earlier chronicle events and the publisher extract cannot establish a stable 1259 jurisdiction without continuity evidence."
+        },
+        {
+          "exclusion_id": "B-X2",
+          "row_ids": [
+            "B-R09",
+            "B-R10"
+          ],
+          "reason": "Revolt and military intervention cannot be equated with stable comune control."
+        },
+        {
+          "exclusion_id": "B-X3",
+          "row_ids": [
+            "B-R16",
+            "B-R17"
+          ],
+          "reason": "The catalogued municipal fonds start in 1314 (Poggibonsi) and 1566 (Monteriggioni); do not count them as checked 1259 records. This does not assert absence from other fonds."
+        }
+      ],
+      "held_out_candidates": [
+        {
+          "reference_id": "B-HO1",
+          "title": "Atlante archeologico di Firenze: indagine storico-archeologica dalla preistoria all’alto medioevo",
+          "publication_year": 2010,
+          "identifier": "OCLC 612237478",
+          "catalog_url": "https://search.worldcat.org/title/612237478",
+          "metadata_only": true,
+          "excluded": true,
+          "contamination": true,
+          "ten_unit_expectation_supported": false,
+          "rights": "Copyright status/edition access not independently verified; no reproduction permitted by this audit.",
+          "access": "Incidental front-cover image marker in search response; no catalog link or image opened. Excluded conservatively; ten suitable local units not established."
+        },
+        {
+          "reference_id": "B-HO2",
+          "title": "Atlas of the medieval world",
+          "publication_year": 2004,
+          "identifier": "OCLC 56011447",
+          "catalog_url": "https://search.worldcat.org/title/56011447",
+          "metadata_only": true,
+          "excluded": true,
+          "contamination": true,
+          "ten_unit_expectation_supported": false,
+          "rights": "Copyright status/edition access not independently verified; no reproduction permitted by this audit.",
+          "access": "Incidental front-cover image marker in search response; no catalog link or image opened. Excluded conservatively; ten suitable local units not established."
+        },
+        {
+          "reference_id": "B-HO3",
+          "title": "Atlas of medieval Europe",
+          "publication_year": 1983,
+          "identifier": "OCLC 9042221",
+          "catalog_url": "https://search.worldcat.org/title/9042221",
+          "metadata_only": true,
+          "excluded": true,
+          "contamination": true,
+          "ten_unit_expectation_supported": false,
+          "rights": "Copyright status/edition access not independently verified; no reproduction permitted by this audit.",
+          "access": "Incidental front-cover image marker in search response; no catalog link or image opened. Excluded conservatively; ten suitable local units not established."
+        }
+      ],
+      "contamination_log": [
+        {
+          "scope": "metadata_query",
+          "records": [
+            "B-HO1",
+            "B-HO2",
+            "B-HO3"
+          ],
+          "exposure": "Front-cover image markers in WorldCat search output; these do not establish that map pixels were viewed. All potentially affected works excluded."
+        },
+        {
+          "scope": "research_queries",
+          "exposure": "Incidental front-cover markers for Balestracci and a modern Villani reprint; incidental PDFs and history-page snippets. No associated image or PDF opened; no cartographic label or legend content identified in returned passages."
+        }
+      ],
+      "incidental_results": "Unrequested history, archival PDF and book snippets appeared. Only the six explicitly opened records entered the preliminary-source set. Later chronicle retellings and general fonds discovery do not supply independently checked 1259 acts.",
+      "isolation_review": {
+        "status": "unverified",
+        "rationale": "Excluded cover-marker records plus the unscreened illustrated HTML request prevent certifying a complete clean search history. No known map-body passage was used."
+      },
+      "review_gates": {
+        "stable_temporal_phase": {
+          "status": "unverified",
+          "rationale": "No individual archival act or ledger entry was inspected to freeze late 1259 or the eve of Montaperti. The texts alone supply a changing campaign sequence."
+        },
+        "spatial_model_fit": {
+          "status": "unverified",
+          "rationale": "Potential center/terrain fit remains hypothetical until comune control and contado jurisdiction are distinguished from alliance, military presence and battle."
+        },
+        "no_dynamic_dependency": {
+          "status": "unverified",
+          "rationale": "The available 1259–1260 narrative paths emphasize revolt, supply and military movement. This run did not establish a stable jurisdictional state."
+        }
+      },
+      "unconfirmed_lineage_leads": "Firenze Diplomatico and Siena Capitoli/Concistoro/Consiglio Generale offer catalog paths only; no target-year instrument checked. Continuous agency ledgers would remain one producing-agency lineage unless independence were demonstrated."
+    }
+  ],
+  "assessment": {
+    "candidates": {
+      "amarna-northern-canaan": {
+        "decision": "NO-GO",
+        "budget_consumed": {
+          "queries": 9,
+          "content_record_checks": 6,
+          "preliminary_sources": 6,
+          "held_out_metadata_queries": 1,
+          "held_out_candidates": 1
+        },
+        "full_text_access": {
+          "numerator": 1,
+          "denominator": 6
+        },
+        "potential_localities_per_center": {
+          "byblos": [
+            "Batruna",
+            "Byblos"
+          ],
+          "amurru": [
+            "Bīt-Arḫa"
+          ]
+        },
+        "independent_political_lineages_per_center": {
+          "byblos": [
+            "rib_hadda_sender"
+          ],
+          "amurru": [
+            "rib_hadda_sender"
+          ]
+        },
+        "verified_locatable_localities": 0,
+        "gates": {
+          "budget_compliant": false,
+          "two_political_centers": false,
+          "four_named_relations_per_center": false,
+          "two_independent_lineages_per_center": false,
+          "twelve_locatable_localities": false,
+          "legal_text_access_70_percent": false,
+          "two_conflicts_or_exclusions": true,
+          "comparator_ten_units": false,
+          "isolation_review": true,
+          "stable_temporal_phase": false,
+          "spatial_model_fit": false,
+          "no_dynamic_dependency": false
+        }
+      },
+      "florence-siena-contado": {
+        "decision": "NO-GO",
+        "budget_consumed": {
+          "queries": 9,
+          "content_record_checks": 6,
+          "preliminary_sources": 6,
+          "held_out_metadata_queries": 1,
+          "held_out_candidates": 3
+        },
+        "full_text_access": {
+          "numerator": 3,
+          "denominator": 6
+        },
+        "potential_localities_per_center": {
+          "florence": [
+            "Florence",
+            "Montalcino",
+            "Montepulciano"
+          ],
+          "siena": [
+            "Grosseto",
+            "Montalcino",
+            "Montemassi",
+            "Siena"
+          ]
+        },
+        "independent_political_lineages_per_center": {
+          "florence": [
+            "villani_chronicle"
+          ],
+          "siena": [
+            "villani_chronicle"
+          ]
+        },
+        "verified_locatable_localities": 0,
+        "gates": {
+          "budget_compliant": false,
+          "two_political_centers": true,
+          "four_named_relations_per_center": false,
+          "two_independent_lineages_per_center": false,
+          "twelve_locatable_localities": false,
+          "legal_text_access_70_percent": false,
+          "two_conflicts_or_exclusions": true,
+          "comparator_ten_units": false,
+          "isolation_review": false,
+          "stable_temporal_phase": false,
+          "spatial_model_fit": false,
+          "no_dynamic_dependency": false
+        }
+      }
+    },
+    "selected_candidate_id": null,
+    "decision": "NO-GO"
+  }
+}

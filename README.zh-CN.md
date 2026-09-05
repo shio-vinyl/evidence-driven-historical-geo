@@ -84,6 +84,10 @@ v0.2 契约把 `Source → Observation → Claim → Model Decision → Evidence
 
 该案例同时引入明确 era 的 BCE 时间契约：`calendar=historical_bce_year_label`、`era=BCE`、`year_bce=701`、`temporal_resolution=campaign_horizon`。天文纪年 `-700` 只是显式计算转换，绝不写成负 ISO 日期。
 
+## 第四案例预检
+
+[来源结构预检](docs/research/prospective-source-structure-preflight.zh-CN.md)记录 **Amarna 北迦南与 Florence–Siena contado 边界两个候选均为 NO-GO**。独立政治谱系、稳定阶段、已证明的正文访问和比较资料适配性未满足硬门槛。查询预算超额及暴露风险已披露。没有创建第四案例或有效预注册，三个既有案例保持不变。
+
 ## 研究轮次与搜索策略实验
 
 `research/rounds/00-initial/` 保存冻结的检索前 bundle、情景快照、诊断与议程；`research/rounds/01-evidence-update/` 保存其来源核查、状态变化和重新计算的切片诊断。经过审查的每一轮都会记录 source、observation、claim、decision 的增量，以及支撑下一步行动的诊断和搜索目标；临时求解结果仍位于已忽略的 `build/` 目录。规范化哈希把前后快照与轮次增量绑定在一起。

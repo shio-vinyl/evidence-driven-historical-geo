@@ -84,6 +84,10 @@ The third case asks which named localities in the Joppa–Ekron–Lachish–Jeru
 
 This case also introduces the era-aware BCE time contract: `calendar=historical_bce_year_label`, `era=BCE`, `year_bce=701`, and `temporal_resolution=campaign_horizon`. Astronomical year `-700` is an explicit computational conversion, never a negative ISO date.
 
+## Fourth-case preflight
+
+The [source-structure preflight](docs/research/prospective-source-structure-preflight.md) records **NO-GO for both Amarna northern Canaan and the Florence–Siena contado frontier**. Independent political lineages, stable phases, demonstrated body access and comparator suitability did not meet the hard gates. Query-budget overruns and exposure risks are disclosed. No fourth case or valid preregistration was created; the three existing cases remain unchanged.
+
 ## Research rounds and policy experiment
 
 `research/rounds/00-initial/` preserves frozen pre-search bundle/scenario snapshots together with the diagnosis and agenda; `research/rounds/01-evidence-update/` preserves its source checks, state changes, and recomputed slice diagnoses. A reviewed round records the source/observation/claim/decision delta together with the diagnosis and search targets that justified the next action; transient solver runs remain under ignored `build/` directories. Canonical hashes bind the before/after snapshots to the round delta.
